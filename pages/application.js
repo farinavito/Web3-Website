@@ -1,24 +1,32 @@
 import 'bulma/css/bulma.css'
+import { useState } from 'react'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
 import Web3 from 'web3'
 
 const App = () => {
 
+    const [error, setError] = useState('')
+
     let web3;
 
-    const connectWalletHandler = () => {
+    const connectWalletHandler = async () => {
         if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
             //metamask installed
-            window.ethereum.request({ method: "eth_requestAccounts"})
-            web3 = new Web3(window.ethereum)
+            try {
+                await window.ethereum.request({ method: "eth_requestAccounts"})
+                web3 = new Web3(window.ethereum)
+            } catch(err) {
+                setError(err.message)
+            }
+            
         } else {
             //metamask not installed
             alert("Please install MetaMask")
         }
     }
 
-    return(
+    return (
         <div className={styles.main}>
             <Head>
             <title>Create Next App</title>
@@ -37,6 +45,11 @@ const App = () => {
             <section>
                 <div className="container">
                     <p>Text</p>
+                </div>
+            </section>
+            <section>
+                <div className="container has-text-danger">
+                    <p>{error}</p>
                 </div>
             </section>
         </div>
