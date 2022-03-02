@@ -1,8 +1,23 @@
 import 'bulma/css/bulma.css'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
+import Web3 from 'web3'
 
-export default function App(){
+const App = () => {
+
+    let web3;
+
+    const connectWalletHandler = () => {
+        if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
+            //metamask installed
+            window.ethereum.request({ method: "eth_requestAccounts"})
+            web3 = new Web3(window.ethereum)
+        } else {
+            //metamask not installed
+            alert("Please install MetaMask")
+        }
+    }
+
     return(
         <div className={styles.main}>
             <Head>
@@ -15,7 +30,7 @@ export default function App(){
                         <h1>A web app</h1>
                     </div>
                     <div className="navbar-end">
-                        <button className="button is-primary">Connect wallet</button>
+                        <button onClick={connectWalletHandler} className="button is-primary">Connect wallet</button>
                     </div>
                 </div>
             </nav>
@@ -28,3 +43,5 @@ export default function App(){
         
     )
 }
+
+export default App
