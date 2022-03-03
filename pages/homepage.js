@@ -30,15 +30,15 @@ const Homepage = () => {
                 
                 <div className="navbar-end">
                     <div className='navbar-item'>
-                            <Link href='/application'>
-                                <a>Enter app</a>
+                            <Link href='/why'>
+                                <a>Why</a>
                             </Link>
                         </div>
                     </div>
                     <div className="navbar-end">
                     <div className='navbar-item'>
                             <Link href='/application'>
-                                <a>Enter app</a>
+                                <a>How it works</a>
                             </Link>
                         </div>
                     </div>
