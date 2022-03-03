@@ -33,7 +33,7 @@ const App = () => {
             <title>Create Next App</title>
             <meta name="description" content="A web3 app" />
             </Head>
-            <nav className="navbar is-primary">
+            <nav className="navbar is-primary is-fixed-top">
                 <div className="container">
                     <div className="navbar-brand">
                         <h1>A web app</h1>
