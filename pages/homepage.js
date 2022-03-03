@@ -14,7 +14,7 @@ const Homepage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <nav className='navbar is-primary'> 
+            <nav className='navbar is-primary is-fixed-top'> 
                 <div className='container'>
                     <div className='navbar-brand'>
                         <div className='navbar-item'>
