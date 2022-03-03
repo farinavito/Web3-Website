@@ -37,7 +37,7 @@ const Homepage = () => {
                     </div>
                     <div className="navbar-end">
                     <div className='navbar-item'>
-                            <Link href='/application'>
+                            <Link href='/how-it-works'>
                                 <a>How it works</a>
                             </Link>
                         </div>
