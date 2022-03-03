@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 const How = () => {
     return(
@@ -9,6 +10,44 @@ const How = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <h1>How</h1>
+
+            <nav className="navbar is-primary is-fixed-top">
+                <div className="navbar-menu">
+                    <div className="container">
+                        <div className="navbar-brand">
+                        <div className='navbar-item'>
+                            <Link href='/homepage'>
+                                <a><h1>A web app</h1></a>
+                            </Link>
+                        </div> 
+                        </div>
+                    </div> 
+                </div>
+                
+                <div className="navbar-end">
+                    <div className='navbar-item'>
+                            <Link href='/why'>
+                                <a>Why</a>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="navbar-end">
+                    <div className='navbar-item'>
+                            <Link href='/how-it-works'>
+                                <a>How it works</a>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="navbar-end">
+                    <div className='navbar-item'>
+                        <Link href='/application'>
+                            <a>Enter app</a>
+                        </Link>
+                    </div>
+                    <div className='navbar-item'>
+                    </div>
+                </div>
+            </nav>
         </>
         
     )
