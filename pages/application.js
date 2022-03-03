@@ -3,6 +3,7 @@ import { useState } from 'react'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
 import Web3 from 'web3'
+import Link from 'next/link'
 
 const App = () => {
 
@@ -32,10 +33,17 @@ const App = () => {
             <title>Create Next App</title>
             <meta name="description" content="A web3 app" />
             </Head>
-            <nav className="navbar mt-4 mb-4">
+            <nav className="navbar is-primary">
                 <div className="container">
                     <div className="navbar-brand">
                         <h1>A web app</h1>
+                    </div>
+                    <div className="navbar-end">
+                    <div className='navbar-item'>
+                            <Link href='/homepage'>
+                                <a>Home</a>
+                            </Link>
+                        </div>
                     </div>
                     <div className="navbar-end">
                         <button onClick={connectWalletHandler} className="button is-primary">Connect wallet</button>
