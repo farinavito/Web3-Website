@@ -20,7 +20,7 @@ const Homepage = () => {
                     <div className="container">
                         <div className="navbar-brand">
                         <div className='navbar-item'>
-                            <Link href='/homepage'>
+                            <Link href='/'>
                                 <a><h1>A web app</h1></a>
                             </Link>
                         </div> 
