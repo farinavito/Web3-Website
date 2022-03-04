@@ -53,56 +53,55 @@ const Homepage = () => {
                 </div>
             </nav>
 
-            <section class="hero is-halfheight">
-                <div class="hero-body">
-                    <div class="">
-                    <p class="title">
+            <section className="hero is-halfheight">
+                <div className="hero-body">
+                    <div className="">
+                    <p className="title">
                         Enabling trust between subjects
                     </p>
-                    <p class="subtitle">
+                    <p className="subtitle">
                         <br></br>
-                        By using smart contrats, we make sure <br></br>
-                        that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, <br></br>
-                        fulfill their obligations to eachother.
+                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
+                        don't have physical access to one another, fulfill their obligations to eachother. <br></br>
+                        Various smart contracts enable you to create agreements with others without the need of trusting them.
                     </p>
                     </div>
                 </div>
             </section>
 
-            <section class="hero is-primary is-halfheight">
-                <div class="hero-body">
-                    <div class="">
-                    <p class="title">
+            <section className="hero is-primary is-halfheight">
+                <div className="hero-body">
+                    <div className="">
+                    <p className="title">
                         2 container
                     </p>
-                    <p class="subtitle">
+                    <p className="subtitle">
                         2 container subtitle
                     </p>
                     </div>
                 </div>
             </section>
 
-            <section class="hero is-halfheight">
-                <div class="hero-body">
-                    <div class="">
-                    <p class="title">
+            <section className="hero is-halfheight">
+                <div className="hero-body">
+                    <div className="">
+                    <p className="title">
                         3 container
                     </p>
-                    <p class="subtitle">
+                    <p className="subtitle">
                         3 container subtitle
                     </p>
                     </div>
                 </div>
             </section>
         <footer>
-        <section class="hero is-small is-primary">
-                <div class="hero-body">
-                    <div class="">
-                    <p class="title">
+        <section className="hero is-small is-primary">
+                <div className="hero-body">
+                    <div className="">
+                    <p className="title">
                         4 container
                     </p>
-                    <p class="subtitle">
+                    <p className="subtitle">
                         4 container subtitle
                     </p>
                     </div>
