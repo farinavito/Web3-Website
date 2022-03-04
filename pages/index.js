@@ -69,18 +69,35 @@ const Homepage = () => {
             </section>
 
             <section className="hero is-primary is-halfheight">
-                <div className="hero-body">
-                  <div className="container has-text-centered">
-                    <p className="title has-text-centered">
-                        Use cases
-                    </p>
-                    <p className="subtitle  has-text-centered">
-                        <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother. <br></br>
+            
+                <div className="columns">
+                  <div className="column">
+                    <p className="title has-text-centered mt-6">
+                      Use cases
                     </p>
                   </div>
                 </div>
+                <div className="hero-body">
+                  <div className="container has-text-centered">
+                    <div className="columns">
+                      <div className="column is-one-quarter">
+                          <p>1</p>
+                      </div>
+                      <div className="column is-one-quarter">
+                        <p>2</p>
+                      </div>
+                      <div className="column is-one-quarter">
+                          <p>3</p>
+                      </div>
+                      <div className="column is-one-quarter">
+                          <p>4</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  
+                
+                         
             </section>
 
             <section className="hero is-halfheight">
