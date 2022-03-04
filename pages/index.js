@@ -62,7 +62,8 @@ const Homepage = () => {
                     <p className="subtitle  has-text-centered">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother. <br></br>
+                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
+                        without cheating the system.
                     </p>
                   </div>
                 </div>
@@ -80,11 +81,11 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="tittle">Buying and selling goods</p>
+                          <p className="tittle">Buy and sell goods</p>
                           <p className="subtitle">1</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">Buying and selling services</p>
+                          <p className="tittle">Buy and sell services</p>
                           <p className="subtitle">2</p>
                         </div>
                         <div className="column py-0">
@@ -112,21 +113,18 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="tittle">Buying and selling goods</p>
+                          <p className="tittle">Choose the right smart contract</p>
                           <p className="subtitle">1</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">Buying and selling services</p>
+                          <p className="tittle">Follow its rules</p>
                           <p className="subtitle">2</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">Legal agreements</p>
+                          <p className="tittle">Get the reward</p>
                           <p className="subtitle">3</p>
                         </div>
-                        <div className="column py-0">
-                          <p className="tittle">Financial commitments</p>
-                          <p className="subtitle">4</p>
-                        </div>
+                        
                       </div>
                   </div>
                 </div>                         
