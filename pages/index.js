@@ -63,7 +63,6 @@ const Homepage = () => {
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother. <br></br>
-                        
                     </p>
                   </div>
                 </div>
@@ -71,42 +70,45 @@ const Homepage = () => {
 
             <section className="hero is-primary is-halfheight">
                 <div className="hero-body">
-                    <div className="">
-                    <p className="title">
-                        2 container
+                  <div className="container has-text-centered">
+                    <p className="title has-text-centered">
+                        Use cases
                     </p>
-                    <p className="subtitle">
-                        2 container subtitle
+                    <p className="subtitle  has-text-centered">
+                        <br></br>
+                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
+                        don't have physical access to one another, fulfill their obligations to eachother. <br></br>
                     </p>
-                    </div>
+                  </div>
                 </div>
             </section>
 
             <section className="hero is-halfheight">
                 <div className="hero-body">
-                    <div className="">
-                    <p className="title">
-                        3 container
+                  <div className="container has-text-centered">
+                    <p className="title has-text-centered">
+                        How it works
                     </p>
-                    <p className="subtitle">
-                        3 container subtitle
+                    <p className="subtitle  has-text-centered">
+                        <br></br>
+                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
+                        don't have physical access to one another, fulfill their obligations to eachother. <br></br>
                     </p>
-                    </div>
+                  </div>
                 </div>
             </section>
         <footer>
         <section className="hero is-small is-primary">
-                <div className="hero-body">
-                    <div className="">
-                    <p className="title">
-                        4 container
-                    </p>
-                    <p className="subtitle">
-                        4 container subtitle
-                    </p>
-                    </div>
-                </div>
-            </section>
+            <div className="hero-body">
+              <div className="container has-text-centered">
+                <p className="subtitle  has-text-centered">
+                    <br></br>
+                    By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
+                    don't have physical access to one another, fulfill their obligations to eachother. <br></br>
+                </p>
+              </div>
+            </div>
+        </section>
         </footer>
             
         </div>
