@@ -101,18 +101,35 @@ const Homepage = () => {
             </section>
 
             <section className="hero is-halfheight">
-                <div className="hero-body">
-                  <div className="container has-text-centered">
-                    <p className="title has-text-centered">
-                        How it works
-                    </p>
-                    <p className="subtitle  has-text-centered">
-                        <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother. <br></br>
+                <div className="columns">
+                  <div className="column">
+                    <p className="title has-text-centered mt-6">
+                      How it works
                     </p>
                   </div>
                 </div>
+                <div className="hero-body py-0">
+                  <div className="container has-text-centered py-0">
+                      <div className="columns py-0">
+                        <div className="column py-0">
+                          <p className="tittle">Buying and selling goods</p>
+                          <p className="subtitle">1</p>
+                        </div>
+                        <div className="column py-0">
+                          <p className="tittle">Buying and selling services</p>
+                          <p className="subtitle">2</p>
+                        </div>
+                        <div className="column py-0">
+                          <p className="tittle">Legal agreements</p>
+                          <p className="subtitle">3</p>
+                        </div>
+                        <div className="column py-0">
+                          <p className="tittle">Financial commitments</p>
+                          <p className="subtitle">4</p>
+                        </div>
+                      </div>
+                  </div>
+                </div>                         
             </section>
         <footer>
         <section className="hero is-small is-primary">
