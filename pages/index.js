@@ -78,18 +78,18 @@ const Homepage = () => {
                   </div>
                 </div>
                 <div className="hero-body">
-                  <div className="container has-text-centered">
-                    <div className="columns">
-                      <div className="column is-one-quarter">
+                  <div className="column is-fullheight has-text-centered ">
+                    <div className="columns is-fullheight">
+                      <div className="column">
                           <p>1</p>
                       </div>
-                      <div className="column is-one-quarter">
+                      <div className="column">
                         <p>2</p>
                       </div>
-                      <div className="column is-one-quarter">
+                      <div className="column">
                           <p>3</p>
                       </div>
-                      <div className="column is-one-quarter">
+                      <div className="column">
                           <p>4</p>
                       </div>
                     </div>
