@@ -15,7 +15,7 @@ const Homepage = () => {
             </Head>
 
 
-            <nav className="navbar is-primary is-fixed-top">
+            <nav className="navbar is-transparent is-fixed-top">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
