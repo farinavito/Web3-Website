@@ -119,18 +119,33 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="tittle">Choose the right smart contract</p>
+                          <p className="tittle">
+                            Create a verbal agreement<br></br>
+                            with another subject
+                          </p>
                           <p className="subtitle">1</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">Follow its rules</p>
+                          <p className="tittle">
+                            Choose the right smart contract<br></br>
+                            for the agreed
+                          </p>
                           <p className="subtitle">2</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">Get the reward</p>
+                          <p className="tittle">
+                            Follow its rules or<br></br>
+                            be penalized
+                          </p>
                           <p className="subtitle">3</p>
                         </div>
-                        
+                        <div className="column py-0">
+                          <p className="tittle">
+                            Get the reward or<br></br>
+                            loose a part of your transaction
+                          </p>
+                          <p className="subtitle">4</p>
+                        </div>
                       </div>
                   </div>
                 </div>                         
