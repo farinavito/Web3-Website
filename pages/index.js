@@ -15,7 +15,7 @@ const Homepage = () => {
             </Head>
 
 
-            <nav className="navbar is-transparent is-fixed-top">
+            <nav className="navbar has-background-black-ter is-fixed-top">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
@@ -53,7 +53,7 @@ const Homepage = () => {
                 </div>
             </nav>
 
-            <section className="hero is-halfheight">
+            <section className="hero is-halfheight has-background-black-ter">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <p className="title has-text-centered">
@@ -69,7 +69,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            <section className="hero is-primary is-halfheight">
+            <section className="hero has-background-black-bis is-halfheight">
                 <div className="columns">
                   <div className="column">
                     <p className="title has-text-centered mt-6">
@@ -81,27 +81,27 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="tittle">Buy and sell goods</p>
-                          <p className="subtitle">1</p>
+                          <p className="tittle has-background-black-ter pt-3">Buy and sell goods</p>
+                          <p className="subtitle has-background-black-ter">1</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">Buy and sell services</p>
-                          <p className="subtitle">2</p>
+                          <p className="tittle has-background-black-ter pt-3">Buy and sell services</p>
+                          <p className="subtitle has-background-black-ter">2</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">Legal agreements</p>
-                          <p className="subtitle">3</p>
+                          <p className="tittle has-background-black-ter pt-3">Legal agreements</p>
+                          <p className="subtitle has-background-black-ter">3</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">Financial commitments</p>
-                          <p className="subtitle">4</p>
+                          <p className="tittle has-background-black-ter pt-3">Financial commitments</p>
+                          <p className="subtitle has-background-black-ter">4</p>
                         </div>
                       </div>
                   </div>
                 </div>                         
             </section>
 
-            <section className="hero is-halfheight">
+            <section className="hero is-halfheight has-background-black-ter">
                 <div className="columns">
                   <div className="column">
                     <p className="title has-text-centered mt-6">
@@ -119,39 +119,39 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="tittle">
+                          <p className="tittle has-background-black-bis pt-3">
                             Create a verbal agreement<br></br>
                             with another subject
                           </p>
-                          <p className="subtitle">1</p>
+                          <p className="subtitle has-background-black-bis">1</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">
+                          <p className="tittle has-background-black-bis pt-3">
                             Choose the right smart contract<br></br>
                             for the agreed
                           </p>
-                          <p className="subtitle">2</p>
+                          <p className="subtitle has-background-black-bis">2</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">
+                          <p className="tittle has-background-black-bis pt-3">
                             Follow its rules or<br></br>
                             be penalized
                           </p>
-                          <p className="subtitle">3</p>
+                          <p className="subtitle has-background-black-bis">3</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle">
+                          <p className="tittle has-background-black-bis pt-3">
                             Get the reward or<br></br>
                             loose a part of your transaction
                           </p>
-                          <p className="subtitle">4</p>
+                          <p className="subtitle has-background-black-bis">4</p>
                         </div>
                       </div>
                   </div>
                 </div>                         
             </section>
         <footer>
-        <section className="hero is-small is-primary">
+        <section className="hero is-small has-background-black-ter">
             <div className="hero-body">
               <div className="container has-text-centered">
                 <p className="subtitle  has-text-centered">

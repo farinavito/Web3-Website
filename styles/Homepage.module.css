@@ -6,5 +6,12 @@
 
 .main p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #074df0;
+    color: white;
+    ;
 }
+
+.main a {
+    color: white;
+}
+
+
