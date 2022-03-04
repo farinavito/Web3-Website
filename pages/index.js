@@ -55,17 +55,17 @@ const Homepage = () => {
 
             <section className="hero is-halfheight">
                 <div className="hero-body">
-                    <div className="">
-                    <p className="title">
+                  <div className="container has-text-centered">
+                    <p className="title has-text-centered">
                         Enabling trust between subjects
                     </p>
-                    <p className="subtitle">
+                    <p className="subtitle  has-text-centered">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother. <br></br>
                         Various smart contracts enable you to create agreements with others without the need of trusting them.
                     </p>
-                    </div>
+                  </div>
                 </div>
             </section>
 
