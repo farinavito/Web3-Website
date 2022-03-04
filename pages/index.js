@@ -107,6 +107,12 @@ const Homepage = () => {
                     <p className="title has-text-centered mt-6">
                       How it works
                     </p>
+                    <p className="subtitle has-text-centered mt-6">
+                      <Link href="how-it-works">
+                        <a>Read the details</a>
+                      </Link>
+                      
+                    </p>
                   </div>
                 </div>
                 <div className="hero-body py-0">
