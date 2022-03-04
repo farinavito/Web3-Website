@@ -57,10 +57,14 @@ const Homepage = () => {
                 <div class="hero-body">
                     <div class="">
                     <p class="title">
-                        1 container
+                        Enabling trust between subjects
                     </p>
                     <p class="subtitle">
-                        1 container subtitle
+                        <br></br>
+                        By using smart contrats, we make sure <br></br>
+                        that subjects who don't know eachother and <br></br>
+                        don't have physical access to one another, <br></br>
+                        fulfill their obligations to eachother.
                     </p>
                     </div>
                 </div>
