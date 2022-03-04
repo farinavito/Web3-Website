@@ -3,3 +3,8 @@
     font-size: 2em;
     font-weight: bold;
 }
+
+.main p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #074df0;
+}
