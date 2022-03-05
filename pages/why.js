@@ -12,7 +12,7 @@ const Why = () => {
             </Head>
             <h1>Why</h1>
 
-            <nav className="navbar is-primary is-fixed-top">
+            <nav className="navbar is-primary has-background-black-ter is-fixed-top">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
