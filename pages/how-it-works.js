@@ -12,7 +12,7 @@ const How = () => {
             </Head>
             <h1>How</h1>
 
-            <nav className="navbar is-primary is-fixed-top">
+            <nav className="navbar is-primary is-fixed-top has-background-black-ter">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
