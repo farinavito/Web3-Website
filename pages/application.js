@@ -35,7 +35,7 @@ const App = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <nav className="navbar is-primary is-fixed-top">
+            <nav className="navbar is-primary is-fixed-top has-background-black-ter">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
@@ -73,7 +73,7 @@ const App = () => {
                 </div>
                 <div className='navbar-end'>
                 <div className='navbar-item'>
-                    <button onClick={connectWalletHandler} className="button is-primary">Connect wallet</button>
+                    <button onClick={connectWalletHandler} className="button ">Connect wallet</button>
                 </div>
                 </div>
                 <div className='navbar-item'>
