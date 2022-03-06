@@ -81,19 +81,19 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="tittle has-background-black-ter pt-3">Buy and sell goods</p>
+                          <p className="tittle has-background-black-bis pt-3">Buy and sell goods</p>
                           <p className="subtitle has-background-black-ter">1</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle has-background-black-ter pt-3">Buy and sell services</p>
+                          <p className="tittle has-background-black-bis pt-3">Buy and sell services</p>
                           <p className="subtitle has-background-black-ter">2</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle has-background-black-ter pt-3">Legal agreements</p>
+                          <p className="tittle has-background-black-bis pt-3">Legal agreements</p>
                           <p className="subtitle has-background-black-ter">3</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle has-background-black-ter pt-3">Financial commitments</p>
+                          <p className="tittle has-background-black-bis pt-3">Financial commitments</p>
                           <p className="subtitle has-background-black-ter">4</p>
                         </div>
                       </div>
@@ -119,28 +119,28 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="tittle has-background-black-bis pt-3">
+                          <p className="tittle has-background-black-ter pt-3">
                             Create a verbal agreement<br></br>
                             with another subject
                           </p>
                           <p className="subtitle has-background-black-bis">1</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle has-background-black-bis pt-3">
+                          <p className="tittle has-background-black-ter pt-3">
                             Choose the right smart contract<br></br>
                             for the agreed
                           </p>
                           <p className="subtitle has-background-black-bis">2</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle has-background-black-bis pt-3">
+                          <p className="tittle has-background-black-ter pt-3">
                             Follow its rules or<br></br>
                             be penalized
                           </p>
                           <p className="subtitle has-background-black-bis">3</p>
                         </div>
                         <div className="column py-0">
-                          <p className="tittle has-background-black-bis pt-3">
+                          <p className="tittle has-background-black-ter pt-3">
                             Get the reward or<br></br>
                             loose a part of your transaction
                           </p>
