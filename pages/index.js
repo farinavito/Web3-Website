@@ -155,9 +155,12 @@ const Homepage = () => {
             <div className="hero-body">
               <div className="container has-text-centered">
                 <p className="has-text-centered">
-                    <br></br>
-                    By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                    don't have physical access to one another, fulfill their obligations to eachother. <br></br>
+                <Link href='/'>
+                    <a>Twitter</a>
+                </Link>
+                <Link href='/'>
+                    <a>Github</a>
+                </Link>
                 </p>
               </div>
             </div>
