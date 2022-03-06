@@ -156,7 +156,7 @@ const Homepage = () => {
               <div className="container has-text-centered">
                 <div className="columns">
                   <div className="column has-text-right">
-                    <Link href='/'>
+                    <Link href='https://twitter.com/farinavito1'>
                       <a>Twitter</a>
                     </Link>
                   </div>
