@@ -154,14 +154,18 @@ const Homepage = () => {
         <section className="hero is-small has-background-black-ter">
             <div className="hero-body">
               <div className="container has-text-centered">
-                <p className="has-text-centered">
-                <Link href='/'>
-                    <a>Twitter</a>
-                </Link>
-                <Link href='/'>
-                    <a>Github</a>
-                </Link>
-                </p>
+                <div className="columns">
+                  <div className="column has-text-right">
+                    <Link href='/'>
+                      <a>Twitter</a>
+                    </Link>
+                  </div>
+                  <div className="column has-text-left">
+                    <Link href='/'>
+                        <a>Github</a>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
         </section>
