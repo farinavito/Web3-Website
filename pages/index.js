@@ -161,7 +161,7 @@ const Homepage = () => {
                     </Link>
                   </div>
                   <div className="column has-text-left">
-                    <Link href='/'>
+                    <Link href='https://github.com/farinavito'>
                         <a>Github</a>
                     </Link>
                   </div>
