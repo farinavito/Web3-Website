@@ -56,9 +56,9 @@ const Homepage = () => {
             <section className="hero is-halfheight has-background-black-ter">
                 <div className="hero-body">
                   <div className="container has-text-centered">
-                    <p className="title has-text-centered">
+                    <text className="title">
                         Enabling trust between subjects
-                    </p>
+                    </text>
                     <p className="has-text-centered">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
@@ -71,10 +71,10 @@ const Homepage = () => {
 
             <section className="hero has-background-black-bis is-halfheight">
                 <div className="columns">
-                  <div className="column">
-                    <p className="title has-text-centered mt-6">
+                  <div className="column has-text-centered mt-6">
+                    <text className="title ">
                       Use cases
-                    </p>
+                    </text>
                   </div>
                 </div>
                 <div className="hero-body py-0">
@@ -103,10 +103,10 @@ const Homepage = () => {
 
             <section className="hero is-halfheight has-background-black-ter">
                 <div className="columns">
-                  <div className="column">
-                    <p className="title has-text-centered mt-6">
+                  <div className="column has-text-centered mt-6">
+                    <text className="title ">
                       How it works
-                    </p>
+                    </text>
                     <p className="has-text-centered mt-6">
                       <Link href="how-it-works">
                         <a>Read the details</a>
