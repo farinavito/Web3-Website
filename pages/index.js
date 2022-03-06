@@ -59,7 +59,7 @@ const Homepage = () => {
                     <p className="title has-text-centered">
                         Enabling trust between subjects
                     </p>
-                    <p className="subtitle  has-text-centered">
+                    <p className="has-text-centered">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother <br></br>
@@ -107,7 +107,7 @@ const Homepage = () => {
                     <p className="title has-text-centered mt-6">
                       How it works
                     </p>
-                    <p className="subtitle has-text-centered mt-6">
+                    <p className="has-text-centered mt-6">
                       <Link href="how-it-works">
                         <a>Read the details</a>
                       </Link>
@@ -154,7 +154,7 @@ const Homepage = () => {
         <section className="hero is-small has-background-black-ter">
             <div className="hero-body">
               <div className="container has-text-centered">
-                <p className="subtitle  has-text-centered">
+                <p className="has-text-centered">
                     <br></br>
                     By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                     don't have physical access to one another, fulfill their obligations to eachother. <br></br>
