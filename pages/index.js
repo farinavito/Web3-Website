@@ -81,37 +81,37 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3">
+                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3">
                             Buy and sell goods<br></br><br></br>
-                            <p className="box has-background-black-ter py-1">
-                              <Link href="/application"><a>More</a></Link>
+                            <p className="box has-background-black-bis py-1">
+                              <Link href="/application"><a>Read more</a></Link>
                             </p>
                           </p>
                           <p className="has-background-black-bis py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3">
+                          <p className="subtitle pt-5 pb-3 mb-3">
                             Buy and sell services<br></br><br></br>
-                            <p className="box has-background-black-ter py-1">
-                              <Link href="/application"><a>More</a></Link>
+                            <p className="box has-background-black-bis py-1">
+                              <Link href="/application"><a>Read more</a></Link>
                             </p>
                           </p>
                           <p className=" has-background-black-bis py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3">
+                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3">
                             Legal agreements<br></br><br></br>
-                            <p className="box has-background-black-ter py-1">
-                              <Link href="/application"><a>More</a></Link>
+                            <p className="box has-background-black-bis py-1">
+                              <Link href="/application"><a>Read more</a></Link>
                             </p>
                           </p>
                           <p className=" has-background-black-bis py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3">
+                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3">
                             Financial commitments<br></br><br></br>
-                            <p className="box has-background-black-ter py-1">
-                              <Link href="/application"><a>More</a></Link>
+                            <p className="box has-background-black-bis py-1">
+                              <Link href="/application"><a>Read more</a></Link>
                             </p>
                           </p>
                           <p className=" has-background-black-bis py-4"></p>
@@ -139,30 +139,42 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis py-3 mb-3">
+                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
                             Create a verbal agreement<br></br>
                             with another subject
+                            <p className="box has-background-black-bis py-1">
+                            <Link href=""><a><br></br></a></Link>
+                            </p>
                           </p>
                           <p className="has-background-black-ter py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis py-3 mb-3">
+                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
                             Choose the right smart contract<br></br>
                             for the agreed
+                            <p className="box has-background-black-bis py-1">
+                            <Link href=""><a><br></br></a></Link>
+                            </p>
                           </p>
                           <p className="has-background-black-ter py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis py-3 mb-3">
+                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
                             Follow its rules or<br></br>
                             be penalized
+                            <p className="box has-background-black-bis py-1">
+                            <Link href=""><a><br></br></a></Link>
+                            </p>
                           </p>
                           <p className="has-background-black-ter py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis py-3 mb-3">
+                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
                             Get the reward or<br></br>
                             loose a part of your transaction
+                            <p className="box has-background-black-bis py-1">
+                            <Link href=""><a><br></br></a></Link>
+                            </p>
                           </p>
                           <p className="has-background-black-ter py-4"></p>
                         </div>
