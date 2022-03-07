@@ -158,7 +158,7 @@ const Homepage = () => {
                 </div>                         
             </section>
 
-            <section className="hero is-halfheight has-background-black-ter">
+            <section className="hero is-halfheight has-background-black-bis">
                 <div className="columns">
                   <div className="column has-text-centered mt-6">
                     <text className="title ">
@@ -175,37 +175,37 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5">
                             Create a verbal agreement<br></br>
                             with another subject
-                            <p className="box has-background-black-bis py-1">
+                            <p className="box has-background-black-ter py-1">
                             <Link href=""><a><br></br></a></Link>
                             </p>
                           </p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5">
                             Choose the right smart contract<br></br>
                             for the agreed
-                            <p className="box has-background-black-bis py-1">
+                            <p className="box has-background-black-ter py-1">
                             <Link href=""><a><br></br></a></Link>
                             </p>
                           </p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5">
                             Follow its rules or<br></br>
                             be penalized
-                            <p className="box has-background-black-bis py-1">
+                            <p className="box has-background-black-ter py-1">
                             <Link href=""><a><br></br></a></Link>
                             </p>
                           </p> 
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5">
                             Get the reward or loose a part<br></br>
                             of your transaction
-                            <p className="box has-background-black-bis py-1">
+                            <p className="box has-background-black-ter py-1">
                             <Link href=""><a><br></br></a></Link>
                             </p>
                           </p>
