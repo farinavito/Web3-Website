@@ -175,7 +175,7 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-6">
                             Create a verbal agreement<br></br>
                             with another subject
                             <p className="box has-background-black-ter py-1">
@@ -184,7 +184,7 @@ const Homepage = () => {
                           </p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-6">
                             Choose the right smart contract<br></br>
                             for the agreed
                             <p className="box has-background-black-ter py-1">
@@ -193,7 +193,7 @@ const Homepage = () => {
                           </p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-6">
                             Follow its rules or<br></br>
                             be penalized
                             <p className="box has-background-black-ter py-1">
@@ -202,7 +202,7 @@ const Homepage = () => {
                           </p> 
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-6">
                             Get the reward or loose a part<br></br>
                             of your transaction
                             <p className="box has-background-black-ter py-1">

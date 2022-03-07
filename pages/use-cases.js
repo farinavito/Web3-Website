@@ -27,19 +27,26 @@ const Cases = () => {
                 
                 <div className="navbar-end">
                     <div className='navbar-item'>
-                            <Link href='/why'>
-                                <a>Why</a>
-                            </Link>
-                        </div>
+                        <Link href='/why'>
+                            <a>Why</a>
+                        </Link>
                     </div>
-                    <div className="navbar-end">
+                </div>
+                <div className="navbar-end">
                     <div className='navbar-item'>
-                            <Link href='/how-it-works'>
-                                <a>How it works</a>
-                            </Link>
-                        </div>
+                        <Link href='/Use cases'>
+                            <a>Use cases</a>
+                        </Link>
                     </div>
-                    <div className="navbar-end">
+                </div>
+                <div className="navbar-end">
+                    <div className='navbar-item'>
+                        <Link href='/how-it-works'>
+                            <a>How it works</a>
+                        </Link>
+                    </div>
+                </div>
+                <div className="navbar-end">
                     <div className='navbar-item'>
                         <Link href='/application'>
                             <a>Enter app</a>
@@ -56,7 +63,7 @@ const Cases = () => {
                     <text className="title">
                     Buy and sell goods
                     </text>
-                    <p className="has-text-centered pt-4">
+                    <p className="has-text-cenetered pt-4">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother <br></br>
