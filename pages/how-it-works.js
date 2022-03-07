@@ -49,6 +49,55 @@ const How = () => {
                     </div>
                 </div>
             </nav>
+
+            <section className="hero is-halfheight has-background-black-ter">
+                <div className="hero-body">
+                  <div className="container has-text-centered">
+                    <text className="title">
+                        Enabling trust between subjects
+                    </text>
+                    <p className="has-text-centered pt-4">
+                        <br></br>
+                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
+                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
+                        without cheating the system.
+                    </p>
+                  </div>
+                </div>
+            </section>
+
+            <section className="hero is-halfheight has-background-black-bis">
+                <div className="hero-body">
+                  <div className="container has-text-centered">
+                    <text className="title">
+                        Enabling trust between subjects
+                    </text>
+                    <p className="has-text-centered pt-4">
+                        <br></br>
+                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
+                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
+                        without cheating the system.
+                    </p>
+                  </div>
+                </div>
+            </section>
+
+            <section className="hero is-halfheight has-background-black-ter">
+                <div className="hero-body">
+                  <div className="container has-text-centered">
+                    <text className="title">
+                        Enabling trust between subjects
+                    </text>
+                    <p className="has-text-centered pt-4">
+                        <br></br>
+                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
+                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
+                        without cheating the system.
+                    </p>
+                  </div>
+                </div>
+            </section>
+
         </div>
         
     )
