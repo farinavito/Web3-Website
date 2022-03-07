@@ -81,7 +81,7 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5 has-text-primary">
                             Buy and sell goods<br></br><br></br>
                             <p className=" has-background-black-ter py-4 is-size-6">
                               Exchange goods with people <br></br> 
@@ -95,7 +95,7 @@ const Homepage = () => {
                           </p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5 has-text-primary">
                             Buy and sell services<br></br><br></br>
                             <p className=" has-background-black-ter py-4 is-size-6">
                               Offer your services worldwide <br></br>
@@ -109,7 +109,7 @@ const Homepage = () => {
                           </p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-5 has-text-primary">
                             Legal agreements<br></br><br></br>
                             <p className=" has-background-black-ter py-4 is-size-6">
                               Create contracts with people<br></br>
@@ -123,7 +123,7 @@ const Homepage = () => {
                           </p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5 has-text-primary">
                             Financial commitments<br></br><br></br>
                             <p className=" has-background-black-ter py-4 is-size-6">
                               Fulfill your financial obligations<br></br>
