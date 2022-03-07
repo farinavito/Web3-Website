@@ -6,7 +6,7 @@
 
 .main p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: whitesmoke;
+    color: white;
     font-size: large;
 }
 
@@ -23,6 +23,8 @@
     color: hsl(171, 100%, 41%);
     margin-top: 3rem;
 }
+
+
 
 
 
