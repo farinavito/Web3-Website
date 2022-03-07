@@ -24,6 +24,19 @@
     margin-top: 3rem;
 }
 
+.main button {
+    background-color: black;
+    border: 1px solid hsl(171, 100%, 41%);
+    color: hsl(171, 100%, 41%);
+}
+
+.main button:hover {
+    background-color: hsl(171, 100%, 41%);
+    border: 1px solid black;
+    color: black;
+}
+
+
 
 
 
