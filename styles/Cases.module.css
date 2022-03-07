@@ -22,4 +22,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     font-size: large;
+    border-top: 2px solid hsl(171, 100%, 41%);
+    border-radius: 25px;
+    
 }
