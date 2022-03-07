@@ -19,37 +19,37 @@ const Homepage = () => {
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
-                        <div className='navbar-item'>
+                          <div className='navbar-item'>
                             <Link href='/'>
                                 <a><h1>A web app</h1></a>
                             </Link>
-                        </div> 
+                          </div> 
                         </div>
                     </div> 
                 </div>
                 
                 <div className="navbar-end">
-                    <div className='navbar-item'>
-                            <Link href='/why'>
-                                <a>Why</a>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="navbar-end">
-                    <div className='navbar-item'>
-                            <Link href='/how-it-works'>
-                                <a>How it works</a>
-                            </Link>
-                        </div>
-                    </div>
-                    <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/application'>
-                            <a>Enter app</a>
-                        </Link>
-                    </div>
-                    <div className='navbar-item'>
-                    </div>
+                  <div className='navbar-item'>
+                    <Link href='/why'>
+                        <a>Why</a>
+                    </Link>
+                  </div>
+                </div>
+                <div className="navbar-end">
+                  <div className='navbar-item'>
+                    <Link href='/how-it-works'>
+                        <a>How it works</a>
+                    </Link>
+                  </div>
+                </div>
+                <div className="navbar-end">
+                  <div className='navbar-item'>
+                    <Link href='/application'>
+                        <a>Enter app</a>
+                    </Link>
+                  </div>
+                  <div className='navbar-item'>
+                  </div>
                 </div>
             </nav>
 
