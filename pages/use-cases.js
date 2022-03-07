@@ -60,11 +60,11 @@ const Cases = () => {
 
             <section id='first' className="hero is-halfheight has-background-black-ter">
                 <div className="hero-body">
-                  <div className="container has-text-centered">
+                  <div className="container has-text-left">
                     <text className="title">
                     Buy and sell goods
                     </text>
-                    <p className="has-text-cenetered pt-4">
+                    <p className="has-text-left pt-4">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother <br></br>
@@ -76,11 +76,11 @@ const Cases = () => {
 
             <section id="second" className="hero is-halfheight has-background-black-bis">
                 <div className="hero-body">
-                  <div className="container has-text-centered">
+                  <div className="container has-text-left">
                     <text className="title">
                     Buy and sell services
                     </text>
-                    <p className="has-text-centered pt-4">
+                    <p className="has-text-left pt-4">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother <br></br>
@@ -92,11 +92,11 @@ const Cases = () => {
 
             <section id='third' className="hero is-halfheight has-background-black-ter">
                 <div className="hero-body">
-                  <div className="container has-text-centered">
+                  <div className="container has-text-left">
                     <text className="title">
                     Legal agreements
                     </text>
-                    <p className="has-text-centered pt-4">
+                    <p className="has-text-left pt-4">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother <br></br>
@@ -108,11 +108,11 @@ const Cases = () => {
 
             <section id='forth' className="hero is-halfheight has-background-black-bis">
                 <div className="hero-body">
-                  <div className="container has-text-centered">
+                  <div className="container has-text-left">
                     <text className="title">
                     Financial commitments
                     </text>
-                    <p className="has-text-centered pt-4">
+                    <p className="has-text-left pt-4">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother <br></br>
