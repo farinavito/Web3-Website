@@ -11,3 +11,15 @@
 .main a:hover {
     color: hsl(171, 100%, 41%);
 }
+
+.main text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: hsl(171, 100%, 41%);
+    margin-top: 3rem;
+}
+
+.main p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: large;
+}

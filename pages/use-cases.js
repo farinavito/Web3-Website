@@ -54,7 +54,7 @@ const Cases = () => {
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
-                        Enabling trust between subjects
+                    Buy and sell goods
                     </text>
                     <p className="has-text-centered pt-4">
                         <br></br>
@@ -70,7 +70,7 @@ const Cases = () => {
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
-                        Enabling trust between subjects
+                    Buy and sell services
                     </text>
                     <p className="has-text-centered pt-4">
                         <br></br>
@@ -86,7 +86,7 @@ const Cases = () => {
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
-                        Enabling trust between subjects
+                    Legal agreements
                     </text>
                     <p className="has-text-centered pt-4">
                         <br></br>
@@ -102,7 +102,7 @@ const Cases = () => {
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
-                        Enabling trust between subjects
+                    Financial commitments
                     </text>
                     <p className="has-text-centered pt-4">
                         <br></br>
