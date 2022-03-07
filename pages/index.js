@@ -37,6 +37,13 @@ const Homepage = () => {
                 </div>
                 <div className="navbar-end">
                   <div className='navbar-item'>
+                    <Link href='/use-cases'>
+                        <a>Use cases</a>
+                    </Link>
+                  </div>
+                </div>
+                <div className="navbar-end">
+                  <div className='navbar-item'>
                     <Link href='/how-it-works'>
                         <a>How it works</a>
                     </Link>
