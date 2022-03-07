@@ -63,7 +63,7 @@ const Cases = () => {
                     <text className="title">
                     Buy and sell goods
                     </text>
-                    <p className="has-text-left pt-4 pl-5 mt-5">
+                    <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and 
                         don't have physical access to one another, fulfill their obligations to eachother
@@ -83,7 +83,7 @@ const Cases = () => {
                     <text className="title">
                     Buy and sell services
                     </text>
-                    <p className="has-text-left pt-4 pl-5 mt-5">
+                    <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother <br></br>
@@ -99,7 +99,7 @@ const Cases = () => {
                     <text className="title">
                     Legal agreements
                     </text>
-                    <p className="has-text-left pt-4 pl-5 mt-5">
+                    <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother <br></br>
@@ -115,7 +115,7 @@ const Cases = () => {
                     <text className="title">
                     Financial commitments
                     </text>
-                    <p className="has-text-left pt-4 pl-5 mt-5">
+                    <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
                         By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
                         don't have physical access to one another, fulfill their obligations to eachother <br></br>
