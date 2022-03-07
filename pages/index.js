@@ -83,47 +83,58 @@ const Homepage = () => {
                         <div className="column py-0">
                           <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5">
                             Buy and sell goods<br></br><br></br>
+                            <p className=" has-background-black-ter py-4 is-size-6">
+                              Exchange goods with people <br></br> 
+                              all over the world
+                            </p>
                             <p className="box has-background-black-ter py-3">
                               <div className='columns is-centered'>
                                 <button className="button is-primary is-responsive is-outlined py-2 px-6 is-size-6">Details </button>
                               </div>
                             </p>
                           </p>
-                          
                         </div>
                         <div className="column py-0">
                           <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5">
                             Buy and sell services<br></br><br></br>
+                            <p className=" has-background-black-ter py-4 is-size-6">
+                              Offer your services worldwide <br></br>
+                              without any risk
+                            </p>
                             <p className="box has-background-black-ter py-3">
                               <div className='columns is-centered'>
                                 <button className="button is-primary is-responsive is-outlined py-2 px-6 is-size-6">Details </button>
                               </div>
                             </p>
                           </p>
-                          
                         </div>
                         <div className="column py-0">
                           <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-5">
                             Legal agreements<br></br><br></br>
+                            <p className=" has-background-black-ter py-4 is-size-6">
+                              Create contracts with people<br></br>
+                              you don't trust or know
+                            </p>
                             <p className="box has-background-black-ter py-3">
                               <div className='columns is-centered'>
                                 <button className="button is-primary is-responsive is-outlined py-2 px-6 is-size-6">Details </button>
                               </div>
                             </p>
                           </p>
-                          
                         </div>
                         <div className="column py-0">
                           <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5">
                             Financial commitments<br></br><br></br>
-                            
+                            <p className=" has-background-black-ter py-4 is-size-6">
+                              Fulfill your financial obligations<br></br>
+                              to your contract's signees
+                            </p>
                             <p className="box has-background-black-ter py-3">
                               <div className='columns is-centered'>
                                 <button className="button is-primary is-responsive is-outlined py-2 px-6 is-size-6">Details </button>
                               </div>
                             </p>
                           </p>
-                          
                         </div>
                       </div>
                   </div>
@@ -140,7 +151,6 @@ const Homepage = () => {
                       <Link href="how-it-works">
                         <a>Read the details</a>
                       </Link>
-                      
                     </p>
                   </div>
                 </div>
@@ -155,7 +165,6 @@ const Homepage = () => {
                             <Link href=""><a><br></br></a></Link>
                             </p>
                           </p>
-                          
                         </div>
                         <div className="column py-0">
                           <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
@@ -165,7 +174,6 @@ const Homepage = () => {
                             <Link href=""><a><br></br></a></Link>
                             </p>
                           </p>
-                          
                         </div>
                         <div className="column py-0">
                           <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
@@ -174,8 +182,7 @@ const Homepage = () => {
                             <p className="box has-background-black-bis py-1">
                             <Link href=""><a><br></br></a></Link>
                             </p>
-                          </p>
-                          
+                          </p> 
                         </div>
                         <div className="column py-0">
                           <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
@@ -185,7 +192,6 @@ const Homepage = () => {
                             <Link href=""><a><br></br></a></Link>
                             </p>
                           </p>
-                          
                         </div>
                       </div>
                   </div>
