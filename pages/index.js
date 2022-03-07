@@ -81,37 +81,45 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3">
                             Buy and sell goods<br></br><br></br>
-                            <p className="box has-background-black-bis py-1">
-                              <Link href="/application"><a>Read more</a></Link>
+                            <p className="box has-background-black-ter py-3">
+                              <div className='columns is-centered'>
+                                <button className="button is-primary is-responsive is-outlined py-2 px-6 is-size-6">Details </button>
+                              </div>
                             </p>
                           </p>
                           <p className="has-background-black-bis py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle pt-5 pb-3 mb-3">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3">
                             Buy and sell services<br></br><br></br>
-                            <p className="box has-background-black-bis py-1">
-                              <Link href="/application"><a>Read more</a></Link>
+                            <p className="box has-background-black-ter py-3">
+                              <div className='columns is-centered'>
+                                <button className="button is-primary is-responsive is-outlined py-2 px-6 is-size-6">Details </button>
+                              </div>
                             </p>
                           </p>
                           <p className=" has-background-black-bis py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5">
                             Legal agreements<br></br><br></br>
-                            <p className="box has-background-black-bis py-1">
-                              <Link href="/application"><a>Read more</a></Link>
+                            <p className="box has-background-black-ter py-3">
+                              <div className='columns is-centered'>
+                                <button className="button is-primary is-responsive is-outlined py-2 px-6 is-size-6">Details </button>
+                              </div>
                             </p>
                           </p>
                           <p className=" has-background-black-bis py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3">
                             Financial commitments<br></br><br></br>
-                            <p className="box has-background-black-bis py-1">
-                              <Link href="/application"><a>Read more</a></Link>
+                            <p className="box has-background-black-ter py-3">
+                              <div className='columns is-centered'>
+                                <button className="button is-primary is-responsive is-outlined py-2 px-6 is-size-6">Details </button>
+                              </div>
                             </p>
                           </p>
                           <p className=" has-background-black-bis py-4"></p>
@@ -170,8 +178,8 @@ const Homepage = () => {
                         </div>
                         <div className="column py-0">
                           <p className="subtitle has-background-black-bis pt-5 pb-3 mb-5">
-                            Get the reward or<br></br>
-                            loose a part of your transaction
+                            Get the reward or loose a part<br></br>
+                            of your transaction
                             <p className="box has-background-black-bis py-1">
                             <Link href=""><a><br></br></a></Link>
                             </p>
