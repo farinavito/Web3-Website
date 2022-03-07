@@ -13,8 +13,7 @@ body {
 .subtitle {
   border: 2px solid;
   border-radius: 25px;
-  border-color: hsl(171, 100%, 41%);
-  
+  border-color: hsl(171, 100%, 41%); 
 }
 
 

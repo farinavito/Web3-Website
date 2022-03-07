@@ -81,7 +81,7 @@ const Homepage = () => {
                   <div className="container has-text-centered py-0">
                       <div className="columns py-0">
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5">
                             Buy and sell goods<br></br><br></br>
                             <p className="box has-background-black-ter py-3">
                               <div className='columns is-centered'>
@@ -92,7 +92,7 @@ const Homepage = () => {
                           <p className="has-background-black-bis py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5">
                             Buy and sell services<br></br><br></br>
                             <p className="box has-background-black-ter py-3">
                               <div className='columns is-centered'>
@@ -103,7 +103,7 @@ const Homepage = () => {
                           <p className=" has-background-black-bis py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-5">
                             Legal agreements<br></br><br></br>
                             <p className="box has-background-black-ter py-3">
                               <div className='columns is-centered'>
@@ -114,7 +114,7 @@ const Homepage = () => {
                           <p className=" has-background-black-bis py-4"></p>
                         </div>
                         <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3">
+                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5">
                             Financial commitments<br></br><br></br>
                             <p className="box has-background-black-ter py-3">
                               <div className='columns is-centered'>
