@@ -1,13 +1,13 @@
-.main h1{
+.main h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2em;
     font-weight: bold;
 }
 
-.main a{
+.main a {
     color: white;
 }
 
-.main a:hover{
+.main a:hover {
     color: hsl(171, 100%, 41%);
 }
