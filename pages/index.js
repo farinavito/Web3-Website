@@ -92,7 +92,6 @@ const Homepage = () => {
                       <div className="columns py-0">
                         <div className="column py-0">
                           <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5 has-text-primary">
-                          
                             Buy and sell goods<br></br><br></br>
                             <p className=" has-background-black-ter py-4 is-size-6">
                               Exchange goods with people <br></br> 
@@ -222,14 +221,10 @@ const Homepage = () => {
               <div className="container has-text-centered">
                 <div className="columns">
                   <div className="column has-text-right">
-                    <Link href='https://twitter.com/farinavito1'>
-                      <a>Twitter</a>
-                    </Link>
+                    <a  target="_blank" rel="noopener noreferrer" href='https://twitter.com/farinavito1'>Twitter</a>
                   </div>
                   <div className="column has-text-left">
-                    <Link href='https://github.com/farinavito'>
-                        <a>Github</a>
-                    </Link>
+                    <a target="_blank" rel="noopener noreferrer" href='https://github.com/farinavito'>Github</a>
                   </div>
                 </div>
               </div>
