@@ -72,10 +72,16 @@ const Cases = () => {
                         Also, the smart contracts will make sure that the buyer sends the money for the purchase first. 
                         This is how the seller will be protected from the buyer's malice intentions.
                         
-                        <h2 >What will you be able to sell and buy?</h2>
-                        Any legal physical or virtual goods from any country worldwide. 
-                        We will not approve selling or buying any illegal goods on our system.<br></br> 
-                        If this rule is breached, we will blacklist the address used in the buying and selling illegal goods.
+                        <h2 >What goods will you be able to sell and buy?</h2>
+                        Any physical and virtual goods from any country in the world. No exception. 
+                        We have spent a lot of time considering enabling a feature that can blacklist addresses. 
+                        Our fear was that our system will be used for selling and buying illegal goods or services.
+                        However, we have decided to take out this feature. Why? 
+                        We believe that we could be pressured to blacklist an address not because of illegal activity, but because of political, ideological or other reason.
+                        Our official statement is that we don't support selling and buying illegal goods and services and we are against it.
+                        However, we are more concerned of the government's regimes unabling people to exchange goods and services with others, due to whatever reason than people using our system for illegal activities.
+                        Therefore, we could be legally pressured to take down the website, however, the smart contracts couldn't be disabled. 
+                        This means that the system will outlived any political or legal pressure that could be forced on us.
 
                         <h2 >When will this feature be implemented?</h2>
                         We can't provide any exact date. However, we are working on it to provide it as soon as possible.
@@ -106,10 +112,16 @@ const Cases = () => {
                         Also, the buyer will be penalized if he/she breaches the terms of services he/she have agreed to. 
                         This is how the seller will be protected from the buyer's malice intentions. All the logic will be handled by the smart contracts.
                         
-                        <h2 >What will you be able to sell and buy?</h2>
-                        Any legal physical or virtual goods from any country worldwide. 
-                        We will not approve selling or buying any illegal goods on our system.<br></br> 
-                        If this rule is breached, we will blacklist the address used in the buying and selling illegal goods.
+                        <h2 >What services will you be able to sell and buy?</h2>
+                        Any physical and virtual goods from any country in the world. No exception. 
+                        We have spent a lot of time considering enabling a feature that can blacklist addresses. 
+                        Our fear was that our system will be used for selling and buying illegal goods or services.
+                        However, we have decided to take out this feature. Why? 
+                        We believe that we could be pressured to blacklist an address not because of illegal activity, but because of political, ideological or other reason.
+                        Our official statement is that we don't support selling and buying illegal goods and services and we are against it.
+                        However, we are more concerned of the government's regimes unabling people to exchange goods and services with others, due to whatever reason than people using our system for illegal activities.
+                        Therefore, we could be legally pressured to take down the website, however, the smart contracts couldn't be disabled. 
+                        This means that the system will outlived any political or legal pressure that could be forced on us.
 
                         <h2 >When will this feature be implemented?</h2>
                         We can't provide any exact date. However, we are working on it to provide it as soon as possible.
