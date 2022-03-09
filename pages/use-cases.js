@@ -86,9 +86,15 @@ const Cases = () => {
                     Buy and sell services
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
-                        <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
+                    <h2>The purpose</h2>
+                        Increasing economies by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother. 
+                        <h2 >How to achieve the above?</h2>
+                        By using smart contracts, we make sure that subjects who don't know eachother and 
+                        don't have physical access to one another, fulfill their obligations to eachother 
+                        without cheating the system.
+                        <h2 >How to achieve the above?</h2>
+                        By using smart contracts, we make sure that subjects who don't know eachother and 
+                        don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
                     </p>
                   </div>
@@ -102,9 +108,15 @@ const Cases = () => {
                     Legal agreements
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
-                        <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
+                    <h2>The purpose</h2>
+                        Increasing economies by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother. 
+                        <h2 >How to achieve the above?</h2>
+                        By using smart contracts, we make sure that subjects who don't know eachother and 
+                        don't have physical access to one another, fulfill their obligations to eachother 
+                        without cheating the system.
+                        <h2 >How to achieve the above?</h2>
+                        By using smart contracts, we make sure that subjects who don't know eachother and 
+                        don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
                     </p>
                   </div>
@@ -118,9 +130,15 @@ const Cases = () => {
                     Financial commitments
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
-                        <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
+                    <h2>The purpose</h2>
+                        Increasing economies by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother. 
+                        <h2 >How to achieve the above?</h2>
+                        By using smart contracts, we make sure that subjects who don't know eachother and 
+                        don't have physical access to one another, fulfill their obligations to eachother 
+                        without cheating the system.
+                        <h2 >How to achieve the above?</h2>
+                        By using smart contracts, we make sure that subjects who don't know eachother and 
+                        don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
                     </p>
                   </div>
