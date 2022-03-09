@@ -17,7 +17,7 @@ const Homepage = () => {
             </Head>
 
 
-            <nav className="navbar has-background-black-bis is-fixed-top">
+            <nav className="navbar has-background-black-ter is-fixed-top">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
@@ -63,7 +63,7 @@ const Homepage = () => {
                 </div>
             </nav>
 
-            <section className="hero is-halfheight has-background-black-bis">
+            <section className="hero is-halfheight has-background-black-ter">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">

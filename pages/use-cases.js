@@ -77,7 +77,7 @@ const Cases = () => {
                         We will not approve selling or buying any illegal goods on our system.<br></br> 
                         If this rule is breached, we will blacklist the address used in the buying and selling illegal goods.
 
-                        <h2 >When will be this feature implemented?</h2>
+                        <h2 >When will this feature be implemented?</h2>
                         We can't provide any exact date. However, we are working on it to provide it as soon as possible.
 
                         <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
@@ -111,7 +111,7 @@ const Cases = () => {
                         We will not approve selling or buying any illegal goods on our system.<br></br> 
                         If this rule is breached, we will blacklist the address used in the buying and selling illegal goods.
 
-                        <h2 >When will be this feature implemented?</h2>
+                        <h2 >When will this feature be implemented?</h2>
                         We can't provide any exact date. However, we are working on it to provide it as soon as possible.
 
                         <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
@@ -141,7 +141,7 @@ const Cases = () => {
                         <h2 >Which legal agreements will be implemented?</h2>
                         We will ask our community to help us find the most usefull legal agreements for them.
 
-                        <h2 >When will be these features implemented?</h2>
+                        <h2 >When will these features be implemented?</h2>
                         We can't provide any exact date. However, we are working on it to provide it as soon as possible.
 
                         <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
@@ -161,17 +161,22 @@ const Cases = () => {
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <h2>The purpose</h2>
-                        Increasing economies by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother.
+                        Enabling people to create financial agreements with other subjects all over the world.
 
                         <h2 >How to achieve the above?</h2>
                         By using smart contracts, we make sure that subjects who don't know eachother and 
                         don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
 
-                        <h2 >How to achieve the above?</h2>
-                        By using smart contracts, we make sure that subjects who don't know eachother and 
-                        don't have physical access to one another, fulfill their obligations to eachother 
-                        without cheating the system.
+                        <h2 >Which financial agreements will be implemented?</h2>
+                        Enabling person A to commit sending payment every X amount to person B every Y time period for the duration of Z time starting at Q.<br></br>
+                        Enabling person A to commit sending a payment till T.<br></br>
+                        Also, we are open to any suggestions fromour community.<br></br>
+
+                        <h2 >When will these features be implemented?</h2>
+                        We have already deployed a smart contract enabling person A to commit sending payment 
+                        every X amount to person B every Y time period for the duration of Z time starting at Q.
+                        In the short future we will deploy a smart contract that will enable subjects to commit sending a payment till T.
 
                         <h2 >How much commission do we charge?</h2>
                         A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
