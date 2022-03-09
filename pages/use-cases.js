@@ -65,10 +65,10 @@ const Cases = () => {
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <h2>The purpose</h2>
-                        Increasing economies by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother. 
+                        Improving individual's and community's financial position by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother. 
 
                         <h2 >How to achieve the above?</h2>
-                        By using smart contracts, we will penalize the seller if he/she doesn't send physical or virtual goods to the buyer. 
+                        By using smart contracts, we can create trust between buyer and the seller. The latter will be penalized the seller if he/she doesn't send physical or virtual goods to the buyer. 
                         Also, the smart contracts will make sure that the buyer sends the money for the purchase first. 
                         This is how the seller will be protected from the buyer's malice intentions.
                         
