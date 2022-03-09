@@ -92,7 +92,8 @@ const Cases = () => {
                         We haven't yet decided which scalin solutions will be used.
 
                         <h2 >How much commission will we charge?</h2>
-                        This smart contract is still in the building and testing phase, therefore, we can't provide the exact number.
+                        A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
+                        This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
                     </p>
                   </div>
                 </div>
@@ -135,7 +136,8 @@ const Cases = () => {
                         We haven't yet decided which scalin solutions will be used.
 
                         <h2 >How much commission will we charge?</h2>
-                        This smart contract is still in the building and testing phase, therefore, we can't provide the exact number.
+                        A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
+                        This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
                     </p>
                   </div>
                 </div>
@@ -168,7 +170,8 @@ const Cases = () => {
                         We haven't yet decided which scalin solutions will be used.  
 
                         <h2 >How much commission will we charge?</h2>
-                        This smart contracts are still in the building and testing phase, therefore, we can't provide the exact number.
+                        A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
+                        This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
                     </p>
                   </div>
                 </div>
@@ -177,7 +180,7 @@ const Cases = () => {
             <section id='forth' className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
-                    <text className="title">
+                    <text className="title mb-6">
                     Financial commitments
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
