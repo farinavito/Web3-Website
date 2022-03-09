@@ -11,7 +11,7 @@ const Cases = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <nav className="navbar is-primary is-fixed-top has-background-black-ter">
+            <nav className="navbar is-primary is-fixed-top has-background-black-bis">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
@@ -57,7 +57,7 @@ const Cases = () => {
                 </div>
             </nav>
 
-            <section id='first' className="hero is-medium has-background-black-ter">
+            <section id='first' className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
@@ -123,7 +123,7 @@ const Cases = () => {
                 </div>
             </section>
 
-            <section id='third' className="hero is-medium has-background-black-ter">
+            <section id='third' className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
