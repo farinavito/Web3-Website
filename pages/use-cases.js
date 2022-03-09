@@ -94,6 +94,7 @@ const Cases = () => {
                         <h2 >How much commission will we charge?</h2>
                         A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
                         This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
+                        The exact commission amount can be checked for a specific smart contract.
                     </p>
                   </div>
                 </div>
@@ -138,6 +139,7 @@ const Cases = () => {
                         <h2 >How much commission will we charge?</h2>
                         A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
                         This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
+                        The exact commission amount can be checked for a specific smart contract.
                     </p>
                   </div>
                 </div>
@@ -172,6 +174,7 @@ const Cases = () => {
                         <h2 >How much commission will we charge?</h2>
                         A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
                         This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
+                        The exact commission amount can be checked for a specific smart contract.
                     </p>
                   </div>
                 </div>
@@ -205,6 +208,7 @@ const Cases = () => {
                         <h2 >How much commission do we charge?</h2>
                         A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
                         This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
+                        The exact commission amount can be checked for a specific smart contract.
                     </p>
                   </div>
                 </div>
