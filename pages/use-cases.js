@@ -130,16 +130,24 @@ const Cases = () => {
                     Legal agreements
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
-                    <h2>The purpose</h2>
-                        Increasing economies by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother. 
+                        <h2>The purpose</h2>
+                        Enabling people to have access to creation of legal agreements with other subjects in their community or worldwide.
+
                         <h2 >How to achieve the above?</h2>
                         By using smart contracts, we make sure that subjects who don't know eachother and 
                         don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
-                        <h2 >How to achieve the above?</h2>
-                        By using smart contracts, we make sure that subjects who don't know eachother and 
-                        don't have physical access to one another, fulfill their obligations to eachother 
-                        without cheating the system.
+
+                        <h2 >Which legal agreements will be implemented?</h2>
+                        We will ask our community to help us find the most usefull legal agreements for them.
+
+                        <h2 >When will be these features implemented?</h2>
+                        We can't provide any exact date. However, we are working on it to provide it as soon as possible.
+
+                        <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
+                        Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
+                        After some time we will deploy them to other Ethereum L2 scaling solutions.  
+                        We haven't yet decided which scalin solutions will be used.
                     </p>
                   </div>
                 </div>
@@ -166,7 +174,7 @@ const Cases = () => {
                         without cheating the system.
 
                         <h2 >How much commission do we charge?</h2>
-                        We have implemented a feature that lets us to change the commission from 1 to 10**15 weis. 
+                        A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
                         This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
                     </p>
                   </div>
