@@ -68,7 +68,7 @@ const Cases = () => {
                         Improving individual's and community's financial position by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother. 
 
                         <h2 >How to achieve the above?</h2>
-                        By using smart contracts, we can create trust between buyer and the seller. The latter will be penalized the seller if he/she doesn't send physical or virtual goods to the buyer. 
+                        By using smart contracts, we can create trust between buyer and the seller. The latter will be penalized if he/she doesn't send physical or virtual goods to the buyer. 
                         Also, the smart contracts will make sure that the buyer sends the money for the purchase first. 
                         This is how the seller will be protected from the buyer's malice intentions.
                         
@@ -79,6 +79,11 @@ const Cases = () => {
 
                         <h2 >When will be this feature implemented?</h2>
                         We can't provide any exact date. However, we are working on it to provide it as soon as possible.
+
+                        <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
+                        Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
+                        After some time we will deploy them to other Ethereum L2 scaling solutions.  
+                        We haven't yet decided which scalin solutions will be used.
                     </p>
                   </div>
                 </div>
@@ -91,16 +96,28 @@ const Cases = () => {
                     Buy and sell services
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
-                    <h2>The purpose</h2>
-                        Increasing economies by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother. 
+                        <h2>The purpose</h2>
+                        Improving individual's and community's financial position by providing a worldwide system where sellers can provide services and buyers can subscribe to them. 
+                        Both parties don't need to know or trust eachother. 
+
                         <h2 >How to achieve the above?</h2>
-                        By using smart contracts, we make sure that subjects who don't know eachother and 
-                        don't have physical access to one another, fulfill their obligations to eachother 
-                        without cheating the system.
-                        <h2 >How to achieve the above?</h2>
-                        By using smart contracts, we make sure that subjects who don't know eachother and 
-                        don't have physical access to one another, fulfill their obligations to eachother 
-                        without cheating the system.
+                        By using smart contracts, we can create trust between buyer and the seller. 
+                        The latter will be penalized if he/she breaches the terms that they had initially provided. 
+                        Also, the buyer will be penalized if he/she breaches the terms of services he/she have agreed to. 
+                        This is how the seller will be protected from the buyer's malice intentions. All the logic will be handled by the smart contracts.
+                        
+                        <h2 >What will you be able to sell and buy?</h2>
+                        Any legal physical or virtual goods from any country worldwide. 
+                        We will not approve selling or buying any illegal goods on our system.<br></br> 
+                        If this rule is breached, we will blacklist the address used in the buying and selling illegal goods.
+
+                        <h2 >When will be this feature implemented?</h2>
+                        We can't provide any exact date. However, we are working on it to provide it as soon as possible.
+
+                        <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
+                        Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
+                        After some time we will deploy them to other Ethereum L2 scaling solutions.  
+                        We haven't yet decided which scalin solutions will be used.
                     </p>
                   </div>
                 </div>
@@ -135,16 +152,22 @@ const Cases = () => {
                     Financial commitments
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
-                    <h2>The purpose</h2>
-                        Increasing economies by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother. 
+                        <h2>The purpose</h2>
+                        Increasing economies by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother.
+
                         <h2 >How to achieve the above?</h2>
                         By using smart contracts, we make sure that subjects who don't know eachother and 
                         don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
+
                         <h2 >How to achieve the above?</h2>
                         By using smart contracts, we make sure that subjects who don't know eachother and 
                         don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
+
+                        <h2 >How much commission do we charge?</h2>
+                        We have implemented a feature that lets us to change the commission from 1 to 10**15 weis. 
+                        This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
                     </p>
                   </div>
                 </div>
