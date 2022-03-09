@@ -80,11 +80,11 @@ const Cases = () => {
                         We believe that we could be pressured to blacklist an address not because of illegal activity, but because of political, ideological or other reason.
                         Our official statement is that we don't support selling and buying illegal goods and services and we are against it.
                         However, we are more concerned of the government's regimes unabling people to exchange goods and services with others, due to whatever reason than people using our system for illegal activities.
-                        Therefore, we could be legally pressured to take down the website, however, the smart contracts couldn't be disabled. 
-                        This means that the system will outlived any political or legal pressure that could be forced on us.
+                        Therefore, we could be legally pressured to take down the website, however, the smart contracts will stay the same and active. 
+                        This means that the system will outlive any political or legal pressure that could be forced on us.
 
                         <h2 >When will this feature be implemented?</h2>
-                        We can't provide any exact date. However, we are working on it to provide it as soon as possible.
+                        We can't provide any exact date. However, we are trying to provide it as soon as possible.
 
                         <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
                         Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
@@ -120,11 +120,11 @@ const Cases = () => {
                         We believe that we could be pressured to blacklist an address not because of illegal activity, but because of political, ideological or other reason.
                         Our official statement is that we don't support selling and buying illegal goods and services and we are against it.
                         However, we are more concerned of the government's regimes unabling people to exchange goods and services with others, due to whatever reason than people using our system for illegal activities.
-                        Therefore, we could be legally pressured to take down the website, however, the smart contracts couldn't be disabled. 
-                        This means that the system will outlived any political or legal pressure that could be forced on us.
+                        Therefore, we could (will) be legally pressured to take down the website, however, the smart contracts will stay the same and active. 
+                        This means that the system will outlive any political or legal pressure that could be forced on us.
 
                         <h2 >When will this feature be implemented?</h2>
-                        We can't provide any exact date. However, we are working on it to provide it as soon as possible.
+                        We can't provide any exact date. However, we are trying to provide it as soon as possible.
 
                         <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
                         Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
@@ -154,7 +154,7 @@ const Cases = () => {
                         We will ask our community to help us find the most usefull legal agreements for them.
 
                         <h2 >When will these features be implemented?</h2>
-                        We can't provide any exact date. However, we are working on it to provide it as soon as possible.
+                        We can't provide any exact date. However, we are trying to provide it as soon as possible.
 
                         <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
                         Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
