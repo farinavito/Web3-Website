@@ -90,6 +90,9 @@ const Cases = () => {
                         Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
                         After some time we will deploy them to other Ethereum L2 scaling solutions.  
                         We haven't yet decided which scalin solutions will be used.
+
+                        <h2 >How much commission will we charge?</h2>
+                        This smart contract is still in the building and testing phase, therefore, we can't provide the exact number.
                     </p>
                   </div>
                 </div>
@@ -130,6 +133,9 @@ const Cases = () => {
                         Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
                         After some time we will deploy them to other Ethereum L2 scaling solutions.  
                         We haven't yet decided which scalin solutions will be used.
+
+                        <h2 >How much commission will we charge?</h2>
+                        This smart contract is still in the building and testing phase, therefore, we can't provide the exact number.
                     </p>
                   </div>
                 </div>
@@ -150,7 +156,7 @@ const Cases = () => {
                         don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
 
-                        <h2 >Which legal agreements will be implemented?</h2>
+                        <h2 >What kind of legal agreements will be implemented?</h2>
                         We will ask our community to help us find the most usefull legal agreements for them.
 
                         <h2 >When will these features be implemented?</h2>
@@ -159,7 +165,10 @@ const Cases = () => {
                         <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
                         Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
                         After some time we will deploy them to other Ethereum L2 scaling solutions.  
-                        We haven't yet decided which scalin solutions will be used.
+                        We haven't yet decided which scalin solutions will be used.  
+
+                        <h2 >How much commission will we charge?</h2>
+                        This smart contracts are still in the building and testing phase, therefore, we can't provide the exact number.
                     </p>
                   </div>
                 </div>
@@ -180,7 +189,7 @@ const Cases = () => {
                         don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
 
-                        <h2 >Which financial agreements will be implemented?</h2>
+                        <h2 >What kind of financial agreements will be implemented?</h2>
                         Enabling person A to commit sending payment every X amount to person B every Y time period for the duration of Z time starting at Q.<br></br>
                         Enabling person A to commit sending a payment till T.<br></br>
                         Also, we are open to any suggestions fromour community.<br></br>
