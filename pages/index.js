@@ -166,9 +166,9 @@ const Homepage = () => {
                       How it works
                     </text>
                     <p className="has-text-centered mt-6">
-                      <Link href="how-it-works">
-                        <a>Read the details</a>
-                      </Link>
+                    <Link href="/how-it-works">
+                      <button className="button is-outlined py-2 px-6 is-size-6">Details</button>
+                    </Link>
                     </p>
                   </div>
                 </div>
