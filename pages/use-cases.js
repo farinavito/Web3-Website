@@ -57,19 +57,21 @@ const Cases = () => {
                 </div>
             </nav>
 
-            <section id='first' className="hero is-halfheight has-background-black-ter">
+            <section id='first' className="hero is-medium has-background-black-ter">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
                     Buy and sell goods
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
-                        <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and 
-                        don't have physical access to one another, fulfill their obligations to eachother
+                        <h2>The purpose</h2>
+                        Increasing economies by providing a worldwide system where buyers and sellers can exchange goods without trusting eachother. 
+                        <h2 >How to achieve the above?</h2>
+                        By using smart contracts, we make sure that subjects who don't know eachother and 
+                        don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
-                        <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and 
+                        <h2 >How to achieve the above?</h2>
+                        By using smart contracts, we make sure that subjects who don't know eachother and 
                         don't have physical access to one another, fulfill their obligations to eachother 
                         without cheating the system.
                     </p>
@@ -77,7 +79,7 @@ const Cases = () => {
                 </div>
             </section>
 
-            <section id="second" className="hero is-halfheight has-background-black-bis">
+            <section id="second" className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
@@ -93,7 +95,7 @@ const Cases = () => {
                 </div>
             </section>
 
-            <section id='third' className="hero is-halfheight has-background-black-ter">
+            <section id='third' className="hero is-medium has-background-black-ter">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
@@ -109,7 +111,7 @@ const Cases = () => {
                 </div>
             </section>
 
-            <section id='forth' className="hero is-halfheight has-background-black-bis">
+            <section id='forth' className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
