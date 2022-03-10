@@ -220,7 +220,7 @@ const Homepage = () => {
                 <div className="columns">
                   <div className="column has-text-centered mt-6">
                     <text className="title ">
-                      Deployed smart contract's statistic
+                      Deployed features
                     </text>
                     <p className="has-text-centered mt-6">
                     <Link href="/how-it-works">
