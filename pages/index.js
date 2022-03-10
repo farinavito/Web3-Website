@@ -223,7 +223,7 @@ const Homepage = () => {
                       Deployed features
                     </text>
                     <p className="has-text-centered mt-6">
-                    <Link href="/how-it-works">
+                    <Link href="/deployed-features">
                       <button className="button is-outlined py-2 px-6 is-size-6">Details</button>
                     </Link>
                     </p>
@@ -238,7 +238,7 @@ const Homepage = () => {
                       Statistic
                     </text>
                     <p className="has-text-centered mt-6">
-                    <Link href="/how-it-works">
+                    <Link href="/statistic">
                       <button className="button is-outlined py-2 px-6 is-size-6">Join</button>
                     </Link>
                     </p>
@@ -253,7 +253,7 @@ const Homepage = () => {
                     Our community
                     </text>
                     <p className="has-text-centered mt-6">
-                    <Link href="/how-it-works">
+                    <Link href="/community">
                       <button className="button is-outlined py-2 px-6 is-size-6">Join</button>
                     </Link>
                     </p>
