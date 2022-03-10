@@ -248,7 +248,22 @@ const Homepage = () => {
                     </text>
                     <p className="has-text-centered mt-6">
                     <Link href="/deployed-features">
-                      <button className="button is-outlined py-2 px-6 is-size-6">Details</button>
+                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">Ethereum</button>
+                    </Link>
+                    <Link href="/deployed-features">
+                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">Polygon</button>
+                    </Link>
+                    <Link href="/deployed-features">
+                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">StarkNet</button>
+                    </Link>
+                    <Link href="/deployed-features">
+                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">Arbitrum</button>
+                    </Link>
+                    <Link href="/deployed-features">
+                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">Optimism</button>
+                    </Link>
+                    <Link href="/deployed-features">
+                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">zkSync</button>
                     </Link>
                     </p>
                   </div>
@@ -261,7 +276,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            <section className="hero is-halfheight has-background-black-bis">
+            <section className="hero is-medium has-background-black-bis">
                 <div className="columns">
                   <div className="column has-text-centered mt-6">
                     <text className="title ">
@@ -273,6 +288,12 @@ const Homepage = () => {
                     </Link>
                     </p>
                   </div>
+                </div>
+            </section>
+
+            <section className="hero is-small has-background-black-bis">
+                <div className="columns">
+                <div className="column has-text-centered mt-6"></div>
                 </div>
             </section>
 
