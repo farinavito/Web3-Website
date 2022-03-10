@@ -216,7 +216,7 @@ const Homepage = () => {
                 </div>                         
             </section>
 
-            <section className="hero is-halfheight has-background-black-bis">
+            <section className="hero is-medium has-background-black-bis">
                 <div className="columns">
                   <div className="column has-text-centered mt-6">
                     <text className="title ">
@@ -231,11 +231,26 @@ const Homepage = () => {
                 </div>
             </section>
 
+            <section className="hero is-halfheight has-background-black-bis">
+                <div className="columns">
+                  <div className="column has-text-centered mt-6">
+                    <text className="title ">
+                      Statistic
+                    </text>
+                    <p className="has-text-centered mt-6">
+                    <Link href="/how-it-works">
+                      <button className="button is-outlined py-2 px-6 is-size-6">Join</button>
+                    </Link>
+                    </p>
+                  </div>
+                </div>
+            </section>
+
             <section className="hero is-medium has-background-black-bis">
                 <div className="columns">
                   <div className="column has-text-centered mt-6">
                     <text className="title ">
-                      Our community
+                    Our community
                     </text>
                     <p className="has-text-centered mt-6">
                     <Link href="/how-it-works">
