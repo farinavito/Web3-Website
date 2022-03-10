@@ -276,7 +276,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            <section className="hero is-halfheight has-background-black-bis">
+            <section className="hero is-medium has-background-black-bis">
                 <div className="columns">
                   <div className="column has-text-centered mt-6">
                     <text className="title ">
@@ -287,52 +287,9 @@ const Homepage = () => {
                       <button className="button is-outlined py-2 px-6 is-size-6">Show more</button>
                     </Link>
                     </p>
+                    <div className="column has-text-centered mt-6"></div>
                   </div>
                 </div>
-
-                <div className="hero-body py-0">
-                  <div className="container has-text-centered py-0">
-                      <div className="columns py-0">
-                        <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-6">
-                            Create a verbal agreement<br></br>
-                            with another subject
-                            <p className="box has-background-black-ter py-1">
-                            <Link href=""><a><br></br></a></Link>
-                            </p>
-                          </p>
-                        </div>
-                        <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-6">
-                            Choose the right smart contract<br></br>
-                            for the agreed
-                            <p className="box has-background-black-ter py-1">
-                            <Link href=""><a><br></br></a></Link>
-                            </p>
-                          </p>
-                        </div>
-                        <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-6">
-                            Follow its rules or<br></br>
-                            be penalized
-                            <p className="box has-background-black-ter py-1">
-                            <Link href=""><a><br></br></a></Link>
-                            </p>
-                          </p> 
-                        </div>
-                        <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-6">
-                            Get the reward or loose a part<br></br>
-                            of your transaction
-                            <p className="box has-background-black-ter py-1">
-                            <Link href=""><a><br></br></a></Link>
-                            </p>
-                          </p>
-                        </div>
-                      </div>
-                  </div>
-                </div> 
-
             </section>
 
             <section className="hero is-small has-background-black-bis">
