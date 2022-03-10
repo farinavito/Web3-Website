@@ -81,17 +81,16 @@ const How = () => {
                 </div>
             </nav>
 
-            <section className="hero is-halfheight has-background-black-bis">
+            <section id='first' className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
-                        Enabling trust between subjects
+                    Implemented smart contracts
                     </text>
-                    <p className="has-text-centered pt-4">
-                        <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
-                        without cheating the system.
+                    <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
+                        <h2></h2>
+                        1. Person A commits sending X amount to person B every Y time period for the duration of Z time starting at Q
+                        
                     </p>
                   </div>
                 </div>
