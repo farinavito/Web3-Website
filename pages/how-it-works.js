@@ -11,7 +11,7 @@ const How = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <nav className="navbar is-primary is-fixed-top has-background-black-ter">
+            <nav className="navbar is-primary is-fixed-top has-background-black-bis">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
@@ -81,7 +81,7 @@ const How = () => {
                 </div>
             </nav>
 
-            <section className="hero is-halfheight has-background-black-ter">
+            <section className="hero is-halfheight has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
@@ -113,7 +113,7 @@ const How = () => {
                 </div>
             </section>
 
-            <section className="hero is-halfheight has-background-black-ter">
+            <section className="hero is-halfheight has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
