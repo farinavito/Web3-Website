@@ -239,7 +239,7 @@ const Homepage = () => {
                     </text>
                     <p className="has-text-centered mt-6">
                     <Link href="/statistic">
-                      <button className="button is-outlined py-2 px-6 is-size-6">Join</button>
+                      <button className="button is-outlined py-2 px-6 is-size-6">Details</button>
                     </Link>
                     </p>
                   </div>
