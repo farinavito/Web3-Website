@@ -255,6 +255,12 @@ const Homepage = () => {
                 </div>
             </section>
 
+            <section className="hero is-small has-background-black-bis">
+                <div className="columns">
+                <div className="column has-text-centered mt-6"></div>
+                </div>
+            </section>
+
             <section className="hero is-halfheight has-background-black-bis">
                 <div className="columns">
                   <div className="column has-text-centered mt-6">

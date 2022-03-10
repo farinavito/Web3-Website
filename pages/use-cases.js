@@ -15,7 +15,10 @@ const Cases = () => {
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
-                            <div className='navbar-item'></div>
+                        <div className='navbar-item'></div>
+                        <div className='navbar-item'></div>
+                        <div className='navbar-item'></div>
+                        <div className='navbar-item'></div>
                             <div className='navbar-item'>
                                 <Link href='/'>
                                     <a><h1>A web app</h1></a>
