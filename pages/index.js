@@ -22,6 +22,9 @@ const Homepage = () => {
                     <div className="container">
                         <div className="navbar-brand">
                         <div className='navbar-item'></div>
+                        <div className='navbar-item'></div>
+                        <div className='navbar-item'></div>
+                        <div className='navbar-item'></div>
                           <div className='navbar-item'>
                             <Link href='/'>
                                 <a><h1>A web app</h1></a>
@@ -49,6 +52,27 @@ const Homepage = () => {
                   <div className='navbar-item'>
                     <Link href='/how-it-works'>
                         <a>How it works</a>
+                    </Link>
+                  </div>
+                </div>
+                <div className="navbar-end">
+                  <div className='navbar-item'>
+                    <Link href='/deployed-features'>
+                        <a>Features</a>
+                    </Link>
+                  </div>
+                </div>
+                <div className="navbar-end">
+                  <div className='navbar-item'>
+                    <Link href='/statistic'>
+                        <a>Statistic</a>
+                    </Link>
+                  </div>
+                </div>
+                <div className="navbar-end">
+                  <div className='navbar-item'>
+                    <Link href='/community'>
+                        <a>Community</a>
                     </Link>
                   </div>
                 </div>
