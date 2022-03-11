@@ -76,6 +76,18 @@ const Statistic = () => {
                   </div>
                 </div>
             </nav>
+
+            <section className="hero is-fullheight has-background-black-bis">
+                <div className="hero-body">
+                  <div className="container has-text-centered">
+                    <p>
+                        UNDER CONSTRUCTION
+                        
+                    </p>
+                  </div>
+                </div>
+            </section>
+
         </div>
     )
 }
