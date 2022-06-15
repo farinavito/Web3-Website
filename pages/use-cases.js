@@ -103,14 +103,11 @@ const Cases = () => {
                         We can't provide any exact date. However, we are trying to provide it as soon as possible.
 
                         <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
-                        Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
-                        After some time we will deploy them to other Ethereum L2 scaling solutions.  
-                        We haven't yet decided which scalin solutions will be used.  
+                        We haven't yet decided, but we will surely deploy them to many blockchains.
+                        Probably, we will first deploy them on Ethereum L2 solutions..  
 
                         <h2 >How much commission will we charge?</h2>
-                        A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
-                        This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
-                        The exact commission amount can be checked for a specific smart contract.
+                        Nothing, you can use it for free.
                     </p>
                   </div>
                 </div>
@@ -141,7 +138,7 @@ const Cases = () => {
 
                         <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
                         We haven't yet decided, but we will surely deploy them to many blockchains.
-                        Probably, we will firstly deploy on Ethereum L2 solutions.
+                        Probably, we will first deploy them on Ethereum L2 solutions.
 
                         <h2 >How much commission do we charge?</h2>
                         Nothing, you can use it for free.
