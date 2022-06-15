@@ -155,6 +155,37 @@ const Cases = () => {
                 </div>
             </section>
 
+            <section id='third' className="hero is-medium has-background-black-bis">
+                <div className="hero-body">
+                  <div className="container has-text-centered">
+                    <text className="title mb-6">
+                    Token vault
+                    </text>
+                    <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
+                        <h2>The purpose</h2>
+                        Enabling people to not get emotional in the bear markets and sell ethers.
+                        
+                        <h2>How to achieve the above?</h2>
+                        The user can send ethers to the smart contract and specifies from which date onwards can the ethers be withdrawn.
+
+                        <h2>Which tokens can be locked in this vault?</h2>
+                        Currently, only ethers. We will discuss pros ans cons of creating a vault for other tokens and see if this would be a beneficial project. 
+
+                        <h2 >When will these features be implemented?</h2>
+                        The vault for locking ether is already implemented.
+
+                        <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
+                        Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
+                        After some time we will deploy them to other Ethereum L2 scaling solutions.  
+                        We haven't yet decided which scalin solutions will be used.
+
+                        <h2 >How much commission do we charge?</h2>
+                        Nothing, it's free for using.
+                    </p>
+                  </div>
+                </div>
+            </section>
+
         </div>
         
     )
