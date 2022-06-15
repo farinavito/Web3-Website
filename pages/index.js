@@ -113,72 +113,56 @@ const Homepage = () => {
                 </div>
                 <div className="hero-body py-0">
                   <div className="container has-text-centered py-0">
-                      <div className="columns py-0">
-                        <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5 has-text-primary">
-                            Buy and sell goods<br></br><br></br>
-                            <p className=" has-background-black-ter py-4 is-size-6">
-                              Exchange goods with people <br></br> 
-                              all over the world
-                            </p>
-                            <p className="box has-background-black-ter pt-4 pb-3">
-                              <div className='columns is-centered'>
-                                <Link href="/use-cases#first">
-                                  <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
-                                </Link>
-                              </div>
-                            </p>
+                    <div className="columns py-0">
+                      <div className="column py-0">
+                        <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-5 has-text-primary">
+                          Legal agreements<br></br><br></br>
+                          <p className=" has-background-black-ter py-4 is-size-6">
+                            Create contracts with people<br></br>
+                            you don't trust or know
                           </p>
-                        </div>
-                        <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5 has-text-primary">
-                            Buy and sell services<br></br><br></br>
-                            <p className=" has-background-black-ter py-4 is-size-6">
-                              Offer your services worldwide <br></br>
-                              without any risk
-                            </p>
-                            <p className="box has-background-black-ter pt-4 pb-3">
-                              <div className='columns is-centered'>
-                                <Link href="/use-cases#second">
-                                  <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
-                                </Link>
-                              </div>
-                            </p>
+                          <p className="box has-background-black-ter pt-4 pb-3">
+                            <div className='columns is-centered'>
+                              <Link href="/use-cases#third">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
+                              </Link>
+                            </div>
                           </p>
-                        </div>
-                        <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-5 has-text-primary">
-                            Legal agreements<br></br><br></br>
-                            <p className=" has-background-black-ter py-4 is-size-6">
-                              Create contracts with people<br></br>
-                              you don't trust or know
-                            </p>
-                            <p className="box has-background-black-ter pt-4 pb-3">
-                              <div className='columns is-centered'>
-                                <Link href="/use-cases#third">
-                                  <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
-                                </Link>
-                              </div>
-                            </p>
-                          </p>
-                        </div>
-                        <div className="column py-0">
-                          <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5 has-text-primary">
-                            Financial commitments<br></br><br></br>
-                            <p className=" has-background-black-ter py-4 is-size-6">
-                              Fulfill your financial obligations<br></br>
-                              to your contract's signees
-                            </p>
-                            <p className="box has-background-black-ter pt-4 pb-3">
-                              <div className='columns is-centered'>
-                                <Link href="/use-cases#forth">
-                                  <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
-                                </Link>
-                              </div>
-                            </p>
-                          </p>
-                        </div>
+                        </p>
                       </div>
+                      <div className="column py-0">
+                        <p className="subtitle has-background-black-ter pt-5 pb-3 mb-3 is-size-5 has-text-primary">
+                          Financial commitments<br></br><br></br>
+                          <p className=" has-background-black-ter py-4 is-size-6">
+                            Fulfill your financial obligations<br></br>
+                            to your contract's signees
+                          </p>
+                          <p className="box has-background-black-ter pt-4 pb-3">
+                            <div className='columns is-centered'>
+                              <Link href="/use-cases#forth">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
+                              </Link>
+                            </div>
+                          </p>
+                        </p>
+                      </div>
+                      <div className="column py-0">
+                        <p className="subtitle has-background-black-ter pt-5 pb-3 mb-5 is-size-5 has-text-primary">
+                          Vault<br></br><br></br>
+                          <p className=" has-background-black-ter py-4 is-size-6">
+                            Protect yourself from yourself<br></br>
+                            in a bear market
+                          </p>
+                          <p className="box has-background-black-ter pt-4 pb-3">
+                            <div className='columns is-centered'>
+                              <Link href="/use-cases#third">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
+                              </Link>
+                            </div>
+                          </p>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>                         
             </section>
