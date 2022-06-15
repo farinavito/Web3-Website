@@ -12,7 +12,7 @@ const Why = () => {
             </Head>
             
 
-            <nav className="navbar is-primary has-background-black-ter is-fixed-top">
+            <nav className="navbar is-primary has-background-black-bis is-fixed-top">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
@@ -81,54 +81,33 @@ const Why = () => {
                 </div>
             </nav>
 
-            <section className="hero is-halfheight has-background-black-ter">
+            <section className="hero is-fullheight has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
-                        Enabling trust between subjects
+                        Why? Simple, we want to help communities to flourish
                     </text>
                     <p className="has-text-centered pt-4">
                         <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
-                        without cheating the system.
+                        <h2>Firstly,</h2>we believe by enabling members of community to work together without trusting one another, <br></br>
+                        will enable communities to thrive in ways we or maybe even the community cannot imagine. <br></br>
+                        This potential of what communities could achieve keeps us on the track of constantly building. <br></br>
+                        <br></br>
+                        <h2>Secondly,</h2>we want to create a system which doesn't discriminate and where everybody is treated equally, <br></br>
+                        no matter of their gender, sex orientation, political orientation, country of origin or nationality. <br></br>
+                        No one should be excluded from having access to legal and financial tools, based on previously mentioned above.<br></br>
+                        <br></br>
+                        <h2>Thirdly,</h2>we want to add our small contribution to improving the world. We are inspired by an old, but for us still relevant document:<br></br>
+                        A Declaration of Independence of Cyberspace from John Perry Barlow, 1996,<br></br>
+                        Even though, our product isn't only tied to the internet communities, we see them as the mirror of the world, our world.<br></br>
+                        <br></br>
+                        <h2>Fourthly,</h2>we do understand there are bad people with ill intentions in this world. We have created this website in good faith<br></br>
+                        to be used for good. Because "good" can have different meaning in different communities, we imply on you: <br></br>
+                        Treat others as you want to be treated. It's so much easier to destroy than to build. Please, remember that.
                     </p>
                   </div>
                 </div>
             </section>
-
-            <section className="hero is-halfheight has-background-black-bis">
-                <div className="hero-body">
-                  <div className="container has-text-centered">
-                    <text className="title">
-                        Enabling trust between subjects
-                    </text>
-                    <p className="has-text-centered pt-4">
-                        <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
-                        without cheating the system.
-                    </p>
-                  </div>
-                </div>
-            </section>
-
-            <section className="hero is-halfheight has-background-black-ter">
-                <div className="hero-body">
-                  <div className="container has-text-centered">
-                    <text className="title">
-                        Enabling trust between subjects
-                    </text>
-                    <p className="has-text-centered pt-4">
-                        <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
-                        without cheating the system.
-                    </p>
-                  </div>
-                </div>
-            </section>
-
         </div>
         
     )
