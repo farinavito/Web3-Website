@@ -132,24 +132,19 @@ const Cases = () => {
                         without cheating the system.
 
                         <h2 >What kind of financial agreements will be implemented?</h2>
-                        Enabling person A to commit sending payment every X amount to person B every Y time period for the duration of Z time starting at Q.<br></br>
-                        Enabling person A to commit sending a payment till T.<br></br>
-                        Also, we are open to any suggestions fromour community.<br></br>
-
+                        Currently, there are two:<br></br>
+                        1) Enabling person A to commit sending payment every X amount to person B every Y time period for the duration of Z time starting at Q.<br></br>
+                        2) Enabling person A to commit sending a payment till T.<br></br>
+                        
                         <h2 >When will these features be implemented?</h2>
-                        We have already deployed a smart contract enabling person A to commit sending payment 
-                        every X amount to person B every Y time period for the duration of Z time starting at Q.
-                        In the short future we will deploy a smart contract that will enable subjects to commit sending a payment till T.
+                        Both of the features mentioned above are already implemented.
 
                         <h2 >Which blockchains will be used to deploy the smart contracts?</h2>
-                        Firstly, the smart contracts will be deployed on the Ethereum mainnet. 
-                        After some time we will deploy them to other Ethereum L2 scaling solutions.  
-                        We haven't yet decided which scalin solutions will be used.
+                        We haven't yet decided, but we will surely deploy them to many blockchains.
+                        Probably, we will firstly deploy on Ethereum L2 solutions.
 
                         <h2 >How much commission do we charge?</h2>
-                        A feature in the smart contract lets us to change the commission from 1 to 10**15 weis. 
-                        This enables us to respond to rapid changes in supply and demand of our system and other events in the world.
-                        The exact commission amount can be checked for a specific smart contract.
+                        Nothing, you can use it for free.
                     </p>
                   </div>
                 </div>
@@ -180,7 +175,7 @@ const Cases = () => {
                         We haven't yet decided which scalin solutions will be used.
 
                         <h2 >How much commission do we charge?</h2>
-                        Nothing, it's free for using.
+                        Nothing, you can use it for free.
                     </p>
                   </div>
                 </div>
