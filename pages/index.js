@@ -123,7 +123,7 @@ const Homepage = () => {
                           </p>
                           <p className="box has-background-black-ter pt-4 pb-3">
                             <div className='columns is-centered'>
-                              <Link href="/use-cases#third">
+                              <Link href="/use-cases#firts">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
                               </Link>
                             </div>
@@ -139,7 +139,7 @@ const Homepage = () => {
                           </p>
                           <p className="box has-background-black-ter pt-4 pb-3">
                             <div className='columns is-centered'>
-                              <Link href="/use-cases#forth">
+                              <Link href="/use-cases#second">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
                               </Link>
                             </div>

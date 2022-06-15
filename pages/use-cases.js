@@ -80,8 +80,8 @@ const Cases = () => {
                     </div>
                 </div>
             </nav>
-            
-            <section id='third' className="hero is-medium has-background-black-bis">
+
+            <section id='first' className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
@@ -116,7 +116,7 @@ const Cases = () => {
                 </div>
             </section>
 
-            <section id='forth' className="hero is-medium has-background-black-bis">
+            <section id='second' className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title mb-6">
