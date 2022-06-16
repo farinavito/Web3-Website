@@ -81,7 +81,7 @@ const How = () => {
                 </div>
             </nav>
 
-            <section id='first' className="hero is-medium has-background-black-bis">
+            <section className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
@@ -95,8 +95,7 @@ const How = () => {
                         4. Choose the smart contract you want to interact with<br></br>
                         5. Act accordingly to the smart contract's specifications <br></br>
                         6. Confirm the transaction in your wallet<br></br>
-                        7. You are all done<br></br>
-                        
+                        7. You are all done<br></br> 
                     </p>
                   </div>
                 </div>
@@ -106,13 +105,11 @@ const How = () => {
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
-                        Enabling trust between subjects
+                        Sending ether before a certain date
                     </text>
-                    <p className="has-text-centered pt-4">
+                    <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
-                        without cheating the system.
+                        Replace this text
                     </p>
                   </div>
                 </div>
@@ -122,13 +119,25 @@ const How = () => {
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
-                        Enabling trust between subjects
+                        Sending installments before a certain date over a time period
                     </text>
-                    <p className="has-text-centered pt-4">
+                    <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
-                        without cheating the system.
+                        Replace this text
+                    </p>
+                  </div>
+                </div>
+            </section>
+
+            <section className="hero is-halfheight has-background-black-bis">
+                <div className="hero-body">
+                  <div className="container has-text-centered">
+                    <text className="title">
+                        Ether vault
+                    </text>
+                    <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
+                        <br></br>
+                        Replace this text
                     </p>
                   </div>
                 </div>
