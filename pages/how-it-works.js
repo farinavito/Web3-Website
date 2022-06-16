@@ -85,11 +85,17 @@ const How = () => {
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
-                    Implemented smart contracts
+                    Interacting with smart contracts
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <h2></h2>
-                        1. Person A commits sending X amount to person B every Y time period for the duration of Z time starting at Q
+                        1. Click on the button "Enter app" in the navbar above<br></br>
+                        2. Connect to your wallet by clicking the "Connect wallet" button<br></br>
+                        3. Your wallet will open. Enter the password<br></br>
+                        4. Choose the smart contract you want to interact with<br></br>
+                        5. Act accordingly to the smart contract's specifications <br></br>
+                        6. Confirm the transaction in your wallet<br></br>
+                        7. You are all done<br></br>
                         
                     </p>
                   </div>
