@@ -133,11 +133,19 @@ const How = () => {
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <text className="title">
-                        Ether vault
+                        Token vault
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
-                        Replace this text
+                        This is detailed description of step 5 in Interacting with smart contracts section <br></br>
+                        You are now in the Token vault dapp's section and your wallet is connected to dapp <br></br><br></br>
+                        1. Go to Deposit section and enter for how long you want to lock up your tokens <br></br>
+                        2. Click on the Deposit button <br></br>
+                        3. A new pop-up will promp you to confirm the transaction <br></br>
+                        4. Before confirming it, you must enter the number of tokens you want to lock up <br></br>
+                        5. Confirm the transaction <br></br>
+                        6. You will get notified if the transaction succeded or failed
+
                     </p>
                   </div>
                 </div>
