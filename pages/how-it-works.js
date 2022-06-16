@@ -51,13 +51,6 @@ const How = () => {
                 </div>
                 <div className="navbar-end">
                     <div className='navbar-item'>
-                        <Link href='/deployed-features'>
-                            <a>Features</a>
-                        </Link>
-                    </div>
-                </div>
-                <div className="navbar-end">
-                    <div className='navbar-item'>
                         <Link href='/statistic'>
                             <a>Statistic</a>
                         </Link>
