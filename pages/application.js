@@ -53,11 +53,11 @@ const App = () => {
                 </div>
                 
                 <div className="navbar-end">
-                <div className='navbar-item'>
+                    <div className='navbar-item'>
                         <Link href='/why'>
                             <a>Why</a>
                         </Link>
-                </div>
+                    </div>
                 </div>
                 <div className="navbar-end">
                     <div className='navbar-item'>
@@ -80,19 +80,12 @@ const App = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="navbar-end">
-                <div className='navbar-item'>
-                    <Link href='/application'>
-                        <a>Enter app</a>
-                    </Link>
-                </div>
-                </div>
                 <div className='navbar-end'>
-                <div className='navbar-item'>
-                    <button onClick={connectWalletHandler} className="button ">Connect wallet</button>
+                    <div className='navbar-item'>
+                        <button onClick={connectWalletHandler} className="button ">Connect wallet</button>
+                    </div>
                 </div>
-                </div>
-                <div className='navbar-item'>
+                     <div className='navbar-item'>
                 </div>
             </nav>
 
