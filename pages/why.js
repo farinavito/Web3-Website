@@ -90,16 +90,16 @@ const Why = () => {
                     <p className="has-text-centered pt-4">
                         <br></br>
                         <h2>Firstly,</h2>we believe by enabling members of community to work together without trusting one another, <br></br>
-                        will enable communities to thrive in ways we or maybe even the community cannot imagine. <br></br>
+                        will enable communities to thrive in ways we or maybe even the communities cannot imagine. <br></br>
                         This potential of what communities could achieve keeps us on the track of constantly building. <br></br>
                         <br></br>
                         <h2>Secondly,</h2>we want to create a system which doesn't discriminate and where everybody is treated equally, <br></br>
                         no matter of their gender, sex orientation, political orientation, country of origin or nationality. <br></br>
-                        No one should be excluded from having access to legal and financial tools, based on previously mentioned above.<br></br>
+                        No one should be excluded from having access to legal and financial tools, because of the above.<br></br>
                         <br></br>
-                        <h2>Thirdly,</h2>we want to add our small contribution to improving the world. We are inspired by an old, but for us still relevant document:<br></br>
-                        A Declaration of Independence of Cyberspace from John Perry Barlow, 1996,<br></br>
-                        Even though, our product isn't only tied to the internet communities, we see them as the mirror of the world, our world.<br></br>
+                        <h2>Thirdly,</h2>we want to add our small piece of puzzle in creating a better world where we want to live in, our world.<br></br> 
+                        We are inspired by an old, really famous in the internet community and for us still relevant document:<br></br>
+                        A Declaration of Independence of Cyberspace from John Perry Barlow, 1996. If you haven't, please read it.<br></br>
                         <br></br>
                         <h2>Fourthly,</h2>we do understand there are bad people with ill intentions in this world. We have created this website in good faith<br></br>
                         to be used for good. Because "good" can have different meaning in different communities, we imply on you: <br></br>
