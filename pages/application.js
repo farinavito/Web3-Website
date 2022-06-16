@@ -81,13 +81,6 @@ const App = () => {
                     </div>
                 </div>
                 <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/community'>
-                            <a>Community</a>
-                        </Link>
-                    </div>
-                </div>
-                <div className="navbar-end">
                 <div className='navbar-item'>
                     <Link href='/application'>
                         <a>Enter app</a>
