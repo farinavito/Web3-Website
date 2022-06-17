@@ -141,14 +141,16 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           DEPOSIT<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            Please enter for how long<br></br>
-                            you will lock up your funds
+                            Enter lock up time<br></br>
                           </p>
                           <input type="text" id="time"></input>
-                          <p className="box has-background-black-bis pt-4 pb-3">
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br><br></br><br></br><br></br>
+                          </p>
+                          <p className="box has-background-black-bis pt-4 pb-3 mt-3">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
+                                <button className="button is-outlined py-2 px-6 is-size-6">Deposit </button>
                               </Link>
                             </div>
                           </p>
@@ -158,15 +160,17 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           WITHDRAW<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            Fulfill your financial obligations<br></br>
-                            to your contract's signees
+                            Enter the funds id<br></br>
                           </p>
                           <input type="text" id="funds_id"></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            Enter the withdrawn quantity<br></br>
+                          </p>
                           <input type="text" id="funds_amount"></input>
-                          <p className="box has-background-black-bis pt-4 pb-3">
+                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
+                                <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
                               </Link>
                             </div>
                           </p>
