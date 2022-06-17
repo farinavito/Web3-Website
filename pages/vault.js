@@ -142,9 +142,9 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           DEPOSIT<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
-                            Lock up time:<br></br>
+                            <br></br>
                           </p>
-                          <input type="text" id="time" className='has-background-primary input is-normal'></input>
+                          <input type="text" id="time" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br>
                           </p>
@@ -161,13 +161,13 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           WITHDRAW<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            Funds id:<br></br>
+                            <br></br>
                           </p>
-                          <input type="text" placeholder="Funds id" class='has-background-primary input is-normal'></input>
+                          <input type="text" placeholder="Enter the id from My funds" class='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            Withdrawn quantity:<br></br>
+                            <br></br>
                           </p>
-                          <input type="text" id="funds_amount" className='has-background-primary input is-normal'></input>
+                          <input type="text" id="funds_amount" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal'></input>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
