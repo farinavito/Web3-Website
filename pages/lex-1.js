@@ -139,7 +139,7 @@ const App = () => {
                       </div>
                       <div id='first'className="column py-0">
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          1st commitments<br></br><br></br>
+                         lex-1<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             Fulfill your financial obligations<br></br>
                             to your contract's signees

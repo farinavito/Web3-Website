@@ -1,0 +1,36 @@
+.main h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.main h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.main a{
+    color: white;
+}
+
+.main section div div .wrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.main a:hover {
+    color: hsl(171, 100%, 41%);
+}
+
+.main button {
+    background-color: hsl(0, 0%, 7%);
+    border: 1px solid hsl(171, 100%, 41%);
+    color: hsl(171, 100%, 41%);
+}
+
+.main button:hover {
+    background-color: hsl(171, 100%, 41%);
+    border: 1px solid black;
+    color: black;
+}
