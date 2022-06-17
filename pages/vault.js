@@ -141,9 +141,9 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           DEPOSIT<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            Enter lock up time<br></br>
+                            Lock up time:<br></br>
                           </p>
-                          <input type="text" id="time"></input>
+                          <input type="text" id="time" className='has-background-primary'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br>
                           </p>
@@ -160,13 +160,13 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           WITHDRAW<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            Enter the funds id<br></br>
+                            Funds id:<br></br>
                           </p>
-                          <input type="text" id="funds_id"></input>
+                          <input type="text" id="funds_id" className='has-background-primary'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            Enter the withdrawn quantity<br></br>
+                            Withdrawn quantity:<br></br>
                           </p>
-                          <input type="text" id="funds_amount"></input>
+                          <input type="text" id="funds_amount" className='has-background-primary'></input>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
