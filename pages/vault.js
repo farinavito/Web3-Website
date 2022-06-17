@@ -176,20 +176,10 @@ const App = () => {
                           </p>
                         </p>
                       </div>
-                      <div id='first'className="column mt-6 pt-6">
+                      <div className="column mt-6 pt-6" >
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           MY FUNDS<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            Fulfill your financial obligations<br></br>
-                            to your contract's signees
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3">
-                            <div className='columns is-centered'>
-                              <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
-                              </Link>
-                            </div>
-                          </p>
+                          
                         </p>
                       </div>
                     </div>
