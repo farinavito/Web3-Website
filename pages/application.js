@@ -35,7 +35,7 @@ const App = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <nav className="navbar is-primary is-fixed-top has-background-black-ter">
+            <nav className="navbar is-primary is-fixed-top has-background-black-bis">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
@@ -99,6 +99,70 @@ const App = () => {
                 <div className="container has-text-danger">
                     <p>{error}</p>
                 </div>
+            </section>
+
+            <section className="hero has-background-black-bis is-fullheight mr-6 pr-6">
+                <div className="hero-body py-0 pr-6 mr-6">
+                  <div className="container has-text-centered pr-6">
+                    <div className="columns  pr-6">
+                      <div className="column py-0 is-one-fifth ">
+                        <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
+                          Smart contracts<br></br><br></br>
+                          <p className="box has-background-black-bis pt-4 pb-3">
+                            <div className='columns is-centered'>
+                              <Link href="/application#first">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
+                              </Link>
+                            </div>
+                          </p>
+                          <p className="box has-background-black-bis pt-4 pb-3">
+                            <div className='columns is-centered'>
+                              <Link href="/application#second">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
+                              </Link>
+                            </div>
+                          </p>
+                          <p className="box has-background-black-bis pt-4 pb-3">
+                            <div className='columns is-centered'>
+                              <Link href="/application#third">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
+                              </Link>
+                            </div>
+                          </p>
+                          <p className="box has-background-black-bis pt-4 pb-3">
+                            <div className='columns is-centered'>
+                              <Link href="/">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
+                              </Link>
+                            </div>
+                          </p>
+                          <p className=" has-background-black-bis py-4 pr-6 is-size-6">
+                            <br></br><br></br><br></br><br></br><br></br>
+                          </p>
+                          <p className=" has-background-black-bis py-4 pr-6 is-size-6">
+                            <br></br><br></br><br></br><br></br><br></br>
+                          </p>
+                        </p>
+                      </div>
+                      <div id='first'className="column py-0">
+                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
+                          1st commitments<br></br><br></br>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            Fulfill your financial obligations<br></br>
+                            to your contract's signees
+                          </p>
+                          <p className="box has-background-black-bis pt-4 pb-3">
+                            <div className='columns is-centered'>
+                              <Link href="/use-cases#second">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
+                              </Link>
+                            </div>
+                          </p>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>                         
             </section>
         </div>
         
