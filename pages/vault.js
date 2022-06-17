@@ -5,6 +5,7 @@ import Head from 'next/head'
 import Web3 from 'web3'
 import Link from 'next/link'
 
+
 const App = () => {
 
     const [error, setError] = useState('')
@@ -140,10 +141,10 @@ const App = () => {
                       <div id='first'className="column mt-6 pt-6 ">
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           DEPOSIT<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
+                          <p className="has-background-black-bis py-4 is-size-6">
                             Lock up time:<br></br>
                           </p>
-                          <input type="text" id="time" className='has-background-primary'></input>
+                          <input type="text" id="time" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br>
                           </p>
@@ -162,11 +163,11 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             Funds id:<br></br>
                           </p>
-                          <input type="text" id="funds_id" className='has-background-primary'></input>
+                          <input type="text" placeholder="Funds id" class='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             Withdrawn quantity:<br></br>
                           </p>
-                          <input type="text" id="funds_amount" className='has-background-primary'></input>
+                          <input type="text" id="funds_amount" className='has-background-primary input is-normal'></input>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
@@ -178,8 +179,7 @@ const App = () => {
                       </div>
                       <div className="column mt-6 pt-6" >
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          MY FUNDS<br></br><br></br>
-                          
+                          MY FUNDS<br></br><br></br> 
                         </p>
                       </div>
                     </div>
