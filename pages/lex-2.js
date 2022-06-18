@@ -103,10 +103,10 @@ const App = () => {
 
             <section className="hero has-background-black-bis is-fullheight pr-6">
                 <div className="hero-body py-0 pr-6 mr-6">
-                  <div className="container has-text-centered pr-6">
-                    <div className="columns  pr-6">
+                  <div className="container has-text-centered mt-6 pr-6">
+                    <div className="columns mt-6 pr-6">
                       <div className="column py-0 is-one-fifth ">
-                        <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
+                        <p className=" has-background-black-bis mt-0 pt-5 pb-3 mb-5 pr-6 has-text-primary">
                           <h2>Smart contracts</h2><br></br><br></br>
                           <p className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
@@ -143,48 +143,52 @@ const App = () => {
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" id="time" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
+                          <input type="text" id="time" placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <input type="text" id="time" placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <input type="text" id="time" placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
                           </p>
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Deposit </button>
+                                <button className="button is-outlined py-2 px-6 is-size-6">Create </button>
                               </Link>
                             </div>
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          WITHDRAW RECEIVER<br></br><br></br>
+                          WITHDRAW SENDER<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" id="time" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
+                          <input type="text" id="time" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
                           </p>
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Deposit </button>
+                                <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
                               </Link>
                             </div>
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          SHOW SIGNEE'S WITHDRAWAL AMOUNT<br></br><br></br>
-                          <p className="has-background-black-bis py-4 is-size-6">
+                          SHOW SENDER'S WITHDRAWAL AMOUNT<br></br><br></br>
+                          <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" id="time" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br><br></br><br></br><br></br><br></br>
-                          </p>
-                          <p className="box has-background-black-bis pt-3 pb-3 mt-3">
+                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Deposit </button>
+                                <button className="button is-outlined py-2 px-6 is-size-6">Show </button>
                               </Link>
                             </div>
                           </p>
@@ -196,15 +200,14 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the id from My funds" class='has-background-primary input is-normal'></input>
+                          <input type="text" placeholder="Enter the agreement's id" class='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
+                                <button className="button is-outlined py-2 px-6 is-size-6">Pay </button>
                               </Link>
                             </div>
                           </p>
@@ -214,11 +217,10 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the id from My funds" class='has-background-primary input is-normal'></input>
+                          <input type="text" placeholder="Enter agreement's id" class='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
@@ -232,15 +234,10 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the id from My funds" class='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="text" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
+                                <button className="button is-outlined py-2 px-6 is-size-6">Show </button>
                               </Link>
                             </div>
                           </p>
@@ -252,6 +249,23 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
+                          <input type="text" placeholder="Enter the agreement's id" class='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                            <div className='columns is-centered'>
+                              <Link href="/use-cases#second">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Check </button>
+                              </Link>
+                            </div>
+                          </p>
+                        </p>
+                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
+                          MY SENDER'S AGREEMENTS<br></br><br></br>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
                           <input type="text" placeholder="Enter the id from My funds" class='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
@@ -266,25 +280,7 @@ const App = () => {
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          ME AS THE SENDER<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="text" placeholder="Enter the id from My funds" class='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="text" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
-                            <div className='columns is-centered'>
-                              <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
-                              </Link>
-                            </div>
-                          </p>
-                        </p>
-                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          ME AS THE RECEIVER<br></br><br></br>
+                          MY RECEIVER'S AGREEMENTS<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
