@@ -164,38 +164,6 @@ const App = () => {
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          WITHDRAW SENDER<br></br><br></br>
-                          <p className="has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="text" id="time" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br><br></br><br></br><br></br><br></br>
-                          </p>
-                          <p className="box has-background-black-bis pt-3 pb-3 mt-3">
-                            <div className='columns is-centered'>
-                              <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
-                              </Link>
-                            </div>
-                          </p>
-                        </p>
-                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          SHOW SENDER'S WITHDRAWAL AMOUNT<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
-                            <div className='columns is-centered'>
-                              <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Show </button>
-                              </Link>
-                            </div>
-                          </p>
-                        </p>
-                      </div>
-                      <div id='first'className="column mt-6 pt-6">
-                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           SEND PAYMENT<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
@@ -208,6 +176,50 @@ const App = () => {
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Pay </button>
+                              </Link>
+                            </div>
+                          </p>
+                        </p>
+                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
+                          WAS CONTRACT BREACHED<br></br><br></br>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <input type="text" placeholder="Enter the agreement's id" class='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                            <div className='columns is-centered'>
+                              <Link href="/use-cases#second">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Check </button>
+                              </Link>
+                            </div>
+                          </p>
+                        </p>
+                      </div>
+                      <div id='first'className="column mt-6 pt-6">
+                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
+                          MY RECEIVER'S AGREEMENTS<br></br><br></br>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <input type="text" placeholder="Enter the id from My funds" class='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <input type="text" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <input type="text" id="time" placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br><br></br><br></br>
+                          </p>
+                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                            <div className='columns is-centered'>
+                              <Link href="/use-cases#second">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
                               </Link>
                             </div>
                           </p>
@@ -245,23 +257,6 @@ const App = () => {
                       </div>
                       <div className="column mt-6 pt-6" >
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          WAS CONTRACT BREACHED<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="text" placeholder="Enter the agreement's id" class='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
-                            <div className='columns is-centered'>
-                              <Link href="/use-cases#second">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Check </button>
-                              </Link>
-                            </div>
-                          </p>
-                        </p>
-                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           MY SENDER'S AGREEMENTS<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
@@ -271,6 +266,13 @@ const App = () => {
                             <br></br>
                           </p>
                           <input type="text" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <input type="text" id="time" placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br><br></br><br></br>
+                          </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
@@ -280,19 +282,31 @@ const App = () => {
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          MY RECEIVER'S AGREEMENTS<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
+                          WITHDRAW SENDER<br></br><br></br>
+                          <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the id from My funds" class='has-background-primary input is-normal'></input>
+                          <input type="text" id="time" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
+                            <br></br><br></br><br></br>
                           </p>
-                          <input type="text" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                          <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
+                              </Link>
+                            </div>
+                          </p>
+                        </p>
+                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
+                          SHOW SENDER'S WITHDRAWAL AMOUNT<br></br><br></br>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                            <div className='columns is-centered'>
+                              <Link href="/use-cases#second">
+                                <button className="button is-outlined py-2 px-6 is-size-6">Show </button>
                               </Link>
                             </div>
                           </p>
