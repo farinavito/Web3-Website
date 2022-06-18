@@ -139,7 +139,7 @@ const App = () => {
                       </div>
                       <div id='first'className="column mt-6 pt-6 ">
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          DEPOSIT<br></br><br></br>
+                          CREATE AGREEMENT<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -156,7 +156,7 @@ const App = () => {
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          DEPOSIT<br></br><br></br>
+                          WITHDRAW RECEIVER<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -173,7 +173,7 @@ const App = () => {
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          DEPOSIT<br></br><br></br>
+                          SHOW SIGNEE'S WITHDRAWAL AMOUNT<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -192,7 +192,7 @@ const App = () => {
                       </div>
                       <div id='first'className="column mt-6 pt-6">
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          WITHDRAW<br></br><br></br>
+                          SEND PAYMENT<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -210,7 +210,7 @@ const App = () => {
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          WITHDRAW<br></br><br></br>
+                          WITHDRAW RECEIVER<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -228,7 +228,7 @@ const App = () => {
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          WITHDRAW<br></br><br></br>
+                          SHOW RECEIVER'S WITHDRAWAL AMOUNT<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -248,7 +248,7 @@ const App = () => {
                       </div>
                       <div className="column mt-6 pt-6" >
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          WITHDRAW<br></br><br></br>
+                          WAS CONTRACT BREACHED<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -266,7 +266,7 @@ const App = () => {
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          WITHDRAW<br></br><br></br>
+                          ME AS THE SENDER<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -284,7 +284,7 @@ const App = () => {
                           </p>
                         </p>
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
-                          WITHDRAW<br></br><br></br>
+                          ME AS THE RECEIVER<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
