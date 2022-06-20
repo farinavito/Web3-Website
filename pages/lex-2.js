@@ -106,7 +106,7 @@ const App = () => {
                   <div className="container has-text-centered mt-6 pr-6">
                     <div className="columns mt-6 pr-6">
                       <div className="column py-0 is-one-fifth">
-                        <p className=" has-background-black-bis mt-0 pt-5 pb-3 mb-5 pr-6 has-text-primary">
+                        <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
                           <h2>Smart contracts</h2><br></br><br></br>
                           <p className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>

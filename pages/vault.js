@@ -138,8 +138,8 @@ const App = () => {
                           </p>
                         </p>
                       </div>
-                      <div id='first'className="column mt-6 pt-6 ">
-                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
+                      <div className="column mt-6 pt-6 ">
+                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           DEPOSIT<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
@@ -157,8 +157,8 @@ const App = () => {
                           </p>
                         </p>
                       </div>
-                      <div id='first'className="column mt-6 pt-6">
-                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
+                      <div className="column mt-6 pt-6">
+                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           WITHDRAW<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
@@ -178,7 +178,7 @@ const App = () => {
                         </p>
                       </div>
                       <div className="column mt-6 pt-6" >
-                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
+                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           MY FUNDS<br></br><br></br> 
                         </p>
                       </div>
