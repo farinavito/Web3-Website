@@ -105,7 +105,7 @@ const App = () => {
                 <div className="hero-body py-0 pr-6 mr-6">
                   <div className="container has-text-centered pr-6">
                     <div className="columns  pr-6">
-                      <div className="column py-0 is-one-fifth ">
+                      <div id='sidebar' className="column py-0">
                         <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
                           <h2>Smart contracts</h2><br></br><br></br>
                           <p className="box has-background-black-bis pt-4 pb-3">
@@ -137,7 +137,8 @@ const App = () => {
                           </p>
                         </p>
                       </div>
-                      <div id='first'className="column py-0">
+                      <div className="column"></div>
+                      <div className="column py-0">
                         <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                          lex-1<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
