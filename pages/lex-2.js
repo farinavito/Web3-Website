@@ -138,7 +138,7 @@ const App = () => {
                         </p>
                       </div>
                       <div className="column"></div>
-                      <div id='first'className="column pt-4">
+                      <div className="column pt-4">
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           CREATE AGREEMENT<br></br><br></br>
                           <p className="has-background-black-bis  py-4 is-size-6">
