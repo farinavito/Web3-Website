@@ -103,8 +103,8 @@ const App = () => {
 
             <section className="hero has-background-black-bis is-fullheight pr-6">
                 <div className="hero-body py-0 pr-6 mr-6">
-                  <div className="container has-text-centered pr-6">
-                    <div className="columns  pr-6">
+                  <div className="container has-text-centered mt-6 pr-6">
+                    <div className="columns mt-6 pr-6">
                       <div id='sidebar' className="column py-0">
                         <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
                           <h2>Smart contracts</h2><br></br><br></br>
