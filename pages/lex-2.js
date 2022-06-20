@@ -102,10 +102,10 @@ const App = () => {
             </section>
 
             <section className="hero has-background-black-bis is-fullheight pr-6">
-                <div className="hero-body py-0 pr-6 mr-6">
+                <div className="hero-body  py-0 pr-6 mr-6">
                   <div className="container has-text-centered mt-6 pr-6">
                     <div className="columns mt-6 pr-6">
-                      <div className="column py-0 is-one-fifth">
+                      <div id='sidebar' className="column py-0">
                         <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
                           <h2>Smart contracts</h2><br></br><br></br>
                           <p className="box has-background-black-bis pt-4 pb-3">
@@ -137,10 +137,11 @@ const App = () => {
                           </p>
                         </p>
                       </div>
-                      <div id='first'className="column pt-4 ">
+                      <div className="column"></div>
+                      <div id='first'className="column pt-4">
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           CREATE AGREEMENT<br></br><br></br>
-                          <p className="has-background-black-bis py-4 is-size-6">
+                          <p className="has-background-black-bis  py-4 is-size-6">
                             <br></br>
                           </p>
                           <input type="text" id="time" placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>

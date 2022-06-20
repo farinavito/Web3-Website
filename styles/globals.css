@@ -16,7 +16,18 @@ body {
   border-color: hsl(171, 100%, 41%); 
 }
 
-
+#sidebar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 220px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 1;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 100px;
+  margin-top: 100px;
+}
 
 
 
