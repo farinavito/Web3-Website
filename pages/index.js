@@ -210,36 +210,6 @@ const Homepage = () => {
                 </div>                         
             </section>
 
-            <section className="hero is-medium has-background-black-bis">
-                <div className="columns">
-                  <div className="column has-text-centered mt-6">
-                    <text className="title ">
-                      Deployed features
-                    </text>
-                    <p className="has-text-centered mt-6">
-                    <Link href="/deployed-features">
-                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">Ethereum</button>
-                    </Link>
-                    <Link href="/deployed-features">
-                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">Polygon</button>
-                    </Link>
-                    <Link href="/deployed-features">
-                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">StarkNet</button>
-                    </Link>
-                    <Link href="/deployed-features">
-                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">Arbitrum</button>
-                    </Link>
-                    <Link href="/deployed-features">
-                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">Optimism</button>
-                    </Link>
-                    <Link href="/deployed-features">
-                      <button className="button is-outlined py-2 px-6 mx-5 is-size-6">zkSync</button>
-                    </Link>
-                    </p>
-                  </div>
-                </div>
-            </section>
-
             <section className="hero is-small has-background-black-bis">
                 <div className="columns">
                 <div className="column has-text-centered mt-6"></div>
@@ -258,27 +228,6 @@ const Homepage = () => {
                     </Link>
                     </p>
                     <div className="column has-text-centered mt-6"></div>
-                  </div>
-                </div>
-            </section>
-
-            <section className="hero is-small has-background-black-bis">
-                <div className="columns">
-                <div className="column has-text-centered mt-6"></div>
-                </div>
-            </section>
-
-            <section className="hero is-medium has-background-black-bis">
-                <div className="columns">
-                  <div className="column has-text-centered">
-                    <text className="title ">
-                    Our community
-                    </text>
-                    <p className="has-text-centered mt-6">
-                    <Link href="/community">
-                      <button className="button is-outlined py-2 px-6 is-size-6">Join</button>
-                    </Link>
-                    </p>
                   </div>
                 </div>
             </section>
