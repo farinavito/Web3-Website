@@ -145,7 +145,7 @@ const App = () => {
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" id="time" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
+                          <input type="text" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
                           </p>
