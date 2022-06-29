@@ -232,8 +232,6 @@ const Homepage = () => {
                 </div>
             </section>
 
-            
-
         <footer>
         <section className="hero is-small has-background-black-bis">
             <div className="hero-body">

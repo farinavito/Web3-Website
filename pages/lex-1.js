@@ -169,7 +169,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the agreement's id" class='has-background-primary input is-normal'></input>
+                          <input type="text" placeholder="Enter the agreement's id"></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>

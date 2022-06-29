@@ -6,26 +6,25 @@ import Web3 from 'web3'
 import Link from 'next/link'
 
 const App = () => {
+  const [error, setError] = useState('')
 
-    const [error, setError] = useState('')
+  let web3;
 
-    let web3;
-
-    const connectWalletHandler = async () => {
-        if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
-            //metamask installed
-            try {
-                await window.ethereum.request({ method: "eth_requestAccounts"})
-                web3 = new Web3(window.ethereum)
-            } catch(err) {
-                setError(err.message)
-            }
-            
-        } else {
-            //metamask not installed
-            alert("Please install MetaMask")
-        }
-    }
+  const connectWalletHandler = async () => {
+      if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
+          //metamask installed
+          try {
+              await window.ethereum.request({ method: "eth_requestAccounts"})
+              web3 = new Web3(window.ethereum)
+          } catch(err) {
+              setError(err.message)
+          }
+          
+      } else {
+          //metamask not installed
+          alert("Please install MetaMask")
+      }
+  }
 
     return (
         <div className={styles.main}>
@@ -111,21 +110,21 @@ const App = () => {
                           <p className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
                               <Link href="/lex-1">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Lex-1 </button>
+                                <button id='btn' className="button is-outlined py-2 px-6 is-size-6">Lex-1 </button>
                               </Link>
                             </div>
                           </p>
                           <p className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
                               <Link href="/lex-2">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Lex-2 </button>
+                                <button id='btn' className="button is-outlined py-2 px-6 is-size-6">Lex-2 </button>
                               </Link>
                             </div>
                           </p>
                           <p className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
                               <Link href="/vault">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Vault </button>
+                                <button id='btn' className="button is-outlined py-2 px-6 is-size-6">Vault </button>
                               </Link>
                             </div>
                           </p>
