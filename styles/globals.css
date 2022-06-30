@@ -23,7 +23,7 @@ body {
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 1;
-  background-color: #111; /* Black */
+  background-color: hsl(0, 0%, 7%); /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 100px;
   margin-top: 100px;
