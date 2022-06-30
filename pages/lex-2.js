@@ -143,15 +143,15 @@ const App = () => {
                           <p className="has-background-black-bis  py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the receiver's address" className='has-background-primary input is-normal' ></input>
+                          <input type="number" placeholder="Enter the receiver's address" className='has-background-primary input is-normal' ></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
+                          <input type="number" placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
+                          <input type="number" placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
                           </p>
@@ -168,7 +168,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                          <input type="number" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -185,7 +185,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                          <input type="number" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -204,15 +204,15 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the id from My funds" className='has-background-primary input is-normal'></input>
+                          <input type="number" placeholder="Enter the id from My funds" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
+                          <input type="number" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
+                          <input type="number" placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br>
                           </p>
@@ -229,7 +229,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter agreement's id" className='has-background-primary input is-normal'></input>
+                          <input type="number" placeholder="Enter agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -261,15 +261,15 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the id from My funds" className='has-background-primary input is-normal'></input>
+                          <input type="number" placeholder="Enter the id from My funds" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
+                          <input type="number" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
+                          <input type="number" placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br>
                           </p>
@@ -286,7 +286,7 @@ const App = () => {
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="text" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                          <input type="number" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br>
                           </p>
