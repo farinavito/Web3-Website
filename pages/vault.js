@@ -1,5 +1,6 @@
 import 'bulma/css/bulma.css'
-import { useState } from 'react'
+import contractVault from '../blockchain/web.js'
+import { useState, useEffect } from 'react'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
 import Web3 from 'web3'
@@ -9,8 +10,19 @@ import Link from 'next/link'
 const App = () => {
 
     const [error, setError] = useState('')
+    const [ids, setIds] = useState('')
 
-    let web3;
+    let web3
+
+    useEffect(() => {
+      
+    })
+
+    const getVaultsIds = async () => {
+      const accounts = web3.eth.getAccounts().call()
+      const _ids = await contractVault.methods.mySafes(accounts[0]).call()
+      setIds(_ids)
+    }
 
     const connectWalletHandler = async () => {
         if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
@@ -18,6 +30,7 @@ const App = () => {
             try {
                 await window.ethereum.request({ method: "eth_requestAccounts"})
                 web3 = new Web3(window.ethereum)
+                getVaultsIds()
             } catch(err) {
                 setError(err.message)
             }
@@ -181,6 +194,8 @@ const App = () => {
                       <div className="column mt-6 pt-6" >
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           MY FUNDS<br></br><br></br> 
+                          
+                          <p>Your contract's ids: {ids}</p>
                         </p>
                       </div>
                     </div>
