@@ -1,5 +1,5 @@
 import 'bulma/css/bulma.css'
-import contractVault from '../blockchain/web.js'
+import contractVault from '../blockchain/web'
 import { useState, useEffect } from 'react'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
@@ -19,8 +19,8 @@ const App = () => {
     })
 
     const getVaultsIds = async () => {
-      const accounts = web3.eth.getAccounts().call()
-      const _ids = await contractVault.methods.mySafes(accounts[0]).call()
+      const accounts = web3.eth.getAccounts()
+      const _ids = await contractVault.methods.mySafes(accounts[0], 0)
       setIds(_ids)
     }
 

@@ -4,7 +4,7 @@ pragma solidity ^0.8.11;
 /// @title This smart contract enables you to lock your funds for the time you choose
 /// @author Farina Vito
 
-contract Vault {
+contract Vault2 {
 
     struct Funds{
         uint256 id; 
@@ -33,6 +33,9 @@ contract Vault {
     /// @notice Storing the id's of the safes that the signee has created
     mapping(address => uint[]) public mySafes;
 
+    /// @notice Storing the amount of the caller's safes
+    mapping(address => uint256) internal myNumSafes;
+
     /// @notice After other event than Terminated happens, emit it and send a message
     event NotifyUser(uint256 quantity);
 
@@ -53,6 +56,8 @@ contract Vault {
         newSafe.lockedUpTime = block.timestamp + _lockTime;
         //storing the ids of the safes and connecting them to msg.sender's address so we can display them to the frontend
         mySafes[msg.sender].push(agreementId);
+        //incrementing the number of the caller's safes
+        myNumSafes[msg.sender] += 1;
     }
 
     function withdraw(uint256 _id, uint256 _quantity) external payable noReentrant{
@@ -69,6 +74,13 @@ contract Vault {
         exactSafe[_id].balances -= _quantity;
         //emit the event
         emit NotifyUser(_quantity);  
+    }
+
+    function getMyNumSafes() external view returns(uint256){
+        //checking if the caller has some Safes
+        require(myNumSafes[msg.sender] > 0, "You don't have any depozits");
+        //return the number of safes that the caller has
+        return myNumSafes[msg.sender];
     }
 
     fallback() external {}
