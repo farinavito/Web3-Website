@@ -19,8 +19,8 @@ const App = () => {
     })
 
     const getVaultsIds = async () => {
-      const accounts = web3.eth.getAccounts()
-      const _ids = await contractVault.methods.getMyNumSafes()
+      const accounts = await web3.eth.getAccounts()
+      const _ids = await contractVault.methods.getMyNumSafes().call({from: accounts[0]})
       setIds(_ids)
     }
 
