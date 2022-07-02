@@ -20,7 +20,7 @@ const App = () => {
 
     const getVaultsIds = async () => {
       const accounts = web3.eth.getAccounts()
-      const _ids = await contractVault.methods.mySafes(accounts[0], 0)
+      const _ids = await contractVault.methods.geMyNumSafes({from: accounts[0]})
       setIds(_ids)
     }
 
