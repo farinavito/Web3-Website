@@ -20,8 +20,13 @@ const App = () => {
 
     const getVaultsIds = async () => {
       const accounts = await web3.eth.getAccounts()
-      const _ids = await contractVault.methods.getMyNumSafes().call({from: accounts[0]})
-      setIds(_ids)
+      try {
+        const _ids = await contractVault.methods.getMyNumSafes().call({from: accounts[0]})
+        setIds(_ids)
+      }
+      catch(err) {
+        setError(err.message)
+      }
     }
 
     const connectWalletHandler = async () => {
@@ -195,7 +200,7 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           MY FUNDS<br></br><br></br> 
                           
-                          <p>Your contract's ids: {ids}</p>
+                          <p>Your contract's ids: {ids}</p><p>{error}</p>
                         </p>
                       </div>
                     </div>
