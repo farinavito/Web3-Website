@@ -13,8 +13,7 @@ const abi_vault = [{"anonymous":false,"inputs":[{"indexed":false,"internalType":
 
 const contractLex = new web3.eth.Contract(abi_lex1, "0x66C099fC1075fE96EdBE1D89120A5e27D71A1DE4")
 const contraLex2 = new web3.eth.Contract(abi_lex2, "0x173f14e21D626793703d9b6B8398a1562e35d47e")
-//not correct
-const contractVault = new web3.eth.Contract(abi_vault, "0x75dAa8356C5d0Fe7FfE84Fe26BEBd91147C501E3")
+const contractVault = new web3.eth.Contract(abi_vault, "0x92a6D0C77c6b2C592781B20d8CB4776795215503")
 
 export  {contractLex}
 export {contraLex2}
