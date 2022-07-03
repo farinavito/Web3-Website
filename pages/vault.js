@@ -18,7 +18,7 @@ const App = () => {
     const [contractVault, setContractVault] = useState(null)
 
     useEffect(() => {
-      
+      getVaultsIds()
     })
 
     const getVaultsIds = async () => {
@@ -57,9 +57,10 @@ const App = () => {
                 //set the variable to the first account
                 setAddress(accounts[0])
                 //local copy of the smart contract
-                const localContract = 
+                const localContract = vaultContract(web3)
+                setContractVault(localContract)
 
-                getVaultsIds()
+                
             } catch(err) {
                 setError(err.message)
             }
