@@ -11,6 +11,7 @@ const App = () => {
 
     const [error, setError] = useState('')
     const [errorVault, setErrorVault] = useState('')
+    const [errorDeposit, setErrorDeposit] = useState('')
     const [ids, setIds] = useState('')
     const [depositCount, setDepositCount] = useState('')
     const [web3, setWeb3] = useState(null)
@@ -19,10 +20,9 @@ const App = () => {
 
     useEffect(() => {
       if (contractVault) getVaultsIds()
-    })
+    }, [contractVault])
 
     const getVaultsIds = async () => {
-      const accounts = await web3.eth.getAccounts()
       try {
         const _ids = await contractVault.methods.getMyNumSafes().call({from: address})
         setIds(_ids)
@@ -37,9 +37,13 @@ const App = () => {
     }
 
     const depositFunds = async () => {
-      await contractVault.methods.deposit().send({
-        from: address
-      })
+      try {
+        await contractVault.methods.deposit().send({
+          from: address
+        })
+      } catch(err) {
+
+      }
     }
 
     const connectWalletHandler = async () => {
@@ -186,7 +190,7 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           DEPOSIT<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
-                            <br></br>
+                            <br></br><p>{errorDeposit}</p>
                           </p>
                           <input onChange={updateDepositQty} type="number" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
