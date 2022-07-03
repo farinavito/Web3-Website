@@ -40,8 +40,8 @@ const App = () => {
       try {
         await contractVault.methods.deposit().send({
           from: address,
-          //value: web3.utils.toWei(depositCount, 'ether')
-          value: depositCount
+          value: web3.utils.toWei('1', 'ether') * depositCount
+          //value: depositCount
         })
       } catch(err) {
         setErrorDeposit(err.message)
@@ -53,20 +53,21 @@ const App = () => {
         if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
             //metamask installed
             try {
-                //request wallet connect - metamask pop up window
-                await window.ethereum.request({ method: "eth_requestAccounts"})
-                //set web3 instance
-                web3 = new Web3(window.ethereum)
-                setWeb3(web3)
-                //list of all accounts
-                const accounts = await web3.eth.getAccounts()
-                //set the variable to the first account
-                setAddress(accounts[0])
-                //local copy of the smart contract
-                const localContract = vaultContract(web3)
-                setContractVault(localContract)
+              //request wallet connect - metamask pop up window
+              await window.ethereum.request({ method: "eth_requestAccounts"})
+              //set web3 instance
+              web3 = new Web3(window.ethereum)
+              setWeb3(web3)
+              //list of all accounts
+              const accounts = await web3.eth.getAccounts()
+              //set the variable to the first account
+              setAddress(accounts[0])
+              //local copy of the smart contract
+              const localContract = vaultContract(web3)
+              setContractVault(localContract)
             } catch(err) {
-                setError(err.message)
+              console.log(err.message)
+              console.log(setError(err.message))
             }
             
         } else {
