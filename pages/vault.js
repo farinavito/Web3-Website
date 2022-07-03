@@ -1,5 +1,5 @@
 import 'bulma/css/bulma.css'
-import contractVault from '../blockchain/web'
+import vaultContract from '../blockchain/web'
 import { useState, useEffect } from 'react'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
@@ -18,13 +18,13 @@ const App = () => {
     const [contractVault, setContractVault] = useState(null)
 
     useEffect(() => {
-      getVaultsIds()
+      if (contractVault) getVaultsIds()
     })
 
     const getVaultsIds = async () => {
       const accounts = await web3.eth.getAccounts()
       try {
-        const _ids = await contractVault.methods.getMyNumSafes().call({from: accounts[0]})
+        const _ids = await contractVault.methods.getMyNumSafes().call({from: address})
         setIds(_ids)
       }
       catch(err) {
@@ -38,7 +38,7 @@ const App = () => {
 
     const depositFunds = async () => {
       await contractVault.methods.deposit().send({
-        from: accounts[0]
+        from: address
       })
     }
 
