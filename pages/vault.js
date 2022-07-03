@@ -13,8 +13,7 @@ const App = () => {
     const [errorVault, setErrorVault] = useState('')
     const [ids, setIds] = useState('')
     const [depositCount, setDepositCount] = useState('')
-
-    let web3
+    const [web3, setWeb3] = useState(null)
 
     useEffect(() => {
       
