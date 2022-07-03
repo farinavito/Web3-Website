@@ -39,7 +39,9 @@ const App = () => {
     const depositFunds = async () => {
       try {
         await contractVault.methods.deposit().send({
-          from: address
+          from: address,
+          //value: web3.utils.toWei(depositCount, 'ether')
+          value:depositCount
         })
       } catch(err) {
 
