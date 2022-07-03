@@ -42,12 +42,16 @@ const App = () => {
     }
 
     const connectWalletHandler = async () => {
+      //checking if metamask is available
         if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
             //metamask installed
             try {
+                //request wallet connect - metamask pop up window
                 await window.ethereum.request({ method: "eth_requestAccounts"})
+                //set web3 instance
                 web3 = new Web3(window.ethereum)
                 setWeb3(web3)
+                //list of all accounts
                 getVaultsIds()
             } catch(err) {
                 setError(err.message)
