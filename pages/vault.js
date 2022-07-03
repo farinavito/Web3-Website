@@ -10,6 +10,7 @@ import Link from 'next/link'
 const App = () => {
 
     const [error, setError] = useState('')
+    const [errorVault, setErrorVault] = useState('')
     const [ids, setIds] = useState('')
 
     let web3
@@ -25,7 +26,7 @@ const App = () => {
         setIds(_ids)
       }
       catch(err) {
-        setError(err.message)
+        setErrorVault(err.message)
       }
     }
 
@@ -200,7 +201,7 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           MY FUNDS<br></br><br></br> 
                           
-                          <p>Your contract's ids: {ids}</p><p>{error}</p>
+                          <p>Your contract's ids: {ids}</p><p>{errorVault}</p>
                         </p>
                       </div>
                     </div>
