@@ -12,6 +12,7 @@ const App = () => {
     const [error, setError] = useState('')
     const [errorVault, setErrorVault] = useState('')
     const [ids, setIds] = useState('')
+    const [depositCount, setDepositCount] = useState('')
 
     let web3
 
@@ -28,6 +29,17 @@ const App = () => {
       catch(err) {
         setErrorVault(err.message)
       }
+    }
+
+    const updateDepositQty = event => {
+      setDepositCount(event.target.value)
+    }
+
+    const depositFunds = async () => {
+      const accounts = await web3.eth.getAccounts()
+      await contractVault.methods.deposit().send({
+        from: accounts[0]
+      })
     }
 
     const connectWalletHandler = async () => {
@@ -164,14 +176,14 @@ const App = () => {
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
+                          <input onChange={updateDepositQty} type="number" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
                           </p>
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
                               <Link href="">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Deposit </button>
+                                <button onClick={depositFunds} className="button is-outlined py-2 px-6 is-size-6">Deposit </button>
                               </Link>
                             </div>
                           </p>
@@ -201,7 +213,8 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           MY FUNDS<br></br><br></br> 
                           
-                          <p>Your contract's ids: {ids}</p><p>{errorVault}</p>
+                          <p>Your contract's ids: {ids}</p>
+                          <p>{errorVault}</p>
                         </p>
                       </div>
                     </div>
