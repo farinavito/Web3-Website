@@ -7,10 +7,10 @@ const vaultContract = web3 => {
     return web3.eth.Contract(abi_vault, "0x92a6D0C77c6b2C592781B20d8CB4776795215503")
 }
 
-const contractLex = new web3.eth.Contract(abi_lex1, "0x66C099fC1075fE96EdBE1D89120A5e27D71A1DE4")
-const contraLex2 = new web3.eth.Contract(abi_lex2, "0x173f14e21D626793703d9b6B8398a1562e35d47e")
+//const contractLex = new web3.eth.Contract(abi_lex1, "0x66C099fC1075fE96EdBE1D89120A5e27D71A1DE4")
+//const contraLex2 = new web3.eth.Contract(abi_lex2, "0x173f14e21D626793703d9b6B8398a1562e35d47e")
 
 
-export  {contractLex}
-export {contraLex2}
+//export  {contractLex}
+//export {contraLex2}
 export default vaultContract

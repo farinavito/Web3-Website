@@ -41,10 +41,10 @@ const App = () => {
         await contractVault.methods.deposit().send({
           from: address,
           //value: web3.utils.toWei(depositCount, 'ether')
-          value:depositCount
+          value: depositCount
         })
       } catch(err) {
-
+        setErrorDeposit(err.message)
       }
     }
 
@@ -65,8 +65,6 @@ const App = () => {
                 //local copy of the smart contract
                 const localContract = vaultContract(web3)
                 setContractVault(localContract)
-
-                
             } catch(err) {
                 setError(err.message)
             }
@@ -147,7 +145,7 @@ const App = () => {
             </section>
             <section>
                 <div className="container has-text-danger">
-                    <p>{error}</p>
+                    <h2>{error}</h2>
                 </div>
             </section>
 
@@ -192,11 +190,11 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           DEPOSIT<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
-                            <br></br><p>{errorDeposit}</p>
                           </p>
                           <input onChange={updateDepositQty} type="number" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br><br></br><br></br><br></br><br></br>
+                            <p></p><p></p><p>{errorDeposit}</p><br></br><br></br><br></br><br></br>
+                            
                           </p>
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
