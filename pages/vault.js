@@ -47,6 +47,7 @@ const App = () => {
             try {
                 await window.ethereum.request({ method: "eth_requestAccounts"})
                 web3 = new Web3(window.ethereum)
+                setWeb3(web3)
                 getVaultsIds()
             } catch(err) {
                 setError(err.message)
