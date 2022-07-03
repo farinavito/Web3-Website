@@ -15,6 +15,7 @@ const App = () => {
     const [depositCount, setDepositCount] = useState('')
     const [web3, setWeb3] = useState(null)
     const [address, setAddress] = useState(null)
+    const [contractVault, setContractVault] = useState(null)
 
     useEffect(() => {
       
@@ -53,7 +54,11 @@ const App = () => {
                 setWeb3(web3)
                 //list of all accounts
                 const accounts = await web3.eth.getAccounts()
+                //set the variable to the first account
                 setAddress(accounts[0])
+                //local copy of the smart contract
+                const localContract = 
+
                 getVaultsIds()
             } catch(err) {
                 setError(err.message)
