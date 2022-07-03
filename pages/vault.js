@@ -14,6 +14,7 @@ const App = () => {
     const [ids, setIds] = useState('')
     const [depositCount, setDepositCount] = useState('')
     const [web3, setWeb3] = useState(null)
+    const [address, setAddress] = useState(null)
 
     useEffect(() => {
       
@@ -35,7 +36,6 @@ const App = () => {
     }
 
     const depositFunds = async () => {
-      const accounts = await web3.eth.getAccounts()
       await contractVault.methods.deposit().send({
         from: accounts[0]
       })
@@ -52,6 +52,8 @@ const App = () => {
                 web3 = new Web3(window.ethereum)
                 setWeb3(web3)
                 //list of all accounts
+                const accounts = await web3.eth.getAccounts()
+                setAddress(accounts[0])
                 getVaultsIds()
             } catch(err) {
                 setError(err.message)
