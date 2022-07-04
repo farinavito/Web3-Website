@@ -42,7 +42,7 @@ const App = () => {
     const [errorIds, setErrorIds] = useState('')
     
 
-    //when the copy of the smart contract is available, call getMyNumVaults()
+    //when the copy of the smart contract is available, call getMyNumVaults() and getMyVaultsIds()
     useEffect(() => {
       if (contractVault) getMyVaultsIds()
       if (contractVault) getMyNumVaults()
