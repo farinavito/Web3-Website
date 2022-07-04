@@ -52,15 +52,14 @@ const App = () => {
     //storing the caller's vaults ids
     const getMyVaultsIds = async () => {
       try {
-        for (let i = 0; i < ids; i++) {
-          const newId = await contractVault.methods.mySafes(address, i).call()
-          setMyVaultsIds(arr => [...arr, newId])
-          
-        }
-        console.log(myVaultsIds)
+          setMyVaultsIds('')
+          for (let i = 0; i < ids; i++) {
+            const newId = await contractVault.methods.mySafes(address, i).call()
+            setMyVaultsIds(arr => [...arr, newId])
+          console.log(myVaultsIds)
+          }
       }
       catch(err) {
-        
         setErrorIds(err.message)
       }
     }
