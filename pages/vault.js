@@ -268,7 +268,7 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           MY FUNDS<br></br><br></br> 
                           
-                          <p>Your contract's ids: {ids}</p>
+                          <p>Number of vaults you have: {ids}</p>
                           <p>{errorVault}</p>
                           <p>Your vault's ids: {myVaultsIds}</p>
                           <p>{errorIds}</p>
