@@ -18,6 +18,8 @@ const App = () => {
     const [ids, setIds] = useState('')
     //storing the caller's time lock for deposit
     const [depositTimeLock, setDepositTimeLock] = useState('')
+    //storing the caller's deposit quantity
+    const [depositQty, setDepositQty] = useState('')
     //storing the web3 instance
     const [web3, setWeb3] = useState(null)
     //storing the address of the person who connected their wallet
@@ -46,12 +48,17 @@ const App = () => {
       setDepositTimeLock(event.target.value)
     }
 
+    //setting the input's variable of caller's deposit quantity from the deposit section 
+    const updateDepositQty = event => {
+      setDepositQty(event.target.value)
+    }
+
     //creating a deposit
     const depositFunds = async () => {
       try {
         await contractVault.methods.deposit(depositTimeLock).send({
           from: address,
-          value: web3.utils.toWei('1', 'wei') * depositTimeLock
+          value: web3.utils.toWei('1', 'wei') * depositQty
         })
       } catch(err) {
         setErrorDeposit(err.message)
@@ -204,7 +211,7 @@ const App = () => {
                           <input onChange={updateDepositTimeLock} type="number" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <p></p><p></p><p>{errorDeposit}</p><br></br><br></br><br></br><br></br>
-                            
+                            <input onChange={updateDepositQty} type="number" placeholder="Enter the amount you want to lock" className='has-background-primary input is-normal'></input>
                           </p>
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
