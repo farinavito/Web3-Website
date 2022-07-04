@@ -24,6 +24,10 @@ const App = () => {
     //storing error message when there is an error for calling deposit
     const [errorDeposit, setErrorDeposit] = useState('')
 
+    //storing the caller's withdraw ids
+    const [withdrawId, setWithdrawId] = useState('')
+    //storing the caller's withdraw quantity
+    const [withdrawQty, setWithdrawQty] = useState('')
     //storing error message when there is an error for calling withdraw
     const [errorWithdraw, setErrorWithdraw] = useState('')
 
@@ -89,6 +93,16 @@ const App = () => {
       } catch(err) {
         setErrorDeposit(err.message)
       }
+    }
+
+    //setting the input's variable of caller's withdrawing id
+    const updateWithdrawId = event => {
+      setWithdrawId(event.target.value)
+    }
+
+    //setting the input's variable of caller's withdrawing quantity from the withdraw section
+    const updateWithdrawQty = event => {
+      setWithdrawQty(event.target.value)
     }
 
     //withdrawing deposit
