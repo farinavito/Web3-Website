@@ -26,6 +26,7 @@ const App = () => {
 
     //storing error message when there is an error for calling withdraw
     const [errorWithdraw, setErrorWithdraw] = useState('')
+
     
     //storing the quantity of caller's vault ids
     const [ids, setIds] = useState('')
@@ -261,11 +262,11 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" placeholder="Enter the id from My funds" className='has-background-primary input is-normal'></input>
+                          <input onChange={updateWithdrawId} type="number" placeholder="Enter the id from My funds" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
+                          <input onChange={updateWithdrawQty} type="number" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
