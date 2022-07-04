@@ -27,6 +27,11 @@ const App = () => {
     //storing the copy of the smart contract
     const [contractVault, setContractVault] = useState(null)
 
+    //storing the caller's ids of the vaults
+    const [myVaultsIds, setMyVaultsIds] = useState('')
+    //storing the error message when trying to get all the caller's vault ids
+    const [errorIds, setErrorIds] = useState('')
+
     //when the copy of the smart contract is available, call getMyNumVaults()
     useEffect(() => {
       if (contractVault) getMyNumVaults()
@@ -40,6 +45,16 @@ const App = () => {
       }
       catch(err) {
         setErrorVault(err.message)
+      }
+    }
+    
+    //storing the caller's vaults ids
+    const getMyVaultsIds = async () => {
+      try {
+        
+      }
+      catch(err) {
+        setErrorIds(err.message)
       }
     }
 
