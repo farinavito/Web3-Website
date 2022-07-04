@@ -25,10 +25,12 @@ const App = () => {
     //storing the copy of the smart contract
     const [contractVault, setContractVault] = useState(null)
 
+    //when the copy of the smart contract is available, call getMyNumVaults()
     useEffect(() => {
       if (contractVault) getMyNumVaults()
     }, [contractVault])
 
+    //storing the number of Vaults the caller has
     const getMyNumVaults = async () => {
       try {
         const _ids = await contractVault.methods.getMyNumSafes().call({from: address})
@@ -39,10 +41,12 @@ const App = () => {
       }
     }
 
+    //setting the input's variable of caller's time lock from the deposit section 
     const updateDepositTimeLock = event => {
       setDepositTimeLock(event.target.value)
     }
 
+    //creating a deposit
     const depositFunds = async () => {
       try {
         await contractVault.methods.deposit(depositTimeLock).send({
