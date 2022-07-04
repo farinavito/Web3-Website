@@ -277,11 +277,10 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           WITHDRAW<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
                           </p>
                           <input onChange={updateWithdrawId} type="number" placeholder="Enter the id from My funds" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
+                          <p></p><p>{errorWithdraw}</p><br></br><br></br><br></br>
                           </p>
                           <input onChange={updateWithdrawQty} type="number" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
