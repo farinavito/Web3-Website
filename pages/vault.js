@@ -17,13 +17,15 @@ const App = () => {
     //storing the copy of the smart contract
     const [contractVault, setContractVault] = useState(null)
     
-    
     //storing the caller's time lock for deposit
     const [depositTimeLock, setDepositTimeLock] = useState('')
     //storing the caller's deposit quantity
     const [depositQty, setDepositQty] = useState('')
     //storing error message when there is an error for calling deposit
     const [errorDeposit, setErrorDeposit] = useState('')
+
+    //storing error message when there is an error for calling withdraw
+    const [errorWithdraw, setErrorWithdraw] = useState('')
     
     //storing the quantity of caller's vault ids
     const [ids, setIds] = useState('')
@@ -85,6 +87,15 @@ const App = () => {
         })
       } catch(err) {
         setErrorDeposit(err.message)
+      }
+    }
+
+    //withdrawing deposit
+    const withdrawFunds = async () => {
+      try {
+
+      } catch(err) {
+        setErrorWithdraw(err.message)
       }
     }
 
