@@ -108,7 +108,10 @@ const App = () => {
     //withdrawing deposit
     const withdrawFunds = async () => {
       try {
-
+        const qty = web3.utils.toWei('1', 'wei') * withdrawQty
+        await contractVault.methods.withdraw(withdrawId, qty).send({
+          from: address
+        })
       } catch(err) {
         setErrorWithdraw(err.message)
       }
