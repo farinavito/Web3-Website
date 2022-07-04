@@ -19,10 +19,10 @@ const App = () => {
     const [contractVault, setContractVault] = useState(null)
 
     useEffect(() => {
-      if (contractVault) getVaultsIds()
+      if (contractVault) getMyNumVaults()
     }, [contractVault])
 
-    const getVaultsIds = async () => {
+    const getMyNumVaults = async () => {
       try {
         const _ids = await contractVault.methods.getMyNumSafes().call({from: address})
         setIds(_ids)
