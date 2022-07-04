@@ -13,7 +13,7 @@ const App = () => {
     const [errorVault, setErrorVault] = useState('')
     const [errorDeposit, setErrorDeposit] = useState('')
     const [ids, setIds] = useState('')
-    const [depositCount, setDepositCount] = useState('')
+    const [depositTimeLock, setDepositTimeLock] = useState('')
     const [web3, setWeb3] = useState(null)
     const [address, setAddress] = useState(null)
     const [contractVault, setContractVault] = useState(null)
@@ -32,15 +32,15 @@ const App = () => {
       }
     }
 
-    const updateDepositQty = event => {
-      setDepositCount(event.target.value)
+    const updateDepositTimeLock = event => {
+      setDepositTimeLock(event.target.value)
     }
 
     const depositFunds = async () => {
       try {
-        await contractVault.methods.deposit(depositCount).send({
+        await contractVault.methods.deposit(depositTimeLock).send({
           from: address,
-          value: web3.utils.toWei('1', 'wei') * depositCount
+          value: web3.utils.toWei('1', 'wei') * depositTimeLock
         })
       } catch(err) {
         setErrorDeposit(err.message)
@@ -191,7 +191,7 @@ const App = () => {
                           DEPOSIT<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
                           </p>
-                          <input onChange={updateDepositQty} type="number" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
+                          <input onChange={updateDepositTimeLock} type="number" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <p></p><p></p><p>{errorDeposit}</p><br></br><br></br><br></br><br></br>
                             
