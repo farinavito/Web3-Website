@@ -8,14 +8,21 @@ import Link from 'next/link'
 
 
 const App = () => {
-    //initializing error message when there is an error for connecting to the metamask
+    //storing error message when there is an error for connecting to the metamask
     const [error, setError] = useState('')
+    //storing error message when there is an error for retrieving number of ids from getMyNumSafes
     const [errorVault, setErrorVault] = useState('')
+    //storing error message when there is an error for calling deposit
     const [errorDeposit, setErrorDeposit] = useState('')
+    //storing the quantity of caller's vault ids
     const [ids, setIds] = useState('')
+    //storing the caller's time lock for deposit
     const [depositTimeLock, setDepositTimeLock] = useState('')
+    //storing the web3 instance
     const [web3, setWeb3] = useState(null)
+    //storing the address of the person who connected their wallet
     const [address, setAddress] = useState(null)
+    //storing the copy of the smart contract
     const [contractVault, setContractVault] = useState(null)
 
     useEffect(() => {
