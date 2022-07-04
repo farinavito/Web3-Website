@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 
 const App = () => {
-
+    //initializing error message when there is an error for connecting to the metamask
     const [error, setError] = useState('')
     const [errorVault, setErrorVault] = useState('')
     const [errorDeposit, setErrorDeposit] = useState('')
@@ -65,8 +65,7 @@ const App = () => {
               const localContract = vaultContract(web3)
               setContractVault(localContract)
             } catch(err) {
-              console.log(err.message)
-              console.log(setError(err.message))
+              setError(err.message)
             }
             
         } else {
