@@ -28,13 +28,14 @@ const App = () => {
     const [contractVault, setContractVault] = useState(null)
 
     //storing the caller's ids of the vaults
-    const [myVaultsIds, setMyVaultsIds] = useState('')
+    const [myVaultsIds, setMyVaultsIds] = useState([])
     //storing the error message when trying to get all the caller's vault ids
     const [errorIds, setErrorIds] = useState('')
 
     //when the copy of the smart contract is available, call getMyNumVaults()
     useEffect(() => {
       if (contractVault) getMyNumVaults()
+      if (contractVault) getMyVaultsIds()
     }, [contractVault])
 
     //storing the number of Vaults the caller has
@@ -51,9 +52,15 @@ const App = () => {
     //storing the caller's vaults ids
     const getMyVaultsIds = async () => {
       try {
-        
+        for (let i = 0; i < ids; i++) {
+          const newId = await contractVault.methods.mySafes(address, i).call()
+          setMyVaultsIds(arr => [...arr, newId])
+          
+        }
+        console.log(myVaultsIds)
       }
       catch(err) {
+        
         setErrorIds(err.message)
       }
     }
@@ -263,6 +270,8 @@ const App = () => {
                           
                           <p>Your contract's ids: {ids}</p>
                           <p>{errorVault}</p>
+                          <p>Your vault's ids: {myVaultsIds}</p>
+                          <p>{errorIds}</p>
                         </p>
                       </div>
                     </div>
