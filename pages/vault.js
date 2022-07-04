@@ -34,8 +34,8 @@ const App = () => {
 
     //when the copy of the smart contract is available, call getMyNumVaults()
     useEffect(() => {
-      if (contractVault) getMyNumVaults()
       if (contractVault) getMyVaultsIds()
+      if (contractVault) getMyNumVaults()
     }, [contractVault])
 
     //storing the number of Vaults the caller has
@@ -52,12 +52,11 @@ const App = () => {
     //storing the caller's vaults ids
     const getMyVaultsIds = async () => {
       try {
-          setMyVaultsIds('')
-          for (let i = 0; i < ids; i++) {
-            const newId = await contractVault.methods.mySafes(address, i).call()
-            setMyVaultsIds(arr => [...arr, newId])
-          console.log(myVaultsIds)
-          }
+        setMyVaultsIds('')
+        for (let i = 0; i < ids; i++) {
+          const newId = await contractVault.methods.mySafes(address, i).call()
+          setMyVaultsIds(arr => [...arr, newId])
+        }
       }
       catch(err) {
         setErrorIds(err.message)
@@ -88,29 +87,28 @@ const App = () => {
 
     const connectWalletHandler = async () => {
       //checking if metamask is available
-        if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
-            //metamask installed
-            try {
-              //request wallet connect - metamask pop up window
-              await window.ethereum.request({ method: "eth_requestAccounts"})
-              //set web3 instance
-              web3 = new Web3(window.ethereum)
-              setWeb3(web3)
-              //list of all accounts
-              const accounts = await web3.eth.getAccounts()
-              //set the variable to the first account
-              setAddress(accounts[0])
-              //local copy of the smart contract
-              const localContract = vaultContract(web3)
-              setContractVault(localContract)
-            } catch(err) {
-              setError(err.message)
-            }
-            
-        } else {
-            //metamask not installed
-            alert("Please install MetaMask")
-        }
+      if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
+        //metamask installed
+        try {
+          //request wallet connect - metamask pop up window
+          await window.ethereum.request({ method: "eth_requestAccounts"})
+          //set web3 instance
+          web3 = new Web3(window.ethereum)
+          setWeb3(web3)
+          //list of all accounts
+          const accounts = await web3.eth.getAccounts()
+          //set the variable to the first account
+          setAddress(accounts[0])
+          //local copy of the smart contract
+          const localContract = vaultContract(web3)
+          setContractVault(localContract)
+        } catch(err) {
+          setError(err.message)
+        }    
+      } else {
+          //metamask not installed
+          alert("Please install MetaMask")
+      }
     }
 
     return (
