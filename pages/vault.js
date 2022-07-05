@@ -131,6 +131,10 @@ const App = () => {
     //getting the caller's funds details
     const getFundsDetails = async () => {
       try {
+        setDetailsId('')
+        setDetailsSignee('')
+        setDetailsBalances('')
+        setDetailsLockedUpTime('')
         const newId = await contractVault.methods.exactSafe(3).call()
         setDetailsId(arr => [...arr, newId.id])
         setDetailsSignee(arr => [...arr, newId.signee])
