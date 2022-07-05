@@ -42,12 +42,21 @@ const App = () => {
 
     //storing the error message when trying to get the caller's funds details
     const [errorFundsDetails, setErrorFundsDetails] = useState('')
+    //storing the caller's funds details -> id
+    const [detailsId, setDetailsId] = useState([])
+    //storing the caller's funds details -> signee
+    const [detailsSignee, setDetailsSignee] = useState([])
+    //storing the caller's funds details -> balances
+    const [detailsBalances, setDetailsBalances] = useState([])
+    //storing the caller's funds details -> lockedUpTime
+    const [detailsLockedUpTime, setDetailsLockedUpTime] = useState([])
     
 
     //when the copy of the smart contract is available, call getMyNumVaults() and getMyVaultsIds()
     useEffect(() => {
       if (contractVault) getMyVaultsIds()
       if (contractVault) getMyNumVaults()
+      if (contractVault) getFundsDetails()
     }, [contractVault])
 
     //storing the number of Vaults the caller has
@@ -119,9 +128,24 @@ const App = () => {
       }
     }
 
-    const fundsDetails = async () => {
+    //getting the caller's funds details
+    const getFundsDetails = async () => {
       try {
-
+        const newId = await contractVault.methods.exactSafe(3).call()
+        setDetailsId(arr => [...arr, newId.id])
+        setDetailsSignee(arr => [...arr, newId.signee])
+        setDetailsBalances(arr => [...arr, newId.balances])
+        setDetailsLockedUpTime(arr => [...arr, newId.lockedUpTime])
+        /*
+        setDetails('')
+        for (let i = 0; i < ids; i++) {
+          //const id = myVaultsIds.get(i)
+          const id = myVaultsIds.map( e => e)
+          const newId = await contractVault.methods.exactSafe(id.toString()).call()
+          setDetails(arr => [...arr, newId])
+          
+        }
+        */
       } catch(err) {
         setErrorFundsDetails(err.message)
       }
@@ -310,6 +334,12 @@ const App = () => {
                           <p>{errorVault}</p>
                           <p>Your vault's ids: {myVaultsIds}</p>
                           <p>{errorIds}</p>
+                          <p>Vault's details: </p>
+                          <br></br>{detailsId}
+                          <br></br>{detailsSignee}
+                          <br></br>{detailsBalances}
+                          <br></br>{detailsLockedUpTime}
+                          <p>{errorFundsDetails}</p>
                         </p>
                       </div>
                     </div>
