@@ -135,7 +135,16 @@ const App = () => {
         setDetailsSignee('')
         setDetailsBalances('')
         setDetailsLockedUpTime('')
-        const newId = await contractVault.methods.exactSafe(3).call()
+        for (const value of myVaultsIds.values()) {
+          const newId = await contractVault.methods.exactSafe(value).call()
+          setDetailsId(arr => [...arr, newId.id])
+          setDetailsSignee(arr => [...arr, newId.signee])
+          setDetailsBalances(arr => [...arr, newId.balances])
+          setDetailsLockedUpTime(arr => [...arr, newId.lockedUpTime])
+          console.log(newId);
+        }
+        /*
+        const newId = await contractVault.methods.exactSafe(myVaultsIds.find(0)).call()
         setDetailsId(arr => [...arr, newId.id])
         setDetailsSignee(arr => [...arr, newId.signee])
         setDetailsBalances(arr => [...arr, newId.balances])
@@ -339,7 +348,8 @@ const App = () => {
                           <p>Your vault's ids: {myVaultsIds}</p>
                           <p>{errorIds}</p>
                           <p>Vault's details: </p>
-                          <br></br>{detailsId}
+                          <br></br>
+                          <br></br>{detailsId} 
                           <br></br>{detailsSignee}
                           <br></br>{detailsBalances}
                           <br></br>{detailsLockedUpTime}
