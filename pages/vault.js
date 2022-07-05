@@ -30,7 +30,6 @@ const App = () => {
     const [withdrawQty, setWithdrawQty] = useState('')
     //storing error message when there is an error for calling withdraw
     const [errorWithdraw, setErrorWithdraw] = useState('')
-
     
     //storing the quantity of caller's vault ids
     const [ids, setIds] = useState('')
@@ -40,6 +39,9 @@ const App = () => {
     const [myVaultsIds, setMyVaultsIds] = useState([])
     //storing the error message when trying to get all the caller's vault ids
     const [errorIds, setErrorIds] = useState('')
+
+    //storing the error message when trying to get the caller's funds details
+    const [errorFundsDetails, setErrorFundsDetails] = useState('')
     
 
     //when the copy of the smart contract is available, call getMyNumVaults() and getMyVaultsIds()
@@ -114,6 +116,14 @@ const App = () => {
         })
       } catch(err) {
         setErrorWithdraw(err.message)
+      }
+    }
+
+    const fundsDetails = async () => {
+      try {
+
+      } catch(err) {
+        setErrorFundsDetails(err.message)
       }
     }
 
