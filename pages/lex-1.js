@@ -16,6 +16,20 @@ const App = () => {
     //storing the copy of the smart contract
     const [contractLex1, setContractLex1] = useState(null)
 
+    //storing error message when there is an error for calling createNewAgreement
+    const [errorNewContract, setErrorNewContract] = useState('')
+
+    //creating a new agreement
+    const createNewAgreement = async () => {
+      try {
+        await contractLex1.methods.createAgreement.send({
+          from: address
+        })
+      } catch(err) {
+        setErrorNewContract(err.message)
+      }
+    }
+
 
     const connectWalletHandler = async () => {
       //checking if metamask is available
@@ -38,8 +52,8 @@ const App = () => {
           setError(err.message)
         }    
       } else {
-          //metamask not installed
-          alert("Please install MetaMask")
+        //metamask not installed
+        alert("Please install MetaMask")
       }
     }
 
