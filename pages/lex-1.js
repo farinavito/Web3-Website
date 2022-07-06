@@ -16,8 +16,15 @@ const App = () => {
     //storing the copy of the smart contract
     const [contractLex1, setContractLex1] = useState(null)
 
+    //storing the receiver's address 
+    const [receiverAddress, setReceiverAddress] = useState('')
     //storing error message when there is an error for calling createNewAgreement
     const [errorNewContract, setErrorNewContract] = useState('')
+
+    //setting the input's variable of caller's receiver address from the createAgreement section 
+    const updateReceiverAddress = event => {
+      setReceiverAddress(event.target.value)
+    }
 
     //creating a new agreement
     const createNewAgreement = async () => {
@@ -174,7 +181,7 @@ const App = () => {
                           <p className="has-background-black-bis  py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
+                          <input type="number" onChange={updateReceiverAddress} placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -189,7 +196,7 @@ const App = () => {
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
                               <Link href="">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Create </button>
+                                <button onClick={createNewAgreement} className="button is-outlined py-2 px-6 is-size-6">Create </button>
                               </Link>
                             </div>
                           </p>
