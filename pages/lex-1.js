@@ -222,7 +222,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" onChange={updateEveryTimeUnit} placeholder="Enter the time duration of every payment" className='has-background-primary input is-normal'></input>
+                          <input type="number" onChange={updateEveryTimeUnit} placeholder="Enter the payment's time duration" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
