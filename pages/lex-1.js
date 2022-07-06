@@ -181,7 +181,7 @@ const App = () => {
                           <p className="has-background-black-bis  py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" onChange={updateReceiverAddress} placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
+                          <input type="text" onChange={updateReceiverAddress} placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
