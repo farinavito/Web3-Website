@@ -20,6 +20,8 @@ const App = () => {
     const [receiverAddress, setReceiverAddress] = useState('')
     //storing the committed amount 
     const [committedAmount, setCommittedAmount] = useState('')
+    //storing the deadline
+    const [deadline, setDeadline] = useState('')
     //storing error message when there is an error for calling createNewAgreement
     const [errorNewContract, setErrorNewContract] = useState('')
 
@@ -31,6 +33,11 @@ const App = () => {
     //setting the input's variable of caller's committed amount from the createAgreement section 
     const updateCommittedAmount = event => {
       setCommittedAmount(event.target.value)
+    }
+
+    //setting the input's variable of caller's deadline from the createAgreement section 
+    const updateDeadline = event => {
+      setDeadline(event.target.value)
     }
 
     //creating a new agreement
@@ -196,7 +203,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
+                          <input type="number" onChange={updateDeadline} placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
                           </p>
