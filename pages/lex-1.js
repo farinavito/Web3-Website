@@ -20,6 +20,8 @@ const App = () => {
     const [receiverAddress, setReceiverAddress] = useState('')
     //storing the committed amount 
     const [committedAmount, setCommittedAmount] = useState('')
+    //storing the every time unit
+    const [everyTimeUnit, setEveryTimeUnit] = useState('')
     //storing the deadline
     const [agreementsLength, setAgreementsLength] = useState('')
     //storing the start agreement
@@ -30,21 +32,30 @@ const App = () => {
     //setting the input's variable of caller's receiver address from the createAgreement section 
     const updateReceiverAddress = event => {
       setReceiverAddress(event.target.value)
+      console.log(event.target.value);
     }
 
     //setting the input's variable of caller's committed amount from the createAgreement section 
     const updateCommittedAmount = event => {
       setCommittedAmount(event.target.value)
+      console.log(event.target.value);
+    }
+
+    //setting the input's variable of caller's every time unit from the createAgreement section
+    const updateEveryTimeUnit = event => {
+      setEveryTimeUnit(event.target.value)
     }
 
     //setting the input's variable of caller's agreement's duration from the createAgreement section 
     const updateHowLong = event => {
       setAgreementsLength(event.target.value)
+      console.log(event.target.value);
     }
 
     //setting the input's variable of the caller's start agreement from the createAgreement section
     const updateStartAgreement = event => {
       setStartAgreement(event.target.value)
+      console.log(event.target.value);
     }
 
     //creating a new agreement
@@ -207,6 +218,10 @@ const App = () => {
                             <br></br>
                           </p>
                           <input type="number" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <input type="number" onChange={updateEveryTimeUnit} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
