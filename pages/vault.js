@@ -92,6 +92,7 @@ const App = () => {
     //setting the input's variable of caller's deposit quantity from the deposit section 
     const updateDepositQty = event => {
       setDepositQty(event.target.value)
+      
     }
 
     //creating a deposit

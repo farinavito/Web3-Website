@@ -18,12 +18,19 @@ const App = () => {
 
     //storing the receiver's address 
     const [receiverAddress, setReceiverAddress] = useState('')
+    //storing the committed amount 
+    const [committedAmount, setCommittedAmount] = useState('')
     //storing error message when there is an error for calling createNewAgreement
     const [errorNewContract, setErrorNewContract] = useState('')
 
     //setting the input's variable of caller's receiver address from the createAgreement section 
     const updateReceiverAddress = event => {
       setReceiverAddress(event.target.value)
+    }
+
+    //setting the input's variable of caller's committed amount from the createAgreement section 
+    const updateCommittedAmount = event => {
+      setCommittedAmount(event.target.value)
     }
 
     //creating a new agreement
@@ -185,7 +192,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
+                          <input type="number" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
