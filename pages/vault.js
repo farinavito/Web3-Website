@@ -128,37 +128,30 @@ const App = () => {
       }
     }
 
+    const allDetails = [];
+    const allDetailsSingleVault = [];
+
     //getting the caller's funds details
     const getFundsDetails = async () => {
       try {
-        setDetailsId('')
-        setDetailsSignee('')
-        setDetailsBalances('')
-        setDetailsLockedUpTime('')
         for (const value of myVaultsIds.values()) {
           const newId = await contractVault.methods.exactSafe(value).call()
-          setDetailsId(arr => [...arr, newId.id])
-          setDetailsSignee(arr => [...arr, newId.signee])
-          setDetailsBalances(arr => [...arr, newId.balances])
-          setDetailsLockedUpTime(arr => [...arr, newId.lockedUpTime])
-          console.log(newId);
-        }
-        /*
-        const newId = await contractVault.methods.exactSafe(myVaultsIds.find(0)).call()
-        setDetailsId(arr => [...arr, newId.id])
-        setDetailsSignee(arr => [...arr, newId.signee])
-        setDetailsBalances(arr => [...arr, newId.balances])
-        setDetailsLockedUpTime(arr => [...arr, newId.lockedUpTime])
-        /*
-        setDetails('')
-        for (let i = 0; i < ids; i++) {
-          //const id = myVaultsIds.get(i)
-          const id = myVaultsIds.map( e => e)
-          const newId = await contractVault.methods.exactSafe(id.toString()).call()
-          setDetails(arr => [...arr, newId])
+          const vault = {
+            id: newId.id, 
+            signee: newId.signee,
+            balances: newId.balances,
+            time: newId.lockedUpTime
+          }
+          //allDetailsSingleVault.push(newId.id, newId.signee, newId.balances, newId.lockedUpTime)
+          //allDetailsSingleVault.push(vault)
+          //console.log(allDetailsSingleVault);
+          //allDetails.push(allDetailsSingleVault)
+          allDetails.push(vault)
+          console.log(vault)
           
-        }
-        */
+          allDetailsSingleVault= []
+        }   
+        //console.log(allDetails);    
       } catch(err) {
         setErrorFundsDetails(err.message)
       }
@@ -189,6 +182,13 @@ const App = () => {
           alert("Please install MetaMask")
       }
     }
+
+    const bla = [
+      {balances: "0", id: "1", signee: "0x143C026113f4BE894F49bbb9d51A4a66cc7e7107", time: "1656882473"},
+      {balances: "10", id: "2", signee: "0x143C026113f4BE894F49bbb9d51A4a66cc7e7107", time: "1656882473"},
+      {balances: "490", id: "3", signee: "0x143C026113f4BE894F49bbb9d51A4a66cc7e7107", time: "1656882473"},
+      {balances: "22", id: "4", signee: "0x143C026113f4BE894F49bbb9d51A4a66cc7e7107", time: "1656882473"},
+    ]
 
     return (
         <div className={styles.main}>
@@ -349,10 +349,17 @@ const App = () => {
                           <p>{errorIds}</p>
                           <p>Vault's details: </p>
                           <br></br>
-                          <br></br>{detailsId} 
-                          <br></br>{detailsSignee}
-                          <br></br>{detailsBalances}
-                          <br></br>{detailsLockedUpTime}
+                          {bla.map(({id, signee, balances, time}) => (
+                            <div>
+                              <p>
+                                Id: {id}<br></br>
+                                Signee: {signee}<br></br>
+                                Balances: {balances}<br></br>
+                                Lock Time{time}<br></br>
+                              </p> 
+                            </div>
+                          ))}
+                          
                           <p>{errorFundsDetails}</p>
                         </p>
                       </div>
