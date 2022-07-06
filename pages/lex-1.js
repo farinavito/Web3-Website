@@ -1,5 +1,6 @@
 import 'bulma/css/bulma.css'
-import { useState } from 'react'
+import contractLex  from '../blockchain/webLex1'
+import { useState, useEffect } from 'react'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
 import Web3 from 'web3'
