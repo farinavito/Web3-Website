@@ -352,7 +352,7 @@ const App = () => {
                           <p>{errorIds}</p>
                           <p>Vault's details: </p>
                           <br></br>
-                          {bla.map(({id, signee, balances, time}) => (
+                          {allDetails.map(({id, signee, balances, time}) => (
                             <div>
                               <p>
                                 Id: {id}<br></br>
