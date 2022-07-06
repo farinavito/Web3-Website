@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "compile": "solcjs --abi --include-path node_modules/ --base-path . blockchain/contracts/Lex.sol blockchain/contracts/LexTwo.sol blockchain/contracts/Vault.sol --output-dir blockchain/build"
+    "compile": "solcjs --abi --include-path node_modules/ --base-path . blockchain/contracts/Lex1.sol blockchain/contracts/LexTwo.sol blockchain/contracts/Vault.sol --output-dir blockchain/build"
   },
   "dependencies": {
     "bulma": "^0.9.3",
