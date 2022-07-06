@@ -7,25 +7,40 @@ import Web3 from 'web3'
 import Link from 'next/link'
 
 const App = () => {
-
+    //storing error message when there is an error for connecting to the metamask
     const [error, setError] = useState('')
+    //storing the web3 instance
+    const [web3, setWeb3] = useState(null)
+    //storing the address of the person who connected their wallet
+    const [address, setAddress] = useState(null)
+    //storing the copy of the smart contract
+    const [contractLex1, setContractLex1] = useState(null)
 
-    let web3;
 
     const connectWalletHandler = async () => {
-        if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
-            //metamask installed
-            try {
-                await window.ethereum.request({ method: "eth_requestAccounts"})
-                web3 = new Web3(window.ethereum)
-            } catch(err) {
-                setError(err.message)
-            }
-            
-        } else {
-            //metamask not installed
-            alert("Please install MetaMask")
-        }
+      //checking if metamask is available
+      if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
+        //metamask installed
+        try {
+          //request wallet connect - metamask pop up window
+          await window.ethereum.request({ method: "eth_requestAccounts"})
+          //set web3 instance
+          web3 = new Web3(window.ethereum)
+          setWeb3(web3)
+          //list of all accounts
+          const accounts = await web3.eth.getAccounts()
+          //set the variable to the first account
+          setAddress(accounts[0])
+          //local copy of the smart contract
+          const localContract = contractLex(web3)
+          setContractLex1(localContract)
+        } catch(err) {
+          setError(err.message)
+        }    
+      } else {
+          //metamask not installed
+          alert("Please install MetaMask")
+      }
     }
 
     return (
