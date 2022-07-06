@@ -1,5 +1,5 @@
 import 'bulma/css/bulma.css'
-import vaultContract from '../blockchain/web'
+import vaultContract from '../blockchain/webVault'
 import { useState, useEffect } from 'react'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
@@ -147,10 +147,12 @@ const App = () => {
           //console.log(allDetailsSingleVault);
           //allDetails.push(allDetailsSingleVault)
           allDetails.push(vault)
-          console.log(vault)
+          //allDetails.push(newId)
+          
           
           allDetailsSingleVault= []
-        }   
+        }  
+        console.log(allDetails) 
         //console.log(allDetails);    
       } catch(err) {
         setErrorFundsDetails(err.message)
