@@ -43,7 +43,7 @@ const App = () => {
     //creating a new agreement
     const createNewAgreement = async () => {
       try {
-        await contractLex1.methods.createAgreement.send({
+        await contractLex1.methods.createAgreement().send({
           from: address
         })
       } catch(err) {
@@ -206,6 +206,9 @@ const App = () => {
                           <input type="number" onChange={updateDeadline} placeholder="Enter the deadline" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
+                          </p>
+                          <p>
+                            {errorNewContract}
                           </p>
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
