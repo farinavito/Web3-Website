@@ -22,6 +22,8 @@ const App = () => {
     const [committedAmount, setCommittedAmount] = useState('')
     //storing the deadline
     const [agreementsLength, setAgreementsLength] = useState('')
+    //storing the start agreement
+    const [startAgreement, setStartAgreement] = useState('')
     //storing error message when there is an error for calling createNewAgreement
     const [errorNewContract, setErrorNewContract] = useState('')
 
@@ -38,6 +40,11 @@ const App = () => {
     //setting the input's variable of caller's agreement's duration from the createAgreement section 
     const updateHowLong = event => {
       setAgreementsLength(event.target.value)
+    }
+
+    //setting the input's variable of the caller's start agreement from the createAgreement section
+    const updateStartAgreement = event => {
+      setStartAgreement(event.target.value)
     }
 
     //creating a new agreement
@@ -204,6 +211,10 @@ const App = () => {
                             <br></br>
                           </p>
                           <input type="number" onChange={updateHowLong} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <input type="number" onChange={updateStartAgreement} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
                           </p>
