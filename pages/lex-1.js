@@ -23,7 +23,7 @@ const App = () => {
     //storing the every time unit
     const [everyTimeUnit, setEveryTimeUnit] = useState('')
     //storing the deadline
-    const [agreementsLength, setAgreementsLength] = useState('')
+    const [agreementsDuration, setAgreementsDuration] = useState('')
     //storing the start agreement
     const [startAgreement, setStartAgreement] = useState('')
     //storing error message when there is an error for calling createNewAgreement
@@ -48,7 +48,7 @@ const App = () => {
 
     //setting the input's variable of caller's agreement's duration from the createAgreement section 
     const updateHowLong = event => {
-      setAgreementsLength(event.target.value)
+      setAgreementsDuration(event.target.value)
       console.log(event.target.value);
     }
 
@@ -61,8 +61,9 @@ const App = () => {
     //creating a new agreement
     const createNewAgreement = async () => {
       try {
-        await contractLex1.methods.createAgreement().send({
-          from: address
+        await contractLex1.methods.createAgreement(receiverAddress, committedAmount, everyTimeUnit, agreementsDuration, startAgreement).send({
+          from: address,
+          value: web3.utils.toWei('1', 'wei') * committedAmount
         })
       } catch(err) {
         setErrorNewContract(err.message)
