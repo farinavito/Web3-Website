@@ -485,18 +485,6 @@ const App = () => {
                             </div>
                           </p>
                         </p>
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
-                          SHOW RECEIVER'S WITHDRAWAL AMOUNT<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p>
-                            {withdrawalAmountAsReceiver} weis
-                          </p>
-                          <p>
-                            {errorReceiversWithdrawalAmount}
-                          </p>
-                        </p>
                       </div>
                       <div className="column pt-4" >
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
@@ -532,18 +520,6 @@ const App = () => {
                                 <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
                               </Link>
                             </div>
-                          </p>
-                        </p>
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
-                          SHOW SENDER'S WITHDRAWAL AMOUNT<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p>
-                            {withdrawalAmountAsSender} weis
-                          </p>
-                          <p>
-                            {errorSendersWithdrawalAmount}
                           </p>
                         </p>
                       </div>
