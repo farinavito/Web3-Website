@@ -70,6 +70,9 @@ const App = () => {
     //storing error message when there is an error for calling receiversWithdrawalAmount
     const [errorSendersWithdrawalAmount, setErrorSendersWithdrawalAmount] = useState('')
 
+    //storing error message when there is an error for calling withdrawReceiversAmount
+    const [errorWithdrawReceiversAmount, setErrorWithdrawReceiversAmount] = useState('')
+
 
     //when the copy of the smart contract is avalaibla call the functions bellow
     useEffect(() => {
@@ -214,6 +217,17 @@ const App = () => {
         setWithdrawalAmountAsReceiver(qty)
       } catch(err){
         setErrorReceiversWithdrawalAmount(err.message)
+      }
+    }
+
+    //withdrawing the caller's amount as the receiver
+    const withdrawReceiversAmount = async () => {
+      try {
+        await contractLex1.methods.withdrawAsTheReceiver().send({
+          from: address
+        })
+      } catch(err){
+        setErrorWithdrawReceiversAmount(err.message)
       }
     }
 
@@ -476,11 +490,12 @@ const App = () => {
                           </p>
                           <p>
                             {errorReceiversWithdrawalAmount}
+                            {errorWithdrawReceiversAmount}
                           </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
+                                <button onClick={withdrawReceiversAmount} className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
                               </Link>
                             </div>
                           </p>
