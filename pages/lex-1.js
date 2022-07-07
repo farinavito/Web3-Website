@@ -61,7 +61,7 @@ const App = () => {
     //storing error message when there is an error for calling wasContractBreached
     const [errorContractBreached, setErrorContractBreached] = useState('')
 
-    //
+    //storing the caller's withdrawal amount as the receiver
     const [withdrawalAmountAsReceiver, setWithdrawalAmountAsReceiver] = useState('')
     //storing error message when there is an error for calling receiversWithdrawalAmount
     const [errorReceiversWithdrawalAmount, setErrorReceiversWithdrawalAmount] = useState('')
@@ -69,11 +69,13 @@ const App = () => {
 
     //when the copy of the smart contract is avalaibla call the functions bellow
     useEffect(() => {
-      if (contractLex1) getMyNumReceiverAgreements()
-      if (contractLex1) getMyReceiverIds()
-      if (contractLex1) getMyNumSenderAgreements()
-      if (contractLex1) getMySenderIds()
-      if (contractLex1) receiversWithdrawalAmount()
+      if (contractLex1){
+        getMyNumReceiverAgreements()
+        getMyReceiverIds()
+        getMyNumSenderAgreements()
+        getMySenderIds()
+        receiversWithdrawalAmount()
+      }
     }, [contractLex1])
 
     //storing the number of agreements the caller as the receiver has
