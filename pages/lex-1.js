@@ -452,29 +452,6 @@ const App = () => {
                             </div>
                           </p>
                         </p>
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
-                          WAS CONTRACT BREACHED<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="number" onChange={updateIdSent2} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p>
-                            {contractBreached}
-                          </p>
-                          <p>
-                            {errorContractBreached}
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
-                            <div className='columns is-centered'>
-                              <Link href="">
-                                <button onClick={wasNewContractBreached} className="button is-outlined py-2 px-6 is-size-6">Check </button>
-                              </Link>
-                            </div>
-                          </p>
-                        </p>
                       </div>
                       <div id='first'className="column pt-4">
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
@@ -509,6 +486,29 @@ const App = () => {
                             <div className='columns is-centered'>
                               <Link href="">
                                 <button onClick={withdrawReceiversAmount} className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
+                              </Link>
+                            </div>
+                          </p>
+                        </p>
+                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                          WAS CONTRACT BREACHED<br></br><br></br>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <input type="number" onChange={updateIdSent2} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
+                          <p>
+                            {contractBreached}
+                          </p>
+                          <p>
+                            {errorContractBreached}
+                          </p>
+                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                            <div className='columns is-centered'>
+                              <Link href="">
+                                <button onClick={wasNewContractBreached} className="button is-outlined py-2 px-6 is-size-6">Check </button>
                               </Link>
                             </div>
                           </p>
