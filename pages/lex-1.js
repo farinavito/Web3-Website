@@ -485,13 +485,6 @@ const App = () => {
                           <p>
                             {errorReceiversWithdrawalAmount}
                           </p>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
-                            <div className='columns is-centered'>
-                              <Link href="">
-                                <button onClick={receiversWithdrawalAmount} className="button is-outlined py-2 px-6 is-size-6">Show </button>
-                              </Link>
-                            </div>
-                          </p>
                         </p>
                       </div>
                       <div className="column pt-4" >
