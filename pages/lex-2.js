@@ -148,25 +148,15 @@ const App = () => {
     setCommittedAmount(event.target.value)
   }
 
-  //setting the input's variable of caller's every time unit from the createAgreement section
-  const updateEveryTimeUnit = event => {
-    setEveryTimeUnit(event.target.value)
-  }
-
   //setting the input's variable of caller's agreement's duration from the createAgreement section 
   const updateHowLong = event => {
     setAgreementsDuration(event.target.value)
   }
 
-  //setting the input's variable of the caller's start agreement from the createAgreement section
-  const updateStartAgreement = event => {
-    setStartAgreement(event.target.value)
-  }
-
   //creating a new agreement
   const createNewAgreement = async () => {
     try {
-      await contractLex2.methods.createAgreement(receiverAddress, committedAmount, everyTimeUnit, agreementsDuration, startAgreement).send({
+      await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
         from: address,
         value: web3.utils.toWei('1', 'wei') * committedAmount
       })
