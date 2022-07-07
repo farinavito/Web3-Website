@@ -36,6 +36,8 @@ const App = () => {
     //storing error message when there is an error for calling sendPayment
     const [errorSendingPayment, setErrorSendingPayment] = useState('')
 
+    //storing the id sent from the wasContractBreached
+    cons [idSent2, setIdSent2] = useState('')
     //storing error message when there is an error for calling wasContractBreached
     const [errorContractBreached, setErrorContractBreached] = useState('')
     
@@ -82,7 +84,7 @@ const App = () => {
       setAmountSent(event.target.value)
     }
 
-    //setting the input's variable of the caller's amount sent from the send payment section
+    //setting the input's variable of the caller's id sent from the send payment section
     const updateIdSent = event => {
       setIdSent(event.target.value)
     }
@@ -99,10 +101,15 @@ const App = () => {
       }
     } 
 
+    //setting the input's variable of the caller's id sent from the was contract breached section
+    const updateIdSent2 = event => {
+      setIdSent2(event.targte.value)
+    }
+
     //checking if the agreement has been breached
     const wasNewContractBreached = async () => {
       try {
-
+        await contractLex1.methods.wasContractBreached(idSent2).call()
       } catch(err){
         setErrorContractBreached(err.message)
       }
@@ -312,7 +319,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                          <input type="number" onChange={updateIdSent2} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
