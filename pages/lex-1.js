@@ -18,6 +18,8 @@ const App = () => {
 
     //storing error message when there is an error for calling getMyReceiverIds
     const [errorReceiverIds, setErrorReceiverIds] = useState('')
+    //storing the number of agreements the caller has as the receiver
+    const [myReceiverIds, setMyReceiverIds] = useState('')
 
     //storing the receiver's address 
     const [receiverAddress, setReceiverAddress] = useState('')
@@ -55,7 +57,8 @@ const App = () => {
     //storing the number of agreements the caller as the receiver has
     const getMyReceiverIds = async () => {
       try {
-
+        const _ids = await contractLex1.methods.getMyNumAgreementsReceiver().call({from: address})
+        setMyReceiverIds(_ids)
       } catch(err){
         setErrorReceiverIds(err.message)
       }
@@ -363,6 +366,9 @@ const App = () => {
                           MY RECEIVER'S AGREEMENTS<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
+                          </p>
+                          <p>
+                            Number of agreements as the receiver: {myReceiverIds}
                           </p>
                           <p>
                             {errorReceiverIds}
