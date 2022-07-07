@@ -17,9 +17,9 @@ const App = () => {
     const [contractLex1, setContractLex1] = useState(null)
 
     //storing error message when there is an error for calling getMyReceiverIds
-    const [errorReceiverIds, setErrorReceiverIds] = useState('')
+    const [errorReceiverAgreements, setErrorReceiverAgreements] = useState('')
     //storing the number of agreements the caller has as the receiver
-    const [myNumReceiverIds, setMyNumReceiverIds] = useState('')
+    const [myNumReceiverAgreements, setMyNumReceiverAgreements] = useState('')
     //storing the ids of caller as the receiver
     const [myReceiverIds, setMyReceiverIds] = useState([])
     //storing error message when there is an error for calling myReceiverAgreements
@@ -56,17 +56,17 @@ const App = () => {
 
     //when the copy of the smart contract is avalaibla call the functions bellow
     useEffect(() => {
-      if (contractLex1) getMyNumReceiverIds()
+      if (contractLex1) getMyNumReceiverAgreements()
       if (contractLex1) getMyReceiverIds()
     }, [contractLex1])
 
     //storing the number of agreements the caller as the receiver has
-    const getMyNumReceiverIds = async () => {
+    const getMyNumReceiverAgreements = async () => {
       try {
         const _ids = await contractLex1.methods.getMyNumAgreementsReceiver().call({from: address})
-        setMyNumReceiverIds(_ids)
+        setMyNumReceiverAgreements(_ids)
       } catch(err){
-        setErrorReceiverIds(err.message)
+        setErrorReceiverAgreements(err.message)
       }
     }
 
@@ -388,10 +388,10 @@ const App = () => {
                             <br></br>
                           </p>
                           <p>
-                            Number of agreements as the receiver: {myNumReceiverIds}
+                            Number of agreements as the receiver: {myNumReceiverAgreements}
                           </p>
                           <p>
-                            Receiver's ids: {myReceiverIds}
+                            Receiver's ids: {myNumReceiverAgreements}
                           </p>
                           <p>
                             {errorReceiverIds}
