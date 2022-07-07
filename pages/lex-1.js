@@ -30,8 +30,9 @@ const App = () => {
     const [errorNewContract, setErrorNewContract] = useState('')
 
 
-
-    //storing error message when there is an error for calling createNewAgreement
+    //storing the agreement's id
+    const [idSent, setIdSent] = useState('')
+    //storing error message when there is an error for calling sendPayment
     const [errorSendingPayment, setErrorSendingPayment] = useState('')
     //storing the amount sent
     const [amountSent, setAmountSent] = useState('')
@@ -78,10 +79,15 @@ const App = () => {
       setAmountSent(event.target.value)
     }
 
+    //setting the input's variable of the caller's amount sent from the send payment section
+    const updateIdSent = event => {
+      setIdSent(event.target.value)
+    }
+
     //sending the payment
-    const sendNewpayment = async () => {
+    const sendNewPayment = async () => {
       try {
-        await contractLex1.methods.sendPayment(_id).send({
+        await contractLex1.methods.sendPayment(idSent).send({
           from: address,
           value: web3.utils.toWei('1', 'wei') * amountSent
         })
@@ -270,7 +276,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                          <input type="number" onChange={updateIdSent} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -284,7 +290,7 @@ const App = () => {
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Pay </button>
+                                <button onClick={sendNewPayment} className="button is-outlined py-2 px-6 is-size-6">Pay </button>
                               </Link>
                             </div>
                           </p>
