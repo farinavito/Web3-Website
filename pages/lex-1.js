@@ -16,14 +16,14 @@ const App = () => {
     //storing the copy of the smart contract
     const [contractLex1, setContractLex1] = useState(null)
 
-    //storing error message when there is an error for calling getMyReceiverIds
-    const [errorReceiverAgreements, setErrorReceiverAgreements] = useState('')
     //storing the number of agreements the caller has as the receiver
-    const [myNumReceiverAgreements, setMyNumReceiverAgreements] = useState('')
+    const [myNumReceiverAgreements, setMyNumReceiverAgreements] = useState(0)
     //storing the ids of caller as the receiver
     const [myReceiverIds, setMyReceiverIds] = useState([])
+    //storing error message when there is an error for calling getMyReceiverIds
+    const [errorReceiverAgreements, setErrorReceiverAgreements] = useState('')
     //storing error message when there is an error for calling myReceiverAgreements
-    cosnt [errorReceiverIds, setErrorReceiverIds] = useState('')
+    const [errorReceiverIds, setErrorReceiverIds] = useState('')
 
 
     //storing the receiver's address 
@@ -74,7 +74,7 @@ const App = () => {
     const getMyReceiverIds = async () => {
       try {
         setMyReceiverIds('')
-        for (let i = 0; i < myNumReceiverIds; i++) {
+        for (let i = 0; i < myNumReceiverAgreements; i++) {
           const newId = await contractVault.methods.myReceiverAgreements(address, i).call()
           setMyReceiverIds(arr => [...arr, newId])
         }
@@ -391,9 +391,10 @@ const App = () => {
                             Number of agreements as the receiver: {myNumReceiverAgreements}
                           </p>
                           <p>
-                            Receiver's ids: {myNumReceiverAgreements}
+                            Receiver's ids: {myReceiverIds}
                           </p>
                           <p>
+                            {errorReceiverAgreements}
                             {errorReceiverIds}
                           </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
