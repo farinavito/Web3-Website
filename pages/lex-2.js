@@ -405,15 +405,7 @@ const App = () => {
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="number" onChange={updateEveryTimeUnit} placeholder="Enter the payment's time duration" className='has-background-primary input is-normal'></input>
-                        <p className=" has-background-black-bis py-4 is-size-6">
-                          <br></br>
-                        </p>
                         <input type="number" onChange={updateHowLong} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
-                        <p className=" has-background-black-bis py-4 is-size-6">
-                          <br></br>
-                        </p>
-                        <input type="number" onChange={updateStartAgreement} placeholder="Enter when the contract starts" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
