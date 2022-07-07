@@ -29,6 +29,10 @@ const App = () => {
     const [myNumSenderAgreements, setMyNumSenderAgreements] = useState('')
     //storing error message when there is an error for calling getMySenderIds
     const [errorSenderAgreements, setErrorSenderAgreements] = useState('')
+     //storing the ids of caller as the sender
+     const [mySenderIds, setMySenderIds] = useState([]) 
+     //storing error message when there is an error for calling mySenderAgreements
+    const [errorSenderIds, setErrorSenderIds] = useState('')
 
     //storing the receiver's address 
     const [receiverAddress, setReceiverAddress] = useState('')
@@ -63,6 +67,7 @@ const App = () => {
       if (contractLex1) getMyNumReceiverAgreements()
       if (contractLex1) getMyReceiverIds()
       if (contractLex1) getMyNumSenderAgreements()
+      if (contractLex1) getMySenderIds()
     }, [contractLex1])
 
     //storing the number of agreements the caller as the receiver has
@@ -101,7 +106,19 @@ const App = () => {
       }
     }
 
-    
+    //storing the caller's ids as the sender
+    const getMySenderIds = async () => {
+      try {
+        setMySenderIds('')
+        for (let i = 0; i < myNumReceiverAgreements; i++) {
+          const newId = await contractVault.methods.mySenderAgreements(address, i).call()
+          setMySenderIds(arr => [...arr, newId])
+        }
+      }
+      catch(err) {
+        setErrorSenderIds(err.message)
+      }
+    }
 
     //setting the input's variable of caller's receiver address from the createAgreement section 
     const updateReceiverAddress = event => {
@@ -465,7 +482,11 @@ const App = () => {
                             Number of agreements as the sender: {myNumSenderAgreements}
                           </p>
                           <p>
+                            Senders's ids: {mySenderIds}
+                          </p>
+                          <p>
                             {errorSenderAgreements}
+                            {errorSenderIds}
                           </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
