@@ -254,6 +254,10 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
+                          <input type="number" placeholder="Enter the amount" className='has-background-primary input is-normal'></input>
+                          <p className=" has-background-black-bis py-4 is-size-6">
+                            <br></br>
+                          </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
