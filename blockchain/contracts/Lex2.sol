@@ -5,7 +5,7 @@ pragma solidity ^0.8.11;
 /// @author Farina Vito
 
 
-contract LexTwo {
+contract Lex2 {
     /// @notice Defining the agreement 
     /// @param id A unique identifier of the agreement
     /// @param signee The person who commits sending the money to the receiver 
@@ -57,6 +57,12 @@ contract LexTwo {
 
   /// @notice Storing the id's of the agreements of the same receiver address
   mapping(address => uint[]) public myReceiverAgreements;
+
+  /// @notice Storing the number of the sender's agreemnts
+  mapping(address => uint256) internal myNumAgreementsSender; 
+
+  /// @notice Storing the number of the receiver's agreemnts
+  mapping(address => uint256) internal myNumAgreementsReceiver;
 
 
   /// @notice Emitting agreement's info 
@@ -115,6 +121,10 @@ contract LexTwo {
       mySenderAgreements[msg.sender].push(agreementId);
       //storing the ids of the agreements and connecting them to _receiver's address so we can display them to the frontend
       myReceiverAgreements[_receiver].push(agreementId);
+      //incrementing the number of sender's agreements
+      myNumAgreementsSender[msg.sender] += 1;
+      //incrementing the number of receiver's agreements
+      myNumAgreementsReceiver[_receiver] += 1;
 
       emit AgreementInfo(
         newAgreement.id, 
@@ -211,6 +221,22 @@ contract LexTwo {
     require(sent, "Failed to send Ether");
     withdraw_receiver[msg.sender] = 0;
     emit NotifyUser("Withdrawal has been transfered");
+  }
+
+  /// @notice Return the number of the caller's agreements as the receiver
+  function getMyNumAgreementsReceiver() external view returns(uint256){
+    //checking if the caller has some agreements
+    require(myNumAgreementsReceiver[msg.sender] > 0, "You don't have any agreements as a receiver");
+    //return the number of agreements that the caller has
+    return myNumAgreementsReceiver[msg.sender];
+  }
+
+  /// @notice Return the number of the caller's agreements as the sender
+  function getMyNumAgreementsSender() external view returns(uint256){
+    //checking if the caller has some agreements
+    require(myNumAgreementsSender[msg.sender] > 0, "You don't have any agreements as a sender");
+    //return the number of agreements that the caller has
+    return myNumAgreementsSender[msg.sender];
   }
 
   /// @notice Return the withdrawal amount of the agreement's signee
