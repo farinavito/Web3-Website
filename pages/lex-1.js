@@ -37,7 +37,9 @@ const App = () => {
     const [errorSendingPayment, setErrorSendingPayment] = useState('')
 
     //storing the id sent from the wasContractBreached
-    cons [idSent2, setIdSent2] = useState('')
+    const [idSent2, setIdSent2] = useState('')
+    //storing the wasContractBreached return
+    const [contractBreached, setContractBreached] = useState('')
     //storing error message when there is an error for calling wasContractBreached
     const [errorContractBreached, setErrorContractBreached] = useState('')
     
@@ -109,7 +111,8 @@ const App = () => {
     //checking if the agreement has been breached
     const wasNewContractBreached = async () => {
       try {
-        await contractLex1.methods.wasContractBreached(idSent2).call()
+        const functionReturn = await contractLex1.methods.wasContractBreached(idSent2).call()
+        setContractBreached(functionReturn)
       } catch(err){
         setErrorContractBreached(err.message)
       }
@@ -322,6 +325,9 @@ const App = () => {
                           <input type="number" onChange={updateIdSent2} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
+                          </p>
+                          <p>
+                            {contractBreached}
                           </p>
                           <p>
                             {errorContractBreached}
