@@ -514,7 +514,7 @@ const App = () => {
                           <p>
                             {errorSendersWithdrawalAmount}
                           </p>
-                          <p className="box has-background-black-bis pt-3 pb-3 mt-3">
+                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
