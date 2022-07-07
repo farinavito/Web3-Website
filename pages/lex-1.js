@@ -20,6 +20,11 @@ const App = () => {
     const [errorReceiverIds, setErrorReceiverIds] = useState('')
     //storing the number of agreements the caller has as the receiver
     const [myNumReceiverIds, setMyNumReceiverIds] = useState('')
+    //storing the ids of caller as the receiver
+    const [myReceiverIds, setMyReceiverIds] = useState([])
+    //storing error message when there is an error for calling myReceiverAgreements
+    cosnt [errorReceiverIds, setErrorReceiverIds] = useState('')
+
 
     //storing the receiver's address 
     const [receiverAddress, setReceiverAddress] = useState('')
@@ -52,6 +57,7 @@ const App = () => {
     //when the copy of the smart contract is avalaibla call the functions bellow
     useEffect(() => {
       if (contractLex1) getMyNumReceiverIds()
+      if (contractLex1) getMyReceiverIds()
     }, [contractLex1])
 
     //storing the number of agreements the caller as the receiver has
@@ -60,6 +66,20 @@ const App = () => {
         const _ids = await contractLex1.methods.getMyNumAgreementsReceiver().call({from: address})
         setMyNumReceiverIds(_ids)
       } catch(err){
+        setErrorReceiverIds(err.message)
+      }
+    }
+
+    //storing the caller's vaults ids
+    const getMyReceiverIds = async () => {
+      try {
+        setMyReceiverIds('')
+        for (let i = 0; i < myNumReceiverIds; i++) {
+          const newId = await contractVault.methods.myReceiverAgreements(address, i).call()
+          setMyReceiverIds(arr => [...arr, newId])
+        }
+      }
+      catch(err) {
         setErrorReceiverIds(err.message)
       }
     }
@@ -369,6 +389,9 @@ const App = () => {
                           </p>
                           <p>
                             Number of agreements as the receiver: {myNumReceiverIds}
+                          </p>
+                          <p>
+                            Receiver's ids: {myReceiverIds}
                           </p>
                           <p>
                             {errorReceiverIds}
