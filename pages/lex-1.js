@@ -65,6 +65,10 @@ const App = () => {
     const [withdrawalAmountAsReceiver, setWithdrawalAmountAsReceiver] = useState('')
     //storing error message when there is an error for calling receiversWithdrawalAmount
     const [errorReceiversWithdrawalAmount, setErrorReceiversWithdrawalAmount] = useState('')
+    //storing the caller's withdrawal amount as the sender
+    const [withdrawalAmountAsSender, setWithdrawalAmountAsSender] = useState('')
+    //storing error message when there is an error for calling receiversWithdrawalAmount
+    const [errorSendersWithdrawalAmount, setErrorSendersWithdrawalAmount] = useState('')
 
 
     //when the copy of the smart contract is avalaibla call the functions bellow
@@ -75,6 +79,7 @@ const App = () => {
         getMyNumSenderAgreements()
         getMySenderIds()
         receiversWithdrawalAmount()
+        sendersWithdrawalAmount()
       }
     }, [contractLex1])
 
@@ -212,6 +217,15 @@ const App = () => {
       }
     }
 
+    //retrieving the caller's withdrawal amount as the sender
+    const sendersWithdrawalAmount = async () => {
+      try {
+        const qty = await contractLex1.methods.getWithdrawalSender().call()
+        setWithdrawalAmountAsSender(qty)
+      } catch(err){
+        setErrorSendersWithdrawalAmount(err.message)
+      }
+    }
 
     const connectWalletHandler = async () => {
       //checking if metamask is available
@@ -534,6 +548,12 @@ const App = () => {
                           SHOW SENDER'S WITHDRAWAL AMOUNT<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
+                          </p>
+                          <p>
+                            {withdrawalAmountAsSender} weis
+                          </p>
+                          <p>
+                            {errorSendersWithdrawalAmount}
                           </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
