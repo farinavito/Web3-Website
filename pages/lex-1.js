@@ -33,6 +33,8 @@ const App = () => {
 
     //storing error message when there is an error for calling createNewAgreement
     const [errorSendingPayment, setErrorSendingPayment] = useState('')
+    //storing the amount sent
+    const [amountSent, setAmountSent] = useState('')
 
     //setting the input's variable of caller's receiver address from the createAgreement section 
     const updateReceiverAddress = event => {
@@ -73,6 +75,12 @@ const App = () => {
       } catch(err) {
         setErrorNewContract(err.message)
       }
+    }
+
+
+    const updateAmountSent = event => {
+      setAmountSent(event.target.value)
+      console.log(event.target.value);
     }
 
     //sending the payment
@@ -271,7 +279,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" placeholder="Enter the amount" className='has-background-primary input is-normal'></input>
+                          <input type="number" onChange={updateAmountSent} placeholder="Enter the amount" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
