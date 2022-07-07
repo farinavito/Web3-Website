@@ -199,7 +199,7 @@ const App = () => {
 
     //setting the input's variable of the caller's id sent from the was contract breached section
     const updateIdSent2 = event => {
-      setIdSent2(event.targte.value)
+      setIdSent2(event.target.value)
     }
 
     //checking if the agreement has been breached
