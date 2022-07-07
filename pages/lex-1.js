@@ -25,6 +25,10 @@ const App = () => {
     //storing error message when there is an error for calling myReceiverAgreements
     const [errorReceiverIds, setErrorReceiverIds] = useState('')
 
+    //storing the number of agreements the caller has as the sender
+    const [myNumSenderAgreements, setMyNumSenderAgreements] = useState('')
+    //storing error message when there is an error for calling getMySenderIds
+    const [errorSenderAgreements, setErrorSenderAgreements] = useState('')
 
     //storing the receiver's address 
     const [receiverAddress, setReceiverAddress] = useState('')
@@ -58,6 +62,7 @@ const App = () => {
     useEffect(() => {
       if (contractLex1) getMyNumReceiverAgreements()
       if (contractLex1) getMyReceiverIds()
+      if (contractLex1) getMyNumSenderAgreements()
     }, [contractLex1])
 
     //storing the number of agreements the caller as the receiver has
@@ -71,7 +76,7 @@ const App = () => {
       }
     }
 
-    //storing the caller's vaults ids
+    //storing the caller's ids as the receiver
     const getMyReceiverIds = async () => {
       try {
         setMyReceiverIds('')
@@ -84,6 +89,19 @@ const App = () => {
         setErrorReceiverIds(err.message)
       }
     }
+
+    //storing the number of agreements the caller as the sender has
+    const getMyNumSenderAgreements = async () => {
+      try {
+        const _ids = await contractLex1.methods.getMyNumAgreementsSender().call({from: address})
+        setMyNumSenderAgreements(_ids)
+      } catch(err){
+        setErrorSenderAgreements(err.message)
+        setMyNumSenderAgreements(0)
+      }
+    }
+
+    
 
     //setting the input's variable of caller's receiver address from the createAgreement section 
     const updateReceiverAddress = event => {
@@ -442,6 +460,12 @@ const App = () => {
                           MY SENDER'S AGREEMENTS<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
+                          </p>
+                          <p>
+                            Number of agreements as the sender: {myNumSenderAgreements}
+                          </p>
+                          <p>
+                            {errorSenderAgreements}
                           </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
