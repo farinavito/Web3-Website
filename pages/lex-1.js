@@ -471,6 +471,12 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
+                          <p>
+                            Current withdrawal amount: <br></br>{withdrawalAmountAsReceiver} weis
+                          </p>
+                          <p>
+                            {errorReceiversWithdrawalAmount}
+                          </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
@@ -513,6 +519,12 @@ const App = () => {
                           WITHDRAW SENDER<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
+                          </p>
+                          <p>
+                            Current withdrawal amount: <br></br>{withdrawalAmountAsSender} weis
+                          </p>
+                          <p>
+                            {errorSendersWithdrawalAmount}
                           </p>
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
