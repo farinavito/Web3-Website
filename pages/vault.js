@@ -67,6 +67,7 @@ const App = () => {
       }
       catch(err) {
         setErrorVault(err.message)
+        setIds(0)
       }
     }
     
