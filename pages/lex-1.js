@@ -29,13 +29,16 @@ const App = () => {
     //storing error message when there is an error for calling createNewAgreement
     const [errorNewContract, setErrorNewContract] = useState('')
 
-
     //storing the agreement's id
     const [idSent, setIdSent] = useState('')
-    //storing error message when there is an error for calling sendPayment
-    const [errorSendingPayment, setErrorSendingPayment] = useState('')
     //storing the amount sent
     const [amountSent, setAmountSent] = useState('')
+    //storing error message when there is an error for calling sendPayment
+    const [errorSendingPayment, setErrorSendingPayment] = useState('')
+
+    //storing error message when there is an error for calling wasContractBreached
+    const [errorContractBreached, setErrorContractBreached] = useState('')
+    
 
     //setting the input's variable of caller's receiver address from the createAgreement section 
     const updateReceiverAddress = event => {
@@ -95,6 +98,15 @@ const App = () => {
         setErrorSendingPayment(err.message)
       }
     } 
+
+    //checking if the agreement has been breached
+    const wasNewContractBreached = async () => {
+      try {
+
+      } catch(err){
+        setErrorContractBreached(err.message)
+      }
+    }
 
 
     const connectWalletHandler = async () => {
@@ -304,10 +316,13 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
+                          <p>
+                            {errorContractBreached}
+                          </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Check </button>
+                                <button onClick={wasNewContractBreached} className="button is-outlined py-2 px-6 is-size-6">Check </button>
                               </Link>
                             </div>
                           </p>
