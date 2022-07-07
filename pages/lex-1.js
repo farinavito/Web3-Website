@@ -16,6 +16,9 @@ const App = () => {
     //storing the copy of the smart contract
     const [contractLex1, setContractLex1] = useState(null)
 
+    //storing error message when there is an error for calling getMyReceiverIds
+    const [errorReceiverIds, setErrorReceiverIds] = useState('')
+
     //storing the receiver's address 
     const [receiverAddress, setReceiverAddress] = useState('')
     //storing the committed amount 
@@ -42,7 +45,21 @@ const App = () => {
     const [contractBreached, setContractBreached] = useState('')
     //storing error message when there is an error for calling wasContractBreached
     const [errorContractBreached, setErrorContractBreached] = useState('')
-    
+
+
+    //when the copy of the smart contract is avalaibla call the functions bellow
+    useEffect(() => {
+      if (contractLex1) getMyReceiverIds()
+    }, [contractLex1])
+
+    //storing the number of agreements the caller as the receiver has
+    const getMyReceiverIds = async () => {
+      try {
+
+      } catch(err){
+        setErrorReceiverIds(err.message)
+      }
+    }
 
     //setting the input's variable of caller's receiver address from the createAgreement section 
     const updateReceiverAddress = event => {
@@ -346,6 +363,9 @@ const App = () => {
                           MY RECEIVER'S AGREEMENTS<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
+                          </p>
+                          <p>
+                            {errorReceiverIds}
                           </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
