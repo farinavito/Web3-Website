@@ -471,10 +471,6 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" placeholder="Enter agreement's id" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
@@ -517,10 +513,6 @@ const App = () => {
                           WITHDRAW SENDER<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
                             <br></br>
-                          </p>
-                          <input type="number" placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br><br></br><br></br>
                           </p>
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
