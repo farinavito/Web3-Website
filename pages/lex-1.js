@@ -17,7 +17,7 @@ const App = () => {
     const [contractLex1, setContractLex1] = useState(null)
 
     //storing the number of agreements the caller has as the receiver
-    const [myNumReceiverAgreements, setMyNumReceiverAgreements] = useState(0)
+    const [myNumReceiverAgreements, setMyNumReceiverAgreements] = useState('')
     //storing the ids of caller as the receiver
     const [myReceiverIds, setMyReceiverIds] = useState([])
     //storing error message when there is an error for calling getMyReceiverIds
@@ -67,6 +67,7 @@ const App = () => {
         setMyNumReceiverAgreements(_ids)
       } catch(err){
         setErrorReceiverAgreements(err.message)
+        setMyNumReceiverAgreements(0)
       }
     }
 
