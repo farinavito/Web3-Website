@@ -61,6 +61,11 @@ const App = () => {
     //storing error message when there is an error for calling wasContractBreached
     const [errorContractBreached, setErrorContractBreached] = useState('')
 
+    //
+    const [withdrawalAmountAsReceiver, setWithdrawalAmountAsReceiver] = useState('')
+    //storing error message when there is an error for calling receiversWithdrawalAmount
+    const [errorReceiversWithdrawalAmount, setErrorReceiversWithdrawalAmount] = useState('')
+
 
     //when the copy of the smart contract is avalaibla call the functions bellow
     useEffect(() => {
@@ -68,6 +73,7 @@ const App = () => {
       if (contractLex1) getMyReceiverIds()
       if (contractLex1) getMyNumSenderAgreements()
       if (contractLex1) getMySenderIds()
+      if (contractLex1) receiversWithdrawalAmount()
     }, [contractLex1])
 
     //storing the number of agreements the caller as the receiver has
@@ -191,6 +197,16 @@ const App = () => {
         setContractBreached(functionReturn)
       } catch(err){
         setErrorContractBreached(err.message)
+      }
+    }
+
+    //retrieving the caller's withdrawal amount as the receiver
+    const receiversWithdrawalAmount = async () => {
+      try {
+        const qty = await contractLex1.methods.getWithdrawalReceiver().call()
+        setWithdrawalAmountAsReceiver(qty)
+      } catch(err){
+        setErrorReceiversWithdrawalAmount(err.message)
       }
     }
 
@@ -463,10 +479,16 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
+                          <p>
+                            {withdrawalAmountAsReceiver} weis
+                          </p>
+                          <p>
+                            {errorReceiversWithdrawalAmount}
+                          </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Show </button>
+                                <button onClick={receiversWithdrawalAmount} className="button is-outlined py-2 px-6 is-size-6">Show </button>
                               </Link>
                             </div>
                           </p>
