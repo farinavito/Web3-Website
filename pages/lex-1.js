@@ -29,6 +29,11 @@ const App = () => {
     //storing error message when there is an error for calling createNewAgreement
     const [errorNewContract, setErrorNewContract] = useState('')
 
+
+
+    //storing error message when there is an error for calling createNewAgreement
+    const [errorSendingPayment, setErrorSendingPayment] = useState('')
+
     //setting the input's variable of caller's receiver address from the createAgreement section 
     const updateReceiverAddress = event => {
       setReceiverAddress(event.target.value)
@@ -69,6 +74,18 @@ const App = () => {
         setErrorNewContract(err.message)
       }
     }
+
+    //sending the payment
+    const sendNewpayment = async () => {
+      try {
+        await contractLex1.methods.sendPayment(_id).send({
+          from: address,
+          value: web3.utils.toWei('1', 'wei') * amountSent
+        })
+      } catch(err) {
+        setErrorSendingPayment(err.message)
+      }
+    } 
 
 
     const connectWalletHandler = async () => {
@@ -257,6 +274,9 @@ const App = () => {
                           <input type="number" placeholder="Enter the amount" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
+                          </p>
+                          <p>
+                            {errorSendingPayment}
                           </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
