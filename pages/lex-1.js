@@ -19,7 +19,7 @@ const App = () => {
     //storing error message when there is an error for calling getMyReceiverIds
     const [errorReceiverIds, setErrorReceiverIds] = useState('')
     //storing the number of agreements the caller has as the receiver
-    const [myReceiverIds, setMyReceiverIds] = useState('')
+    const [myNumReceiverIds, setMyNumReceiverIds] = useState('')
 
     //storing the receiver's address 
     const [receiverAddress, setReceiverAddress] = useState('')
@@ -51,14 +51,14 @@ const App = () => {
 
     //when the copy of the smart contract is avalaibla call the functions bellow
     useEffect(() => {
-      if (contractLex1) getMyReceiverIds()
+      if (contractLex1) getMyNumReceiverIds()
     }, [contractLex1])
 
     //storing the number of agreements the caller as the receiver has
-    const getMyReceiverIds = async () => {
+    const getMyNumReceiverIds = async () => {
       try {
         const _ids = await contractLex1.methods.getMyNumAgreementsReceiver().call({from: address})
-        setMyReceiverIds(_ids)
+        setMyNumReceiverIds(_ids)
       } catch(err){
         setErrorReceiverIds(err.message)
       }
@@ -368,7 +368,7 @@ const App = () => {
                             <br></br>
                           </p>
                           <p>
-                            Number of agreements as the receiver: {myReceiverIds}
+                            Number of agreements as the receiver: {myNumReceiverIds}
                           </p>
                           <p>
                             {errorReceiverIds}
