@@ -39,13 +39,11 @@ const App = () => {
     //setting the input's variable of caller's receiver address from the createAgreement section 
     const updateReceiverAddress = event => {
       setReceiverAddress(event.target.value)
-      console.log(event.target.value);
     }
 
     //setting the input's variable of caller's committed amount from the createAgreement section 
     const updateCommittedAmount = event => {
       setCommittedAmount(event.target.value)
-      console.log(event.target.value);
     }
 
     //setting the input's variable of caller's every time unit from the createAgreement section
@@ -56,13 +54,11 @@ const App = () => {
     //setting the input's variable of caller's agreement's duration from the createAgreement section 
     const updateHowLong = event => {
       setAgreementsDuration(event.target.value)
-      console.log(event.target.value);
     }
 
     //setting the input's variable of the caller's start agreement from the createAgreement section
     const updateStartAgreement = event => {
       setStartAgreement(event.target.value)
-      console.log(event.target.value);
     }
 
     //creating a new agreement
@@ -77,10 +73,9 @@ const App = () => {
       }
     }
 
-
+    //setting the input's variable of the caller's amount sent from the send payment section
     const updateAmountSent = event => {
       setAmountSent(event.target.value)
-      console.log(event.target.value);
     }
 
     //sending the payment
