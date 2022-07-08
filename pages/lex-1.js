@@ -94,7 +94,7 @@ const App = () => {
         const _ids = await contractLex1.methods.getMyNumAgreementsReceiver().call({from: address})
         setMyNumReceiverAgreements(_ids)
       } catch(err){
-        setErrorReceiverAgreements(err.message)
+        setErrorReceiverAgreements(err.message.slice(20, 62))
         setMyNumReceiverAgreements(0)
       }
     }
@@ -119,7 +119,7 @@ const App = () => {
         const _ids = await contractLex1.methods.getMyNumAgreementsSender().call({from: address})
         setMyNumSenderAgreements(_ids)
       } catch(err){
-        setErrorSenderAgreements(err.message)
+        setErrorSenderAgreements(err.message.slice(20, 62))
         setMyNumSenderAgreements(0)
       }
     }
@@ -461,7 +461,7 @@ const App = () => {
                             <br></br>
                           </p>
                           <p>
-                            Number of agreements as the receiver: {myNumReceiverAgreements}
+                            Number of agreements as the receiver: <br></br>{myNumReceiverAgreements}
                           </p>
                           <p>
                             Receiver's ids: {myReceiverIds}
@@ -522,7 +522,7 @@ const App = () => {
                             <br></br>
                           </p>
                           <p>
-                            Number of agreements as the sender: {myNumSenderAgreements}
+                            Number of agreements as the sender: <br></br>{myNumSenderAgreements}
                           </p>
                           <p>
                             Senders's ids: {mySenderIds}
