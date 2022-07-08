@@ -438,7 +438,7 @@ const App = () => {
                           <br></br>
                         </p>
                         <p>
-                          Number of agreements as the receiver: {myNumReceiverAgreements}
+                          Number of agreements as the receiver: <br></br>{myNumReceiverAgreements}
                         </p>
                         <p>
                           Receiver's ids: {myReceiverIds}
@@ -499,7 +499,7 @@ const App = () => {
                           <br></br>
                         </p>
                         <p>
-                          Number of agreements as the sender: {myNumSenderAgreements}
+                          Number of agreements as the sender: <br></br>{myNumSenderAgreements}
                         </p>
                         <p>
                           Senders's ids: {mySenderIds}
