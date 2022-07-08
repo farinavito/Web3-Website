@@ -273,7 +273,6 @@ const App = () => {
           setContractLex1(localContract)
         } catch(err) {
           setError(err.message)
-          console.log(err.message)
         }    
       } else {
         //metamask not installed
