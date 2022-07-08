@@ -217,6 +217,8 @@ const App = () => {
     } catch(err){
       if(err.message == "Cannot read properties of null (reading 'methods')" ){
         setErrorWithdrawReceiversAmount("Please connect your wallet")
+      } else if (err.message == " MetaMask Tx Signature: User denied transaction signature "){
+        setErrorWithdrawReceiversAmount("You have rejected the transaction")
       } else{
         setErrorWithdrawReceiversAmount(err.message)
       }
@@ -232,6 +234,8 @@ const App = () => {
     } catch(err){
       if(err.message == "Cannot read properties of null (reading 'methods')" ){
         setErrorWithdrawSendersAmount("Please connect your wallet")
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature"){
+        setErrorWithdrawSendersAmount("You have rejected the transaction")
       } else{
         setErrorWithdrawSendersAmount(err.message)
       }
@@ -265,6 +269,10 @@ const App = () => {
         //local copy of the smart contract
         const localContract = contractLex(web3)
         setcontractLex2(localContract)
+        //set the error handler to empty
+        setErrorWithdrawReceiversAmount('')
+        //set the error handler to empty
+        setErrorWithdrawSendersAmount('')
       } catch(err) {
         setError(err.message)
       }    
