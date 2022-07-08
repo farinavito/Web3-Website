@@ -1,5 +1,5 @@
 import 'bulma/css/bulma.css'
-import contractLex2 from '../blockchain/webLex2'
+import contractLex from '../blockchain/webLex2'
 import { useState, useEffect } from 'react'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
@@ -255,7 +255,7 @@ const App = () => {
         //set the variable to the first account
         setAddress(accounts[0])
         //local copy of the smart contract
-        const localContract = contractLex2(web3)
+        const localContract = contractLex(web3)
         setcontractLex2(localContract)
       } catch(err) {
         setError(err.message)
