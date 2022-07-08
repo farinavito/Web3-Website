@@ -133,7 +133,7 @@ const App = () => {
           from: address
         })
       } catch(err) {
-        if(err.message == "Cannot read properties of null (reading 'methods')"){
+        if(err.message == "Cannot read properties of null (reading 'utils')"){
           setErrorWithdraw("Please connect your wallet")
         } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
           setErrorWithdraw("Please enter all the info required")
@@ -191,6 +191,10 @@ const App = () => {
           //local copy of the smart contract
           const localContract = vaultContract(web3)
           setContractVault(localContract)
+          //set the error handler to empty string after connecting the wallet
+          setErrorDeposit('')
+          //set the error handler to empty string after connecting the wallet
+          setErrorWithdraw('')
         } catch(err) {
           setError(err.message)
         }    
