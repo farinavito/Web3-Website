@@ -217,9 +217,11 @@ const App = () => {
     } catch(err){
       if(err.message == "Cannot read properties of null (reading 'methods')" ){
         setErrorWithdrawReceiversAmount("Please connect your wallet")
-      } else if (err.message == " MetaMask Tx Signature: User denied transaction signature "){
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+
         setErrorWithdrawReceiversAmount("You have rejected the transaction")
       } else{
+        console.log(err.message)
         setErrorWithdrawReceiversAmount(err.message)
       }
     }
@@ -234,7 +236,7 @@ const App = () => {
     } catch(err){
       if(err.message == "Cannot read properties of null (reading 'methods')" ){
         setErrorWithdrawSendersAmount("Please connect your wallet")
-      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature"){
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
         setErrorWithdrawSendersAmount("You have rejected the transaction")
       } else{
         setErrorWithdrawSendersAmount(err.message)
