@@ -226,7 +226,7 @@ const App = () => {
   //withdrawing the caller's amount as the sender
   const withdrawSendersAmount = async () => {
     try {
-      await contractLex2.methods.withdrawAsTheSender().send({
+      await contractLex2.methods.withdrawAsTheSignee().send({
         from: address
       })
     } catch(err){
