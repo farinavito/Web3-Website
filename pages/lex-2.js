@@ -215,7 +215,11 @@ const App = () => {
         from: address
       })
     } catch(err){
-      setErrorWithdrawReceiversAmount(err.message)
+      if(err.message == "Cannot read properties of null (reading 'methods')" ){
+        setErrorWithdrawReceiversAmount("Please connect your wallet")
+      } else{
+        setErrorWithdrawReceiversAmount(err.message)
+      }
     }
   }
 
@@ -226,7 +230,11 @@ const App = () => {
         from: address
       })
     } catch(err){
-      setErrorWithdrawSendersAmount(err.message)
+      if(err.message == "Cannot read properties of null (reading 'methods')" ){
+        setErrorWithdrawSendersAmount("Please connect your wallet")
+      } else{
+        setErrorWithdrawSendersAmount(err.message)
+      }
     }
   }
 
