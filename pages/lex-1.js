@@ -271,6 +271,10 @@ const App = () => {
           //local copy of the smart contract
           const localContract = contractLex(web3)
           setContractLex1(localContract)
+          //set the error handler to empty after connecting the wallet
+          setErrorWithdrawSendersAmount('')
+          //set the error handler to empty after connecting the wallet
+          setErrorWithdrawReceiversAmount('')
         } catch(err) {
           setError(err.message)
         }    
