@@ -312,10 +312,11 @@ const App = () => {
                           </p>
                           <input onChange={updateDepositTimeLock} type="number" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            <p></p><p></p><p>{errorDeposit}</p><br></br><br></br><br></br><br></br>
+                            <p></p><p></p><p></p><br></br><br></br><br></br>
                             <input onChange={updateDepositQty} type="number" placeholder="Enter the amount you want to lock" className='has-background-primary input is-normal'></input>
                           </p>
-                          <p className="box has-background-black-bis pt-3 pb-3 mt-3">
+                          <p>{errorDeposit}</p>
+                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
                                 <button onClick={depositFunds} className="button is-outlined py-2 px-6 is-size-6">Deposit </button>
@@ -331,9 +332,10 @@ const App = () => {
                           </p>
                           <input onChange={updateWithdrawId} type="number" placeholder="Enter the id from My funds" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                          <p></p><p>{errorWithdraw}</p><br></br><br></br><br></br>
+                            <p></p><p></p><br></br><br></br><br></br>
+                            <input onChange={updateWithdrawQty} type="number" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
                           </p>
-                          <input onChange={updateWithdrawQty} type="number" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
+                          <p>{errorWithdraw}</p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
