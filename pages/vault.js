@@ -102,9 +102,13 @@ const App = () => {
         await contractVault.methods.deposit(depositTimeLock).send({
           from: address,
           value: web3.utils.toWei('1', 'wei') * depositQty
-        })
-        setDepositTimeLock(0)
-        setDepositQty(0)
+        }).then(
+          e => {
+            if(e['status'] == true){
+              setErrorDeposit("Success")
+            }
+          }
+          )
       } catch(err) {
         if(err.message == "Cannot read properties of null (reading 'methods')"){
           setErrorDeposit("Please connect your wallet")
@@ -201,6 +205,7 @@ const App = () => {
           setErrorDeposit('')
           //set the error handler to empty string after connecting the wallet
           setErrorWithdraw('')
+          
         } catch(err) {
           setError(err.message)
         }    
