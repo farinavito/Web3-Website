@@ -94,7 +94,7 @@ const App = () => {
         const _ids = await contractLex1.methods.getMyNumAgreementsReceiver().call({from: address})
         setMyNumReceiverAgreements(_ids)
       } catch(err){
-        setErrorReceiverAgreements(err.message.slice(20, 62))
+        setErrorReceiverAgreements(err.message.slice(20, 63))
         setMyNumReceiverAgreements(0)
       }
     }
