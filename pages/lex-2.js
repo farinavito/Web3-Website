@@ -14,7 +14,7 @@ const App = () => {
   //storing the address of the person who connected their wallet
   const [address, setAddress] = useState(null)
   //storing the copy of the smart contract
-  const [contractLex2, setContractLex1] = useState(null)
+  const [contractLex2, setcontractLex2] = useState(null)
 
   //storing the number of agreements the caller has as the receiver
   const [myNumReceiverAgreements, setMyNumReceiverAgreements] = useState('')
@@ -38,12 +38,8 @@ const App = () => {
   const [receiverAddress, setReceiverAddress] = useState('')
   //storing the committed amount 
   const [committedAmount, setCommittedAmount] = useState('')
-  //storing the every time unit
-  const [everyTimeUnit, setEveryTimeUnit] = useState('')
   //storing the deadline
   const [agreementsDuration, setAgreementsDuration] = useState('')
-  //storing the start agreement
-  const [startAgreement, setStartAgreement] = useState('')
   //storing error message when there is an error for calling createNewAgreement
   const [errorNewContract, setErrorNewContract] = useState('')
 
@@ -259,8 +255,8 @@ const App = () => {
         //set the variable to the first account
         setAddress(accounts[0])
         //local copy of the smart contract
-        const localContract = contractLex(web3)
-        setContractLex1(localContract)
+        const localContract = contractLex2(web3)
+        setcontractLex2(localContract)
       } catch(err) {
         setError(err.message)
       }    
