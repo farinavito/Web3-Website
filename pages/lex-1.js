@@ -223,26 +223,39 @@ const App = () => {
     }
 
     //withdrawing the caller's amount as the receiver
-    const withdrawReceiversAmount = async () => {
-      try {
-        await contractLex1.methods.withdrawAsTheReceiver().send({
-          from: address
-        })
-      } catch(err){
+  const withdrawReceiversAmount = async () => {
+    try {
+      await contractLex1.methods.withdrawAsTheReceiver().send({
+        from: address
+      })
+    } catch(err){
+      if(err.message == "Cannot read properties of null (reading 'methods')" ){
+        setErrorWithdrawReceiversAmount("Please connect your wallet")
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+
+        setErrorWithdrawReceiversAmount("You have rejected the transaction")
+      } else{
         setErrorWithdrawReceiversAmount(err.message)
       }
     }
+  }
 
     //withdrawing the caller's amount as the sender
-    const withdrawSendersAmount = async () => {
-      try {
-        await contractLex1.methods.withdrawAsTheSender().send({
-          from: address
-        })
-      } catch(err){
+  const withdrawSendersAmount = async () => {
+    try {
+      await contractLex1.methods.withdrawAsTheSignee().send({
+        from: address
+      })
+    } catch(err){
+      if(err.message == "Cannot read properties of null (reading 'methods')" ){
+        setErrorWithdrawSendersAmount("Please connect your wallet")
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+        setErrorWithdrawSendersAmount("You have rejected the transaction")
+      } else{
         setErrorWithdrawSendersAmount(err.message)
       }
     }
+  }
 
     //retrieving the caller's withdrawal amount as the sender
     const sendersWithdrawalAmount = async () => {

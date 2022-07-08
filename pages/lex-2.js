@@ -221,7 +221,6 @@ const App = () => {
 
         setErrorWithdrawReceiversAmount("You have rejected the transaction")
       } else{
-        console.log(err.message)
         setErrorWithdrawReceiversAmount(err.message)
       }
     }
