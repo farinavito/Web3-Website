@@ -146,11 +146,17 @@ const App = () => {
       setWithdrawQty(event.target.value)
     }
 
-    //check if the caller is the same as the agreement's signee
-    const checkCaller = async (_id) => {
+    //check if the withdrawn's requirements aren't breached
+    const checkRequirementsWithdraw = async (_id) => {
       const ag_signee = await contractVault.methods.exactSafe(_id).call()
+      //check if the agreement's signee is the same as the connected address
       if (ag_signee.signee == address){
-        return true
+        //check if the locked up time is smaller than current unix timestamp
+        if (ag_signee.lockedUpTime < Math.floor(Date.now() / 1000)){
+          return true
+        } else {
+          setErrorWithdraw("Your locked up time hasn't ended yet")
+        } 
       } else {
         setErrorWithdraw("You aren't the agreement's signee")
         return false
@@ -161,7 +167,7 @@ const App = () => {
     const withdrawFunds = async () => {
       try {
         const qty = web3.utils.toWei('1', 'wei') * withdrawQty
-        if (checkCaller(withdrawId) == true){
+        if (checkRequirementsWithdraw(withdrawId) == true){
           await contractVault.methods.withdraw(withdrawId, qty).send({
             from: address
           }).then(
@@ -171,9 +177,7 @@ const App = () => {
               }
             }
           )
-        } else {
-        }
-        
+        }         
       } catch(err) {
         //TypeError
         if(err.message == "Cannot read properties of null (reading 'utils')"){
