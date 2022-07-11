@@ -145,7 +145,15 @@ const App = () => {
         const qty = web3.utils.toWei('1', 'wei') * withdrawQty
         await contractVault.methods.withdraw(withdrawId, qty).send({
           from: address
-        })
+        }).then(
+          e => {
+            if(e['status'] == true){
+              setErrorDeposit("Success")
+            } else if (e['status'] == false){
+              setErrorDeposit("Transaction failed")
+            }
+          }
+        )
       } catch(err) {
         //TypeError
         if(err.message == "Cannot read properties of null (reading 'utils')"){
