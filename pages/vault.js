@@ -146,16 +146,18 @@ const App = () => {
       setWithdrawQty(event.target.value)
     }
 
+    //check if the caller is the same as the agreement's signee
     const checkCaller = async (_id) => {
-      const blah = await contractVault.methods.exactSafe(_id).call()
-      if (blah == address){
+      const ag_signee = await contractVault.methods.exactSafe(_id).call()
+      console.log(typeof ag_signee.signee)
+      console.log(typeof address)
+      if (ag_signee.signee == address){
+        console.log("mhm")
         return true
-        //setErrorWithdraw('true')
       } else {
         setErrorWithdraw("You aren't the agreement's signee")
+        console.log("mmm")
         return false
-        
-        //setErrorWithdraw('false')
       }
     }
 
@@ -174,7 +176,6 @@ const App = () => {
             }
           )
         } else {
-          //setErrorWithdraw("You aren't the agreement's signee")
         }
         
       } catch(err) {
