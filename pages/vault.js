@@ -149,14 +149,10 @@ const App = () => {
     //check if the caller is the same as the agreement's signee
     const checkCaller = async (_id) => {
       const ag_signee = await contractVault.methods.exactSafe(_id).call()
-      console.log(typeof ag_signee.signee)
-      console.log(typeof address)
       if (ag_signee.signee == address){
-        console.log("mhm")
         return true
       } else {
         setErrorWithdraw("You aren't the agreement's signee")
-        console.log("mmm")
         return false
       }
     }
