@@ -99,17 +99,26 @@ const App = () => {
     //creating a deposit
     const depositFunds = async () => {
       try {
+        //every time initialize the error's useState to zero
         setErrorDeposit('')
-        await contractVault.methods.deposit(depositTimeLock).send({
-          from: address,
-          value: web3.utils.toWei('1', 'wei') * depositQty
-        }).then(
-          e => {
-            if(e['status'] == true){
-              setErrorDeposit("Transaction succeeded")
+        //check the smart contracts require statement fails
+        if (depositQty == 0){
+          setErrorDeposit('You must deposit more than 0 weis')
+        //call the deposit function
+        } else {
+          await contractVault.methods.deposit(depositTimeLock).send({
+            from: address,
+            value: web3.utils.toWei('1', 'wei') * depositQty
+          }).then(
+            e => {
+              //if the transaction succeeds
+              if(e['status'] == true){
+                setErrorDeposit("Transaction succeeded")
+              }
             }
-          }
-        )
+          )
+        }
+      //if the transaction fails
       } catch(err) {
         //TypeError
         if(err.message == "Cannot read properties of null (reading 'methods')"){
@@ -209,6 +218,8 @@ const App = () => {
           setWeb3(web3)
           //list of all accounts
           const accounts = await web3.eth.getAccounts()
+          //web3.eth.handleRevert = true
+
           //set the variable to the first account
           setAddress(accounts[0])
           //local copy of the smart contract
