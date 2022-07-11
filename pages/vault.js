@@ -105,22 +105,28 @@ const App = () => {
           value: web3.utils.toWei('1', 'wei') * depositQty
         }).then(
           e => {
+            console.log(e)
             if(e['status'] == true){
               setErrorDeposit("Success")
             } else if (e['status'] == false){
               setErrorDeposit("Transaction failed")
             }
           }
-          )
+        )
       } catch(err) {
+        console.log(err.name)
+        //TypeError
         if(err.message == "Cannot read properties of null (reading 'methods')"){
           setErrorDeposit("Please connect your wallet")
+        //Error
         } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
           setErrorDeposit("Please enter all the info required")
+        //undefined
         } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
           setErrorDeposit("You have rejected the transaction")
+        //Error
         } else{
-          setErrorDeposit(err.message)
+          setErrorDeposit("Transaction failed")
         }
       }
     }
