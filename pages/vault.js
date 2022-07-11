@@ -146,7 +146,7 @@ const App = () => {
         }).then(
           e => {
             if(e['status'] == true){
-              setErrorDeposit("Success")
+              setErrorWithdraw("Success")
             }
           }
         )
