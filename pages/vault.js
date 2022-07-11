@@ -120,7 +120,6 @@ const App = () => {
         } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
           setErrorDeposit("You have rejected the transaction")
         } else{
-          console.log(err.message)
           setErrorDeposit(err.message)
         }
       }
