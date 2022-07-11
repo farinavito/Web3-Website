@@ -146,19 +146,37 @@ const App = () => {
       setWithdrawQty(event.target.value)
     }
 
+    const checkCaller = async (_id) => {
+      const blah = await contractVault.methods.exactSafe(_id).call()
+      if (blah == address){
+        return true
+        //setErrorWithdraw('true')
+      } else {
+        setErrorWithdraw("You aren't the agreement's signee")
+        return false
+        
+        //setErrorWithdraw('false')
+      }
+    }
+
     //withdrawing deposit
     const withdrawFunds = async () => {
       try {
         const qty = web3.utils.toWei('1', 'wei') * withdrawQty
-        await contractVault.methods.withdraw(withdrawId, qty).send({
-          from: address
-        }).then(
-          e => {
-            if(e['status'] == true){
-              setErrorWithdraw("Transaction succeeded")
+        if (checkCaller(withdrawId) == true){
+          await contractVault.methods.withdraw(withdrawId, qty).send({
+            from: address
+          }).then(
+            e => {
+              if(e['status'] == true){
+                setErrorWithdraw("Transaction succeeded")
+              }
             }
-          }
-        )
+          )
+        } else {
+          //setErrorWithdraw("You aren't the agreement's signee")
+        }
+        
       } catch(err) {
         //TypeError
         if(err.message == "Cannot read properties of null (reading 'utils')"){
