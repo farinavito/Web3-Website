@@ -99,6 +99,7 @@ const App = () => {
     //creating a deposit
     const depositFunds = async () => {
       try {
+        setErrorDeposit('')
         await contractVault.methods.deposit(depositTimeLock).send({
           from: address,
           value: web3.utils.toWei('1', 'wei') * depositQty
@@ -106,6 +107,8 @@ const App = () => {
           e => {
             if(e['status'] == true){
               setErrorDeposit("Success")
+            } else if (e['status'] == false){
+              setErrorDeposit("Transaction failed")
             }
           }
           )
