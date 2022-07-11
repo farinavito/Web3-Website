@@ -107,8 +107,6 @@ const App = () => {
           e => {
             if(e['status'] == true){
               setErrorDeposit("Success")
-            } else if (e['status'] == false){
-              setErrorDeposit("Transaction failed")
             }
           }
         )
@@ -149,8 +147,6 @@ const App = () => {
           e => {
             if(e['status'] == true){
               setErrorDeposit("Success")
-            } else if (e['status'] == false){
-              setErrorDeposit("Transaction failed")
             }
           }
         )
