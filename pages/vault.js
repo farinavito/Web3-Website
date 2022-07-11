@@ -105,7 +105,6 @@ const App = () => {
           value: web3.utils.toWei('1', 'wei') * depositQty
         }).then(
           e => {
-            console.log(e)
             if(e['status'] == true){
               setErrorDeposit("Success")
             } else if (e['status'] == false){
@@ -114,7 +113,6 @@ const App = () => {
           }
         )
       } catch(err) {
-        console.log(err.name)
         //TypeError
         if(err.message == "Cannot read properties of null (reading 'methods')"){
           setErrorDeposit("Please connect your wallet")
@@ -149,14 +147,18 @@ const App = () => {
           from: address
         })
       } catch(err) {
+        //TypeError
         if(err.message == "Cannot read properties of null (reading 'utils')"){
           setErrorWithdraw("Please connect your wallet")
+        //Error
         } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
           setErrorWithdraw("Please enter all the info required")
+        //undefined
         } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
           setErrorWithdraw("You have rejected the transaction")
+        //Error
         } else{
-          setErrorWithdraw(err.message)
+          setErrorWithdraw("Transaction failed")
         }
       }
     }
@@ -185,7 +187,6 @@ const App = () => {
           
           allDetailsSingleVault= []
         }  
-        console.log(allDetails) 
         //console.log(allDetails);    
       } catch(err) {
         setErrorFundsDetails(err.message)
