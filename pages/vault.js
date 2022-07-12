@@ -152,24 +152,33 @@ const App = () => {
 
     //check if the withdrawn's requirements aren't breached
     const checkRequirementsWithdraw = async (_id, _qty) => {
-      const ag_signee = await contractVault.methods.exactSafe(_id).call()
-      //check if the agreement's signee is the same as the connected address
-      if (ag_signee.signee == address){
-        //check if the locked up time is smaller than current unix timestamp
-        if (ag_signee.lockedUpTime < Math.floor(Date.now() / 1000)){
-          //check if the balance of the agreement is larger than withdrawn amount
-          if(ag_signee.balances >= _qty){
-            return true
+      try{
+        const ag_signee = await contractVault.methods.exactSafe(_id).call()
+        //check if the agreement's signee is the same as the connected address
+        if (ag_signee.signee == address){
+          //check if the locked up time is smaller than current unix timestamp
+          if (ag_signee.lockedUpTime < Math.floor(Date.now() / 1000)){
+            //check if the balance of the agreement is larger than withdrawn amount
+            if(ag_signee.balances >= _qty){
+              return true
+            } else {
+              setErrorWithdraw("Your want to withdraw more than it's stored in the agreement")
+            }
           } else {
-            setErrorWithdraw("Your want to withdraw more than it's stored in the agreement")
-          }
+            setErrorWithdraw("Your locked up time hasn't ended yet")
+          } 
         } else {
-          setErrorWithdraw("Your locked up time hasn't ended yet")
-        } 
-      } else {
-        setErrorWithdraw("You aren't the agreement's signee")
-        return false
+          setErrorWithdraw("You aren't the agreement's signee")
+          return false
+        }
+      }catch(err) {
+        //Error
+        if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+        setErrorWithdraw("Please enter all the info required")
+        }
       }
+      
+      
     }
 
     //withdrawing deposit
