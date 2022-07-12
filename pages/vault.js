@@ -442,9 +442,13 @@ const App = () => {
                           MY FUNDS<br></br><br></br> 
                           
                           <p className='max-class'>Number of vaults you have: <br></br><br></br>{ids}</p>
-                          <p className='max-class'><br></br>{errorVault}</p>
                           <p className='max-class'>Your vault's ids: <br></br><br></br>{myVaultsIds}</p>
-                          <p className='max-class'><br></br>{errorIds}</p>
+                          <br></br>
+                          <p className='max-class'>
+                            <br></br>{errorIds}
+                            <br></br>{errorVault}
+                          </p>
+                          <br></br>
                           <p className='max-class'>Vault's details: </p>
                           <br></br>
                           {allDetails.map(({id, signee, balances, time}) => (
