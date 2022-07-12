@@ -99,9 +99,9 @@ const App = () => {
     //creating a deposit
     const depositFunds = async () => {
       try {
-        console.log(address)
         //every time initialize the error's useState to zero
         setErrorDeposit('')
+        //if the address is not connected
         if (address == null){
           setErrorDeposit('Please connect your wallet')
         }
