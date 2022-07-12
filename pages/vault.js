@@ -391,7 +391,8 @@ const App = () => {
                             <p></p><p></p><p></p><br></br><br></br><br></br>
                             <input onChange={updateDepositQty} type="number" placeholder="Enter the amount you want to lock" className='has-background-primary input is-normal'></input>
                           </p>
-                          <p>{errorDeposit}</p>
+                          <br></br>
+                          <p className='max-class'>{errorDeposit}</p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
@@ -410,8 +411,8 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <p></p><p></p><br></br><br></br><br></br>
                             <input onChange={updateWithdrawQty} type="number" min="0" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
-                          </p>
-                          <p>{errorWithdraw}</p>
+                          </p><br></br>
+                          <p className='max-class'>{errorWithdraw}</p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
