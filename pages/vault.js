@@ -99,10 +99,14 @@ const App = () => {
     //creating a deposit
     const depositFunds = async () => {
       try {
+        console.log(address)
         //every time initialize the error's useState to zero
         setErrorDeposit('')
+        if (address == null){
+          setErrorDeposit('Please connect your wallet')
+        }
         //check the smart contracts require statement fails
-        if (depositQty == 0){
+        else if (depositQty == 0){
           setErrorDeposit('You must deposit more than 0 weis')
         //call the deposit function
         } else {
