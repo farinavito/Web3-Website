@@ -441,10 +441,10 @@ const App = () => {
                         <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           MY FUNDS<br></br><br></br> 
                           
-                          <p>Number of vaults you have: {ids}</p>
-                          <p>{errorVault}</p>
-                          <p>Your vault's ids: {myVaultsIds}</p>
-                          <p>{errorIds}</p>
+                          <p className='max-class'>Number of vaults you have: <br></br>{ids}</p>
+                          <p className='max-class'><br></br>{errorVault}</p>
+                          <p>Your vault's ids: <br></br>{myVaultsIds}</p>
+                          <p className='max-class'><br></br>{errorIds}</p>
                           <p>Vault's details: </p>
                           <br></br>
                           {allDetails.map(({id, signee, balances, time}) => (
