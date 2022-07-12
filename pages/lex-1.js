@@ -418,19 +418,19 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
+                          <input type="number" min="0" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" onChange={updateEveryTimeUnit} placeholder="Enter the payment's time duration" className='has-background-primary input is-normal'></input>
+                          <input type="number" min="0" onChange={updateEveryTimeUnit} placeholder="Enter the payment's time duration" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" onChange={updateHowLong} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
+                          <input type="number" min="0" onChange={updateHowLong} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" onChange={updateStartAgreement} placeholder="Enter when the contract starts" className='has-background-primary input is-normal'></input>
+                          <input type="number" min="0" onChange={updateStartAgreement} placeholder="Enter when the contract starts" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -450,11 +450,11 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" onChange={updateIdSent} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                          <input type="number" min="0" onChange={updateIdSent} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" onChange={updateAmountSent} placeholder="Enter the amount" className='has-background-primary input is-normal'></input>
+                          <input type="number" min="0" onChange={updateAmountSent} placeholder="Enter the amount" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
@@ -512,7 +512,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <input type="number" onChange={updateIdSent2} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                          <input type="number" min="0" onChange={updateIdSent2} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
