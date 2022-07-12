@@ -147,13 +147,18 @@ const App = () => {
     }
 
     //check if the withdrawn's requirements aren't breached
-    const checkRequirementsWithdraw = async (_id) => {
+    const checkRequirementsWithdraw = async (_id, _qty) => {
       const ag_signee = await contractVault.methods.exactSafe(_id).call()
       //check if the agreement's signee is the same as the connected address
       if (ag_signee.signee == address){
         //check if the locked up time is smaller than current unix timestamp
         if (ag_signee.lockedUpTime < Math.floor(Date.now() / 1000)){
-          return true
+          //check if the balance of the agreement is larger than withdrawn amount
+          if(ag_signee.balances >= _qty){
+            return true
+          } else {
+            setErrorWithdraw("Your want to withdraw more than it's stored in the agreement")
+          }
         } else {
           setErrorWithdraw("Your locked up time hasn't ended yet")
         } 
@@ -167,7 +172,7 @@ const App = () => {
     const withdrawFunds = async () => {
       try {
         const qty = web3.utils.toWei('1', 'wei') * withdrawQty
-        if (checkRequirementsWithdraw(withdrawId) == true){
+        if (checkRequirementsWithdraw(withdrawId, qty) == true){
           await contractVault.methods.withdraw(withdrawId, qty).send({
             from: address
           }).then(
