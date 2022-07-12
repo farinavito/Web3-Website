@@ -153,6 +153,7 @@ const App = () => {
     //check if the withdrawn's requirements aren't breached
     const checkRequirementsWithdraw = async (_id, _qty) => {
       try{
+        //calling exactSafe()
         const ag_signee = await contractVault.methods.exactSafe(_id).call()
         //check if the agreement's signee is the same as the connected address
         if (ag_signee.signee == address){
