@@ -153,7 +153,6 @@ const App = () => {
     //check if the withdrawn's requirements aren't breached
     const checkRequirementsWithdraw = async (_id, _qty) => {
       try{
-        setErrorWithdraw('')
         //calling exactSafe()
         const ag_signee = await contractVault.methods.exactSafe(_id).call()
         //check if the agreement's signee is the same as the connected address
@@ -186,6 +185,7 @@ const App = () => {
     //withdrawing deposit
     const withdrawFunds = async () => {
       try {
+        setErrorWithdraw('')
         const qty = web3.utils.toWei('1', 'wei') * withdrawQty
         if (checkRequirementsWithdraw(withdrawId, qty) == true){
           await contractVault.methods.withdraw(withdrawId, qty).send({
