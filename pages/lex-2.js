@@ -152,6 +152,7 @@ const App = () => {
   //check if the createNewAgreement's requirements aren't breached
   const checkRequirementsCreate = async(_agreementsDuration) => {
     try {
+      //check if the agreement's deadline is not created in the past
       if(_agreementsDuration > Math.floor(Date.now() / 1000)){
         return true
       } else {
