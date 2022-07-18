@@ -283,6 +283,8 @@ const App = () => {
   //retrieving the caller's withdrawal amount as the receiver
   const receiversWithdrawalAmount = async () => {
     try {
+      setWithdrawalAmountAsReceiver('')
+      setErrorReceiversWithdrawalAmount('')
       const qty = await contractLex2.methods.getWithdrawalReceiver().call()
       setWithdrawalAmountAsReceiver(qty)
     } catch(err){
