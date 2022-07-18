@@ -124,7 +124,7 @@ const App = () => {
   const getMySenderIds = async () => {
     try {
       setMySenderIds('')
-      for (let i = 0; i < myNumReceiverAgreements; i++) {
+      for (let i = 0; i < myNumSenderAgreements; i++) {
         const newId = await contractVault.methods.mySenderAgreements(address, i).call()
         setMySenderIds(arr => [...arr, newId])
       }
