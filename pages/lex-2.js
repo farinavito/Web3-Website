@@ -317,6 +317,7 @@ const App = () => {
   //withdrawing the caller's amount as the receiver
   const withdrawReceiversAmount = async () => {
     try {
+      //calling withdrawAsTheReceiver function
       await contractLex2.methods.withdrawAsTheReceiver().send({
         from: address
       })
@@ -335,6 +336,7 @@ const App = () => {
   //withdrawing the caller's amount as the sender
   const withdrawSendersAmount = async () => {
     try {
+      //calling withdrawAsTheSignee function
       await contractLex2.methods.withdrawAsTheSignee().send({
         from: address
       })
