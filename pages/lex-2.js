@@ -193,6 +193,20 @@ const App = () => {
     setIdSent(event.target.value)
   }
 
+  //check if the sendNewPayment's requirements aren't breached
+  const checkRequirementsSend = async(_id) => {
+    try {
+      const ag_signee = await contractLex2.methods.exactSafe(_id).call()
+      if(ag_signee.signee == address){
+        return true
+      } else {
+        setErrorSendingPayment("Agreement's deadline is in the past")
+      }
+    } catch(err){
+      setErrorSendingPayment(err.message)
+    }
+  } 
+
   //sending the payment
   const sendNewPayment = async () => {
     try {
