@@ -163,7 +163,7 @@ const App = () => {
   } 
 
   //creating a new agreement
-  const createNewAgreement = async () => {
+  const createNewAgreement = async() => {
     try {
       setErrorNewContract('')
       if(checkRequirementsCreate() == true){
@@ -208,12 +208,21 @@ const App = () => {
   } 
 
   //sending the payment
-  const sendNewPayment = async () => {
+  const sendNewPayment = async() => {
     try {
-      await contractLex2.methods.sendPayment(idSent).send({
-        from: address,
-        value: web3.utils.toWei('1', 'wei') * amountSent
-      })
+      setErrorSendingPayment('')
+      if(checkRequirementsSend(idSent) == true){
+        await contractLex2.methods.sendPayment(idSent).send({
+          from: address,
+          value: web3.utils.toWei('1', 'wei') * amountSent
+        }).then(
+          e => {
+            if(e['status'] == true){
+              setErrorSendingPayment("Transaction succeeded")
+            }
+          }
+        )
+      }
     } catch(err) {
       setErrorSendingPayment(err.message)
     }
