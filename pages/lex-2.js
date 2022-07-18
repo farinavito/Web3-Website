@@ -166,11 +166,14 @@ const App = () => {
   //creating a new agreement
   const createNewAgreement = async() => {
     try {
+      //setting error handler to an empty string
       setErrorNewContract('')
-      if(checkRequirementsCreate() == true){
+      //check that the requirements don't fail
+      if(checkRequirementsCreate(agreementsDuration) == true){
         await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
           from: address,
           value: web3.utils.toWei('1', 'wei') * committedAmount
+        //return success message to the user
         }).then(
           e => {
             if(e['status'] == true){
