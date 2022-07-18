@@ -200,7 +200,9 @@ const App = () => {
   //check if the sendNewPayment's requirements aren't breached
   const checkRequirementsSend = async(_id) => {
     try {
+      //storing the struct Agreement
       const ag_signee = await contractLex2.methods.exactSafe(_id).call()
+      //check if the signee is the same as the connected address
       if(ag_signee.signee == address){
         return true
       } else {
