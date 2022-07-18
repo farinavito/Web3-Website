@@ -104,7 +104,7 @@ const App = () => {
     try {
       //settign the useState to an empty string
       setMyReceiverIds('')
-      //looping over the number of the contracts that the caller has 
+      //looping over the number of the contracts that the caller has as the receiver
       for (let i = 0; i < myNumReceiverAgreements; i++) {
         //retrieving the contract's ids
         const newId = await contractVault.methods.myReceiverAgreements(address, i).call()
@@ -135,9 +135,13 @@ const App = () => {
   //storing the caller's ids as the sender
   const getMySenderIds = async () => {
     try {
+      //settign the useState to an empty string
       setMySenderIds('')
+      //looping over the number of the contracts that the caller has as the sender
       for (let i = 0; i < myNumSenderAgreements; i++) {
+        //retrieving the contract's ids
         const newId = await contractVault.methods.mySenderAgreements(address, i).call()
+        //storing the ids in an array
         setMySenderIds(arr => [...arr, newId])
       }
     }
