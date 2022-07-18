@@ -242,6 +242,24 @@ const App = () => {
     setIdSent2(event.target.value)
   }
 
+  //check if wasContractBreached's requirements aren't breached
+  const checkRequirementsContractBreached = async(_id) => {
+    try{
+      const ag_signee = await contractLex2.methods.exactSafe(_id).call()
+      if(ag_signee.status == "Created"){
+        if(ag_signee.receiver == address){
+          return true
+        } else {
+          setErrorContractBreached("You aren't the contract's receiver")
+        }
+      } else {
+        setErrorContractBreached("The agreement is already terminated")
+      }
+    } catch(err){
+      setErrorContractBreached(err.message)
+    }
+  }
+
   //checking if the agreement has been breached
   const wasNewContractBreached = async () => {
     try {
