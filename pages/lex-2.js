@@ -166,10 +166,18 @@ const App = () => {
   const createNewAgreement = async () => {
     try {
       setErrorNewContract('')
-      await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
-        from: address,
-        value: web3.utils.toWei('1', 'wei') * committedAmount
-      })
+      if(checkRequirementsCreate() == true){
+        await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
+          from: address,
+          value: web3.utils.toWei('1', 'wei') * committedAmount
+        }).then(
+          e => {
+            if(e['status'] == true){
+              setErrorNewContract("Transaction succeeded")
+            }
+          }
+        )
+      }
     } catch(err) {
       setErrorNewContract(err.message)
     }
