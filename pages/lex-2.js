@@ -87,10 +87,14 @@ const App = () => {
   //storing the number of agreements the caller as the receiver has
   const getMyNumReceiverAgreements = async () => {
     try {
+      //storing the number of contracts that the caller has
       const _ids = await contractLex2.methods.getMyNumAgreementsReceiver().call({from: address})
+      //setting the useState with the number of contracts that the caller has
       setMyNumReceiverAgreements(_ids)
     } catch(err){
+      //retrieving the error that the requirements return
       setErrorReceiverAgreements(err.message.slice(20, 63))
+      //setting the number of contracts that the caller has to zero
       setMyNumReceiverAgreements(0)
     }
   }
