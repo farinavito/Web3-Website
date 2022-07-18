@@ -216,11 +216,14 @@ const App = () => {
   //sending the payment
   const sendNewPayment = async() => {
     try {
+      //setting error handler to an empty string
       setErrorSendingPayment('')
+      //checking if the requirements don't fail
       if(checkRequirementsSend(idSent) == true){
         await contractLex2.methods.sendPayment(idSent).send({
           from: address,
           value: web3.utils.toWei('1', 'wei') * amountSent
+        //returning success message to the user
         }).then(
           e => {
             if(e['status'] == true){
