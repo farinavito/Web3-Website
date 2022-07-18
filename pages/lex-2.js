@@ -551,6 +551,14 @@ const App = () => {
                 </div>
               </div>                         
           </section>
+
+          <footer>
+            <section className="hero is-small has-background-black-bis">
+              <div className="hero-body">
+              </div>
+            </section>
+          </footer>
+
       </div>
       
   )
