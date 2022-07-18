@@ -354,7 +354,9 @@ const App = () => {
   //retrieving the caller's withdrawal amount as the sender
   const sendersWithdrawalAmount = async () => {
     try {
+      //calling getWithdrawalSignee function
       const qty = await contractLex2.methods.getWithdrawalSignee().call()
+      //storing the function's return
       setWithdrawalAmountAsSender(qty)
     } catch(err){
       setErrorSendersWithdrawalAmount(err.message)
