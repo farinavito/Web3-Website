@@ -154,6 +154,8 @@ const App = () => {
     try {
       if(_agreementsDuration > Math.floor(Date.now() / 1000)){
         return true
+      } else {
+        setErrorNewContract("Agreement's deadline is in the past")
       }
     } catch(err){
       setErrorNewContract(err.message)
@@ -163,6 +165,7 @@ const App = () => {
   //creating a new agreement
   const createNewAgreement = async () => {
     try {
+      setErrorNewContract('')
       await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
         from: address,
         value: web3.utils.toWei('1', 'wei') * committedAmount
