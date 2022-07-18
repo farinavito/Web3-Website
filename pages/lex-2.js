@@ -149,6 +149,17 @@ const App = () => {
     setAgreementsDuration(event.target.value)
   }
 
+  //check if the createNewAgreement's requirements aren't breached
+  const checkRequirementsCreate = async(_agreementsDuration) => {
+    try {
+      if(_agreementsDuration > Math.floor(Date.now() / 1000)){
+        return true
+      }
+    } catch(err){
+      setErrorNewContract(err.message)
+    }
+  } 
+
   //creating a new agreement
   const createNewAgreement = async () => {
     try {
