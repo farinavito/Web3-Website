@@ -266,10 +266,13 @@ const App = () => {
   //checking if the agreement has been breached
   const wasNewContractBreached = async () => {
     try {
+      //setting error handlers to an empty string
       setContractBreached('')
       setErrorContractBreached('')
+      //check if the requirements don't fail
       if(checkRequirementsContractBreached(idSent2) == true){
         const functionReturn = await contractLex2.methods.wasContractBreached(idSent2).call()
+        //storing the function's return
         setContractBreached(functionReturn)
       } 
     } catch(err){
