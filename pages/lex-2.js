@@ -200,7 +200,7 @@ const App = () => {
       if(ag_signee.signee == address){
         return true
       } else {
-        setErrorSendingPayment("Agreement's deadline is in the past")
+        setErrorSendingPayment("You are not the signee of this contract")
       }
     } catch(err){
       setErrorSendingPayment(err.message)
