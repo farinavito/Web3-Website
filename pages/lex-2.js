@@ -302,9 +302,12 @@ const App = () => {
   //retrieving the caller's withdrawal amount as the receiver
   const receiversWithdrawalAmount = async () => {
     try {
+      //setting error handlers to an empty string
       setWithdrawalAmountAsReceiver('')
       setErrorReceiversWithdrawalAmount('')
+      //calling getWithdrawalReceiver function
       const qty = await contractLex2.methods.getWithdrawalReceiver().call()
+      //storing the function's return
       setWithdrawalAmountAsReceiver(qty)
     } catch(err){
       setErrorReceiversWithdrawalAmount(err.message)
