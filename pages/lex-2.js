@@ -404,11 +404,11 @@ const App = () => {
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="number" min="0" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
+                        <input type="number" min="1" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="number" min="0" onChange={updateHowLong} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
+                        <input type="number" min="1" onChange={updateHowLong} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
