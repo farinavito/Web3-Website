@@ -87,7 +87,7 @@ const App = () => {
   //storing the number of agreements the caller as the receiver has
   const getMyNumReceiverAgreements = async () => {
     try {
-      //storing the number of contracts that the caller has
+      //storing the number of contracts that the caller has as the receiver
       const _ids = await contractLex2.methods.getMyNumAgreementsReceiver().call({from: address})
       //setting the useState with the number of contracts that the caller has
       setMyNumReceiverAgreements(_ids)
@@ -120,10 +120,14 @@ const App = () => {
   //storing the number of agreements the caller as the sender has
   const getMyNumSenderAgreements = async () => {
     try {
+      //storing the number of contracts that the caller has as the sender
       const _ids = await contractLex2.methods.getMyNumAgreementsSender().call({from: address})
+      //setting the useState with the number of contracts that the caller has
       setMyNumSenderAgreements(_ids)
     } catch(err){
+      //retrieving the error that the requirements return
       setErrorSenderAgreements(err.message.slice(20, 62))
+      //setting the number of contracts that the caller has to zero
       setMyNumSenderAgreements(0)
     }
   }
