@@ -186,6 +186,7 @@ const App = () => {
       setErrorNewContract('')
       //check that the requirements don't fail
       if(checkRequirementsCreate(agreementsDuration) == true){
+        //calling createAgreement function
         await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
           from: address,
           value: web3.utils.toWei('1', 'wei') * committedAmount
@@ -236,6 +237,7 @@ const App = () => {
       setErrorSendingPayment('')
       //checking if the requirements don't fail
       if(checkRequirementsSend(idSent) == true){
+        //calling sendPayment function
         await contractLex2.methods.sendPayment(idSent).send({
           from: address,
           value: web3.utils.toWei('1', 'wei') * amountSent
@@ -287,6 +289,7 @@ const App = () => {
       setErrorContractBreached('')
       //check if the requirements don't fail
       if(checkRequirementsContractBreached(idSent2) == true){
+        //calling wasContractBreached function
         const functionReturn = await contractLex2.methods.wasContractBreached(idSent2).call()
         //storing the function's return
         setContractBreached(functionReturn)
