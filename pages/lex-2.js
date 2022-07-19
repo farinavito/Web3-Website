@@ -186,10 +186,11 @@ const App = () => {
       setErrorNewContract('')
       //check that the requirements don't fail
       if(checkRequirementsCreate(agreementsDuration) == true){
+        const qty = web3.utils.toWei('1', 'wei') * committedAmount
         //calling createAgreement function
         await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
           from: address,
-          value: web3.utils.toWei('1', 'wei') * committedAmount
+          value: qty
         //return success message to the user
         }).then(
           e => {
