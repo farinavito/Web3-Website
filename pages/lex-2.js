@@ -185,8 +185,6 @@ const App = () => {
       } else {
         setErrorNewContract("Please enter all the info required")
       }
-      
-      
     } catch(err){
       setErrorNewContract(err.message)
     }
@@ -210,6 +208,7 @@ const App = () => {
           e => {
             if(e['status'] == true){
               setErrorNewContract("Transaction succeeded")
+              console.log(e)
             }
           }
         )
@@ -220,10 +219,10 @@ const App = () => {
         setErrorNewContract("Please connect your wallet")
       //Error
       } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
-        setErrorWithdraw("Please enter all the info required")
+        setErrorNewContract("Please enter all the info required")
       //undefined
       } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
-        setErrorWithdraw("You have rejected the transaction")
+        setErrorNewContract("You have rejected the transaction")
       //Error
       } else {
         setErrorNewContract(err.message)
