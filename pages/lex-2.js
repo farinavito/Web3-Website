@@ -166,7 +166,7 @@ const App = () => {
   }
 
   //check if the createNewAgreement's requirements aren't breached
-  const checkRequirementsCreate = async(_agreementsDuration) => {
+  const checkRequirementsCreate = () => {
     try {
       //check if the user has inserted all inputs
       if(receiverAddress != '' && committedAmount != '' && agreementsDuration != ''){
@@ -174,7 +174,7 @@ const App = () => {
         const addrs = web3.utils.isAddress(receiverAddress)
         if(addrs){
           //check if the agreement's deadline is not created in the past
-          if(_agreementsDuration > Math.floor(Date.now() / 1000)){
+          if(agreementsDuration > Math.floor(Date.now() / 1000)){
             return true
           } else {
             setErrorNewContract("Agreement's deadline is in the past")
@@ -198,7 +198,7 @@ const App = () => {
       //storing the quantity of weis the user wants to insert
       const qty = web3.utils.toWei('1', 'wei') * committedAmount
       //check that the requirements don't fail
-      if(checkRequirementsCreate(agreementsDuration) == true){
+      if(checkRequirementsCreate() == true){
         //calling createAgreement function
         await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
           from: address,
