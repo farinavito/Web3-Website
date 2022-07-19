@@ -189,7 +189,7 @@ const App = () => {
         return false
       }
     } catch(err){
-      setErrorNewContract(err.message)
+      setErrorNewContract("Transaction failed")
     }
   } 
 
@@ -227,7 +227,7 @@ const App = () => {
         setErrorNewContract("You have rejected the transaction")
       //Error
       } else {
-        setErrorNewContract(err.message)
+        setErrorNewContract("Transaction failed")
       }
     }
   }
