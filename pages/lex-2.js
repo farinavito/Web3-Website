@@ -208,7 +208,6 @@ const App = () => {
           e => {
             if(e['status'] == true){
               setErrorNewContract("Transaction succeeded")
-              console.log(e)
             }
           }
         )
