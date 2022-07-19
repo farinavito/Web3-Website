@@ -201,6 +201,7 @@ const App = () => {
       }
     } catch(err) {
       setErrorNewContract(err.message)
+      console.log(err.message)
     }
   }
 
