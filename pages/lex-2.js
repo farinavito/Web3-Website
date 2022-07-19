@@ -168,11 +168,11 @@ const App = () => {
   //check if the createNewAgreement's requirements aren't breached
   const checkRequirementsCreate = async(_agreementsDuration) => {
     try {
-      //check if the input address is valid (returns true)
-      const addrs = web3.utils.isAddress(receiverAddress)
-      if(addrs){
-        //check if the user has inserted all inputs
-        if(receiverAddress != '' && committedAmount != '' && agreementsDuration != ''){
+      //check if the user has inserted all inputs
+      if(receiverAddress != '' && committedAmount != '' && agreementsDuration != ''){
+        //check if the input address is valid (returns true)
+        const addrs = web3.utils.isAddress(receiverAddress)
+        if(addrs){
           //check if the agreement's deadline is not created in the past
           if(_agreementsDuration > Math.floor(Date.now() / 1000)){
             return true
@@ -180,11 +180,12 @@ const App = () => {
             setErrorNewContract("Agreement's deadline is in the past")
           }
         } else {
-          setErrorNewContract("Please enter all the info required")
+          setErrorNewContract("The address inserted isn't correct")
         }
       } else {
-        setErrorNewContract("The address inserted isn't correct")
+        setErrorNewContract("Please enter all the info required")
       }
+      
       
     } catch(err){
       setErrorNewContract(err.message)
