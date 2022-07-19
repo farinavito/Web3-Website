@@ -168,11 +168,16 @@ const App = () => {
   //check if the createNewAgreement's requirements aren't breached
   const checkRequirementsCreate = async(_agreementsDuration) => {
     try {
-      //check if the agreement's deadline is not created in the past
-      if(_agreementsDuration > Math.floor(Date.now() / 1000)){
-        return true
+      //
+      if(receiverAddress != '' && committedAmount != '' && agreementsDuration != ''){
+        //check if the agreement's deadline is not created in the past
+        if(_agreementsDuration > Math.floor(Date.now() / 1000)){
+          return true
+        } else {
+          setErrorNewContract("Agreement's deadline is in the past")
+        }
       } else {
-        setErrorNewContract("Agreement's deadline is in the past")
+        setErrorNewContract("Please enter all the info required")
       }
     } catch(err){
       setErrorNewContract(err.message)
@@ -205,6 +210,10 @@ const App = () => {
       //TypeError
       if(err.message == "Cannot read properties of null (reading 'utils')"){
         setErrorNewContract("Please connect your wallet")
+      //Error
+      } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+        setErrorWithdraw("Please enter all the info required")
+      //undefined
       } else {
         setErrorNewContract(err.message)
       }
