@@ -184,9 +184,10 @@ const App = () => {
     try {
       //setting error handler to an empty string
       setErrorNewContract('')
+      //storing the quantity of weis the user wants to insert
+      const qty = web3.utils.toWei('1', 'wei') * committedAmount
       //check that the requirements don't fail
       if(checkRequirementsCreate(agreementsDuration) == true){
-        const qty = web3.utils.toWei('1', 'wei') * committedAmount
         //calling createAgreement function
         await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
           from: address,
@@ -201,8 +202,12 @@ const App = () => {
         )
       }
     } catch(err) {
-      setErrorNewContract(err.message)
-      console.log(err.message)
+      //TypeError
+      if(err.message == "Cannot read properties of null (reading 'utils')"){
+        setErrorNewContract("Please connect your wallet")
+      } else {
+        setErrorNewContract(err.message)
+      }
     }
   }
 
