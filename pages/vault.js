@@ -164,9 +164,11 @@ const App = () => {
               return true
             } else {
               setErrorWithdraw("Your want to withdraw more than it's stored in the agreement")
+              return false
             }
           } else {
             setErrorWithdraw("Your locked up time hasn't ended yet")
+            return false
           } 
         } else {
           setErrorWithdraw("You aren't the agreement's signee")
