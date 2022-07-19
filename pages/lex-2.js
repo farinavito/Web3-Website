@@ -178,12 +178,15 @@ const App = () => {
             return true
           } else {
             setErrorNewContract("Agreement's deadline is in the past")
+            return false
           }
         } else {
           setErrorNewContract("The address inserted isn't correct")
+          return false
         }
       } else {
         setErrorNewContract("Please enter all the info required")
+        return false
       }
     } catch(err){
       setErrorNewContract(err.message)
