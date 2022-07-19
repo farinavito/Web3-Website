@@ -543,6 +543,7 @@ const App = () => {
                         <p>
                           {errorNewContract}
                         </p>
+                        <br></br>
                         <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                           <div className='columns is-centered'>
                             <Link href="">
