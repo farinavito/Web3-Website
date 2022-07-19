@@ -391,6 +391,8 @@ const App = () => {
         setErrorWithdrawReceiversAmount('')
         //set the error handler to empty
         setErrorWithdrawSendersAmount('')
+        //set the error handler for creating new agreeemnt to empty
+        setErrorNewContract('')
       } catch(err) {
         setError(err.message)
       }    
