@@ -189,7 +189,7 @@ const App = () => {
         return false
       }
     } catch(err){
-      setErrorNewContract("Transaction failed")
+      setErrorNewContract("Unable to connect to smart contract")
     }
   } 
 
@@ -226,7 +226,6 @@ const App = () => {
       //Error
       } else {
         setErrorNewContract("Transaction failed")
-        console.log(err.message)
       }
     }
   }
@@ -258,7 +257,7 @@ const App = () => {
         setErrorSendingPayment("You are not the signee of this contract")
       }
     } catch(err){
-      setErrorSendingPayment(err.message)
+      setErrorSendingPayment("Unable to connect to the smart contract")
     }
   } 
 
