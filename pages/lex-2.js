@@ -334,7 +334,6 @@ const App = () => {
         setErrorContractBreached("The agreement is already terminated")
       }
     } catch(err){
-      //Error
       //TypeError
       if(err.message == "Cannot read properties of null (reading 'methods')"){
         setErrorContractBreached("Please connect your wallet")
