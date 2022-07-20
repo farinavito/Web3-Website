@@ -198,12 +198,14 @@ const App = () => {
     try {
       //setting error handler to an empty string
       setErrorNewContract('')
+      //storing the amount sent
+      const qty = web3.utils.toWei('1', 'wei') * committedAmount
       //check that the requirements don't fail
       if(checkRequirementsCreate() == true){
         //calling createAgreement function
-        await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
+        await contractLex2.methods.createAgreement(receiverAddress, qty, agreementsDuration).send({
           from: address,
-          value: web3.utils.toWei('1', 'wei') * committedAmount
+          value: qty
         //return success message to the user
         }).then(
           e => {
@@ -266,7 +268,7 @@ const App = () => {
     try {
       //setting error handler to an empty string
       setErrorSendingPayment('')
-      //storing the amount sended
+      //storing the amount sent
       const qty = web3.utils.toWei('1', 'wei') * amountSent
       //checking if the requirements don't fail
       if(checkRequirementsSend(idSent) == true){
