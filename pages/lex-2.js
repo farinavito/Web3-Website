@@ -251,7 +251,7 @@ const App = () => {
   const checkRequirementsSend = async(_id) => {
     try {
       //storing the struct Agreement
-      const ag_signee = await contractLex2.methods.exactSafe(_id).call()
+      const ag_signee = await contractLex2.methods.exactAgreement(_id).call()
       //check if the signee is the same as the connected address
       if(ag_signee.signee == address){
         //check if the status is equal to Created
@@ -460,6 +460,10 @@ const App = () => {
         setErrorWithdrawSendersAmount('')
         //set the error handler for creating new agreeemnt to empty
         setErrorNewContract('')
+        //set the error handler for sending new payment to empty
+        setErrorSendingPayment('')
+        //set the error handler for sending breaching new contract to empty
+        setErrorContractBreached('')
       } catch(err) {
         setError(err.message)
       }    
