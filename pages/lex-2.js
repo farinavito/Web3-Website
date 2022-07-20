@@ -335,8 +335,16 @@ const App = () => {
       }
     } catch(err){
       //Error
-      if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+      //TypeError
+      if(err.message == "Cannot read properties of null (reading 'methods')"){
+        setErrorContractBreached("Please connect your wallet")
+      //Error
+      } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
         setErrorContractBreached("Please enter all the info required")
+      //undefined
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+        setErrorContractBreached("You have rejected the transaction")
+      //Error
       } else {
         setErrorContractBreached("Unable to connect to the smart contract")
       }
@@ -358,7 +366,7 @@ const App = () => {
       } 
     } catch(err){
       //TypeError
-      if(err.message == "Cannot read properties of null (reading 'utils')"){
+      if(err.message == "Cannot read properties of null (reading 'methods')"){
         setErrorContractBreached("Please connect your wallet")
       //Error
       } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
