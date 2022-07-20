@@ -337,6 +337,8 @@ const App = () => {
       //Error
       if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
         setErrorWithdraw("Please enter all the info required")
+      } else {
+        setErrorSendingPayment("Unable to connect to the smart contract")
       }
     }
   }
