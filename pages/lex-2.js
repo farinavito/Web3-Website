@@ -324,7 +324,10 @@ const App = () => {
         setErrorContractBreached("The agreement is already terminated")
       }
     } catch(err){
-      setErrorContractBreached(err.message)
+      //Error
+      if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+        setErrorWithdraw("Please enter all the info required")
+      }
     }
   }
 
