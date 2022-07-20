@@ -321,7 +321,7 @@ const App = () => {
   const checkRequirementsContractBreached = async(_id) => {
     try{
       //storing the struct Agreement
-      const ag_signee = await contractLex2.methods.exactSafe(_id).call()
+      const ag_signee = await contractLex2.methods.exactAgreement(_id).call()
       //check if the contract's status is Created
       if(ag_signee.status == "Created"){
         //check if the receiver is the same as the connected address
