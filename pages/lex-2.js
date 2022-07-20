@@ -267,12 +267,14 @@ const App = () => {
     try {
       //setting error handler to an empty string
       setErrorSendingPayment('')
+      //storing the amount sended
+      const qty = web3.utils.toWei('1', 'wei') * amountSent
       //checking if the requirements don't fail
       if(checkRequirementsSend(idSent) == true){
         //calling sendPayment function
-        await contractLex2.methods.sendPayment(idSent).send({
+        await contractLex2.methods.sendPayment(idSent, qty).send({
           from: address,
-          value: web3.utils.toWei('1', 'wei') * amountSent
+          value: qty
         //returning success message to the user
         }).then(
           e => {
