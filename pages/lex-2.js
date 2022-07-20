@@ -198,14 +198,12 @@ const App = () => {
     try {
       //setting error handler to an empty string
       setErrorNewContract('')
-      //storing the quantity of weis the user wants to insert
-      const qty = web3.utils.toWei('1', 'wei') * committedAmount
       //check that the requirements don't fail
       if(checkRequirementsCreate() == true){
         //calling createAgreement function
         await contractLex2.methods.createAgreement(receiverAddress, committedAmount, agreementsDuration).send({
           from: address,
-          value: qty
+          value: web3.utils.toWei('1', 'wei') * committedAmount
         //return success message to the user
         }).then(
           e => {
@@ -228,6 +226,7 @@ const App = () => {
       //Error
       } else {
         setErrorNewContract("Transaction failed")
+        console.log(err.message)
       }
     }
   }
