@@ -248,7 +248,12 @@ const App = () => {
       const ag_signee = await contractLex2.methods.exactSafe(_id).call()
       //check if the signee is the same as the connected address
       if(ag_signee.signee == address){
-        return true
+        //check if the status is equal to Created
+        if(ag_signee.status == "Created"){
+          return true
+        } else {
+          setErrorSendingPayment("This agreement is already terminated")
+        }
       } else {
         setErrorSendingPayment("You are not the signee of this contract")
       }
