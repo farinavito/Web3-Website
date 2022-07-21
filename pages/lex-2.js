@@ -67,6 +67,8 @@ const App = () => {
   const [withdrawalAmountAsSender, setWithdrawalAmountAsSender] = useState('')
   //storing error message when there is an error for calling receiversWithdrawalAmount
   const [errorSendersWithdrawalAmount, setErrorSendersWithdrawalAmount] = useState('')
+  //storing the initialization for withdrawSendersAmount
+  const [isInitializeSender, setIsInitializeSender] = useState('')
 
   //storing error message when there is an error for calling withdrawReceiversAmount
   const [errorWithdrawReceiversAmount, setErrorWithdrawReceiversAmount] = useState('')
@@ -428,6 +430,9 @@ const App = () => {
   //retrieving the caller's withdrawal amount as the sender
   const sendersWithdrawalAmount = async () => {
     try {
+      //setting error handlers to an empty string
+      setWithdrawalAmountAsSender('')
+      setErrorSendersWithdrawalAmount('')
       //calling getWithdrawalSignee function
       const qty = await contractLex2.methods.getWithdrawalSignee().call()
       //storing the function's return
@@ -440,17 +445,27 @@ const App = () => {
   //withdrawing the caller's amount as the sender
   const withdrawSendersAmount = async () => {
     try {
-      //calling withdrawAsTheSignee function
-      await contractLex2.methods.withdrawAsTheSignee().send({
-        from: address
-      })
+      //check if the user has 0 weis
+      if(typeof setWithdrawalAmountAsSender() !== "undefined"){
+        //calling withdrawAsTheSignee function
+        await contractLex2.methods.withdrawAsTheSignee().send({
+          from: address
+        })
+      } else {
+        if(isInitializeSender == ''){
+          setErrorSendersWithdrawalAmount("Please connect your wallet")
+        } else {
+          setErrorSendersWithdrawalAmount("You can't withdraw 0 weis")
+          setWithdrawalAmountAsSender(await contractLex2.methods.getWithdrawalSignee().call())
+        }
+      }
     } catch(err){
       if(err.message == "Cannot read properties of null (reading 'methods')" ){
         setErrorWithdrawSendersAmount("Please connect your wallet")
       } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
         setErrorWithdrawSendersAmount("You have rejected the transaction")
       } else{
-        setErrorWithdrawSendersAmount(err.message)
+        setErrorWithdrawSendersAmount("Transaction failed")
       }
     }
   }
@@ -484,6 +499,8 @@ const App = () => {
         setErrorContractBreached('')
         //set the initialization to true for withdrawReceiversAmount
         setIsInitialize(true)
+        //set the initialization to true for withdrawSendersAmount
+        setIsInitializeSender(true)
       } catch(err) {
         setError(err.message)
       }    
