@@ -206,6 +206,39 @@ const App = () => {
       setIdSent2(event.target.value)
     }
 
+    //check if wasContractBreached's requirements aren't breached
+    const checkRequirementsContractBreached = async(_id) => {
+      try{
+        //storing the struct Agreement
+        const ag_signee = await contractLex1.methods.exactAgreement(_id).call()
+        //check if the receiver is the same as the connected address
+        if(ag_signee.receiver == address){
+          //check if the contract's status is Created
+          if(ag_signee.status == "Created"){
+            return true
+          } else {
+            setErrorContractBreached("The agreement is already terminated")
+          }
+        } else {
+          setErrorContractBreached("You aren't the contract's receiver")
+        }
+      } catch(err){
+        //TypeError
+        if(err.message == "Cannot read properties of null (reading 'methods')"){
+          setErrorContractBreached("Please connect your wallet")
+        //Error
+        } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+          setErrorContractBreached("Please enter all the info required")
+        //undefined
+        } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+          setErrorContractBreached("You have rejected the transaction")
+        //Error
+        } else {
+          setErrorContractBreached("Unable to connect to the smart contract")
+        }
+      }
+    }
+
     //checking if the agreement has been breached
     const wasNewContractBreached = async () => {
       try {
@@ -348,6 +381,8 @@ const App = () => {
           setIsInitializeSender(true)
           //set the initialization to true for withdrawReceiversAmount
           setIsInitialize(true)
+          //set the error handler to empty after connecting the wallet
+          setErrorContractBreached('')
         } catch(err) {
           setError(err.message)
         }    
