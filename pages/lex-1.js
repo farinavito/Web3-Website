@@ -454,9 +454,11 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
+                          <br></br>
                           <p className='max-class'>
                             {errorNewContract}
                           </p>
+                          <br></br>
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
                             <div className='columns is-centered'>
                               <Link href="">
@@ -475,9 +477,11 @@ const App = () => {
                           <p>
                             Number of agreements as the receiver: <br></br>{myNumReceiverAgreements}
                           </p>
+                          <br></br>
                           <p>
                             Receiver's ids: {myReceiverIds}
                           </p>
+                          <br></br>
                           <p className='max-class'>
                             {errorReceiverAgreements}
                             {errorReceiverIds}
@@ -491,10 +495,12 @@ const App = () => {
                           <p>
                             Current withdrawal amount: <br></br>{withdrawalAmountAsReceiver} weis
                           </p>
+                          <br></br>
                           <p className='max-class'>
                             {errorReceiversWithdrawalAmount}
                             {errorWithdrawReceiversAmount}
                           </p>
+                          <br></br>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
@@ -519,6 +525,7 @@ const App = () => {
                           <p>
                             {errorContractBreached}
                           </p>
+                          <br></br>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
@@ -537,9 +544,11 @@ const App = () => {
                           <p>
                             Number of agreements as the sender: <br></br>{myNumSenderAgreements}
                           </p>
+                          <br></br>
                           <p>
                             Senders's ids: {mySenderIds}
                           </p>
+                          <br></br>
                           <p className='max-class'>
                             {errorSenderAgreements}
                             {errorSenderIds}
@@ -558,6 +567,7 @@ const App = () => {
                             {errorSendersWithdrawalAmount}
                             {errorWithdrawSendersAmount}
                           </p>
+                          <br></br>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
@@ -579,9 +589,11 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
+                          <br></br>
                           <p className='max-class'>
                             {errorSendingPayment}
                           </p>
+                          <br></br>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
