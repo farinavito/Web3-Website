@@ -263,7 +263,7 @@ const App = () => {
         //check if the signee is the same as the connected address
         if(ag_signee.signee == address){
           //check if the status is equal to Created
-          if(ag_signee.status == "Created"){
+          if(ag_signee.status == "Created" || ag_signee.status == "Activated"){
             return true
           } else {
             setErrorSendingPayment("This agreement is already terminated")
