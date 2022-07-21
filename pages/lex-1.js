@@ -189,6 +189,32 @@ const App = () => {
       setIdSent(event.target.value)
     }
 
+    //check if the sendNewPayment's requirements aren't breached
+    const checkRequirementsSend = async(_id) => {
+      try {
+        //storing the struct Agreement
+        const ag_signee = await contractLex2.methods.exactAgreement(_id).call()
+        //check if the signee is the same as the connected address
+        if(ag_signee.signee == address){
+          //check if the status is equal to Created
+          if(ag_signee.status == "Created"){
+            return true
+          } else {
+            setErrorSendingPayment("This agreement is already terminated")
+          }
+        } else {
+          setErrorSendingPayment("You are not the signee of this contract")
+        }
+      } catch(err){
+        //Error
+        if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+          setErrorSendingPayment("Please enter all the info required")
+        } else {
+          setErrorSendingPayment("Unable to connect to the smart contract")
+        }
+      }
+    } 
+
     //sending the payment
     const sendNewPayment = async () => {
       try {
