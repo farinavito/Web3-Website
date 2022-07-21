@@ -167,6 +167,39 @@ const App = () => {
       setStartAgreement(event.target.value)
     }
 
+    //check if the createNewAgreement's requirements aren't breached
+    const checkRequirementsCreate = () => {
+      try {
+        //check if the user has inserted all inputs
+        if(receiverAddress != '' && committedAmount != '' && everyTimeUnit != '' && agreementsDuration != '' && startAgreement != ''){
+          //check if the input address is valid (returns true)
+          const addrs = web3.utils.isAddress(receiverAddress)
+          if(addrs){
+            //check if the agreement's deadline is not created in the past
+            if(agreementsDuration > Math.floor(Date.now() / 1000)){
+              return true
+            } else {
+              setErrorNewContract("Agreement's deadline is in the past")
+              return false
+            }
+          } else {
+            setErrorNewContract("The address inserted isn't correct")
+            return false
+          }
+        } else {
+          setErrorNewContract("Please enter all the info required")
+          return false
+        }
+      } catch(err){
+        //Error
+        if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+          setErrorWithdraw("Please enter all the info required")
+        } else {
+          setErrorNewContract("Unable to connect to the smart contract")
+        }
+      }
+    }
+
     //creating a new agreement
     const createNewAgreement = async () => {
       try {
