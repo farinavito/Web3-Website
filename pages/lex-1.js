@@ -234,9 +234,20 @@ const App = () => {
     //withdrawing the caller's amount as the receiver
   const withdrawReceiversAmount = async () => {
     try {
-      await contractLex1.methods.withdrawAsTheReceiver().send({
-        from: address
-      })
+      //check if the user has 0 weis
+      if(typeof setWithdrawalAmountAsReceiver() !== "undefined"){
+        //calling withdrawAsTheReceiver function
+        await contractLex1.methods.withdrawAsTheReceiver().send({
+          from: address
+        })
+      } else {
+        if(isInitialize == ''){
+          setErrorWithdrawReceiversAmount("Please connect your wallet")
+        } else {
+          setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
+          setWithdrawalAmountAsReceiver(await contractLex1.methods.getWithdrawalReceiver().call())
+        }
+      }
     } catch(err){
       if(err.message == "Cannot read properties of null (reading 'methods')" ){
         setErrorWithdrawReceiversAmount("Please connect your wallet")
