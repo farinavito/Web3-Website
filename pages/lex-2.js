@@ -322,16 +322,16 @@ const App = () => {
     try{
       //storing the struct Agreement
       const ag_signee = await contractLex2.methods.exactAgreement(_id).call()
-      //check if the contract's status is Created
-      if(ag_signee.status == "Created"){
-        //check if the receiver is the same as the connected address
-        if(ag_signee.receiver == address){
+      //check if the receiver is the same as the connected address
+      if(ag_signee.receiver == address){
+        //check if the contract's status is Created
+        if(ag_signee.status == "Created"){
           return true
         } else {
-          setErrorContractBreached("You aren't the contract's receiver")
+          setErrorContractBreached("The agreement is already terminated")
         }
       } else {
-        setErrorContractBreached("The agreement is already terminated")
+        setErrorContractBreached("You aren't the contract's receiver")
       }
     } catch(err){
       //TypeError
@@ -362,7 +362,7 @@ const App = () => {
         const functionReturn = await contractLex2.methods.wasContractBreached(idSent2).call()
         //storing the function's return
         setContractBreached(functionReturn)
-      } 
+      }
     } catch(err){
       //TypeError
       if(err.message == "Cannot read properties of null (reading 'methods')"){
