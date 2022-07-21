@@ -614,7 +614,7 @@ const App = () => {
                           <br></br>
                         </p>
                         <br></br>
-                        <p>
+                        <p className='max-class'>
                           {errorNewContract}
                         </p>
                         <br></br>
@@ -641,7 +641,7 @@ const App = () => {
                           Receiver's ids: {myReceiverIds}
                         </p>
                         <br></br>
-                        <p>
+                        <p className='max-class'>
                           {errorReceiverAgreements}
                           {errorReceiverIds}
                         </p>
@@ -655,7 +655,7 @@ const App = () => {
                           Current withdrawal amount: <br></br>{withdrawalAmountAsReceiver} weis
                         </p>
                         <br></br>
-                        <p>
+                        <p className='max-class'>
                           {errorReceiversWithdrawalAmount}
                           {errorWithdrawReceiversAmount}
                         </p>
@@ -680,7 +680,7 @@ const App = () => {
                           {contractBreached}
                         </p>
                         <br></br>
-                        <p>
+                        <p className='max-class'>
                           {errorContractBreached}
                         </p>
                         <p className="box has-background-black-bis pt-4 pb-3 mt-6">
@@ -706,7 +706,7 @@ const App = () => {
                           Senders's ids: {mySenderIds}
                         </p>
                         <br></br>
-                        <p>
+                        <p className='max-class'>
                           {errorSenderAgreements}
                           {errorSenderIds}
                         </p>
@@ -720,7 +720,7 @@ const App = () => {
                           Current withdrawal amount: <br></br>{withdrawalAmountAsSender} weis
                         </p>
                         <br></br>
-                        <p>
+                        <p className='max-class'>
                           {errorSendersWithdrawalAmount}
                           {errorWithdrawSendersAmount}
                         </p>
@@ -745,7 +745,7 @@ const App = () => {
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <p>
+                        <p className='max-class'>
                           {errorSendingPayment}
                         </p>
                         <p className="box has-background-black-bis pt-4 pb-3 mt-6">
