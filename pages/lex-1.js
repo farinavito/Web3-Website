@@ -240,7 +240,20 @@ const App = () => {
     }
   }
 
-    //withdrawing the caller's amount as the sender
+  //retrieving the caller's withdrawal amount as the sender
+  const sendersWithdrawalAmount = async () => {
+    try {
+      //set error handler to empty
+      setErrorWithdrawSendersAmount('')
+      setErrorSendersWithdrawalAmount('')
+      const qty = await contractLex1.methods.getWithdrawalSender().call()
+      setWithdrawalAmountAsSender(qty)
+    } catch(err){
+      setErrorSendersWithdrawalAmount(err.message)
+    }
+  }
+
+  //withdrawing the caller's amount as the sender
   const withdrawSendersAmount = async () => {
     try {
       await contractLex1.methods.withdrawAsTheSignee().send({
@@ -256,16 +269,6 @@ const App = () => {
       }
     }
   }
-
-    //retrieving the caller's withdrawal amount as the sender
-    const sendersWithdrawalAmount = async () => {
-      try {
-        const qty = await contractLex1.methods.getWithdrawalSender().call()
-        setWithdrawalAmountAsSender(qty)
-      } catch(err){
-        setErrorSendersWithdrawalAmount(err.message)
-      }
-    }
 
     const connectWalletHandler = async () => {
       //checking if metamask is available
