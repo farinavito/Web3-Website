@@ -434,7 +434,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <p>
+                          <p className='max-class'>
                             {errorNewContract}
                           </p>
                           <p className="box has-background-black-bis pt-3 pb-3 mt-3">
@@ -458,7 +458,7 @@ const App = () => {
                           <p>
                             Receiver's ids: {myReceiverIds}
                           </p>
-                          <p>
+                          <p className='max-class'>
                             {errorReceiverAgreements}
                             {errorReceiverIds}
                           </p>
@@ -471,7 +471,7 @@ const App = () => {
                           <p>
                             Current withdrawal amount: <br></br>{withdrawalAmountAsReceiver} weis
                           </p>
-                          <p>
+                          <p className='max-class'>
                             {errorReceiversWithdrawalAmount}
                             {errorWithdrawReceiversAmount}
                           </p>
@@ -492,9 +492,10 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <p>
+                          <p className='max-class'>
                             {contractBreached}
                           </p>
+                          <br></br>
                           <p>
                             {errorContractBreached}
                           </p>
@@ -519,7 +520,7 @@ const App = () => {
                           <p>
                             Senders's ids: {mySenderIds}
                           </p>
-                          <p>
+                          <p className='max-class'>
                             {errorSenderAgreements}
                             {errorSenderIds}
                           </p>
@@ -532,7 +533,7 @@ const App = () => {
                           <p>
                             Current withdrawal amount: <br></br>{withdrawalAmountAsSender} weis
                           </p>
-                          <p>
+                          <p className='max-class'>
                             {errorSendersWithdrawalAmount}
                             {errorWithdrawSendersAmount}
                           </p>
@@ -557,7 +558,7 @@ const App = () => {
                           <p className=" has-background-black-bis py-4 is-size-6">
                             <br></br>
                           </p>
-                          <p>
+                          <p className='max-class'>
                             {errorSendingPayment}
                           </p>
                           <p className="box has-background-black-bis pt-4 pb-3 mt-6">
