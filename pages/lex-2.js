@@ -613,6 +613,7 @@ const App = () => {
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
+                        <br></br>
                         <p>
                           {errorNewContract}
                         </p>
@@ -635,9 +636,11 @@ const App = () => {
                         <p>
                           Number of agreements as the receiver: <br></br>{myNumReceiverAgreements}
                         </p>
+                        <br></br>
                         <p>
                           Receiver's ids: {myReceiverIds}
                         </p>
+                        <br></br>
                         <p>
                           {errorReceiverAgreements}
                           {errorReceiverIds}
@@ -651,6 +654,7 @@ const App = () => {
                         <p>
                           Current withdrawal amount: <br></br>{withdrawalAmountAsReceiver} weis
                         </p>
+                        <br></br>
                         <p>
                           {errorReceiversWithdrawalAmount}
                           {errorWithdrawReceiversAmount}
@@ -675,6 +679,7 @@ const App = () => {
                         <p>
                           {contractBreached}
                         </p>
+                        <br></br>
                         <p>
                           {errorContractBreached}
                         </p>
@@ -696,9 +701,11 @@ const App = () => {
                         <p>
                           Number of agreements as the sender: <br></br>{myNumSenderAgreements}
                         </p>
+                        <br></br>
                         <p>
                           Senders's ids: {mySenderIds}
                         </p>
+                        <br></br>
                         <p>
                           {errorSenderAgreements}
                           {errorSenderIds}
@@ -712,6 +719,7 @@ const App = () => {
                         <p>
                           Current withdrawal amount: <br></br>{withdrawalAmountAsSender} weis
                         </p>
+                        <br></br>
                         <p>
                           {errorSendersWithdrawalAmount}
                           {errorWithdrawSendersAmount}
