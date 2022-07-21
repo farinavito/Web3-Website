@@ -398,6 +398,7 @@ const App = () => {
   //withdrawing the caller's amount as the receiver
   const withdrawReceiversAmount = async () => {
     try {
+      //check if the user has 0 weis
       if(typeof setWithdrawalAmountAsReceiver() !== "undefined"){
         //calling withdrawAsTheReceiver function
         await contractLex2.methods.withdrawAsTheReceiver().send({
