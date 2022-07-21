@@ -193,7 +193,7 @@ const App = () => {
     const checkRequirementsSend = async(_id) => {
       try {
         //storing the struct Agreement
-        const ag_signee = await contractLex2.methods.exactAgreement(_id).call()
+        const ag_signee = await contractLex1.methods.exactAgreement(_id).call()
         //check if the signee is the same as the connected address
         if(ag_signee.signee == address){
           //check if the status is equal to Created
@@ -436,6 +436,8 @@ const App = () => {
           setIsInitialize(true)
           //set the error handler to empty after connecting the wallet
           setErrorContractBreached('')
+          //set the error handler to empty after connecting the wallet
+          setErrorSendingPayment('')
         } catch(err) {
           setError(err.message)
         }    
