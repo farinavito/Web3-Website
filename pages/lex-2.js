@@ -212,7 +212,6 @@ const App = () => {
       //check that the requirements don't fail
       if(checkRequirementsCreate() == true){
         //calling createAgreement function
-        console.log(receiverAddress, qty, agreementsDuration, address)
         await contractLex2.methods.createAgreement(receiverAddress, qty, agreementsDuration).send({
           from: address,
           value: qty

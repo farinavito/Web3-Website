@@ -170,12 +170,39 @@ const App = () => {
     //creating a new agreement
     const createNewAgreement = async () => {
       try {
-        await contractLex1.methods.createAgreement(receiverAddress, committedAmount, everyTimeUnit, agreementsDuration, startAgreement).send({
-          from: address,
-          value: web3.utils.toWei('1', 'wei') * committedAmount
-        })
+        //setting error handler to an empty string
+        setErrorNewContract('')
+        //storing the amount sent
+        const qty = web3.utils.toWei('1', 'wei') * committedAmount
+        //check that the requirements don't fail
+        if(checkRequirementsCreate() == true){
+          await contractLex1.methods.createAgreement(receiverAddress, qty, everyTimeUnit, agreementsDuration, startAgreement).send({
+            from: address,
+            value: qty
+          //return success message to the user
+          }).then(
+            e => {
+              if(e['status'] == true){
+                setErrorNewContract("Transaction succeeded")
+              }
+            }
+          )
+        }
       } catch(err) {
-        setErrorNewContract(err.message)
+        //TypeError
+        if(err.message == "Cannot read properties of null (reading 'utils')"){
+          setErrorNewContract("Please connect your wallet")
+        //Error
+        } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+          setErrorNewContract("Please enter all the info required")
+        //undefined
+        } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+          setErrorNewContract("You have rejected the transaction")
+        //Error
+        } else {
+          console.log(err.message )
+          setErrorNewContract("Transaction failed")
+        }
       }
     }
 
@@ -438,6 +465,8 @@ const App = () => {
           setErrorContractBreached('')
           //set the error handler to empty after connecting the wallet
           setErrorSendingPayment('')
+          //set the error handler to empty after connecting the wallet
+          setErrorNewContract('')
         } catch(err) {
           setError(err.message)
         }    
