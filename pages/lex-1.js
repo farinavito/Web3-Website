@@ -553,6 +553,7 @@ const App = () => {
                           <p>
                             Current withdrawal amount: <br></br>{withdrawalAmountAsSender} weis
                           </p>
+                          <br></br>
                           <p className='max-class'>
                             {errorSendersWithdrawalAmount}
                             {errorWithdrawSendersAmount}
