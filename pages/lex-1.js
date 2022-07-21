@@ -246,7 +246,9 @@ const App = () => {
       //set error handler to empty
       setErrorWithdrawSendersAmount('')
       setErrorSendersWithdrawalAmount('')
+      //calling getWithdrawalSender function
       const qty = await contractLex1.methods.getWithdrawalSender().call()
+      //storing the function's return
       setWithdrawalAmountAsSender(qty)
     } catch(err){
       setErrorSendersWithdrawalAmount(err.message)
