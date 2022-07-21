@@ -192,12 +192,39 @@ const App = () => {
     //sending the payment
     const sendNewPayment = async () => {
       try {
-        await contractLex1.methods.sendPayment(idSent).send({
-          from: address,
-          value: web3.utils.toWei('1', 'wei') * amountSent
-        })
+        //setting error handler to an empty string
+        setErrorSendingPayment('')
+        //storing the amount sent
+        const qty = web3.utils.toWei('1', 'wei') * amountSent
+        //checking if the requirements don't fail
+        if(checkRequirementsSend(idSent) == true){
+          //calling sendPayment function
+          await contractLex1.methods.sendPayment(idSent, qty).send({
+            from: address,
+            value: web3.utils.toWei('1', 'wei') * amountSent
+          //returning success message to the user
+          }).then(
+            e => {
+              if(e['status'] == true){
+                setErrorSendingPayment("Transaction succeeded")
+              }
+            }
+          )
+        }
       } catch(err) {
-        setErrorSendingPayment(err.message)
+        //TypeError
+        if(err.message == "Cannot read properties of null (reading 'utils')"){
+          setErrorSendingPayment("Please connect your wallet")
+        //Error
+        } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+          setErrorSendingPayment("Please enter all the info required")
+        //undefined
+        } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+          setErrorSendingPayment("You have rejected the transaction")
+        //Error
+        } else {
+          setErrorSendingPayment("Transaction failed")
+        }
       }
     } 
 
