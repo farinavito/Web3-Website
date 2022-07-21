@@ -176,8 +176,14 @@ const App = () => {
           const addrs = web3.utils.isAddress(receiverAddress)
           if(addrs){
             //check if the agreement's deadline is not created in the past
-            if(agreementsDuration > Math.floor(Date.now() / 1000)){
-              return true
+            if(startAgreement >= Math.floor(Date.now() / 1000)){
+              //check if the agreement's duration is longer than the time unit
+              if(agreementsDuration > everyTimeUnit){
+                return true
+              } else {
+                setErrorNewContract("The period of the payment is greater than the duration of the contract")
+                return false
+              }
             } else {
               setErrorNewContract("Agreement's deadline is in the past")
               return false
