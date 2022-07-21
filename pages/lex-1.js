@@ -69,6 +69,8 @@ const App = () => {
     const [withdrawalAmountAsSender, setWithdrawalAmountAsSender] = useState('')
     //storing error message when there is an error for calling receiversWithdrawalAmount
     const [errorSendersWithdrawalAmount, setErrorSendersWithdrawalAmount] = useState('')
+    //storing the initialization for withdrawSendersAmount
+    const [isInitializeSender, setIsInitializeSender] = useState('')
 
     //storing error message when there is an error for calling withdrawReceiversAmount
     const [errorWithdrawReceiversAmount, setErrorWithdrawReceiversAmount] = useState('')
@@ -293,6 +295,8 @@ const App = () => {
           setErrorWithdrawSendersAmount('')
           //set the error handler to empty after connecting the wallet
           setErrorWithdrawReceiversAmount('')
+          //set the initialization to true for withdrawSendersAmount
+          setIsInitializeSender(true)
         } catch(err) {
           setError(err.message)
         }    
