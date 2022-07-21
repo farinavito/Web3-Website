@@ -65,6 +65,8 @@ const App = () => {
     const [withdrawalAmountAsReceiver, setWithdrawalAmountAsReceiver] = useState('')
     //storing error message when there is an error for calling receiversWithdrawalAmount
     const [errorReceiversWithdrawalAmount, setErrorReceiversWithdrawalAmount] = useState('')
+    //storing the initialization for withdrawReceiversAmount
+    const [isInitialize, setIsInitialize] = useState('')
     //storing the caller's withdrawal amount as the sender
     const [withdrawalAmountAsSender, setWithdrawalAmountAsSender] = useState('')
     //storing error message when there is an error for calling receiversWithdrawalAmount
@@ -313,6 +315,8 @@ const App = () => {
           setErrorWithdrawReceiversAmount('')
           //set the initialization to true for withdrawSendersAmount
           setIsInitializeSender(true)
+          //set the initialization to true for withdrawReceiversAmount
+          setIsInitialize(true)
         } catch(err) {
           setError(err.message)
         }    
