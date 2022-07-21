@@ -209,10 +209,30 @@ const App = () => {
     //checking if the agreement has been breached
     const wasNewContractBreached = async () => {
       try {
-        const functionReturn = await contractLex1.methods.wasContractBreached(idSent2).call()
-        setContractBreached(functionReturn)
+        //setting error handlers to an empty string
+        setContractBreached('')
+        setErrorContractBreached('')
+        //check if the requirements don't fail
+        if(checkRequirementsContractBreached(idSent2) == true){
+          //check if the requirements don't fail
+          const functionReturn = await contractLex1.methods.wasContractBreached(idSent2).call()
+          //storing the function's return
+          setContractBreached(functionReturn)
+        }
       } catch(err){
-        setErrorContractBreached(err.message)
+        //TypeError
+        if(err.message == "Cannot read properties of null (reading 'methods')"){
+          setErrorContractBreached("Please connect your wallet")
+        //Error
+        } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+          setErrorContractBreached("Please enter all the info required")
+        //undefined
+        } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+          setErrorContractBreached("You have rejected the transaction")
+        //Error
+        } else {
+          setErrorContractBreached("Transaction failed")
+        }
       }
     }
 
