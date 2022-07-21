@@ -29,9 +29,9 @@ const App = () => {
   const [myNumSenderAgreements, setMyNumSenderAgreements] = useState('')
   //storing error message when there is an error for calling getMySenderIds
   const [errorSenderAgreements, setErrorSenderAgreements] = useState('')
-   //storing the ids of caller as the sender
-   const [mySenderIds, setMySenderIds] = useState([]) 
-   //storing error message when there is an error for calling mySenderAgreements
+  //storing the ids of caller as the sender
+  const [mySenderIds, setMySenderIds] = useState([]) 
+  //storing error message when there is an error for calling mySenderAgreements
   const [errorSenderIds, setErrorSenderIds] = useState('')
 
   //storing the receiver's address 
@@ -61,7 +61,7 @@ const App = () => {
   const [withdrawalAmountAsReceiver, setWithdrawalAmountAsReceiver] = useState('')
   //storing error message when there is an error for calling receiversWithdrawalAmount
   const [errorReceiversWithdrawalAmount, setErrorReceiversWithdrawalAmount] = useState('')
-  //
+  //storing the initialization for withdrawReceiversAmount
   const [isInitialize, setIsInitialize] = useState('')
   //storing the caller's withdrawal amount as the sender
   const [withdrawalAmountAsSender, setWithdrawalAmountAsSender] = useState('')
@@ -411,6 +411,7 @@ const App = () => {
           setErrorWithdrawReceiversAmount("Please connect your wallet")
         } else {
           setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
+          setWithdrawalAmountAsReceiver(await contractLex2.methods.getWithdrawalReceiver().call())
         }
       }
     } catch(err){
