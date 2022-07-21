@@ -61,6 +61,8 @@ const App = () => {
   const [withdrawalAmountAsReceiver, setWithdrawalAmountAsReceiver] = useState('')
   //storing error message when there is an error for calling receiversWithdrawalAmount
   const [errorReceiversWithdrawalAmount, setErrorReceiversWithdrawalAmount] = useState('')
+  //
+  const [isInitialize, setIsInitialize] = useState('')
   //storing the caller's withdrawal amount as the sender
   const [withdrawalAmountAsSender, setWithdrawalAmountAsSender] = useState('')
   //storing error message when there is an error for calling receiversWithdrawalAmount
@@ -405,7 +407,11 @@ const App = () => {
           from: address
         })
       } else {
-        setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
+        if(isInitialize == ''){
+          setErrorWithdrawReceiversAmount("Please connect your wallet")
+        } else {
+          setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
+        }
       }
     } catch(err){
       if(err.message == "Cannot read properties of null (reading 'methods')" ){
@@ -475,6 +481,8 @@ const App = () => {
         setErrorSendingPayment('')
         //set the error handler for sending breaching new contract to empty
         setErrorContractBreached('')
+        //set the initialization to true for withdrawReceiversAmount
+        setIsInitialize(true)
       } catch(err) {
         setError(err.message)
       }    
