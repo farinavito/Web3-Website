@@ -261,7 +261,6 @@ const App = () => {
         setErrorNewContract("You have rejected the transaction")
       //Error
       } else {
-        console.log(err.message )
         setErrorNewContract("Transaction failed")
       }
     }
@@ -420,7 +419,6 @@ const App = () => {
       const qty = await contractLex1.methods.getWithdrawalReceiver().call({from: address})
       //storing the function's return
       setWithdrawalAmountAsReceiver(qty)
-      console.log(qty)
     } catch(err){
       setErrorReceiversWithdrawalAmount(err.message)
     }
@@ -501,11 +499,22 @@ const App = () => {
   //return the deposit amount that the caller has in all his sender's contract
   const getAllDeposit = async () => {
     try {
-      //storing the struct Agreement
-      const ag_signee = await contractLex1.methods.exactAgreement(_id).call({from: address})
+      //storing the deposit 
+      const qty = 0
+      //looping over the number of the contracts that the caller has as the sender
+      for (let i = 0; i < myNumSenderAgreements; i++){
+        //storing the struct Agreement
+        console.log(mySenderIds[i])
+        const ag_signee = await contractLex1.methods.exactAgreement(mySenderIds[i]).call({from: address})
+        //incrementing by the deposit amount
+        qty += ag_signee.deposit
+        console.log(qty)
+      }
+      //saving all the deposit's amount to an useState
+      setUserDepositAll(qty)
 
     } catch(err){
-
+      console.log(err.message)
     }
   }
 
