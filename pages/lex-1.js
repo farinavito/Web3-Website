@@ -94,6 +94,7 @@ const App = () => {
       getMySenderIds()
       receiversWithdrawalAmount()
       sendersWithdrawalAmount()
+      getAllDeposit()
     }
   }, [contractLex1])
 
@@ -494,6 +495,17 @@ const App = () => {
       } else{
         setErrorWithdrawSendersAmount("Transaction failed")
       }
+    }
+  }
+
+  //return the deposit amount that the caller has in all his sender's contract
+  const getAllDeposit = async () => {
+    try {
+      //storing the struct Agreement
+      const ag_signee = await contractLex1.methods.exactAgreement(_id).call({from: address})
+
+    } catch(err){
+
     }
   }
 
