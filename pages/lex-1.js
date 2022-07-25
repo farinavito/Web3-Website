@@ -517,7 +517,7 @@ const App = () => {
         //console.log(qty)
         }
         //saving all the deposit's amount to an useState
-        setUserDepositAll(qty)
+        setUserDepositAll(parseInt(qty))
       }
     } catch(err){
       console.log(err.message)
