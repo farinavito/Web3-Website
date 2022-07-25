@@ -426,76 +426,76 @@ const App = () => {
   }
 
   //withdrawing the caller's amount as the receiver
-const withdrawReceiversAmount = async () => {
-  try {
-    //check if the user has 0 weis
-    if(typeof setWithdrawalAmountAsReceiver() !== "undefined"){
-      //calling withdrawAsTheReceiver function
-      await contractLex1.methods.withdrawAsTheReceiver().send({
-        from: address
-      })
-    } else {
-      if(isInitialize == ''){
+  const withdrawReceiversAmount = async () => {
+    try {
+      //check if the user has 0 weis
+      if(typeof setWithdrawalAmountAsReceiver() !== "undefined"){
+        //calling withdrawAsTheReceiver function
+        await contractLex1.methods.withdrawAsTheReceiver().send({
+          from: address
+        })
+      } else {
+        if(isInitialize == ''){
+          setErrorWithdrawReceiversAmount("Please connect your wallet")
+        } else {
+          setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
+          setWithdrawalAmountAsReceiver(await contractLex1.methods.getWithdrawalReceiver().call())
+        }
+      }
+    } catch(err){
+      if(err.message == "Cannot read properties of null (reading 'methods')" ){
         setErrorWithdrawReceiversAmount("Please connect your wallet")
-      } else {
-        setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
-        setWithdrawalAmountAsReceiver(await contractLex1.methods.getWithdrawalReceiver().call())
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+
+        setErrorWithdrawReceiversAmount("You have rejected the transaction")
+      } else{
+        setErrorWithdrawReceiversAmount(err.message)
       }
     }
-  } catch(err){
-    if(err.message == "Cannot read properties of null (reading 'methods')" ){
-      setErrorWithdrawReceiversAmount("Please connect your wallet")
-    } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+  }
 
-      setErrorWithdrawReceiversAmount("You have rejected the transaction")
-    } else{
-      setErrorWithdrawReceiversAmount(err.message)
+  //retrieving the caller's withdrawal amount as the sender
+  const sendersWithdrawalAmount = async () => {
+    try {
+      //set error handler to empty
+      setErrorWithdrawSendersAmount('')
+      setErrorSendersWithdrawalAmount('')
+      //calling getWithdrawalSender function
+      const qty = await contractLex1.methods.getWithdrawalSender().call({from: address})
+      //storing the function's return
+      setWithdrawalAmountAsSender(qty)
+    } catch(err){
+      setErrorSendersWithdrawalAmount(err.message)
     }
   }
-}
 
-//retrieving the caller's withdrawal amount as the sender
-const sendersWithdrawalAmount = async () => {
-  try {
-    //set error handler to empty
-    setErrorWithdrawSendersAmount('')
-    setErrorSendersWithdrawalAmount('')
-    //calling getWithdrawalSender function
-    const qty = await contractLex1.methods.getWithdrawalSender().call({from: address})
-    //storing the function's return
-    setWithdrawalAmountAsSender(qty)
-  } catch(err){
-    setErrorSendersWithdrawalAmount(err.message)
-  }
-}
-
-//withdrawing the caller's amount as the sender
-const withdrawSendersAmount = async () => {
-  try {
-    //check if the user has 0 weis
-    if(typeof setWithdrawalAmountAsSender() !== "undefined"){
-      //calling withdrawAsTheSignee function
-      await contractLex1.methods.withdrawAsTheSender().send({
-        from: address
-      })
-    } else {
-      if(isInitializeSender == ''){
-        setErrorSendersWithdrawalAmount("Please connect your wallet")
+  //withdrawing the caller's amount as the sender
+  const withdrawSendersAmount = async () => {
+    try {
+      //check if the user has 0 weis
+      if(typeof setWithdrawalAmountAsSender() !== "undefined"){
+        //calling withdrawAsTheSignee function
+        await contractLex1.methods.withdrawAsTheSender().send({
+          from: address
+        })
       } else {
-        setErrorSendersWithdrawalAmount("You can't withdraw 0 weis")
-        setWithdrawalAmountAsSender(await contractLex1.methods.getWithdrawalSender().call())
+        if(isInitializeSender == ''){
+          setErrorSendersWithdrawalAmount("Please connect your wallet")
+        } else {
+          setErrorSendersWithdrawalAmount("You can't withdraw 0 weis")
+          setWithdrawalAmountAsSender(await contractLex1.methods.getWithdrawalSender().call())
+        }
+      }
+    } catch(err){
+      if(err.message == "Cannot read properties of null (reading 'methods')" ){
+        setErrorWithdrawSendersAmount("Please connect your wallet")
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+        setErrorWithdrawSendersAmount("You have rejected the transaction")
+      } else{
+        setErrorWithdrawSendersAmount("Transaction failed")
       }
     }
-  } catch(err){
-    if(err.message == "Cannot read properties of null (reading 'methods')" ){
-      setErrorWithdrawSendersAmount("Please connect your wallet")
-    } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
-      setErrorWithdrawSendersAmount("You have rejected the transaction")
-    } else{
-      setErrorWithdrawSendersAmount("Transaction failed")
-    }
   }
-}
 
   const connectWalletHandler = async () => {
     //checking if metamask is available
