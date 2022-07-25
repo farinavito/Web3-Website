@@ -677,7 +677,9 @@ const App = () => {
                           </p>
                           <br></br>
                           <p>
-                            Receiver's ids: {myReceiverIds}
+                            Receiver's ids:
+                            <br></br> 
+                            {myReceiverIds}
                           </p>
                           <br></br>
                           <p className='max-class'>
@@ -744,7 +746,8 @@ const App = () => {
                           </p>
                           <br></br>
                           <p>
-                            Senders's ids: {mySenderIds}
+                            Senders's ids: 
+                            <br></br>{mySenderIds}
                           </p>
                           <br></br>
                           <p className='max-class'>
