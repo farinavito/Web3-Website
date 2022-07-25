@@ -29,9 +29,9 @@ const App = () => {
     const [myNumSenderAgreements, setMyNumSenderAgreements] = useState('')
     //storing error message when there is an error for calling getMySenderIds
     const [errorSenderAgreements, setErrorSenderAgreements] = useState('')
-     //storing the ids of caller as the sender
-     const [mySenderIds, setMySenderIds] = useState([]) 
-     //storing error message when there is an error for calling mySenderAgreements
+    //storing the ids of caller as the sender
+    const [mySenderIds, setMySenderIds] = useState([]) 
+    //storing error message when there is an error for calling mySenderAgreements
     const [errorSenderIds, setErrorSenderIds] = useState('')
 
     //storing the receiver's address 
@@ -113,7 +113,7 @@ const App = () => {
         }
       }
       catch(err) {
-        setErrorReceiverIds(err.message)
+        setErrorReceiverIds(err.message.slice(20, 63))
       }
     }
 
