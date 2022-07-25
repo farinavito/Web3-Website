@@ -517,7 +517,11 @@ const App = () => {
         setUserDepositAll(parseInt(qty))
       }
     } catch(err){
-      setErrorUserDepositAll(err.message)
+      if(err.message == "Cannot read properties of undefined (reading 'length')"){
+        setErrorUserDepositAll('')
+      } else{
+        setErrorUserDepositAll(err.message)
+      }
     }
   }
 
