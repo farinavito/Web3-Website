@@ -79,6 +79,11 @@ const App = () => {
     //storing error message when there is an error for calling withdrawSendersAmount
     const [errorWithdrawSendersAmount, setErrorWithdrawSendersAmount] = useState('')
 
+    //storing the whole amount of the user's deposit
+    const [userDepositAll, setUserDepositAll] = useState([])
+    //storing the error message when there is an error for calling exactAgreement's deposit
+    const [errorUserDepositAll, setErrorUserDepositAll] = useState('')
+
 
     //when the copy of the smart contract is avalaibla call the functions bellow
     useEffect(() => {
@@ -696,12 +701,11 @@ const App = () => {
                             <br></br>
                           </p>
                           <p>
-                            Your commited deposit: <br></br>{withdrawalAmountAsReceiver} weis
+                            Your commited deposit: <br></br>{userDepositAll} weis
                           </p>
                           <br></br>
                           <p className='max-class'>
-                            {errorReceiversWithdrawalAmount}
-                            {errorWithdrawReceiversAmount}
+                            {errorUserDepositAll}
                           </p>
                           <br></br>
                         </p>
