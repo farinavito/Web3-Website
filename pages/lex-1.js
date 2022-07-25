@@ -7,862 +7,862 @@ import Web3 from 'web3'
 import Link from 'next/link'
 
 const App = () => {
-    //storing error message when there is an error for connecting to the metamask
-    const [error, setError] = useState('')
-    //storing the web3 instance
-    const [web3, setWeb3] = useState(null)
-    //storing the address of the person who connected their wallet
-    const [address, setAddress] = useState(null)
-    //storing the copy of the smart contract
-    const [contractLex1, setContractLex1] = useState(null)
+  //storing error message when there is an error for connecting to the metamask
+  const [error, setError] = useState('')
+  //storing the web3 instance
+  const [web3, setWeb3] = useState(null)
+  //storing the address of the person who connected their wallet
+  const [address, setAddress] = useState(null)
+  //storing the copy of the smart contract
+  const [contractLex1, setContractLex1] = useState(null)
 
-    //storing the number of agreements the caller has as the receiver
-    const [myNumReceiverAgreements, setMyNumReceiverAgreements] = useState('')
-    //storing the ids of caller as the receiver
-    const [myReceiverIds, setMyReceiverIds] = useState([])
-    //storing error message when there is an error for calling getMyReceiverIds
-    const [errorReceiverAgreements, setErrorReceiverAgreements] = useState('')
-    //storing error message when there is an error for calling myReceiverAgreements
-    const [errorReceiverIds, setErrorReceiverIds] = useState('')
+  //storing the number of agreements the caller has as the receiver
+  const [myNumReceiverAgreements, setMyNumReceiverAgreements] = useState('')
+  //storing the ids of caller as the receiver
+  const [myReceiverIds, setMyReceiverIds] = useState([])
+  //storing error message when there is an error for calling getMyReceiverIds
+  const [errorReceiverAgreements, setErrorReceiverAgreements] = useState('')
+  //storing error message when there is an error for calling myReceiverAgreements
+  const [errorReceiverIds, setErrorReceiverIds] = useState('')
 
-    //storing the number of agreements the caller has as the sender
-    const [myNumSenderAgreements, setMyNumSenderAgreements] = useState('')
-    //storing error message when there is an error for calling getMySenderIds
-    const [errorSenderAgreements, setErrorSenderAgreements] = useState('')
-    //storing the ids of caller as the sender
-    const [mySenderIds, setMySenderIds] = useState([]) 
-    //storing error message when there is an error for calling mySenderAgreements
-    const [errorSenderIds, setErrorSenderIds] = useState('')
+  //storing the number of agreements the caller has as the sender
+  const [myNumSenderAgreements, setMyNumSenderAgreements] = useState('')
+  //storing error message when there is an error for calling getMySenderIds
+  const [errorSenderAgreements, setErrorSenderAgreements] = useState('')
+  //storing the ids of caller as the sender
+  const [mySenderIds, setMySenderIds] = useState([]) 
+  //storing error message when there is an error for calling mySenderAgreements
+  const [errorSenderIds, setErrorSenderIds] = useState('')
 
-    //storing the receiver's address 
-    const [receiverAddress, setReceiverAddress] = useState('')
-    //storing the committed amount 
-    const [committedAmount, setCommittedAmount] = useState('')
-    //storing the every time unit
-    const [everyTimeUnit, setEveryTimeUnit] = useState('')
-    //storing the deadline
-    const [agreementsDuration, setAgreementsDuration] = useState('')
-    //storing the start agreement
-    const [startAgreement, setStartAgreement] = useState('')
-    //storing error message when there is an error for calling createNewAgreement
-    const [errorNewContract, setErrorNewContract] = useState('')
+  //storing the receiver's address 
+  const [receiverAddress, setReceiverAddress] = useState('')
+  //storing the committed amount 
+  const [committedAmount, setCommittedAmount] = useState('')
+  //storing the every time unit
+  const [everyTimeUnit, setEveryTimeUnit] = useState('')
+  //storing the deadline
+  const [agreementsDuration, setAgreementsDuration] = useState('')
+  //storing the start agreement
+  const [startAgreement, setStartAgreement] = useState('')
+  //storing error message when there is an error for calling createNewAgreement
+  const [errorNewContract, setErrorNewContract] = useState('')
 
-    //storing the agreement's id
-    const [idSent, setIdSent] = useState('')
-    //storing the amount sent
-    const [amountSent, setAmountSent] = useState('')
-    //storing error message when there is an error for calling sendPayment
-    const [errorSendingPayment, setErrorSendingPayment] = useState('')
+  //storing the agreement's id
+  const [idSent, setIdSent] = useState('')
+  //storing the amount sent
+  const [amountSent, setAmountSent] = useState('')
+  //storing error message when there is an error for calling sendPayment
+  const [errorSendingPayment, setErrorSendingPayment] = useState('')
 
-    //storing the id sent from the wasContractBreached
-    const [idSent2, setIdSent2] = useState('')
-    //storing the wasContractBreached return
-    const [contractBreached, setContractBreached] = useState('')
-    //storing error message when there is an error for calling wasContractBreached
-    const [errorContractBreached, setErrorContractBreached] = useState('')
+  //storing the id sent from the wasContractBreached
+  const [idSent2, setIdSent2] = useState('')
+  //storing the wasContractBreached return
+  const [contractBreached, setContractBreached] = useState('')
+  //storing error message when there is an error for calling wasContractBreached
+  const [errorContractBreached, setErrorContractBreached] = useState('')
 
-    //storing the caller's withdrawal amount as the receiver
-    const [withdrawalAmountAsReceiver, setWithdrawalAmountAsReceiver] = useState('')
-    //storing error message when there is an error for calling receiversWithdrawalAmount
-    const [errorReceiversWithdrawalAmount, setErrorReceiversWithdrawalAmount] = useState('')
-    //storing the initialization for withdrawReceiversAmount
-    const [isInitialize, setIsInitialize] = useState('')
-    //storing the caller's withdrawal amount as the sender
-    const [withdrawalAmountAsSender, setWithdrawalAmountAsSender] = useState('')
-    //storing error message when there is an error for calling receiversWithdrawalAmount
-    const [errorSendersWithdrawalAmount, setErrorSendersWithdrawalAmount] = useState('')
-    //storing the initialization for withdrawSendersAmount
-    const [isInitializeSender, setIsInitializeSender] = useState('')
+  //storing the caller's withdrawal amount as the receiver
+  const [withdrawalAmountAsReceiver, setWithdrawalAmountAsReceiver] = useState('')
+  //storing error message when there is an error for calling receiversWithdrawalAmount
+  const [errorReceiversWithdrawalAmount, setErrorReceiversWithdrawalAmount] = useState('')
+  //storing the initialization for withdrawReceiversAmount
+  const [isInitialize, setIsInitialize] = useState('')
+  //storing the caller's withdrawal amount as the sender
+  const [withdrawalAmountAsSender, setWithdrawalAmountAsSender] = useState('')
+  //storing error message when there is an error for calling receiversWithdrawalAmount
+  const [errorSendersWithdrawalAmount, setErrorSendersWithdrawalAmount] = useState('')
+  //storing the initialization for withdrawSendersAmount
+  const [isInitializeSender, setIsInitializeSender] = useState('')
 
-    //storing error message when there is an error for calling withdrawReceiversAmount
-    const [errorWithdrawReceiversAmount, setErrorWithdrawReceiversAmount] = useState('')
-    //storing error message when there is an error for calling withdrawSendersAmount
-    const [errorWithdrawSendersAmount, setErrorWithdrawSendersAmount] = useState('')
+  //storing error message when there is an error for calling withdrawReceiversAmount
+  const [errorWithdrawReceiversAmount, setErrorWithdrawReceiversAmount] = useState('')
+  //storing error message when there is an error for calling withdrawSendersAmount
+  const [errorWithdrawSendersAmount, setErrorWithdrawSendersAmount] = useState('')
 
-    //storing the whole amount of the user's deposit
-    const [userDepositAll, setUserDepositAll] = useState([])
-    //storing the error message when there is an error for calling exactAgreement's deposit
-    const [errorUserDepositAll, setErrorUserDepositAll] = useState('')
+  //storing the whole amount of the user's deposit
+  const [userDepositAll, setUserDepositAll] = useState([])
+  //storing the error message when there is an error for calling exactAgreement's deposit
+  const [errorUserDepositAll, setErrorUserDepositAll] = useState('')
 
 
-    //when the copy of the smart contract is avalaibla call the functions bellow
-    useEffect(() => {
-      if (contractLex1){
-        getMyNumReceiverAgreements()
-        getMyReceiverIds()
-        getMyNumSenderAgreements()
-        getMySenderIds()
-        receiversWithdrawalAmount()
-        sendersWithdrawalAmount()
-      }
-    }, [contractLex1])
-
-    //storing the number of agreements the caller as the receiver has
-    const getMyNumReceiverAgreements = async () => {
-      try {
-        //storing the number of contracts that the caller has as the receiver
-        const _ids = await contractLex1.methods.getMyNumAgreementsReceiver().call({from: address})
-        //setting the useState with the number of contracts that the caller has
-        setMyNumReceiverAgreements(_ids)
-      } catch(err){
-        //retrieving the error that the requirements return
-        setErrorReceiverAgreements(err.message.slice(20, 63))
-        //setting the number of contracts that the caller has to zero
-        setMyNumReceiverAgreements(0)
-      }
+  //when the copy of the smart contract is avalaibla call the functions bellow
+  useEffect(() => {
+    if (contractLex1){
+      getMyNumReceiverAgreements()
+      getMyReceiverIds()
+      getMyNumSenderAgreements()
+      getMySenderIds()
+      receiversWithdrawalAmount()
+      sendersWithdrawalAmount()
     }
+  }, [contractLex1])
 
-    //storing the caller's ids as the receiver
-    const getMyReceiverIds = async () => {
-      try {
-        //settign the useState to an empty string
-        setMyReceiverIds('')
-        //looping over the number of the contracts that the caller has as the receiver
-        for (let i = 0; i < myNumReceiverAgreements; i++) {
-          //retrieving the contract's ids
-          const newId = await contractLex1.methods.myReceiverAgreements(address, i).call({from: address})
-          //storing the ids in an array
-          setMyReceiverIds(arr => [...arr, newId])
-        }
-      }
-      catch(err) {
-        setErrorReceiverIds(err.message.slice(20, 63))
+  //storing the number of agreements the caller as the receiver has
+  const getMyNumReceiverAgreements = async () => {
+    try {
+      //storing the number of contracts that the caller has as the receiver
+      const _ids = await contractLex1.methods.getMyNumAgreementsReceiver().call({from: address})
+      //setting the useState with the number of contracts that the caller has
+      setMyNumReceiverAgreements(_ids)
+    } catch(err){
+      //retrieving the error that the requirements return
+      setErrorReceiverAgreements(err.message.slice(20, 63))
+      //setting the number of contracts that the caller has to zero
+      setMyNumReceiverAgreements(0)
+    }
+  }
+
+  //storing the caller's ids as the receiver
+  const getMyReceiverIds = async () => {
+    try {
+      //settign the useState to an empty string
+      setMyReceiverIds('')
+      //looping over the number of the contracts that the caller has as the receiver
+      for (let i = 0; i < myNumReceiverAgreements; i++) {
+        //retrieving the contract's ids
+        const newId = await contractLex1.methods.myReceiverAgreements(address, i).call({from: address})
+        //storing the ids in an array
+        setMyReceiverIds(arr => [...arr, newId])
       }
     }
+    catch(err) {
+      setErrorReceiverIds(err.message.slice(20, 63))
+    }
+  }
 
-    //storing the number of agreements the caller as the sender has
-    const getMyNumSenderAgreements = async () => {
-      try {
-        //storing the number of contracts that the caller has as the sender
-        const _ids = await contractLex1.methods.getMyNumAgreementsSender().call({from: address})
-        //setting the useState with the number of contracts that the caller has
-        setMyNumSenderAgreements(_ids)
-      } catch(err){
-        //retrieving the error that the requirements return
-        setErrorSenderAgreements(err.message.slice(20, 62))
-        //setting the number of contracts that the caller has to zero
-        setMyNumSenderAgreements(0)
+  //storing the number of agreements the caller as the sender has
+  const getMyNumSenderAgreements = async () => {
+    try {
+      //storing the number of contracts that the caller has as the sender
+      const _ids = await contractLex1.methods.getMyNumAgreementsSender().call({from: address})
+      //setting the useState with the number of contracts that the caller has
+      setMyNumSenderAgreements(_ids)
+    } catch(err){
+      //retrieving the error that the requirements return
+      setErrorSenderAgreements(err.message.slice(20, 62))
+      //setting the number of contracts that the caller has to zero
+      setMyNumSenderAgreements(0)
+    }
+  }
+
+  //storing the caller's ids as the sender
+  const getMySenderIds = async () => {
+    try {
+      //settign the useState to an empty string
+      setMySenderIds('')
+      //looping over the number of the contracts that the caller has as the sender
+      for (let i = 0; i < myNumSenderAgreements; i++) {
+        //retrieving the contract's ids
+        const newId = await contractLex1.methods.mySenderAgreements(address, i).call({from: address})
+        //storing the ids in an array
+        setMySenderIds(arr => [...arr, newId])
       }
     }
-
-    //storing the caller's ids as the sender
-    const getMySenderIds = async () => {
-      try {
-        //settign the useState to an empty string
-        setMySenderIds('')
-        //looping over the number of the contracts that the caller has as the sender
-        for (let i = 0; i < myNumSenderAgreements; i++) {
-          //retrieving the contract's ids
-          const newId = await contractLex1.methods.mySenderAgreements(address, i).call({from: address})
-          //storing the ids in an array
-          setMySenderIds(arr => [...arr, newId])
-        }
-      }
-      catch(err) {
-        setErrorSenderIds(err.message.slice(20, 62))
-      }
+    catch(err) {
+      setErrorSenderIds(err.message.slice(20, 62))
     }
+  }
 
-    //setting the input's variable of caller's receiver address from the createAgreement section 
-    const updateReceiverAddress = event => {
-      setReceiverAddress(event.target.value)
-    }
+  //setting the input's variable of caller's receiver address from the createAgreement section 
+  const updateReceiverAddress = event => {
+    setReceiverAddress(event.target.value)
+  }
 
-    //setting the input's variable of caller's committed amount from the createAgreement section 
-    const updateCommittedAmount = event => {
-      setCommittedAmount(event.target.value)
-    }
+  //setting the input's variable of caller's committed amount from the createAgreement section 
+  const updateCommittedAmount = event => {
+    setCommittedAmount(event.target.value)
+  }
 
-    //setting the input's variable of caller's every time unit from the createAgreement section
-    const updateEveryTimeUnit = event => {
-      setEveryTimeUnit(event.target.value)
-    }
+  //setting the input's variable of caller's every time unit from the createAgreement section
+  const updateEveryTimeUnit = event => {
+    setEveryTimeUnit(event.target.value)
+  }
 
-    //setting the input's variable of caller's agreement's duration from the createAgreement section 
-    const updateHowLong = event => {
-      setAgreementsDuration(event.target.value)
-    }
+  //setting the input's variable of caller's agreement's duration from the createAgreement section 
+  const updateHowLong = event => {
+    setAgreementsDuration(event.target.value)
+  }
 
-    //setting the input's variable of the caller's start agreement from the createAgreement section
-    const updateStartAgreement = event => {
-      setStartAgreement(event.target.value)
-    }
+  //setting the input's variable of the caller's start agreement from the createAgreement section
+  const updateStartAgreement = event => {
+    setStartAgreement(event.target.value)
+  }
 
-    //check if the createNewAgreement's requirements aren't breached
-    const checkRequirementsCreate = () => {
-      try {
-        //check if the user has inserted all inputs
-        if(receiverAddress != '' && committedAmount != '' && everyTimeUnit != '' && agreementsDuration != '' && startAgreement != ''){
-          //check if the input address is valid (returns true)
-          const addrs = web3.utils.isAddress(receiverAddress)
-          if(addrs){
-            //check if the agreement's deadline is not created in the past
-            if(startAgreement >= Math.floor(Date.now() / 1000)){
-              //check if the agreement's duration is longer than the time unit
-              if(agreementsDuration > everyTimeUnit){
-                return true
-              } else {
-                setErrorNewContract("The period of the payment is greater than the duration of the contract")
-                return false
-              }
+  //check if the createNewAgreement's requirements aren't breached
+  const checkRequirementsCreate = () => {
+    try {
+      //check if the user has inserted all inputs
+      if(receiverAddress != '' && committedAmount != '' && everyTimeUnit != '' && agreementsDuration != '' && startAgreement != ''){
+        //check if the input address is valid (returns true)
+        const addrs = web3.utils.isAddress(receiverAddress)
+        if(addrs){
+          //check if the agreement's deadline is not created in the past
+          if(startAgreement >= Math.floor(Date.now() / 1000)){
+            //check if the agreement's duration is longer than the time unit
+            if(agreementsDuration > everyTimeUnit){
+              return true
             } else {
-              setErrorNewContract("Agreement's deadline is in the past")
+              setErrorNewContract("The period of the payment is greater than the duration of the contract")
               return false
             }
           } else {
-            setErrorNewContract("The address inserted isn't correct")
+            setErrorNewContract("Agreement's deadline is in the past")
             return false
           }
         } else {
-          setErrorNewContract("Please enter all the info required")
+          setErrorNewContract("The address inserted isn't correct")
           return false
         }
-      } catch(err){
-        //Error
-        if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
-          setErrorWithdraw("Please enter all the info required")
-        } else {
-          setErrorNewContract("Unable to connect to the smart contract")
-        }
+      } else {
+        setErrorNewContract("Please enter all the info required")
+        return false
+      }
+    } catch(err){
+      //Error
+      if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+        setErrorWithdraw("Please enter all the info required")
+      } else {
+        setErrorNewContract("Unable to connect to the smart contract")
       }
     }
+  }
 
-    //creating a new agreement
-    const createNewAgreement = async () => {
-      try {
-        //setting error handler to an empty string
-        setErrorNewContract('')
-        //storing the amount sent
-        const qty = web3.utils.toWei('1', 'wei') * committedAmount
-        //check that the requirements don't fail
-        if(checkRequirementsCreate() == true){
-          await contractLex1.methods.createAgreement(receiverAddress, qty, everyTimeUnit, agreementsDuration, startAgreement).send({
-            from: address,
-            value: qty
-          //return success message to the user
-          }).then(
-            e => {
-              if(e['status'] == true){
-                setErrorNewContract("Transaction succeeded")
-              }
+  //creating a new agreement
+  const createNewAgreement = async () => {
+    try {
+      //setting error handler to an empty string
+      setErrorNewContract('')
+      //storing the amount sent
+      const qty = web3.utils.toWei('1', 'wei') * committedAmount
+      //check that the requirements don't fail
+      if(checkRequirementsCreate() == true){
+        await contractLex1.methods.createAgreement(receiverAddress, qty, everyTimeUnit, agreementsDuration, startAgreement).send({
+          from: address,
+          value: qty
+        //return success message to the user
+        }).then(
+          e => {
+            if(e['status'] == true){
+              setErrorNewContract("Transaction succeeded")
             }
-          )
-        }
-      } catch(err) {
-        //TypeError
-        if(err.message == "Cannot read properties of null (reading 'utils')"){
-          setErrorNewContract("Please connect your wallet")
-        //Error
-        } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
-          setErrorNewContract("Please enter all the info required")
-        //undefined
-        } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
-          setErrorNewContract("You have rejected the transaction")
-        //Error
-        } else {
-          console.log(err.message )
-          setErrorNewContract("Transaction failed")
-        }
-      }
-    }
-
-    //setting the input's variable of the caller's amount sent from the send payment section
-    const updateAmountSent = event => {
-      setAmountSent(event.target.value)
-    }
-
-    //setting the input's variable of the caller's id sent from the send payment section
-    const updateIdSent = event => {
-      setIdSent(event.target.value)
-    }
-
-    //check if the sendNewPayment's requirements aren't breached
-    const checkRequirementsSend = async(_id) => {
-      try {
-        //storing the struct Agreement
-        const ag_signee = await contractLex1.methods.exactAgreement(_id).call({from: address})
-        //check if the signee is the same as the connected address
-        if(ag_signee.signee == address){
-          //check if the status is equal to Created
-          if(ag_signee.status == "Created" || ag_signee.status == "Activated"){
-            return true
-          } else {
-            setErrorSendingPayment("This agreement is already terminated")
           }
-        } else {
-          setErrorSendingPayment("You are not the signee of this contract")
-        }
-      } catch(err){
-        //Error
-        if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
-          setErrorSendingPayment("Please enter all the info required")
-        } else {
-          setErrorSendingPayment("Unable to connect to the smart contract")
-        }
+        )
       }
-    } 
+    } catch(err) {
+      //TypeError
+      if(err.message == "Cannot read properties of null (reading 'utils')"){
+        setErrorNewContract("Please connect your wallet")
+      //Error
+      } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+        setErrorNewContract("Please enter all the info required")
+      //undefined
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+        setErrorNewContract("You have rejected the transaction")
+      //Error
+      } else {
+        console.log(err.message )
+        setErrorNewContract("Transaction failed")
+      }
+    }
+  }
 
-    //sending the payment
-    const sendNewPayment = async () => {
-      try {
-        //setting error handler to an empty string
-        setErrorSendingPayment('')
-        //storing the amount sent
-        const qty = web3.utils.toWei('1', 'wei') * amountSent
-        //checking if the requirements don't fail
-        if(checkRequirementsSend(idSent) == true){
-          //calling sendPayment function
-          await contractLex1.methods.sendPayment(idSent, qty).send({
-            from: address,
-            value: web3.utils.toWei('1', 'wei') * amountSent
-          //returning success message to the user
-          }).then(
-            e => {
-              if(e['status'] == true){
-                setErrorSendingPayment("Transaction succeeded")
-              }
+  //setting the input's variable of the caller's amount sent from the send payment section
+  const updateAmountSent = event => {
+    setAmountSent(event.target.value)
+  }
+
+  //setting the input's variable of the caller's id sent from the send payment section
+  const updateIdSent = event => {
+    setIdSent(event.target.value)
+  }
+
+  //check if the sendNewPayment's requirements aren't breached
+  const checkRequirementsSend = async(_id) => {
+    try {
+      //storing the struct Agreement
+      const ag_signee = await contractLex1.methods.exactAgreement(_id).call({from: address})
+      //check if the signee is the same as the connected address
+      if(ag_signee.signee == address){
+        //check if the status is equal to Created
+        if(ag_signee.status == "Created" || ag_signee.status == "Activated"){
+          return true
+        } else {
+          setErrorSendingPayment("This agreement is already terminated")
+        }
+      } else {
+        setErrorSendingPayment("You are not the signee of this contract")
+      }
+    } catch(err){
+      //Error
+      if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+        setErrorSendingPayment("Please enter all the info required")
+      } else {
+        setErrorSendingPayment("Unable to connect to the smart contract")
+      }
+    }
+  } 
+
+  //sending the payment
+  const sendNewPayment = async () => {
+    try {
+      //setting error handler to an empty string
+      setErrorSendingPayment('')
+      //storing the amount sent
+      const qty = web3.utils.toWei('1', 'wei') * amountSent
+      //checking if the requirements don't fail
+      if(checkRequirementsSend(idSent) == true){
+        //calling sendPayment function
+        await contractLex1.methods.sendPayment(idSent, qty).send({
+          from: address,
+          value: web3.utils.toWei('1', 'wei') * amountSent
+        //returning success message to the user
+        }).then(
+          e => {
+            if(e['status'] == true){
+              setErrorSendingPayment("Transaction succeeded")
             }
-          )
-        }
-      } catch(err) {
-        //TypeError
-        if(err.message == "Cannot read properties of null (reading 'utils')"){
-          setErrorSendingPayment("Please connect your wallet")
-        //Error
-        } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
-          setErrorSendingPayment("Please enter all the info required")
-        //undefined
-        } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
-          setErrorSendingPayment("You have rejected the transaction")
-        //Error
-        } else {
-          setErrorSendingPayment("Transaction failed")
-        }
-      }
-    } 
-
-    //setting the input's variable of the caller's id sent from the was contract breached section
-    const updateIdSent2 = event => {
-      setIdSent2(event.target.value)
-    }
-
-    //check if wasContractBreached's requirements aren't breached
-    const checkRequirementsContractBreached = async(_id) => {
-      try{
-        //storing the struct Agreement
-        const ag_signee = await contractLex1.methods.exactAgreement(_id).call({from: address})
-        //check if the receiver is the same as the connected address
-        if(ag_signee.receiver == address){
-          //check if the contract's status is Created
-          if(ag_signee.status == "Created"){
-            return true
-          } else {
-            setErrorContractBreached("The agreement is already terminated")
           }
-        } else {
-          setErrorContractBreached("You aren't the contract's receiver")
-        }
-      } catch(err){
-        //TypeError
-        if(err.message == "Cannot read properties of null (reading 'methods')"){
-          setErrorContractBreached("Please connect your wallet")
-        //Error
-        } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
-          setErrorContractBreached("Please enter all the info required")
-        //undefined
-        } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
-          setErrorContractBreached("You have rejected the transaction")
-        //Error
-        } else {
-          setErrorContractBreached("Unable to connect to the smart contract")
-        }
+        )
+      }
+    } catch(err) {
+      //TypeError
+      if(err.message == "Cannot read properties of null (reading 'utils')"){
+        setErrorSendingPayment("Please connect your wallet")
+      //Error
+      } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+        setErrorSendingPayment("Please enter all the info required")
+      //undefined
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+        setErrorSendingPayment("You have rejected the transaction")
+      //Error
+      } else {
+        setErrorSendingPayment("Transaction failed")
       }
     }
+  } 
 
-    //checking if the agreement has been breached
-    const wasNewContractBreached = async () => {
-      try {
-        //setting error handlers to an empty string
-        setContractBreached('')
-        setErrorContractBreached('')
+  //setting the input's variable of the caller's id sent from the was contract breached section
+  const updateIdSent2 = event => {
+    setIdSent2(event.target.value)
+  }
+
+  //check if wasContractBreached's requirements aren't breached
+  const checkRequirementsContractBreached = async(_id) => {
+    try{
+      //storing the struct Agreement
+      const ag_signee = await contractLex1.methods.exactAgreement(_id).call({from: address})
+      //check if the receiver is the same as the connected address
+      if(ag_signee.receiver == address){
+        //check if the contract's status is Created
+        if(ag_signee.status == "Created"){
+          return true
+        } else {
+          setErrorContractBreached("The agreement is already terminated")
+        }
+      } else {
+        setErrorContractBreached("You aren't the contract's receiver")
+      }
+    } catch(err){
+      //TypeError
+      if(err.message == "Cannot read properties of null (reading 'methods')"){
+        setErrorContractBreached("Please connect your wallet")
+      //Error
+      } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+        setErrorContractBreached("Please enter all the info required")
+      //undefined
+      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+        setErrorContractBreached("You have rejected the transaction")
+      //Error
+      } else {
+        setErrorContractBreached("Unable to connect to the smart contract")
+      }
+    }
+  }
+
+  //checking if the agreement has been breached
+  const wasNewContractBreached = async () => {
+    try {
+      //setting error handlers to an empty string
+      setContractBreached('')
+      setErrorContractBreached('')
+      //check if the requirements don't fail
+      if(checkRequirementsContractBreached(idSent2) == true){
         //check if the requirements don't fail
-        if(checkRequirementsContractBreached(idSent2) == true){
-          //check if the requirements don't fail
-          const functionReturn = await contractLex1.methods.wasContractBreached(idSent2).call({from: address})
-          //storing the function's return
-          setContractBreached(functionReturn)
-        }
-      } catch(err){
-        //TypeError
-        if(err.message == "Cannot read properties of null (reading 'methods')"){
-          setErrorContractBreached("Please connect your wallet")
-        //Error
-        } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
-          setErrorContractBreached("Please enter all the info required")
-        //undefined
-        } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
-          setErrorContractBreached("You have rejected the transaction")
-        //Error
-        } else {
-          setErrorContractBreached("Transaction failed")
-        }
-      }
-    }
-
-    //retrieving the caller's withdrawal amount as the receiver
-    const receiversWithdrawalAmount = async () => {
-      try {
-        //setting error handlers to an empty string
-        setWithdrawalAmountAsReceiver('')
-        setErrorReceiversWithdrawalAmount('')
-        //calling getWithdrawalReceiver function
-        const qty = await contractLex1.methods.getWithdrawalReceiver().call({from: address})
+        const functionReturn = await contractLex1.methods.wasContractBreached(idSent2).call({from: address})
         //storing the function's return
-        setWithdrawalAmountAsReceiver(qty)
-        console.log(qty)
-      } catch(err){
-        setErrorReceiversWithdrawalAmount(err.message)
-      }
-    }
-
-    //withdrawing the caller's amount as the receiver
-  const withdrawReceiversAmount = async () => {
-    try {
-      //check if the user has 0 weis
-      if(typeof setWithdrawalAmountAsReceiver() !== "undefined"){
-        //calling withdrawAsTheReceiver function
-        await contractLex1.methods.withdrawAsTheReceiver().send({
-          from: address
-        })
-      } else {
-        if(isInitialize == ''){
-          setErrorWithdrawReceiversAmount("Please connect your wallet")
-        } else {
-          setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
-          setWithdrawalAmountAsReceiver(await contractLex1.methods.getWithdrawalReceiver().call())
-        }
+        setContractBreached(functionReturn)
       }
     } catch(err){
-      if(err.message == "Cannot read properties of null (reading 'methods')" ){
-        setErrorWithdrawReceiversAmount("Please connect your wallet")
+      //TypeError
+      if(err.message == "Cannot read properties of null (reading 'methods')"){
+        setErrorContractBreached("Please connect your wallet")
+      //Error
+      } else if (err.message == 'invalid BigNumber string (argument="value", value="", code=INVALID_ARGUMENT, version=bignumber/5.6.2)'){
+        setErrorContractBreached("Please enter all the info required")
+      //undefined
       } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
-
-        setErrorWithdrawReceiversAmount("You have rejected the transaction")
-      } else{
-        setErrorWithdrawReceiversAmount(err.message)
+        setErrorContractBreached("You have rejected the transaction")
+      //Error
+      } else {
+        setErrorContractBreached("Transaction failed")
       }
     }
   }
 
-  //retrieving the caller's withdrawal amount as the sender
-  const sendersWithdrawalAmount = async () => {
+  //retrieving the caller's withdrawal amount as the receiver
+  const receiversWithdrawalAmount = async () => {
     try {
-      //set error handler to empty
-      setErrorWithdrawSendersAmount('')
-      setErrorSendersWithdrawalAmount('')
-      //calling getWithdrawalSender function
-      const qty = await contractLex1.methods.getWithdrawalSender().call({from: address})
+      //setting error handlers to an empty string
+      setWithdrawalAmountAsReceiver('')
+      setErrorReceiversWithdrawalAmount('')
+      //calling getWithdrawalReceiver function
+      const qty = await contractLex1.methods.getWithdrawalReceiver().call({from: address})
       //storing the function's return
-      setWithdrawalAmountAsSender(qty)
+      setWithdrawalAmountAsReceiver(qty)
+      console.log(qty)
     } catch(err){
-      setErrorSendersWithdrawalAmount(err.message)
+      setErrorReceiversWithdrawalAmount(err.message)
     }
   }
 
-  //withdrawing the caller's amount as the sender
-  const withdrawSendersAmount = async () => {
-    try {
-      //check if the user has 0 weis
-      if(typeof setWithdrawalAmountAsSender() !== "undefined"){
-        //calling withdrawAsTheSignee function
-        await contractLex1.methods.withdrawAsTheSender().send({
-          from: address
-        })
+  //withdrawing the caller's amount as the receiver
+const withdrawReceiversAmount = async () => {
+  try {
+    //check if the user has 0 weis
+    if(typeof setWithdrawalAmountAsReceiver() !== "undefined"){
+      //calling withdrawAsTheReceiver function
+      await contractLex1.methods.withdrawAsTheReceiver().send({
+        from: address
+      })
+    } else {
+      if(isInitialize == ''){
+        setErrorWithdrawReceiversAmount("Please connect your wallet")
       } else {
-        if(isInitializeSender == ''){
-          setErrorSendersWithdrawalAmount("Please connect your wallet")
-        } else {
-          setErrorSendersWithdrawalAmount("You can't withdraw 0 weis")
-          setWithdrawalAmountAsSender(await contractLex1.methods.getWithdrawalSender().call())
-        }
+        setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
+        setWithdrawalAmountAsReceiver(await contractLex1.methods.getWithdrawalReceiver().call())
       }
-    } catch(err){
-      if(err.message == "Cannot read properties of null (reading 'methods')" ){
-        setErrorWithdrawSendersAmount("Please connect your wallet")
-      } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
-        setErrorWithdrawSendersAmount("You have rejected the transaction")
-      } else{
-        setErrorWithdrawSendersAmount("Transaction failed")
+    }
+  } catch(err){
+    if(err.message == "Cannot read properties of null (reading 'methods')" ){
+      setErrorWithdrawReceiversAmount("Please connect your wallet")
+    } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+
+      setErrorWithdrawReceiversAmount("You have rejected the transaction")
+    } else{
+      setErrorWithdrawReceiversAmount(err.message)
+    }
+  }
+}
+
+//retrieving the caller's withdrawal amount as the sender
+const sendersWithdrawalAmount = async () => {
+  try {
+    //set error handler to empty
+    setErrorWithdrawSendersAmount('')
+    setErrorSendersWithdrawalAmount('')
+    //calling getWithdrawalSender function
+    const qty = await contractLex1.methods.getWithdrawalSender().call({from: address})
+    //storing the function's return
+    setWithdrawalAmountAsSender(qty)
+  } catch(err){
+    setErrorSendersWithdrawalAmount(err.message)
+  }
+}
+
+//withdrawing the caller's amount as the sender
+const withdrawSendersAmount = async () => {
+  try {
+    //check if the user has 0 weis
+    if(typeof setWithdrawalAmountAsSender() !== "undefined"){
+      //calling withdrawAsTheSignee function
+      await contractLex1.methods.withdrawAsTheSender().send({
+        from: address
+      })
+    } else {
+      if(isInitializeSender == ''){
+        setErrorSendersWithdrawalAmount("Please connect your wallet")
+      } else {
+        setErrorSendersWithdrawalAmount("You can't withdraw 0 weis")
+        setWithdrawalAmountAsSender(await contractLex1.methods.getWithdrawalSender().call())
       }
+    }
+  } catch(err){
+    if(err.message == "Cannot read properties of null (reading 'methods')" ){
+      setErrorWithdrawSendersAmount("Please connect your wallet")
+    } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
+      setErrorWithdrawSendersAmount("You have rejected the transaction")
+    } else{
+      setErrorWithdrawSendersAmount("Transaction failed")
+    }
+  }
+}
+
+  const connectWalletHandler = async () => {
+    //checking if metamask is available
+    if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
+      //metamask installed
+      try {
+        //request wallet connect - metamask pop up window
+        await window.ethereum.request({ method: "eth_requestAccounts"})
+        //set web3 instance
+        web3 = new Web3(window.ethereum)
+        setWeb3(web3)
+        //list of all accounts
+        const accounts = await web3.eth.getAccounts()
+        //set the variable to the first account
+        setAddress(accounts[0])
+        //local copy of the smart contract
+        const localContract = contractLex(web3)
+        setContractLex1(localContract)
+        //set the error handler to empty after connecting the wallet
+        setErrorWithdrawSendersAmount('')
+        //set the error handler to empty after connecting the wallet
+        setErrorWithdrawReceiversAmount('')
+        //set the initialization to true for withdrawSendersAmount
+        setIsInitializeSender(true)
+        //set the initialization to true for withdrawReceiversAmount
+        setIsInitialize(true)
+        //set the error handler to empty after connecting the wallet
+        setErrorContractBreached('')
+        //set the error handler to empty after connecting the wallet
+        setErrorSendingPayment('')
+        //set the error handler to empty after connecting the wallet
+        setErrorNewContract('')
+        //set the error handler to empty after connecting the wallet
+        setErrorReceiverAgreements('')
+        //set the error handler to empty after connecting the wallet
+        setErrorReceiverIds('')
+        //set the error handler to empty after connecting the wallet
+        setErrorSenderAgreements('')
+        //set the error handler to empty after connecting the wallet
+        setErrorSenderIds('')
+      } catch(err) {
+        setError(err.message)
+      }    
+    } else {
+      //metamask not installed
+      alert("Please install MetaMask")
     }
   }
 
-    const connectWalletHandler = async () => {
-      //checking if metamask is available
-      if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
-        //metamask installed
-        try {
-          //request wallet connect - metamask pop up window
-          await window.ethereum.request({ method: "eth_requestAccounts"})
-          //set web3 instance
-          web3 = new Web3(window.ethereum)
-          setWeb3(web3)
-          //list of all accounts
-          const accounts = await web3.eth.getAccounts()
-          //set the variable to the first account
-          setAddress(accounts[0])
-          //local copy of the smart contract
-          const localContract = contractLex(web3)
-          setContractLex1(localContract)
-          //set the error handler to empty after connecting the wallet
-          setErrorWithdrawSendersAmount('')
-          //set the error handler to empty after connecting the wallet
-          setErrorWithdrawReceiversAmount('')
-          //set the initialization to true for withdrawSendersAmount
-          setIsInitializeSender(true)
-          //set the initialization to true for withdrawReceiversAmount
-          setIsInitialize(true)
-          //set the error handler to empty after connecting the wallet
-          setErrorContractBreached('')
-          //set the error handler to empty after connecting the wallet
-          setErrorSendingPayment('')
-          //set the error handler to empty after connecting the wallet
-          setErrorNewContract('')
-          //set the error handler to empty after connecting the wallet
-          setErrorReceiverAgreements('')
-          //set the error handler to empty after connecting the wallet
-          setErrorReceiverIds('')
-          //set the error handler to empty after connecting the wallet
-          setErrorSenderAgreements('')
-          //set the error handler to empty after connecting the wallet
-          setErrorSenderIds('')
-        } catch(err) {
-          setError(err.message)
-        }    
-      } else {
-        //metamask not installed
-        alert("Please install MetaMask")
-      }
-    }
+  return (
+      <div className={styles.main}>
+          <Head>
+              <title>Create Next App</title>
+              <meta name="description" content="Generated by create next app" />
+              <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-    return (
-        <div className={styles.main}>
-            <Head>
-                <title>Create Next App</title>
-                <meta name="description" content="Generated by create next app" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+          <nav className="navbar is-primary is-fixed-top has-background-black-bis">
+              <div className="navbar-menu">
+                  <div className="container">
+                      <div className="navbar-brand">
+                      <div className='navbar-item'></div>
+                      <div className='navbar-item'></div>
+                      <div className='navbar-item'></div>
+                      <div className='navbar-item'></div>
+                      <div className='navbar-item'>
+                          <Link href='/'>
+                              <a><h1>A web app</h1></a>
+                          </Link>
+                      </div> 
+                      </div>
+                  </div> 
+              </div>
+              
+              <div className="navbar-end">
+                  <div className='navbar-item'>
+                      <Link href='/why'>
+                          <a>Why</a>
+                      </Link>
+                  </div>
+              </div>
+              <div className="navbar-end">
+                  <div className='navbar-item'>
+                      <Link href='/how-it-works'>
+                          <a>How it works</a>
+                      </Link>
+                  </div>
+              </div>
+              <div className="navbar-end">
+                  <div className='navbar-item'>
+                      <Link href='/use-cases'>
+                          <a>Use cases</a>
+                      </Link>
+                  </div>
+              </div>
+              <div className="navbar-end">
+                  <div className='navbar-item'>
+                      <Link href='/statistic'>
+                          <a>Statistic</a>
+                      </Link>
+                  </div>
+              </div>
+              <div className='navbar-end'>
+                  <div className='navbar-item'>
+                      <button onClick={connectWalletHandler} className="button ">Connect wallet</button>
+                  </div>
+              </div>
+                    <div className='navbar-item'>
+              </div>
+          </nav>
 
-            <nav className="navbar is-primary is-fixed-top has-background-black-bis">
-                <div className="navbar-menu">
-                    <div className="container">
-                        <div className="navbar-brand">
-                        <div className='navbar-item'></div>
-                        <div className='navbar-item'></div>
-                        <div className='navbar-item'></div>
-                        <div className='navbar-item'></div>
-                        <div className='navbar-item'>
-                            <Link href='/'>
-                                <a><h1>A web app</h1></a>
+          
+          <section>
+              <div className="container">
+                  <p>Text</p>
+              </div>
+          </section>
+          <section>
+              <div className="container has-text-danger">
+                  <p>{error}</p>
+              </div>
+          </section>
+
+          <section className="hero has-background-black-bis is-fullheight pr-6">
+              <div className="hero-body py-0 pr-6 mr-6">
+                <div className="container has-text-centered mt-6 pr-6">
+                  <div className="columns mt-6 pr-6">
+                    <div id='sidebar' className="column py-0">
+                      <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
+                        <h2>Smart contracts</h2><br></br><br></br>
+                        <p className="box has-background-black-bis pt-4 pb-3">
+                          <div className='columns is-centered'>
+                            <Link href="/lex-1">
+                              <button className="button is-outlined py-2 px-6 is-size-6">Lex-1 </button>
                             </Link>
-                        </div> 
-                        </div>
-                    </div> 
-                </div>
-                
-                <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/why'>
-                            <a>Why</a>
-                        </Link>
+                          </div>
+                        </p>
+                        <p className="box has-background-black-bis pt-4 pb-3">
+                          <div className='columns is-centered'>
+                            <Link href="/lex-2">
+                              <button className="button is-outlined py-2 px-6 is-size-6">Lex-2 </button>
+                            </Link>
+                          </div>
+                        </p>
+                        <p className="box has-background-black-bis pt-4 pb-3">
+                          <div className='columns is-centered'>
+                            <Link href="/vault">
+                              <button className="button is-outlined py-2 px-6 is-size-6">Vault </button>
+                            </Link>
+                          </div>
+                        </p>
+                        <p className=" has-background-black-bis py-4 pr-6 is-size-6">
+                          <br></br><br></br><br></br><br></br><br></br>
+                        </p>
+                        <p className=" has-background-black-bis py-4 pr-6 is-size-6">
+                          <br></br><br></br><br></br><br></br><br></br>
+                        </p>
+                      </p>
                     </div>
-                </div>
-                <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/how-it-works'>
-                            <a>How it works</a>
-                        </Link>
+                    <div className="column"></div>
+                    <div className="column pt-4">
+                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
+                        CREATE AGREEMENT<br></br><br></br>
+                        <p className="has-background-black-bis  py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <input type="text" onChange={updateReceiverAddress} placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <input type="number" min="1" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <input type="number" min="1" onChange={updateEveryTimeUnit} placeholder="Enter the payment's time duration" className='has-background-primary input is-normal'></input>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <input type="number" min="1" onChange={updateHowLong} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <input type="number" min="1" onChange={updateStartAgreement} placeholder="Enter when the contract starts" className='has-background-primary input is-normal'></input>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <br></br>
+                        <p className='max-class'>
+                          {errorNewContract}
+                        </p>
+                        <br></br>
+                        <p className="box has-background-black-bis pt-3 pb-3 mt-3">
+                          <div className='columns is-centered'>
+                            <Link href="">
+                              <button onClick={createNewAgreement} className="button is-outlined py-2 px-6 is-size-6">Create </button>
+                            </Link>
+                          </div>
+                        </p>
+                      </p>
+                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                        YOUR DEPOSIT<br></br><br></br>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <p>
+                          Your commited deposit: <br></br>{userDepositAll} weis
+                        </p>
+                        <br></br>
+                        <p className='max-class'>
+                          {errorUserDepositAll}
+                        </p>
+                        <br></br>
+                      </p>
                     </div>
-                </div>
-                <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/use-cases'>
-                            <a>Use cases</a>
-                        </Link>
+                    <div id='first'className="column pt-4">
+                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
+                        MY RECEIVER'S AGREEMENTS<br></br><br></br>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <p>
+                          Number of agreements as the receiver: <br></br>{myNumReceiverAgreements}
+                        </p>
+                        <br></br>
+                        <p>
+                          Receiver's ids:
+                          <br></br> 
+                          {myReceiverIds}
+                        </p>
+                        <br></br>
+                        <p className='max-class'>
+                          {errorReceiverAgreements}
+                          {errorReceiverIds}
+                        </p>
+                      </p>
+                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                        WITHDRAW RECEIVER<br></br><br></br>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <p>
+                          Current withdrawal amount: <br></br>{withdrawalAmountAsReceiver} weis
+                        </p>
+                        <br></br>
+                        <p className='max-class'>
+                          {errorReceiversWithdrawalAmount}
+                          {errorWithdrawReceiversAmount}
+                        </p>
+                        <br></br>
+                        <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                          <div className='columns is-centered'>
+                            <Link href="">
+                              <button onClick={withdrawReceiversAmount} className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
+                            </Link>
+                          </div>
+                        </p>
+                      </p>
+                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                        WAS CONTRACT BREACHED<br></br><br></br>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <input type="number" min="1" onChange={updateIdSent2} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <p className='max-class'>
+                          {contractBreached}
+                        </p>
+                        <br></br>
+                        <p>
+                          {errorContractBreached}
+                        </p>
+                        <br></br>
+                        <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                          <div className='columns is-centered'>
+                            <Link href="">
+                              <button onClick={wasNewContractBreached} className="button is-outlined py-2 px-6 is-size-6">Check </button>
+                            </Link>
+                          </div>
+                        </p>
+                      </p>
                     </div>
-                </div>
-                <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/statistic'>
-                            <a>Statistic</a>
-                        </Link>
-                    </div>
-                </div>
-                <div className='navbar-end'>
-                    <div className='navbar-item'>
-                        <button onClick={connectWalletHandler} className="button ">Connect wallet</button>
-                    </div>
-                </div>
-                     <div className='navbar-item'>
-                </div>
-            </nav>
-
-            
-            <section>
-                <div className="container">
-                    <p>Text</p>
-                </div>
-            </section>
-            <section>
-                <div className="container has-text-danger">
-                    <p>{error}</p>
-                </div>
-            </section>
-
-            <section className="hero has-background-black-bis is-fullheight pr-6">
-                <div className="hero-body py-0 pr-6 mr-6">
-                  <div className="container has-text-centered mt-6 pr-6">
-                    <div className="columns mt-6 pr-6">
-                      <div id='sidebar' className="column py-0">
-                        <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
-                          <h2>Smart contracts</h2><br></br><br></br>
-                          <p className="box has-background-black-bis pt-4 pb-3">
-                            <div className='columns is-centered'>
-                              <Link href="/lex-1">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Lex-1 </button>
-                              </Link>
-                            </div>
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3">
-                            <div className='columns is-centered'>
-                              <Link href="/lex-2">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Lex-2 </button>
-                              </Link>
-                            </div>
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3">
-                            <div className='columns is-centered'>
-                              <Link href="/vault">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Vault </button>
-                              </Link>
-                            </div>
-                          </p>
-                          <p className=" has-background-black-bis py-4 pr-6 is-size-6">
-                            <br></br><br></br><br></br><br></br><br></br>
-                          </p>
-                          <p className=" has-background-black-bis py-4 pr-6 is-size-6">
-                            <br></br><br></br><br></br><br></br><br></br>
-                          </p>
-                        </p>
-                      </div>
-                      <div className="column"></div>
-                      <div className="column pt-4">
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
-                          CREATE AGREEMENT<br></br><br></br>
-                          <p className="has-background-black-bis  py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="text" onChange={updateReceiverAddress} placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="number" min="1" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="number" min="1" onChange={updateEveryTimeUnit} placeholder="Enter the payment's time duration" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="number" min="1" onChange={updateHowLong} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="number" min="1" onChange={updateStartAgreement} placeholder="Enter when the contract starts" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <br></br>
-                          <p className='max-class'>
-                            {errorNewContract}
-                          </p>
-                          <br></br>
-                          <p className="box has-background-black-bis pt-3 pb-3 mt-3">
-                            <div className='columns is-centered'>
-                              <Link href="">
-                                <button onClick={createNewAgreement} className="button is-outlined py-2 px-6 is-size-6">Create </button>
-                              </Link>
-                            </div>
-                          </p>
-                        </p>
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
-                          YOUR DEPOSIT<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p>
-                            Your commited deposit: <br></br>{userDepositAll} weis
-                          </p>
-                          <br></br>
-                          <p className='max-class'>
-                            {errorUserDepositAll}
-                          </p>
+                    <div className="column pt-4" >
+                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
+                        MY SENDER'S AGREEMENTS<br></br><br></br>
+                        <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                      </div>
-                      <div id='first'className="column pt-4">
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
-                          MY RECEIVER'S AGREEMENTS<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p>
-                            Number of agreements as the receiver: <br></br>{myNumReceiverAgreements}
-                          </p>
-                          <br></br>
-                          <p>
-                            Receiver's ids:
-                            <br></br> 
-                            {myReceiverIds}
-                          </p>
-                          <br></br>
-                          <p className='max-class'>
-                            {errorReceiverAgreements}
-                            {errorReceiverIds}
-                          </p>
+                        <p>
+                          Number of agreements as the sender: <br></br>{myNumSenderAgreements}
                         </p>
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
-                          WITHDRAW RECEIVER<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p>
-                            Current withdrawal amount: <br></br>{withdrawalAmountAsReceiver} weis
-                          </p>
-                          <br></br>
-                          <p className='max-class'>
-                            {errorReceiversWithdrawalAmount}
-                            {errorWithdrawReceiversAmount}
-                          </p>
-                          <br></br>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
-                            <div className='columns is-centered'>
-                              <Link href="">
-                                <button onClick={withdrawReceiversAmount} className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
-                              </Link>
-                            </div>
-                          </p>
+                        <br></br>
+                        <p>
+                          Senders's ids: 
+                          <br></br>{mySenderIds}
                         </p>
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
-                          WAS CONTRACT BREACHED<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="number" min="1" onChange={updateIdSent2} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p className='max-class'>
-                            {contractBreached}
-                          </p>
-                          <br></br>
-                          <p>
-                            {errorContractBreached}
-                          </p>
-                          <br></br>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
-                            <div className='columns is-centered'>
-                              <Link href="">
-                                <button onClick={wasNewContractBreached} className="button is-outlined py-2 px-6 is-size-6">Check </button>
-                              </Link>
-                            </div>
-                          </p>
+                        <br></br>
+                        <p className='max-class'>
+                          {errorSenderAgreements}
+                          {errorSenderIds}
                         </p>
-                      </div>
-                      <div className="column pt-4" >
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
-                          MY SENDER'S AGREEMENTS<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p>
-                            Number of agreements as the sender: <br></br>{myNumSenderAgreements}
-                          </p>
+                      </p>
+                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                        WITHDRAW SENDER<br></br><br></br>
+                        <p className="has-background-black-bis py-4 is-size-6">
                           <br></br>
-                          <p>
-                            Senders's ids: 
-                            <br></br>{mySenderIds}
-                          </p>
-                          <br></br>
-                          <p className='max-class'>
-                            {errorSenderAgreements}
-                            {errorSenderIds}
-                          </p>
                         </p>
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
-                          WITHDRAW SENDER<br></br><br></br>
-                          <p className="has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <p>
-                            Current withdrawal amount: <br></br>{withdrawalAmountAsSender} weis
-                          </p>
-                          <br></br>
-                          <p className='max-class'>
-                            {errorSendersWithdrawalAmount}
-                            {errorWithdrawSendersAmount}
-                          </p>
-                          <br></br>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
-                            <div className='columns is-centered'>
-                              <Link href="">
-                                <button onClick={withdrawSendersAmount} className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
-                              </Link>
-                            </div>
-                          </p>
+                        <p>
+                          Current withdrawal amount: <br></br>{withdrawalAmountAsSender} weis
                         </p>
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
-                          SEND PAYMENT<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="number" min="1" onChange={updateIdSent} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <input type="number" min="1" onChange={updateAmountSent} placeholder="Enter the amount" className='has-background-primary input is-normal'></input>
-                          <p className=" has-background-black-bis py-4 is-size-6">
-                            <br></br>
-                          </p>
-                          <br></br>
-                          <p className='max-class'>
-                            {errorSendingPayment}
-                          </p>
-                          <br></br>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
-                            <div className='columns is-centered'>
-                              <Link href="">
-                                <button onClick={sendNewPayment} className="button is-outlined py-2 px-6 is-size-6">Pay </button>
-                              </Link>
-                            </div>
-                          </p>
+                        <br></br>
+                        <p className='max-class'>
+                          {errorSendersWithdrawalAmount}
+                          {errorWithdrawSendersAmount}
                         </p>
-                      </div>
+                        <br></br>
+                        <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                          <div className='columns is-centered'>
+                            <Link href="">
+                              <button onClick={withdrawSendersAmount} className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
+                            </Link>
+                          </div>
+                        </p>
+                      </p>
+                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                        SEND PAYMENT<br></br><br></br>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <input type="number" min="1" onChange={updateIdSent} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <input type="number" min="1" onChange={updateAmountSent} placeholder="Enter the amount" className='has-background-primary input is-normal'></input>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <br></br>
+                        <p className='max-class'>
+                          {errorSendingPayment}
+                        </p>
+                        <br></br>
+                        <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                          <div className='columns is-centered'>
+                            <Link href="">
+                              <button onClick={sendNewPayment} className="button is-outlined py-2 px-6 is-size-6">Pay </button>
+                            </Link>
+                          </div>
+                        </p>
+                      </p>
                     </div>
                   </div>
-                </div>                         
-            </section>
-
-            <footer>
-              <section className="hero is-small has-background-black-bis">
-                <div className="hero-body">
                 </div>
-              </section>
-            </footer>
+              </div>                         
+          </section>
 
-        </div>
-        
-    )
+          <footer>
+            <section className="hero is-small has-background-black-bis">
+              <div className="hero-body">
+              </div>
+            </section>
+          </footer>
+
+      </div>
+      
+  )
 }
 
 export default App
