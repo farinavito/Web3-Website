@@ -282,7 +282,7 @@ const App = () => {
       //storing the struct Agreement
       const ag_signee = await contractLex1.methods.exactAgreement(_id).call({from: address})
       //check if the signee is the same as the connected address
-      if(ag_signee.signee == address){
+      if(ag_signee.sender == address){
         //check if the status is equal to Created
         if(ag_signee.status == "Created" || ag_signee.status == "Activated"){
           return true
