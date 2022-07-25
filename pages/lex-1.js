@@ -133,12 +133,12 @@ const App = () => {
       try {
         setMySenderIds('')
         for (let i = 0; i < myNumReceiverAgreements; i++) {
-          const newId = await contractVault.methods.mySenderAgreements(address, i).call()
+          const newId = await contractLex1.methods.mySenderAgreements(address, i).call()
           setMySenderIds(arr => [...arr, newId])
         }
       }
       catch(err) {
-        setErrorSenderIds(err.message)
+        setErrorSenderIds(err.message.slice(20, 62))
       }
     }
 
