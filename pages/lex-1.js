@@ -288,9 +288,11 @@ const App = () => {
           return true
         } else {
           setErrorSendingPayment("This agreement is already terminated")
+          return false
         }
       } else {
         setErrorSendingPayment("You are not the signee of this contract")
+        return false
       }
     } catch(err){
       //Error
@@ -310,11 +312,12 @@ const App = () => {
       //storing the amount sent
       const qty = web3.utils.toWei('1', 'wei') * amountSent
       //checking if the requirements don't fail
-      if(checkRequirementsSend(idSent) == true){
+      console.log(checkRequirementsSend(idSent) === true)
+      if(checkRequirementsSend(idSent) === true){
         //calling sendPayment function
-        await contractLex1.methods.sendPayment(idSent, qty).send({
+        await contractLex1.methods.sendPayment(idSent).send({
           from: address,
-          value: web3.utils.toWei('1', 'wei') * amountSent
+          value: qty
         //returning success message to the user
         }).then(
           e => {
@@ -337,6 +340,7 @@ const App = () => {
       //Error
       } else {
         setErrorSendingPayment("Transaction failed")
+        setErrorSendingPayment(err.message)
       }
     }
   } 
