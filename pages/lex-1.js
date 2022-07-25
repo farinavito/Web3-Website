@@ -340,7 +340,6 @@ const App = () => {
       //Error
       } else {
         setErrorSendingPayment("Transaction failed")
-        setErrorSendingPayment(err.message)
       }
     }
   } 
