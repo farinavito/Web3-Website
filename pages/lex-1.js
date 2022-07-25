@@ -115,7 +115,7 @@ const App = () => {
         //looping over the number of the contracts that the caller has as the receiver
         for (let i = 0; i < myNumReceiverAgreements; i++) {
           //retrieving the contract's ids
-          const newId = await contractLex1.methods.myReceiverAgreements(address, i).call()
+          const newId = await contractLex1.methods.myReceiverAgreements(address, i).call({from: address})
           //storing the ids in an array
           setMyReceiverIds(arr => [...arr, newId])
         }
@@ -148,7 +148,7 @@ const App = () => {
         //looping over the number of the contracts that the caller has as the sender
         for (let i = 0; i < myNumSenderAgreements; i++) {
           //retrieving the contract's ids
-          const newId = await contractLex1.methods.mySenderAgreements(address, i).call()
+          const newId = await contractLex1.methods.mySenderAgreements(address, i).call({from: address})
           //storing the ids in an array
           setMySenderIds(arr => [...arr, newId])
         }
@@ -275,7 +275,7 @@ const App = () => {
     const checkRequirementsSend = async(_id) => {
       try {
         //storing the struct Agreement
-        const ag_signee = await contractLex1.methods.exactAgreement(_id).call()
+        const ag_signee = await contractLex1.methods.exactAgreement(_id).call({from: address})
         //check if the signee is the same as the connected address
         if(ag_signee.signee == address){
           //check if the status is equal to Created
@@ -383,7 +383,7 @@ const App = () => {
         //check if the requirements don't fail
         if(checkRequirementsContractBreached(idSent2) == true){
           //check if the requirements don't fail
-          const functionReturn = await contractLex1.methods.wasContractBreached(idSent2).call()
+          const functionReturn = await contractLex1.methods.wasContractBreached(idSent2).call({from: address})
           //storing the function's return
           setContractBreached(functionReturn)
         }
@@ -456,7 +456,7 @@ const App = () => {
       setErrorWithdrawSendersAmount('')
       setErrorSendersWithdrawalAmount('')
       //calling getWithdrawalSender function
-      const qty = await contractLex1.methods.getWithdrawalSender().call()
+      const qty = await contractLex1.methods.getWithdrawalSender().call({from: address})
       //storing the function's return
       setWithdrawalAmountAsSender(qty)
     } catch(err){
