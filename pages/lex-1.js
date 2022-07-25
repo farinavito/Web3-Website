@@ -108,7 +108,7 @@ const App = () => {
       try {
         setMyReceiverIds('')
         for (let i = 0; i < myNumReceiverAgreements; i++) {
-          const newId = await contractVault.methods.myReceiverAgreements(address, i).call()
+          const newId = await contractLex1.methods.myReceiverAgreements(address, i).call()
           setMyReceiverIds(arr => [...arr, newId])
         }
       }
