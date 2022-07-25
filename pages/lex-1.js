@@ -345,7 +345,7 @@ const App = () => {
     const checkRequirementsContractBreached = async(_id) => {
       try{
         //storing the struct Agreement
-        const ag_signee = await contractLex1.methods.exactAgreement(_id).call()
+        const ag_signee = await contractLex1.methods.exactAgreement(_id).call({from: address})
         //check if the receiver is the same as the connected address
         if(ag_signee.receiver == address){
           //check if the contract's status is Created
@@ -411,9 +411,10 @@ const App = () => {
         setWithdrawalAmountAsReceiver('')
         setErrorReceiversWithdrawalAmount('')
         //calling getWithdrawalReceiver function
-        const qty = await contractLex1.methods.getWithdrawalReceiver().call()
+        const qty = await contractLex1.methods.getWithdrawalReceiver().call({from: address})
         //storing the function's return
         setWithdrawalAmountAsReceiver(qty)
+        console.log(qty)
       } catch(err){
         setErrorReceiversWithdrawalAmount(err.message)
       }
