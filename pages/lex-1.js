@@ -506,6 +506,10 @@ const App = () => {
           setErrorSendingPayment('')
           //set the error handler to empty after connecting the wallet
           setErrorNewContract('')
+          //set the error handler to empty after connecting the wallet
+          setErrorReceiverAgreements('')
+          //set the error handler to empty after connecting the wallet
+          setErrorReceiverIds('')
         } catch(err) {
           setError(err.message)
         }    
