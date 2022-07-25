@@ -499,20 +499,26 @@ const App = () => {
   //return the deposit amount that the caller has in all his sender's contract
   const getAllDeposit = async () => {
     try {
-      //storing the deposit 
-      const qty = 0
-      //looping over the number of the contracts that the caller has as the sender
-      for (let i = 0; i < myNumSenderAgreements; i++){
+      //check if the myNumSenderAgreements is equal to 0
+      if(myNumSenderAgreements == '0'){
+        //set to 0
+        setUserDepositAll(0)
+      } else{
+        //storing the deposit 
+        const qty = 0
+        //looping over the number of the contracts that the caller has as the sender
+        for (let i = 0; i < myNumSenderAgreements; i++){
         //storing the struct Agreement
-        console.log(mySenderIds[i])
+        //console.log(mySenderIds[i])
+        console.log(mySenderIds[5])
         const ag_signee = await contractLex1.methods.exactAgreement(mySenderIds[i]).call({from: address})
         //incrementing by the deposit amount
         qty += ag_signee.deposit
-        console.log(qty)
+        //console.log(qty)
+        }
+        //saving all the deposit's amount to an useState
+        setUserDepositAll(qty)
       }
-      //saving all the deposit's amount to an useState
-      setUserDepositAll(qty)
-
     } catch(err){
       console.log(err.message)
     }
