@@ -76,7 +76,7 @@ const App = () => {
       try {
         setMyVaultsIds('')
         for (let i = 0; i < ids; i++) {
-          const newId = await contractVault.methods.mySafes(address, i).call()
+          const newId = await contractVault.methods.mySafes(address, i).call({from: address})
           setMyVaultsIds(arr => [...arr, newId])
         }
       }
@@ -154,7 +154,7 @@ const App = () => {
     const checkRequirementsWithdraw = async (_id, _qty) => {
       try{
         //calling exactSafe()
-        const ag_signee = await contractVault.methods.exactSafe(_id).call()
+        const ag_signee = await contractVault.methods.exactSafe(_id).call({from: address})
         //check if the agreement's signee is the same as the connected address
         if (ag_signee.signee == address){
           //check if the locked up time is smaller than current unix timestamp
@@ -224,7 +224,7 @@ const App = () => {
     const getFundsDetails = async () => {
       try {
         for (const value of myVaultsIds.values()) {
-          const newId = await contractVault.methods.exactSafe(value).call()
+          const newId = await contractVault.methods.exactSafe(value).call({from: address})
           const vault = {
             id: newId.id, 
             signee: newId.signee,
