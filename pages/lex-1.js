@@ -110,9 +110,13 @@ const App = () => {
     //storing the caller's ids as the receiver
     const getMyReceiverIds = async () => {
       try {
+        //settign the useState to an empty string
         setMyReceiverIds('')
+        //looping over the number of the contracts that the caller has as the receiver
         for (let i = 0; i < myNumReceiverAgreements; i++) {
+          //retrieving the contract's ids
           const newId = await contractLex1.methods.myReceiverAgreements(address, i).call()
+          //storing the ids in an array
           setMyReceiverIds(arr => [...arr, newId])
         }
       }
