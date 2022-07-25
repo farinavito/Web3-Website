@@ -509,18 +509,15 @@ const App = () => {
         //looping over the number of the contracts that the caller has as the sender
         for (let i = 0; i < myNumSenderAgreements; i++){
         //storing the struct Agreement
-        //console.log(mySenderIds[i])
-        console.log(mySenderIds[5])
         const ag_signee = await contractLex1.methods.exactAgreement(mySenderIds[i]).call({from: address})
         //incrementing by the deposit amount
         qty += ag_signee.deposit
-        //console.log(qty)
         }
         //saving all the deposit's amount to an useState
         setUserDepositAll(parseInt(qty))
       }
     } catch(err){
-      console.log(err.message)
+      setErrorUserDepositAll(err.message)
     }
   }
 
