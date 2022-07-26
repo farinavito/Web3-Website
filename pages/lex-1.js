@@ -472,10 +472,9 @@ const App = () => {
       if(err.message == "Cannot read properties of null (reading 'methods')" ){
         setErrorWithdrawReceiversAmount("Please connect your wallet")
       } else if (err.message == "MetaMask Tx Signature: User denied transaction signature."){
-
         setErrorWithdrawReceiversAmount("You have rejected the transaction")
       } else{
-        setErrorWithdrawReceiversAmount(err.message)
+        setErrorWithdrawReceiversAmount("Transaction failed")
       }
     }
   }
