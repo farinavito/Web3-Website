@@ -248,6 +248,17 @@ const App = () => {
             }
           }
         )
+        //clear the input variables
+        setReceiverAddress('')
+        setCommittedAmount('')
+        setEveryTimeUnit('')
+        setAgreementsDuration('')
+        setStartAgreement('')
+        //clear the input variables
+        const inputs = document.querySelectorAll('#first_input, #second_input, #third_input, #forth_input, #fifth_input')
+        inputs.forEach(input => {
+          input.value = ''
+        })
       }
     } catch(err) {
       //TypeError
@@ -262,6 +273,17 @@ const App = () => {
       //Error
       } else {
         setErrorNewContract("Transaction failed")
+        //clear the input variables
+        setReceiverAddress('')
+        setCommittedAmount('')
+        setEveryTimeUnit('')
+        setAgreementsDuration('')
+        setStartAgreement('')
+        //clear the input variables
+        const inputs = document.querySelectorAll('#first_input, #second_input, #third_input, #forth_input, #fifth_input')
+        inputs.forEach(input => {
+          input.value = ''
+        })
       }
     }
   }
@@ -695,23 +717,23 @@ const App = () => {
                         <p className="has-background-black-bis  py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="text" onChange={updateReceiverAddress} placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
+                        <input id='first_input' type="text" onChange={updateReceiverAddress} placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="number" min="1" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
+                        <input id='second_input' type="number" min="1" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="number" min="1" onChange={updateEveryTimeUnit} placeholder="Enter the payment's time duration" className='has-background-primary input is-normal'></input>
+                        <input id='third_input' type="number" min="1" onChange={updateEveryTimeUnit} placeholder="Enter the payment's time duration" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="number" min="1" onChange={updateHowLong} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
+                        <input id='forth_input' type="number" min="1" onChange={updateHowLong} placeholder="Enter how long the contracts needs to last" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="number" min="1" onChange={updateStartAgreement} placeholder="Enter when the contract starts" className='has-background-primary input is-normal'></input>
+                        <input id='fifth_input' type="number" min="1" onChange={updateStartAgreement} placeholder="Enter when the contract starts" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
