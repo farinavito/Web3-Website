@@ -150,7 +150,7 @@ const App = () => {
       }
     }
     catch(err) {
-      setErrorSenderIds(err.message)
+      setErrorSenderIds(err.message.slice(20, 62))
     }
   }
 
