@@ -465,7 +465,7 @@ const App = () => {
           setErrorWithdrawReceiversAmount("Please connect your wallet")
         } else {
           setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
-          setWithdrawalAmountAsReceiver(await contractLex1.methods.getWithdrawalReceiver().call())
+          setWithdrawalAmountAsReceiver(await contractLex1.methods.getWithdrawalReceiver().call({from: address}))
         }
       }
     } catch(err){
