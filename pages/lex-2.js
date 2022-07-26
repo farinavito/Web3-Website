@@ -249,7 +249,6 @@ const App = () => {
       } else {
         console.log(err.message )
         setErrorNewContract("Transaction failed")
-
         //clear the storage of the input variables
         setReceiverAddress('')
         setCommittedAmount('')
@@ -285,9 +284,11 @@ const App = () => {
           return true
         } else {
           setErrorSendingPayment("This agreement is already terminated")
+          return false
         }
       } else {
         setErrorSendingPayment("You are not the signee of this contract")
+        return false
       }
     } catch(err){
       //Error
