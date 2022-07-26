@@ -416,6 +416,7 @@ const App = () => {
       //calling getWithdrawalReceiver function
       const qty = await contractLex2.methods.getWithdrawalReceiver().call({from: address})
       //storing the function's return
+      console.log(qty)
       setWithdrawalAmountAsReceiver(qty)
     } catch(err){
       setErrorReceiversWithdrawalAmount(err.message)
@@ -489,6 +490,35 @@ const App = () => {
         setErrorWithdrawSendersAmount("You have rejected the transaction")
       } else{
         setErrorWithdrawSendersAmount("Transaction failed")
+      }
+    }
+  }
+
+  //return the deposit amount that the caller has in all his sender's contract
+  const getAllDeposit = async () => {
+    try {
+      //check if the myNumSenderAgreements is equal to 0
+      if(myNumSenderAgreements == '0'){
+        //set to 0
+        setUserDepositAll(0)
+      } else{
+        //storing the deposit 
+        const qty = 0
+        //looping over the number of the contracts that the caller has as the sender
+        for (let i = 0; i < myNumSenderAgreements; i++){
+        //storing the struct Agreement
+        const ag_signee = await contractLex1.methods.exactAgreement(mySenderIds[i]).call({from: address})
+        //incrementing by the deposit amount
+        qty += ag_signee.deposit
+        }
+        //saving all the deposit's amount to an useState
+        setUserDepositAll(parseInt(qty))
+      }
+    } catch(err){
+      if(err.message == "Cannot read properties of undefined (reading 'length')"){
+        setErrorUserDepositAll('')
+      } else{
+        setErrorUserDepositAll(err.message)
       }
     }
   }
