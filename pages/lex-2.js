@@ -117,7 +117,7 @@ const App = () => {
       }
     }
     catch(err) {
-      setErrorReceiverIds(err.message)
+      setErrorReceiverIds(err.message.slice(20, 63))
     }
   }
 
