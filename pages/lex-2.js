@@ -90,6 +90,7 @@ const App = () => {
       getMySenderIds()
       receiversWithdrawalAmount()
       sendersWithdrawalAmount()
+      getAllDeposit()
     }
   }, [contractLex2])
 
