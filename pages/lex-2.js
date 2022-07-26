@@ -75,6 +75,11 @@ const App = () => {
   //storing error message when there is an error for calling withdrawSendersAmount
   const [errorWithdrawSendersAmount, setErrorWithdrawSendersAmount] = useState('')
 
+  //storing the whole amount of the user's deposit
+  const [userDepositAll, setUserDepositAll] = useState([])
+  //storing the error message when there is an error for calling exactAgreement's deposit
+  const [errorUserDepositAll, setErrorUserDepositAll] = useState('')
+
 
   //when the copy of the smart contract is avalaibla call the functions bellow
   useEffect(() => {
@@ -507,7 +512,7 @@ const App = () => {
         //looping over the number of the contracts that the caller has as the sender
         for (let i = 0; i < myNumSenderAgreements; i++){
         //storing the struct Agreement
-        const ag_signee = await contractLex1.methods.exactAgreement(mySenderIds[i]).call({from: address})
+        const ag_signee = await contractLex2.methods.exactAgreement(mySenderIds[i]).call({from: address})
         //incrementing by the deposit amount
         qty += ag_signee.deposit
         }
