@@ -223,6 +223,17 @@ const App = () => {
             }
           }
         )
+
+        //clear the input variables
+        setReceiverAddress('')
+        setCommittedAmount('')
+        setAgreementsDuration('')
+        //clear the input variables
+        const inputs = document.querySelectorAll('#first_input, #second_input, #third_input')
+        inputs.forEach(input => {
+          input.value = ''
+        })
+
       }
     } catch(err) {
       //TypeError
@@ -238,6 +249,16 @@ const App = () => {
       } else {
         console.log(err.message )
         setErrorNewContract("Transaction failed")
+
+        //clear the storage of the input variables
+        setReceiverAddress('')
+        setCommittedAmount('')
+        setAgreementsDuration('')
+        //clear the input variables
+        const inputs = document.querySelectorAll('#first_input, #second_input, #third_input')
+        inputs.forEach(input => {
+          input.value = ''
+        })
       }
     }
   }
@@ -628,15 +649,15 @@ const App = () => {
                         <p className="has-background-black-bis  py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="text" onChange={updateReceiverAddress} placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
+                        <input id='first_input' type="text" onChange={updateReceiverAddress} placeholder="Enter the receiver's address" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="number" min="1" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
+                        <input id='second_input' type="number" min="1" onChange={updateCommittedAmount} placeholder="Enter the amount you committed" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="number" min="1" onChange={updateHowLong} placeholder="Enter the contract's deadline" className='has-background-primary input is-normal'></input>
+                        <input id='third_input' type="number" min="1" onChange={updateHowLong} placeholder="Enter the contract's deadline" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>

@@ -389,7 +389,9 @@ const App = () => {
       setContractBreached('')
       setErrorContractBreached('')
       //check if the requirements don't fail
-      if(checkRequirementsContractBreached(idSent2) == true){
+      console.log(Promise.resolve(checkRequirementsContractBreached(idSent2)))
+      console.log(checkRequirementsContractBreached(idSent2) === true)
+      if(checkRequirementsContractBreached(idSent2) === true){
         //check if the requirements don't fail
         const functionReturn = await contractLex1.methods.wasContractBreached(idSent2).call({from: address})
         //storing the function's return
