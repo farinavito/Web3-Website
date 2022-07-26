@@ -253,7 +253,6 @@ const App = () => {
         setErrorNewContract("You have rejected the transaction")
       //Error
       } else {
-        console.log(err.message )
         setErrorNewContract("Transaction failed")
         //clear the storage of the input variables
         setReceiverAddress('')
@@ -362,9 +361,11 @@ const App = () => {
           return true
         } else {
           setErrorContractBreached("The agreement is already terminated")
+          return false
         }
       } else {
         setErrorContractBreached("You aren't the contract's receiver")
+        return false
       }
     } catch(err){
       //TypeError
@@ -390,7 +391,7 @@ const App = () => {
       setContractBreached('')
       setErrorContractBreached('')
       //check if the requirements don't fail
-      if(checkRequirementsContractBreached(idSent2) == true){
+      if(checkRequirementsContractBreached(idSent2) === true){
         //calling wasContractBreached function
         const functionReturn = await contractLex2.methods.wasContractBreached(idSent2).call({from: address})
         //storing the function's return
@@ -422,7 +423,6 @@ const App = () => {
       //calling getWithdrawalReceiver function
       const qty = await contractLex2.methods.getWithdrawalReceiver().call({from: address})
       //storing the function's return
-      console.log(qty)
       setWithdrawalAmountAsReceiver(qty)
     } catch(err){
       setErrorReceiversWithdrawalAmount(err.message)
