@@ -334,8 +334,7 @@ const App = () => {
       //storing the amount sent
       const qty = web3.utils.toWei('1', 'wei') * amountSent
       //checking if the requirements don't fail
-      console.log(checkRequirementsSend(idSent) === true)
-      if(checkRequirementsSend(idSent) === true){
+      if(checkRequirementsSend(idSent)){
         //calling sendPayment function
         await contractLex1.methods.sendPayment(idSent).send({
           from: address,
@@ -411,9 +410,7 @@ const App = () => {
       setContractBreached('')
       setErrorContractBreached('')
       //check if the requirements don't fail
-      console.log(Promise.resolve(checkRequirementsContractBreached(idSent2)))
-      console.log(checkRequirementsContractBreached(idSent2) === true)
-      if(checkRequirementsContractBreached(idSent2) === true){
+      if(checkRequirementsContractBreached(idSent2)){
         //check if the requirements don't fail
         const functionReturn = await contractLex1.methods.wasContractBreached(idSent2).call({from: address})
         //storing the function's return
