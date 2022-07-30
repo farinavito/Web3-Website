@@ -1,5 +1,5 @@
 import 'bulma/css/bulma.css'
-import contractLex from '../blockchain/webLex2'
+import contractLex2 from '../blockchain/webLex2'
 import { useState, useEffect } from 'react'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
@@ -14,7 +14,7 @@ const App = () => {
   //storing the address of the person who connected their wallet
   const [address, setAddress] = useState(null)
   //storing the copy of the smart contract
-  const [contractLex2, setcontractLex2] = useState(null)
+  const [contractLex, setcontractLex2] = useState(null)
 
   //storing the number of agreements the caller has as the receiver
   const [myNumReceiverAgreements, setMyNumReceiverAgreements] = useState('')
@@ -83,7 +83,7 @@ const App = () => {
 
   //when the copy of the smart contract is avalaibla call the functions bellow
   useEffect(() => {
-    if (contractLex2){
+    if (contractLex){
       getMyNumReceiverAgreements()
       getMyReceiverIds()
       getMyNumSenderAgreements()
@@ -92,13 +92,13 @@ const App = () => {
       sendersWithdrawalAmount()
       getAllDeposit()
     }
-  }, [contractLex2])
+  }, [contractLex])
 
   //storing the number of agreements the caller as the receiver has
   const getMyNumReceiverAgreements = async () => {
     try {
       //storing the number of contracts that the caller has as the receiver
-      const _ids = await contractLex2.methods.getMyNumAgreementsReceiver().call({from: address})
+      const _ids = await contractLex.methods.getMyNumAgreementsReceiver().call({from: address})
       //setting the useState with the number of contracts that the caller has
       setMyNumReceiverAgreements(_ids)
     } catch(err){
@@ -117,7 +117,7 @@ const App = () => {
       //looping over the number of the contracts that the caller has as the receiver
       for (let i = 0; i < myNumReceiverAgreements; i++) {
         //retrieving the contract's ids
-        const newId = await contractLex2.methods.myReceiverAgreements(address, i).call({from: address})
+        const newId = await contractLex.methods.myReceiverAgreements(address, i).call({from: address})
         //storing the ids in an array
         setMyReceiverIds(arr => [...arr, newId])
       }
@@ -131,7 +131,7 @@ const App = () => {
   const getMyNumSenderAgreements = async () => {
     try {
       //storing the number of contracts that the caller has as the sender
-      const _ids = await contractLex2.methods.getMyNumAgreementsSender().call({from: address})
+      const _ids = await contractLex.methods.getMyNumAgreementsSender().call({from: address})
       //setting the useState with the number of contracts that the caller has
       setMyNumSenderAgreements(_ids)
     } catch(err){
@@ -150,7 +150,7 @@ const App = () => {
       //looping over the number of the contracts that the caller has as the sender
       for (let i = 0; i < myNumSenderAgreements; i++) {
         //retrieving the contract's ids
-        const newId = await contractLex2.methods.mySenderAgreements(address, i).call({from: address})
+        const newId = await contractLex.methods.mySenderAgreements(address, i).call({from: address})
         //storing the ids in an array
         setMySenderIds(arr => [...arr, newId])
       }
@@ -218,7 +218,7 @@ const App = () => {
       //check that the requirements don't fail
       if(checkRequirementsCreate()){
         //calling createAgreement function
-        await contractLex2.methods.createAgreement(receiverAddress, qty, agreementsDuration).send({
+        await contractLex.methods.createAgreement(receiverAddress, qty, agreementsDuration).send({
           from: address,
           value: qty
         //return success message to the user
@@ -281,7 +281,7 @@ const App = () => {
   const checkRequirementsSend = async(_id) => {
     try {
       //storing the struct Agreement
-      const ag_signee = await contractLex2.methods.exactAgreement(_id).call({from: address})
+      const ag_signee = await contractLex.methods.exactAgreement(_id).call({from: address})
       //check if the signee is the same as the connected address
       if(ag_signee.signee == address){
         //check if the status is equal to Created
@@ -315,7 +315,7 @@ const App = () => {
       //checking if the requirements don't fail
       if(checkRequirementsSend(idSent)){
         //calling sendPayment function
-        await contractLex2.methods.sendPayment(idSent, qty).send({
+        await contractLex.methods.sendPayment(idSent, qty).send({
           from: address,
           value: qty
         //returning success message to the user
@@ -353,7 +353,7 @@ const App = () => {
   const checkRequirementsContractBreached = async(_id) => {
     try{
       //storing the struct Agreement
-      const ag_signee = await contractLex2.methods.exactAgreement(_id).call({from: address})
+      const ag_signee = await contractLex.methods.exactAgreement(_id).call({from: address})
       //check if the receiver is the same as the connected address
       if(ag_signee.receiver == address){
         //check if the contract's status is Created
@@ -393,9 +393,11 @@ const App = () => {
       //check if the requirements don't fail
       if(checkRequirementsContractBreached(idSent2)){
         //calling wasContractBreached function
-        const functionReturn = await contractLex2.methods.wasContractBreached(idSent2).call({from: address})
+        const functionReturn = await contractLex.methods.wasContractBreached(idSent2).call({from: address})
         //storing the function's return
-        setContractBreached(functionReturn)
+        //web3.eth.getPendingTransactions().then(console.log);
+        console.log(await functionReturn.wait())
+        //setContractBreached(functionReturn)
       }
     } catch(err){
       //TypeError
@@ -409,7 +411,7 @@ const App = () => {
         setErrorContractBreached("You have rejected the transaction")
       //Error
       } else {
-        setErrorContractBreached("Transaction failed")
+        setErrorContractBreached(err.message)
       }
     }
   }
@@ -421,7 +423,7 @@ const App = () => {
       setWithdrawalAmountAsReceiver('')
       setErrorReceiversWithdrawalAmount('')
       //calling getWithdrawalReceiver function
-      const qty = await contractLex2.methods.getWithdrawalReceiver().call({from: address})
+      const qty = await contractLex.methods.getWithdrawalReceiver().call({from: address})
       //storing the function's return
       setWithdrawalAmountAsReceiver(qty)
     } catch(err){
@@ -435,7 +437,7 @@ const App = () => {
       //check if the user has 0 weis
       if(typeof setWithdrawalAmountAsReceiver() !== "undefined"){
         //calling withdrawAsTheReceiver function
-        await contractLex2.methods.withdrawAsTheReceiver().send({
+        await contractLex.methods.withdrawAsTheReceiver().send({
           from: address
         })
       } else {
@@ -443,7 +445,7 @@ const App = () => {
           setErrorWithdrawReceiversAmount("Please connect your wallet")
         } else {
           setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
-          setWithdrawalAmountAsReceiver(await contractLex2.methods.getWithdrawalReceiver().call({from: address}))
+          setWithdrawalAmountAsReceiver(await contractLex.methods.getWithdrawalReceiver().call({from: address}))
         }
       }
     } catch(err){
@@ -464,7 +466,7 @@ const App = () => {
       setWithdrawalAmountAsSender('')
       setErrorSendersWithdrawalAmount('')
       //calling getWithdrawalSignee function
-      const qty = await contractLex2.methods.getWithdrawalSignee().call()
+      const qty = await contractLex.methods.getWithdrawalSignee().call()
       //storing the function's return
       setWithdrawalAmountAsSender(qty)
     } catch(err){
@@ -478,7 +480,7 @@ const App = () => {
       //check if the user has 0 weis
       if(typeof setWithdrawalAmountAsSender() !== "undefined"){
         //calling withdrawAsTheSignee function
-        await contractLex2.methods.withdrawAsTheSignee().send({
+        await contractLex.methods.withdrawAsTheSignee().send({
           from: address
         })
       } else {
@@ -486,7 +488,7 @@ const App = () => {
           setErrorSendersWithdrawalAmount("Please connect your wallet")
         } else {
           setErrorSendersWithdrawalAmount("You can't withdraw 0 weis")
-          setWithdrawalAmountAsSender(await contractLex2.methods.getWithdrawalSignee().call())
+          setWithdrawalAmountAsSender(await contractLex.methods.getWithdrawalSignee().call())
         }
       }
     } catch(err){
@@ -513,7 +515,7 @@ const App = () => {
         //looping over the number of the contracts that the caller has as the sender
         for (let i = 0; i < myNumSenderAgreements; i++){
         //storing the struct Agreement
-        const ag_signee = await contractLex2.methods.exactAgreement(mySenderIds[i]).call({from: address})
+        const ag_signee = await contractLex.methods.exactAgreement(mySenderIds[i]).call({from: address})
         //incrementing by the deposit amount
         qty += ag_signee.deposit
         }
@@ -544,7 +546,7 @@ const App = () => {
         //set the variable to the first account
         setAddress(accounts[0])
         //local copy of the smart contract
-        const localContract = contractLex(web3)
+        const localContract = contractLex2(web3)
         setcontractLex2(localContract)
         //set the error handler to empty
         setErrorWithdrawReceiversAmount('')
