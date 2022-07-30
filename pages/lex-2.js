@@ -395,9 +395,7 @@ const App = () => {
         //calling wasContractBreached function
         const functionReturn = await contractLex.methods.wasContractBreached(idSent2).call({from: address})
         //storing the function's return
-        //web3.eth.getPendingTransactions().then(console.log);
-        console.log(await functionReturn.wait())
-        //setContractBreached(functionReturn)
+        setContractBreached(functionReturn)
       }
     } catch(err){
       //TypeError
