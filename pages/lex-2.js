@@ -395,7 +395,8 @@ const App = () => {
         //calling wasContractBreached function
         const functionReturn = await contractLex.methods.wasContractBreached(idSent2).call({from: address})
         //storing the function's return
-        setContractBreached(functionReturn)
+        console.log(functionReturn.events.args)
+        //setContractBreached(functionReturn)
       }
     } catch(err){
       //TypeError
@@ -560,6 +561,14 @@ const App = () => {
         setIsInitialize(true)
         //set the initialization to true for withdrawSendersAmount
         setIsInitializeSender(true)
+        //set the error handler to empty
+        setErrorReceiverIds('')
+        //set the error handler to empty
+        setErrorReceiverAgreements('')
+        //set the error handler to empty
+        setErrorSenderIds('')
+        //set the error handler to empty
+        setErrorSenderAgreements('')
       } catch(err) {
         setError(err.message)
       }    
