@@ -414,6 +414,9 @@ const App = () => {
         //storing the function's return
         console.log(functionReturn.events.args)
         //setContractBreached(functionReturn)
+
+        //clear the input's variable
+        setIdSent2('')
       }
     } catch(err){
       //TypeError
@@ -428,6 +431,8 @@ const App = () => {
       //Error
       } else {
         setErrorContractBreached(err.message)
+        //clear the input's variable
+        setIdSent2('')
       }
     }
   }
