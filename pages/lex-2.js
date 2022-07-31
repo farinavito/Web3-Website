@@ -586,11 +586,11 @@ const App = () => {
           //storing the struct Agreement
           const ag_signee = await contractLex.methods.exactAgreement(mySenderIds[i]).call({from: address})
           //incrementing by the deposit amount
-          qtyDeposit += ag_signee.deposit
-          console.log(ag_signee.deposit)
+          qtyDeposit += parseInt(ag_signee.deposit)
+          console.log(qtyDeposit)
         }
         //saving all the deposit's amount to an useState
-        setUserDepositAll(parseInt(qtyDeposit))
+        setUserDepositAll(qtyDeposit)
       }
     } catch(err){
       if(err.message == "Cannot read properties of undefined (reading 'length')"){
@@ -642,6 +642,8 @@ const App = () => {
         setErrorSenderAgreements('')
         //set the error handler to empty
         setErrorFundsDetails('')
+        //set the error handler to empty
+        setErrorUserDepositAll('')
       } catch(err) {
         setError(err.message)
       }    
