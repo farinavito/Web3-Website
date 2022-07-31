@@ -644,6 +644,12 @@ const App = () => {
         setErrorFundsDetails('')
         //set the error handler to empty
         setErrorUserDepositAll('')
+        //set the error handler to empty
+        setErrorSendersWithdrawalAmount('')
+        //set the error handler to empty
+        setErrorReceiversWithdrawalAmount
+        //
+        setErrorWithdraw('')
       } catch(err) {
         setError(err.message)
       }    
