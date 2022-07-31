@@ -565,7 +565,7 @@ const App = () => {
         
         allDetailsSingleAgreement= []
       }  
-      console.log(allDetails);    
+      console.log(allDetails[0].id);    
     } catch(err) {
       setErrorFundsDetails(err.message)
     }
@@ -823,18 +823,26 @@ const App = () => {
                             </p> 
                           </div>
                         ))}
+                        
+                        {allDetails.map(({id, signee, receiver, amount, deposit, status, deadline}) => (
+                          <div>
+                            <p>
+                              Id: {allDetails[0]}<br></br>
+                              Signee: {allDetails[0].signee}<br></br>
+                              Receiver: {allDetails[0].receiver}<br></br>
+                              Amount: {allDetails[0].amount}<br></br>
+                              Deposit: {allDetails[0].deposit}<br></br>
+                              Status: {allDetails[0].status}<br></br>
+                              Deadline: {allDetails[0].deadline}<br></br>
+                            </p> 
+                          </div>
+                        ))}
+                       
                         <br></br>
                         <p className='max-class'>
                           {errorFundsDetails}
                         </p>
                         <br></br>
-                        <p className="box has-background-black-bis pt-3 pb-3 mt-3">
-                          <div className='columns is-centered'>
-                            <Link href="">
-                              <button onClick={getSendersAgreementsDetails} className="button is-outlined py-2 px-6 is-size-6">Create </button>
-                            </Link>
-                          </div>
-                        </p>
                       </p>
                     </div>
                     <div id='first'className="column pt-4">
