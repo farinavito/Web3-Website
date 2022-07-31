@@ -806,7 +806,7 @@ const App = () => {
                           <br></br>
                         </p>
                         <p>
-                          Your commited deposit: <br></br>{userDepositAll} weis
+                          Your created agreements: <br></br>
                         </p>
                         <br></br>
                         {allDetails.map(({id, signee, receiver, amount, deposit, status, deadline}) => (
