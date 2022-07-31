@@ -618,38 +618,25 @@ const App = () => {
         //local copy of the smart contract
         const localContract = contractLex2(web3)
         setcontractLex2(localContract)
-        //set the error handler to empty
+        //set the error handlers to empty
         setErrorWithdrawReceiversAmount('')
-        //set the error handler to empty
         setErrorWithdrawSendersAmount('')
-        //set the error handler for creating new agreeemnt to empty
         setErrorNewContract('')
-        //set the error handler for sending new payment to empty
         setErrorSendingPayment('')
-        //set the error handler for sending breaching new contract to empty
         setErrorContractBreached('')
+        setErrorReceiverIds('')
+        setErrorReceiverAgreements('')
+        setErrorSenderIds('')
+        setErrorSenderAgreements('')
+        setErrorFundsDetails('')
+        setErrorUserDepositAll('')
+        setErrorSendersWithdrawalAmount('')
+        setErrorReceiversWithdrawalAmount('')
+        setErrorWithdraw('')
         //set the initialization to true for withdrawReceiversAmount
         setIsInitialize(true)
         //set the initialization to true for withdrawSendersAmount
         setIsInitializeSender(true)
-        //set the error handler to empty
-        setErrorReceiverIds('')
-        //set the error handler to empty
-        setErrorReceiverAgreements('')
-        //set the error handler to empty
-        setErrorSenderIds('')
-        //set the error handler to empty
-        setErrorSenderAgreements('')
-        //set the error handler to empty
-        setErrorFundsDetails('')
-        //set the error handler to empty
-        setErrorUserDepositAll('')
-        //set the error handler to empty
-        setErrorSendersWithdrawalAmount('')
-        //set the error handler to empty
-        setErrorReceiversWithdrawalAmount
-        //
-        setErrorWithdraw('')
       } catch(err) {
         setError(err.message)
       }    
