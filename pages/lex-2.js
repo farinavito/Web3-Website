@@ -558,7 +558,7 @@ const App = () => {
         
         allDetailsSingleVault= []
       }  
-      //console.log(allDetails);    
+      console.log(allDetails);    
     } catch(err) {
       setErrorFundsDetails(err.message)
     }
@@ -573,17 +573,17 @@ const App = () => {
         setUserDepositAll(0)
       } else{
         //storing the deposit 
-        const qty = 0
+        let qtyDeposit = 0
         //looping over the number of the contracts that the caller has as the sender
         for (let i = 0; i < myNumSenderAgreements; i++){
           //storing the struct Agreement
           const ag_signee = await contractLex.methods.exactAgreement(mySenderIds[i]).call({from: address})
           //incrementing by the deposit amount
-          qty += ag_signee.deposit
-          console.log(parseInt(qty))
+          qtyDeposit += ag_signee.deposit
+          console.log(ag_signee.deposit)
         }
         //saving all the deposit's amount to an useState
-        setUserDepositAll(parseInt(qty))
+        setUserDepositAll(parseInt(qtyDeposit))
       }
     } catch(err){
       if(err.message == "Cannot read properties of undefined (reading 'length')"){
