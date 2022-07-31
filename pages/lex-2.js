@@ -545,14 +545,14 @@ const App = () => {
   }
 
   const allDetails = [];
-  const allDetailsSingleVault = [];
+  const allDetailsSingleAgreeemnt = [];
 
   //getting the caller's funds details
   const getSendersAgreementsDetails = async () => {
     try {
       for (const value of mySenderIds.values()) {
         const newId = await contractLex.methods.exactAgreement(value).call({from: address})
-        const vault = {
+        const agreeemnt = {
           id: newId.id, 
           signee: newId.signee,
           receiver: newId.receiver,
@@ -561,9 +561,9 @@ const App = () => {
           status: newId.status,
           deadline: newId.deadline
         }
-        allDetails.push(vault)    
+        allDetails.push(agreeemnt)    
         
-        allDetailsSingleVault= []
+        allDetailsSingleAgreeemnt= []
       }  
       console.log(allDetails);    
     } catch(err) {
@@ -834,6 +834,13 @@ const App = () => {
                           {errorFundsDetails}
                         </p>
                         <br></br>
+                        <p className="box has-background-black-bis pt-3 pb-3 mt-3">
+                          <div className='columns is-centered'>
+                            <Link href="">
+                              <button onClick={getSendersAgreementsDetails} className="button is-outlined py-2 px-6 is-size-6">Create </button>
+                            </Link>
+                          </div>
+                        </p>
                       </p>
                     </div>
                     <div id='first'className="column pt-4">
