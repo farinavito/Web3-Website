@@ -471,10 +471,12 @@ const App = () => {
     try {
       //check if the user has 0 weis
       if(setWithdrawalAmountAsReceiver() !== "undefined"){
-        //calling withdrawAsTheReceiver function
-        await contractLex.methods.withdrawAsTheReceiver().send({
-          from: address
-        })
+        if(withdrawalAmountAsReceiver !== "0"){
+          //calling withdrawAsTheReceiver function
+          await contractLex.methods.withdrawAsTheReceiver().send({from: address})
+        } else {
+          setErrorWithdrawReceiversAmount("You can't withdraw 0 weis")
+        } 
       } else {
         if(isInitialize == ''){
           setErrorWithdrawReceiversAmount("Please connect your wallet")
