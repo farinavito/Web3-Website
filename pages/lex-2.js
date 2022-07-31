@@ -80,6 +80,9 @@ const App = () => {
   //storing the error message when there is an error for calling exactAgreement's deposit
   const [errorUserDepositAll, setErrorUserDepositAll] = useState('')
 
+  //storing the error message when trying to get the caller's funds details
+  const [errorFundsDetails, setErrorFundsDetails] = useState('')
+
 
   //when the copy of the smart contract is avalaibla call the functions bellow
   useEffect(() => {
@@ -630,6 +633,8 @@ const App = () => {
         setErrorSenderIds('')
         //set the error handler to empty
         setErrorSenderAgreements('')
+        //set the error handler to empty
+        setErrorFundsDetails('')
       } catch(err) {
         setError(err.message)
       }    
@@ -819,7 +824,7 @@ const App = () => {
                         ))}
                         <br></br>
                         <p className='max-class'>
-                          {errorUserDepositAll}
+                          {errorFundsDetails}
                         </p>
                         <br></br>
                       </p>
