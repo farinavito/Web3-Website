@@ -412,8 +412,8 @@ const App = () => {
         //calling wasContractBreached function
         const functionReturn = await contractLex.methods.wasContractBreached(idSent2).call({from: address})
         //storing the function's return
-        //console.log(functionReturn.events.args)
-        //setContractBreached(functionReturn)
+        console.log(await functionReturn)
+        //setContractBreached(await functionReturn)
 
         //clear the storage of the input variables
         setIdSent2('')
@@ -755,6 +755,20 @@ const App = () => {
                       </p>
                       <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
                         YOUR DEPOSIT<br></br><br></br>
+                        <p className=" has-background-black-bis py-4 is-size-6">
+                          <br></br>
+                        </p>
+                        <p>
+                          Your commited deposit: <br></br>{userDepositAll} weis
+                        </p>
+                        <br></br>
+                        <p className='max-class'>
+                          {errorUserDepositAll}
+                        </p>
+                        <br></br>
+                      </p>
+                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                        ALL YOUR CREATED AGREEMENTS<br></br><br></br>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
