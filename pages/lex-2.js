@@ -340,6 +340,9 @@ const App = () => {
       //Error
       } else {
         setErrorSendingPayment("Transaction failed")
+        //remove the input's variables
+        setIdSent('')
+        setAmountSent('')
       }
     }
   } 
