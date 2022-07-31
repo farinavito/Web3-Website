@@ -471,6 +471,7 @@ const App = () => {
     try {
       //check if the user has 0 weis
       if(setWithdrawalAmountAsReceiver() !== "undefined"){
+        //check if the receiver's amount isn't empty
         if(withdrawalAmountAsReceiver !== "0"){
           //calling withdrawAsTheReceiver function
           await contractLex.methods.withdrawAsTheReceiver().send({from: address})
@@ -516,6 +517,7 @@ const App = () => {
     try {
       //check if the user has 0 weis
       if(typeof setWithdrawalAmountAsSender() !== "undefined"){
+        //check if the sender's withdrawal amount isn't empty
         if(withdrawalAmountAsSender !== "0"){
           //calling withdrawAsTheSignee function
           await contractLex.methods.withdrawAsTheSignee().send({from: address})
