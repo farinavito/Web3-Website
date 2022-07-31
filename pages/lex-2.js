@@ -587,7 +587,6 @@ const App = () => {
           const ag_signee = await contractLex.methods.exactAgreement(mySenderIds[i]).call({from: address})
           //incrementing by the deposit amount
           qtyDeposit += parseInt(ag_signee.deposit)
-          console.log(qtyDeposit)
         }
         //saving all the deposit's amount to an useState
         setUserDepositAll(qtyDeposit)
