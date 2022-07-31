@@ -412,11 +412,16 @@ const App = () => {
         //calling wasContractBreached function
         const functionReturn = await contractLex.methods.wasContractBreached(idSent2).call({from: address})
         //storing the function's return
-        console.log(functionReturn.events.args)
+        //console.log(functionReturn.events.args)
         //setContractBreached(functionReturn)
 
-        //clear the input's variable
+        //clear the storage of the input variables
         setIdSent2('')
+        //clear the input variables
+        const inputs = document.querySelectorAll('#sixth_input')
+        inputs.forEach(input => {
+          input.value = ''
+        })
       }
     } catch(err){
       //TypeError
@@ -431,8 +436,13 @@ const App = () => {
       //Error
       } else {
         setErrorContractBreached(err.message)
-        //clear the input's variable
+        //clear the storage of the input variables
         setIdSent2('')
+        //clear the input variables
+        const inputs = document.querySelectorAll('#sixth_input')
+        inputs.forEach(input => {
+          input.value = ''
+        })
       }
     }
   }
@@ -805,7 +815,7 @@ const App = () => {
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input type="number" min="1" onChange={updateIdSent2} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                        <input id='sixth_input' type="number" min="1" onChange={updateIdSent2} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
