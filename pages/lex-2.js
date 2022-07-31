@@ -516,10 +516,13 @@ const App = () => {
     try {
       //check if the user has 0 weis
       if(typeof setWithdrawalAmountAsSender() !== "undefined"){
-        //calling withdrawAsTheSignee function
-        await contractLex.methods.withdrawAsTheSignee().send({
-          from: address
-        })
+        if(withdrawalAmountAsSender !== "0"){
+          //calling withdrawAsTheSignee function
+          await contractLex.methods.withdrawAsTheSignee().send({from: address})
+        } else {
+          setErrorSendersWithdrawalAmount("You can't withdraw 0 weis")
+        }
+        
       } else {
         if(isInitializeSender == ''){
           setErrorSendersWithdrawalAmount("Please connect your wallet")
