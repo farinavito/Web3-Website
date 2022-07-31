@@ -335,7 +335,7 @@ const App = () => {
         setIdSent('')
         setAmountSent('')
         //clear the input variables
-        const inputs = document.querySelectorAll('#forth_input, #fifth_input')
+        const inputs = document.querySelectorAll('#fourth_input, #fifth_input')
         inputs.forEach(input => {
           input.value = ''
         })
@@ -357,7 +357,7 @@ const App = () => {
         setIdSent('')
         setAmountSent('')
         //clear the input variables
-        const inputs = document.querySelectorAll('#forth_input, #fifth_input')
+        const inputs = document.querySelectorAll('#fourth_input, #fifth_input')
         inputs.forEach(input => {
           input.value = ''
         })
@@ -944,7 +944,7 @@ const App = () => {
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
-                        <input id='forth_input' type="number" min="1" onChange={updateIdSent} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
+                        <input id='fourth_input' type="number" min="1" onChange={updateIdSent} placeholder="Enter the agreement's id" className='has-background-primary input is-normal'></input>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
                         </p>
