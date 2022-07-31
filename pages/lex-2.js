@@ -91,6 +91,7 @@ const App = () => {
       receiversWithdrawalAmount()
       sendersWithdrawalAmount()
       getAllDeposit()
+      getSendersAgreementsDetails()
     }
   }, [contractLex])
 
@@ -533,6 +534,33 @@ const App = () => {
     }
   }
 
+  const allDetails = [];
+  const allDetailsSingleVault = [];
+
+  //getting the caller's funds details
+  const getSendersAgreementsDetails = async () => {
+    try {
+      for (const value of mySenderIds.values()) {
+        const newId = await contractLex.methods.exactAgreement(value).call({from: address})
+        const vault = {
+          id: newId.id, 
+          signee: newId.signee,
+          receiver: newId.receiver,
+          amount: newId.amount,
+          deposit: newId.deposit,
+          status: newId.status,
+          deadline: newId.deadline
+        }
+        allDetails.push(vault)    
+        
+        allDetailsSingleVault= []
+      }  
+      //console.log(allDetails);    
+    } catch(err) {
+      setErrorFundsDetails(err.message)
+    }
+  }
+
   //return the deposit amount that the caller has in all his sender's contract
   const getAllDeposit = async () => {
     try {
@@ -775,6 +803,20 @@ const App = () => {
                         <p>
                           Your commited deposit: <br></br>{userDepositAll} weis
                         </p>
+                        <br></br>
+                        {allDetails.map(({id, signee, receiver, amount, deposit, status, deadline}) => (
+                          <div>
+                            <p>
+                              Id: {id}<br></br>
+                              Signee: {signee}<br></br>
+                              Receiver: {receiver}<br></br>
+                              Amount: {amount}<br></br>
+                              Deposit: {deposit}<br></br>
+                              Status: {status}<br></br>
+                              Deadline: {deadline}<br></br>
+                            </p> 
+                          </div>
+                        ))}
                         <br></br>
                         <p className='max-class'>
                           {errorUserDepositAll}
