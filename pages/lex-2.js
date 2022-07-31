@@ -545,14 +545,14 @@ const App = () => {
   }
 
   const allDetails = [];
-  const allDetailsSingleAgreeemnt = [];
+  const allDetailsSingleAgreement = [];
 
   //getting the caller's funds details
   const getSendersAgreementsDetails = async () => {
     try {
       for (const value of mySenderIds.values()) {
         const newId = await contractLex.methods.exactAgreement(value).call({from: address})
-        const agreeemnt = {
+        const agreement = {
           id: newId.id, 
           signee: newId.signee,
           receiver: newId.receiver,
@@ -561,9 +561,9 @@ const App = () => {
           status: newId.status,
           deadline: newId.deadline
         }
-        allDetails.push(agreeemnt)    
+        allDetails.push(agreement)    
         
-        allDetailsSingleAgreeemnt= []
+        allDetailsSingleAgreement= []
       }  
       console.log(allDetails);    
     } catch(err) {
