@@ -315,7 +315,7 @@ const App = () => {
       //checking if the requirements don't fail
       if(checkRequirementsSend(idSent)){
         //calling sendPayment function
-        await contractLex.methods.sendPayment(idSent, qty).send({
+        await contractLex.methods.sendPayment(idSent).send({
           from: address,
           value: qty
         //returning success message to the user
