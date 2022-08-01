@@ -385,7 +385,7 @@ const App = () => {
           return false
         }
       } else {
-        setErrorContractBreached("You aren't the contract's receiver")
+        setErrorContractBreached("You aren't the agreement's receiver")
         return false
       }
     } catch(err){
@@ -417,7 +417,7 @@ const App = () => {
         const functionReturn = await contractLex.methods.wasContractBreached(idSent2).call({from: address})
         //storing the function's return
         console.log(await functionReturn)
-        //setContractBreached(await functionReturn)
+        setContractBreached(await functionReturn)
 
         //clear the storage of the input variables
         setIdSent2('')
@@ -544,6 +544,7 @@ const App = () => {
     }
   }
 
+  
   const allDetails = [];
   const allDetailsSingleAgreement = [];
 
@@ -560,12 +561,14 @@ const App = () => {
           deposit: newId.deposit,
           status: newId.status,
           deadline: newId.deadline
+          
         }
+        
         allDetails.push(agreement)    
         
         allDetailsSingleAgreement= []
       }  
-      console.log(allDetails[0].id);    
+      console.log(allDetails);    
     } catch(err) {
       setErrorFundsDetails(err.message)
     }
@@ -644,6 +647,8 @@ const App = () => {
       alert("Please install MetaMask")
     }
   }
+
+  const bbb = allDetails
 
   return (
       <div className={styles.main}>
@@ -810,6 +815,9 @@ const App = () => {
                           Your created agreements: <br></br>
                         </p>
                         <br></br>
+
+                       
+                        
                         {allDetails.map(({id, signee, receiver, amount, deposit, status, deadline}) => (
                           <div>
                             <p>
@@ -822,22 +830,8 @@ const App = () => {
                               Deadline: {deadline}<br></br>
                             </p> 
                           </div>
-                        ))}
-                        
-                        {allDetails.map(({id, signee, receiver, amount, deposit, status, deadline}) => (
-                          <div>
-                            <p>
-                              Id: {allDetails[0]}<br></br>
-                              Signee: {allDetails[0].signee}<br></br>
-                              Receiver: {allDetails[0].receiver}<br></br>
-                              Amount: {allDetails[0].amount}<br></br>
-                              Deposit: {allDetails[0].deposit}<br></br>
-                              Status: {allDetails[0].status}<br></br>
-                              Deadline: {allDetails[0].deadline}<br></br>
-                            </p> 
-                          </div>
-                        ))}
-                       
+                        ))}  
+                                         
                         <br></br>
                         <p className='max-class'>
                           {errorFundsDetails}
