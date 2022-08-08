@@ -24,12 +24,6 @@
     color: hsl(171, 100%, 41%);
 }
 
-.main text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: hsl(171, 100%, 41%);
-    margin-top: 3rem;
-}
-
 .main button {
     background-color: hsl(0, 0%, 7%);
     border: 1px solid hsl(171, 100%, 41%);
