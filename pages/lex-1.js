@@ -657,40 +657,40 @@ const App = () => {
                 <div className="container has-text-centered mt-6 pr-6">
                   <div className="columns mt-6 pr-6">
                     <div id='sidebar' className="column py-0">
-                      <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
+                      <div className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
                         <h2>Smart contracts</h2><br></br><br></br>
-                        <p className="box has-background-black-bis pt-4 pb-3">
+                        <div className="box has-background-black-bis pt-4 pb-3">
                           <div className='columns is-centered'>
                             <Link href="/lex-1">
                               <button className="button is-outlined py-2 px-6 is-size-6">Lex-1 </button>
                             </Link>
                           </div>
-                        </p>
-                        <p className="box has-background-black-bis pt-4 pb-3">
+                        </div>
+                        <div className="box has-background-black-bis pt-4 pb-3">
                           <div className='columns is-centered'>
                             <Link href="/lex-2">
                               <button className="button is-outlined py-2 px-6 is-size-6">Lex-2 </button>
                             </Link>
                           </div>
-                        </p>
-                        <p className="box has-background-black-bis pt-4 pb-3">
+                        </div>
+                        <div className="box has-background-black-bis pt-4 pb-3">
                           <div className='columns is-centered'>
                             <Link href="/vault">
                               <button className="button is-outlined py-2 px-6 is-size-6">Vault </button>
                             </Link>
                           </div>
-                        </p>
+                        </div>
                         <p className=" has-background-black-bis py-4 pr-6 is-size-6">
                           <br></br><br></br><br></br><br></br><br></br>
                         </p>
                         <p className=" has-background-black-bis py-4 pr-6 is-size-6">
                           <br></br><br></br><br></br><br></br><br></br>
                         </p>
-                      </p>
+                      </div>
                     </div>
                     <div className="column"></div>
                     <div className="column pt-4">
-                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
+                      <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                         CREATE AGREEMENT<br></br><br></br>
                         <p className="has-background-black-bis  py-4 is-size-6">
                           <br></br>
@@ -720,15 +720,15 @@ const App = () => {
                           {errorNewContract}
                         </p>
                         <br></br>
-                        <p className="box has-background-black-bis pt-3 pb-3 mt-3">
+                        <div className="box has-background-black-bis pt-3 pb-3 mt-3">
                           <div className='columns is-centered'>
                             <Link href="">
                               <button onClick={createNewAgreement} className="button is-outlined py-2 px-6 is-size-6">Create </button>
                             </Link>
                           </div>
-                        </p>
-                      </p>
-                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                        </div>
+                      </div>
+                      <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
                         YOUR DEPOSIT<br></br><br></br>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
@@ -741,10 +741,10 @@ const App = () => {
                           {errorUserDepositAll}
                         </p>
                         <br></br>
-                      </p>
+                      </div>
                     </div>
                     <div id='first'className="column pt-4">
-                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
+                      <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                         MY RECEIVER'S AGREEMENTS<br></br><br></br>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
@@ -763,8 +763,8 @@ const App = () => {
                           {errorReceiverAgreements}
                           {errorReceiverIds}
                         </p>
-                      </p>
-                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                      </div>
+                      <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
                         WITHDRAW RECEIVER<br></br><br></br>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
@@ -778,15 +778,15 @@ const App = () => {
                           {errorWithdrawReceiversAmount}
                         </p>
                         <br></br>
-                        <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                        <div className="box has-background-black-bis pt-4 pb-3 mt-6">
                           <div className='columns is-centered'>
                             <Link href="">
                               <button onClick={withdrawReceiversAmount} className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
                             </Link>
                           </div>
-                        </p>
-                      </p>
-                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                        </div>
+                      </div>
+                      <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
                         WAS CONTRACT BREACHED<br></br><br></br>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
@@ -803,17 +803,17 @@ const App = () => {
                           {errorContractBreached}
                         </p>
                         <br></br>
-                        <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                        <div className="box has-background-black-bis pt-4 pb-3 mt-6">
                           <div className='columns is-centered'>
                             <Link href="">
                               <button onClick={wasNewContractBreached} className="button is-outlined py-2 px-6 is-size-6">Check </button>
                             </Link>
                           </div>
-                        </p>
-                      </p>
+                        </div>
+                      </div>
                     </div>
                     <div className="column pt-4" >
-                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
+                      <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                         MY SENDER'S AGREEMENTS<br></br><br></br>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
@@ -831,8 +831,8 @@ const App = () => {
                           {errorSenderAgreements}
                           {errorSenderIds}
                         </p>
-                      </p>
-                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                      </div>
+                      <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
                         WITHDRAW SENDER<br></br><br></br>
                         <p className="has-background-black-bis py-4 is-size-6">
                           <br></br>
@@ -846,15 +846,15 @@ const App = () => {
                           {errorWithdrawSendersAmount}
                         </p>
                         <br></br>
-                        <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                        <div className="box has-background-black-bis pt-4 pb-3 mt-6">
                           <div className='columns is-centered'>
                             <Link href="">
                               <button onClick={withdrawSendersAmount} className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
                             </Link>
                           </div>
-                        </p>
-                      </p>
-                      <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
+                        </div>
+                      </div>
+                      <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 mt-6 has-text-primary">
                         SEND PAYMENT<br></br><br></br>
                         <p className=" has-background-black-bis py-4 is-size-6">
                           <br></br>
@@ -872,14 +872,14 @@ const App = () => {
                           {errorSendingPayment}
                         </p>
                         <br></br>
-                        <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                        <div className="box has-background-black-bis pt-4 pb-3 mt-6">
                           <div className='columns is-centered'>
                             <Link href="">
                               <button onClick={sendNewPayment} className="button is-outlined py-2 px-6 is-size-6">Pay </button>
                             </Link>
                           </div>
-                        </p>
-                      </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
