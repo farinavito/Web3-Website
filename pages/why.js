@@ -63,8 +63,7 @@ const Why = () => {
                         <a>Enter app</a>
                     </Link>
                   </div>
-                  <div className='navbar-item'>
-                  </div>
+                  <div className='navbar-item'></div>
                 </div>
             </nav>
 
@@ -74,7 +73,7 @@ const Why = () => {
                     <h3 className="title">
                         Why? Simple, we want to help communities to flourish
                     </h3>
-                    <div className="has-text-centered pt-4">
+                    <article className="has-text-centered pt-4">
                         <br></br>
                         <h2>Firstly,</h2>we believe by enabling members of community to work together without trusting one another, <br></br>
                         will enable communities to thrive in ways we or maybe even the communities cannot imagine. <br></br>
@@ -90,8 +89,9 @@ const Why = () => {
                         <br></br>
                         <h2>Fourthly,</h2>we do understand there are bad people with ill intentions in this world. We have created this website in good faith<br></br>
                         to be used for good. Because "good" can have different meaning in different communities, we imply on you: <br></br>
-                        Treat others as you want to be treated. It's so much easier to destroy than to build. Please, remember that.
-                    </div>
+                        Treat others as you want to be treated. It's so much easier to destroy than to build. Please, remember that.<br></br>
+                        <br></br>
+                    </article>
                   </div>
                 </div>
             </section>
