@@ -1,31 +1,9 @@
 import 'bulma/css/bulma.css'
-import { useState } from 'react'
 import styles from '../styles/application.module.css'
 import Head from 'next/head'
-import Web3 from 'web3'
 import Link from 'next/link'
 
 const App = () => {
-
-    const [error, setError] = useState('')
-
-    let web3;
-
-    const connectWalletHandler = async () => {
-        if (typeof window !== "undefined" && typeof window.ethereum !== "undefined"){
-            //metamask installed
-            try {
-                await window.ethereum.request({ method: "eth_requestAccounts"})
-                web3 = new Web3(window.ethereum)
-            } catch(err) {
-                setError(err.message)
-            }
-            
-        } else {
-            //metamask not installed
-            alert("Please install MetaMask")
-        }
-    }
 
     return (
         <div className={styles.main}>
