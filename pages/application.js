@@ -106,53 +106,53 @@ const App = () => {
                   <div className="container has-text-centered pr-6">
                     <div className="columns  pr-6">
                       <div id='sidebar' className="column py-0">
-                        <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
+                        <div className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
                           <h2>Smart contracts</h2><br></br><br></br>
-                          <p className="box has-background-black-bis pt-4 pb-3">
+                          <div className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
                               <Link href="/lex-1">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Lex-1 </button>
                               </Link>
                             </div>
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3">
+                          </div>
+                          <div className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
                               <Link href="/lex-2">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Lex-2 </button>
                               </Link>
                             </div>
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3">
+                          </div>
+                          <div className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
                               <Link href="/vault">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Vault </button>
                               </Link>
                             </div>
-                          </p>
-                          <p className=" has-background-black-bis py-4 pr-6 is-size-6">
+                          </div>
+                          <div className=" has-background-black-bis py-4 pr-6 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
-                          </p>
-                          <p className=" has-background-black-bis py-4 pr-6 is-size-6">
+                          </div>
+                          <div className=" has-background-black-bis py-4 pr-6 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
-                          </p>
-                        </p>
+                          </div>
+                        </div>
                       </div>
                       <div className="column"></div>
                       <div className="column py-0">
-                        <p className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
+                        <div className="subtitle has-background-black-bis pt-5 pb-3 mb-3 has-text-primary">
                           1st commitments<br></br><br></br>
-                          <p className=" has-background-black-bis py-4 is-size-6">
+                          <div className=" has-background-black-bis py-4 is-size-6">
                             Fulfill your financial obligations<br></br>
                             to your contract's signees
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3">
+                          </div>
+                          <div className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
                               <Link href="/use-cases#second">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Details </button>
                               </Link>
                             </div>
-                          </p>
-                        </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
