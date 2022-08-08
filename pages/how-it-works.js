@@ -70,9 +70,10 @@ const How = () => {
             <section className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
-                    <text className="title">
-                    Interacting with smart contracts
-                    </text>
+                    <h4 className="title">
+                        Interacting with smart contracts
+                    </h4>
+                    <br></br>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
                         1. Click on the button "Enter app" in the navbar above<br></br>
@@ -90,9 +91,10 @@ const How = () => {
             <section className="hero is-halfheight has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
-                    <text className="title">
+                    <h4 className="title">
                         Sending ether before a certain date
-                    </text>
+                    </h4>
+                    <br></br>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
                         Replace this text
@@ -104,9 +106,10 @@ const How = () => {
             <section className="hero is-halfheight has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
-                    <text className="title">
+                    <h4 className="title">
                         Sending installments before a certain date over a time period
-                    </text>
+                    </h4>
+                    <br></br>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
                         Replace this text
@@ -118,9 +121,10 @@ const How = () => {
             <section className="hero is-halfheight has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
-                    <text className="title">
+                    <h4 className="title">
                         Token vault
-                    </text>
+                    </h4>
+                    <br></br>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <br></br>
                         This is detailed description of step 5 in Interacting with smart contracts section <br></br>
