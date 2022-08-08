@@ -366,81 +366,81 @@ const App = () => {
                   <div className="container has-text-centered pr-6">
                     <div className="columns  pr-6">
                       <div id='sidebar' className="column py-0">
-                        <p className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
+                        <div className=" has-background-black-bis pt-5 pb-3 mb-5 pr-6 has-text-primary">
                           <h2>Smart contracts</h2><br></br><br></br>
-                          <p className="box has-background-black-bis pt-4 pb-3">
+                          <div className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
                               <Link href="/lex-1">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Lex-1 </button>
                               </Link>
                             </div>
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3">
+                          </div>
+                          <div className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
                               <Link href="/lex-2">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Lex-2 </button>
                               </Link>
                             </div>
-                          </p>
-                          <p className="box has-background-black-bis pt-4 pb-3">
+                          </div>
+                          <div className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
                               <Link href="/vault">
                                 <button className="button is-outlined py-2 px-6 is-size-6">Vault </button>
                               </Link>
                             </div>
-                          </p>
+                          </div>
                           <p className=" has-background-black-bis py-4 pr-6 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
                           </p>
                           <p className=" has-background-black-bis py-4 pr-6 is-size-6">
                             <br></br><br></br><br></br><br></br><br></br>
                           </p>
-                        </p>
+                        </div>
                       </div>
                       <div className="column"></div>
                       <div className="column mt-6  pt-6 ">
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
+                        <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           DEPOSIT<br></br><br></br>
                           <p className="has-background-black-bis py-4 is-size-6">
                           </p>
                           <input onChange={updateDepositTimeLock} type="number" min="1" placeholder="Enter the locked up time" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            <p></p><p></p><p></p><br></br><br></br><br></br>
+                            <br></br><br></br><br></br>
                             <input onChange={updateDepositQty} type="number" placeholder="Enter the amount you want to lock" className='has-background-primary input is-normal'></input>
                           </p>
                           <br></br>
                           <p className='max-class'>{errorDeposit}</p>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                          <div className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
                                 <button onClick={depositFunds} className="button is-outlined py-2 px-6 is-size-6">Deposit </button>
                               </Link>
                             </div>
-                          </p>
-                        </p>
+                          </div>
+                        </div>
                       </div>
                       <div className="column mt-6 pt-6">
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
+                        <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           WITHDRAW<br></br><br></br>
                           <p className=" has-background-black-bis py-4 is-size-6">
                           </p>
                           <input onChange={updateWithdrawId} type="number" min="1" placeholder="Enter the id from My funds" className='has-background-primary input is-normal'></input>
                           <p className=" has-background-black-bis py-4 is-size-6">
-                            <p></p><p></p><br></br><br></br><br></br>
+                            <br></br><br></br><br></br>
                             <input onChange={updateWithdrawQty} type="number" min="1" placeholder="Enter the withdrawn quantity" className='has-background-primary input is-normal input-placeholder-color:black'></input>
                           </p><br></br>
                           <p className='max-class'>{errorWithdraw}</p>
-                          <p className="box has-background-black-bis pt-4 pb-3 mt-6">
+                          <div className="box has-background-black-bis pt-4 pb-3 mt-6">
                             <div className='columns is-centered'>
                               <Link href="">
                                 <button onClick={withdrawFunds} className="button is-outlined py-2 px-6 is-size-6">Withdraw </button>
                               </Link>
                             </div>
-                          </p>
-                        </p>
+                          </div>
+                        </div>
                       </div>
                       <div className="column mt-6 pt-6" >
-                        <p className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
+                        <div className="subtitle has-background-black-bis pt-6 pb-3 mb-3 has-text-primary">
                           MY FUNDS<br></br><br></br> 
                           
                           <p className='max-class'>Number of vaults you have: <br></br><br></br>{ids}</p>
@@ -465,7 +465,7 @@ const App = () => {
                           ))}
                           
                           <p>{errorFundsDetails}</p>
-                        </p>
+                        </div>
                       </div>
                     </div>
                   </div>
