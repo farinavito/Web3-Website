@@ -4,19 +4,25 @@
     font-weight: bold;
 }
 
+.main h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: hsl(171, 100%, 41%);
+    font-size: large;
+}
+
+.main h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: hsl(171, 100%, 41%);
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
 .main a {
     color: white;
 }
 
 .main a:hover {
     color: hsl(171, 100%, 41%);
-}
-
-.main text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: hsl(171, 100%, 41%);
-    margin-top: 3rem;
-    margin-bottom: 6rem;
 }
 
 .main div {
@@ -26,8 +32,3 @@
       
 }
 
-.main h2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: hsl(171, 100%, 41%);
-    font-size: large;
-}

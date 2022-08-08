@@ -70,9 +70,9 @@ const Why = () => {
             <section className="hero is-fullheight has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
-                    <text className="title">
+                    <h3 className="title">
                         Why? Simple, we want to help communities to flourish
-                    </text>
+                    </h3>
                     <div className="has-text-centered pt-4">
                         <br></br>
                         <h2>Firstly,</h2>we believe by enabling members of community to work together without trusting one another, <br></br>
