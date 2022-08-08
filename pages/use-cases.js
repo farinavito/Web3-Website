@@ -73,7 +73,7 @@ const Cases = () => {
                     <h4 className="title">
                     Legal agreements
                     </h4>
-                    <div className="has-text-left pb-6 pt-4 pl-5 mt-5">
+                    <article className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <h2>The purpose</h2>
                         Enabling people to have access to creation of legal agreements with other subjects in their community or worldwide.
 
@@ -94,7 +94,7 @@ const Cases = () => {
 
                         <h2 >How much commission will we charge?</h2>
                         Nothing, you can use it for free.
-                    </div>
+                    </article>
                   </div>
                 </div>
             </section>
@@ -105,7 +105,7 @@ const Cases = () => {
                     <h4 className="title mb-6">
                     Financial commitments
                     </h4>
-                    <div className="has-text-left pb-6 pt-4 pl-5 mt-5">
+                    <article className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <h2>The purpose</h2>
                         Enabling people to create financial agreements with other subjects all over the world.
 
@@ -128,7 +128,7 @@ const Cases = () => {
 
                         <h2 >How much commission do we charge?</h2>
                         Nothing, you can use it for free.
-                    </div>
+                    </article>
                   </div>
                 </div>
             </section>
@@ -139,7 +139,7 @@ const Cases = () => {
                     <h4 className="title mb-6">
                     Token vault
                     </h4>
-                    <div className="has-text-left pb-6 pt-4 pl-5 mt-5">
+                    <article id='new' className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <h2>The purpose</h2>
                         Enabling people to not get emotional in the bear markets and sell ethers.
                         
@@ -159,7 +159,7 @@ const Cases = () => {
 
                         <h2 >How much commission do we charge?</h2>
                         Nothing, you can use it for free.
-                    </div>
+                    </article>
                   </div>
                 </div>
             </section>

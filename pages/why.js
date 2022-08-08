@@ -12,7 +12,7 @@ const Why = () => {
             </Head>
             
 
-            <nav className="navbar is-primary has-background-black-bis is-fixed-top">
+            <nav className="navbar has-background-black-bis is-fixed-top">
                 <div className="navbar-menu">
                     <div className="container">
                         <div className="navbar-brand">
@@ -20,50 +20,51 @@ const Why = () => {
                         <div className='navbar-item'></div>
                         <div className='navbar-item'></div>
                         <div className='navbar-item'></div>
-                            <div className='navbar-item'>
-                                <Link href='/'>
-                                    <a><h1>A web app</h1></a>
-                                </Link>
-                            </div> 
+                          <div className='navbar-item'>
+                            <Link href='/'>
+                                <a><h1>website</h1></a>
+                            </Link>
+                          </div> 
                         </div>
                     </div> 
                 </div>
+                
                 <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/why'>
-                            <a>Why</a>
-                        </Link>
-                    </div>
+                  <div className='navbar-item'>
+                    <Link href='/why'>
+                        <a>Why</a>
+                    </Link>
+                  </div>
                 </div>
                 <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/use-cases'>
-                            <a>Use cases</a>
-                        </Link>
-                    </div>
+                  <div className='navbar-item'>
+                    <Link href='/use-cases'>
+                        <a>Use cases</a>
+                    </Link>
+                  </div>
                 </div>
                 <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/how-it-works'>
-                            <a>How it works</a>
-                        </Link>
-                    </div>
+                  <div className='navbar-item'>
+                    <Link href='/how-it-works'>
+                        <a>How it works</a>
+                    </Link>
+                  </div>
                 </div>
                 <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/statistic'>
-                            <a>Statistic</a>
-                        </Link>
-                    </div>
+                  <div className='navbar-item'>
+                    <Link href='/statistic'>
+                        <a>Statistic</a>
+                    </Link>
+                  </div>
                 </div>
                 <div className="navbar-end">
-                    <div className='navbar-item'>
-                        <Link href='/application'>
-                            <a>Enter app</a>
-                        </Link>
-                    </div>
-                    <div className='navbar-item'>
-                    </div>
+                  <div className='navbar-item'>
+                    <Link href='/application'>
+                        <a>Enter app</a>
+                    </Link>
+                  </div>
+                  <div className='navbar-item'>
+                  </div>
                 </div>
             </nav>
 
