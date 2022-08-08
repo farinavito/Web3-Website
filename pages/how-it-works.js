@@ -74,7 +74,7 @@ const How = () => {
                     Interacting with smart contracts
                     </text>
                     <p className="has-text-left pb-6 pt-4 pl-5 mt-5">
-                        <h2></h2>
+                        <br></br>
                         1. Click on the button "Enter app" in the navbar above<br></br>
                         2. Connect to your wallet by clicking the "Connect wallet" button<br></br>
                         3. Your wallet will open. Enter the password<br></br>
