@@ -70,9 +70,9 @@ const Cases = () => {
             <section id='first' className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
-                    <text className="title">
+                    <h4 className="title">
                     Legal agreements
-                    </text>
+                    </h4>
                     <div className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <h2>The purpose</h2>
                         Enabling people to have access to creation of legal agreements with other subjects in their community or worldwide.
@@ -102,9 +102,9 @@ const Cases = () => {
             <section id='second' className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
-                    <text className="title mb-6">
+                    <h4 className="title mb-6">
                     Financial commitments
-                    </text>
+                    </h4>
                     <div className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <h2>The purpose</h2>
                         Enabling people to create financial agreements with other subjects all over the world.
@@ -136,9 +136,9 @@ const Cases = () => {
             <section id='third' className="hero is-medium has-background-black-bis">
                 <div className="hero-body">
                   <div className="container has-text-centered">
-                    <text className="title mb-6">
+                    <h4 className="title mb-6">
                     Token vault
-                    </text>
+                    </h4>
                     <div className="has-text-left pb-6 pt-4 pl-5 mt-5">
                         <h2>The purpose</h2>
                         Enabling people to not get emotional in the bear markets and sell ethers.

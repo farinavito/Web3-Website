@@ -64,19 +64,7 @@ const App = () => {
                 <div className='navbar-item'></div>
                 <div className='navbar-item'></div>
                 
-            </nav>
-
-            
-            <section>
-                <div className="container">
-                    <p>Text</p>
-                </div>
-            </section>
-            <section>
-                <div className="container has-text-danger">
-                    <p>{error}</p>
-                </div>
-            </section>
+            </nav>           
 
             <section className="hero has-background-black-bis is-fullheight pr-6">
                 <div className="hero-body py-0 pr-6 mr-6">
