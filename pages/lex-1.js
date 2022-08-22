@@ -662,21 +662,21 @@ const App = () => {
                         <div className="box has-background-black-bis pt-4 pb-3">
                           <div className='columns is-centered'>
                             <Link href="/lex-1">
-                              <button className="button is-outlined py-2 px-6 is-size-6">Lex-1 </button>
+                              <button className="button is-outlined py-2 px-3 is-size-6">Installments </button>
                             </Link>
                           </div>
                         </div>
                         <div className="box has-background-black-bis pt-4 pb-3">
                           <div className='columns is-centered'>
                             <Link href="/lex-2">
-                              <button className="button is-outlined py-2 px-6 is-size-6">Lex-2 </button>
+                              <button className="button is-outlined py-2 px-5 is-size-6">Payment </button>
                             </Link>
                           </div>
                         </div>
                         <div className="box has-background-black-bis pt-4 pb-3">
                           <div className='columns is-centered'>
                             <Link href="/vault">
-                              <button className="button is-outlined py-2 px-6 is-size-6">Vault </button>
+                              <button className="button is-outlined py-2 px-5 is-size-6">Deposits </button>
                             </Link>
                           </div>
                         </div>
