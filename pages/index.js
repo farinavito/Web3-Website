@@ -77,13 +77,12 @@ const Homepage = () => {
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <h1 className="title">
-                        Enabling trust between subjects
+                        Building the alternative world
                     </h1>
                     <p className="has-text-centered pt-4">
                         <br></br>
-                        By using smart contrats, we make sure that subjects who don't know eachother and <br></br>
-                        don't have physical access to one another, fulfill their obligations to eachother <br></br>
-                        without cheating the system.
+                        The goal of this project is to disrupt the social and economical principles of this world by leveraging the use of cryptocurrency<br></br>
+                        
                     </p>
                   </div>
                 </div>
