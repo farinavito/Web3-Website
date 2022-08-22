@@ -71,7 +71,7 @@ const Why = () => {
                 <div className="hero-body">
                   <div className="container has-text-centered">
                     <h3 className="title">
-                        Why? Simple, we want to help communities to flourish
+                        Why?
                     </h3>
                     <article className="has-text-centered pt-4">
                         <br></br>
