@@ -17,7 +17,7 @@ const Statistic = () => {
                         <div className='navbar-item'></div>
                           <div className='navbar-item'>
                             <Link href='/'>
-                                <a><h1>A web app</h1></a>
+                                <a><h1>Alt World</h1></a>
                             </Link>
                           </div> 
                         </div>
