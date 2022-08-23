@@ -81,7 +81,7 @@ const Homepage = () => {
                     </h1>
                     <p className="has-text-centered pt-4">
                         <br></br>
-                        The goal of this project is to disrupt the social and economical principles of this world by leveraging the use of cryptocurrency<br></br>
+                        The goal of this project is to disrupt the social and economical principles of this world by leveraging the use of technology<br></br>
                     </p>
                   </div>
                 </div>
