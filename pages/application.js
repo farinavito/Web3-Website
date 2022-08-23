@@ -75,8 +75,8 @@ const App = () => {
                           <h2>Smart contracts</h2><br></br><br></br>
                           <div className="box has-background-black-bis pt-4 pb-3">
                             <div className='columns is-centered'>
-                              <Link href="/lex-1">
-                                <button className="button is-outlined py-2 px-6 is-size-6">Lex-1 </button>
+                              <Link href="/installments">
+                                <button className="button is-outlined py-2 px-3 is-size-6">Installments </button>
                               </Link>
                             </div>
                           </div>
