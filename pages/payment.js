@@ -594,21 +594,21 @@ const App = () => {
                         <h2>Smart contracts</h2><br></br><br></br>
                         <div className="box has-background-black-bis pt-4 pb-3">
                           <div className='columns is-centered'>
-                            <Link href="/lex-1">
+                            <Link href="/installments">
                               <button className="button is-outlined py-2 px-3 is-size-6">Installments </button>
                             </Link>
                           </div>
                         </div>
                         <div className="box has-background-black-bis pt-4 pb-3">
                           <div className='columns is-centered'>
-                            <Link href="/lex-2">
+                            <Link href="/payment">
                               <button className="button is-outlined py-2 px-5 is-size-6">Payment </button>
                             </Link>
                           </div>
                         </div>
                         <div className="box has-background-black-bis pt-4 pb-3">
                           <div className='columns is-centered'>
-                            <Link href="/vault">
+                            <Link href="/deposits">
                               <button className="button is-outlined py-2 px-5 is-size-6">Deposits </button>
                             </Link>
                           </div>
